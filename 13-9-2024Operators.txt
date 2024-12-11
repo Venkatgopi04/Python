@@ -1,0 +1,379 @@
+Logical or operator ---> or
+==================
+True --- 1
+False ---0
+
+X1          X2            X1 or X2
+==================
+1           0                    1
+0           1                    1
+1           1                    1
+0           0                    0
+==================
+
+
+Ex1:
+===
+import time 
+First_Name=input('Enter the First_Name:')
+Last_Name=input('Enter the Last_Name:')
+username=input('Enter the username:')
+P1=input('Enter the Password:')
+P2=input('Enter the Confirm_Password:')
+if(First_Name=="jessica" or Last_Name=="adam" or username=="jessica_12345" and P1=="J_12345" and P2=="J_12345"):
+    print("====New User_Details=====")
+    print("First_Name is:",First_Name)
+    print("Last_Name is:",Last_Name)
+    print("Username is:",username)
+    print("Password is:",P1)
+    print("Confirm password is:",P2)
+    print()
+else:
+    print("Dear user Username/P1/P2 are requred .....")
+print()
+time.sleep(2)
+print('End of an application')
+
+
+Logical not operator ----> not:
+=============
+True ----False
+1------0
+
+Ex1:
+===
+import time 
+X1=True 
+print(X1)
+print()
+print(type(X1))
+print()
+X2=not X1 
+print(X2)
+print()
+print(type(X2))
+print()
+time.sleep(3)
+print('End of an application')
+
+
+->Bitwise operators in Python:
+===================
+Python supports Bitwise operators.The main objective of bitwise operators is to perform 
+bit level operations(0 & 1).Following are the Bitwise operator in Python
+
+->Bitwise and  ----> & 
+->Bitwise or ------> | 
+->Bitwise exclusive or ----> ^ 
+->Bitwise complement operator ---> ~
+->Bitwise left_shift operator ----> << 
+->Bitwise Right_Shift operator ----> >>
+
+
+->Bitwise and  ----> & :
+================
+===================
+X1        X2              X1&X2
+====================
+1          0                   0
+0          1                   0
+1          1                   1
+0         0                     0
+=================
+
+
+->Bitwise or  ----> | :
+================
+===================
+X1        X2              X1|X2
+====================
+1          0                   1
+0          1                   1
+1          1                   1
+0         0                    0
+=================
+
+->Bitwise Exclusive or  ----> ^ :
+================
+===================
+X1        X2              X1^X2
+====================
+1          0                   1
+0          1                   1
+1          1                   0
+0          0                   0
+=================
+
+
+print(4 & 5)
+print(4 |5)
+print(4 ^ 5)
+
+
+4 --- 1    0   0  
+5 --- 1    0    1   & |  ^
+=================
+        1  0   0  -----> 4
+        1  0   1  ------>5
+        0   0   1 ----->1
+==================
+
+
+Ex1:
+===
+import time 
+print("The result_set is:",4 & 5)
+print()
+print("The result_set is:",4 |5)
+print()
+print("The result_set is:",4 ^ 5)
+print()
+time.sleep(3)
+print('End of an application')
+
+
+
+print(77 & 7)
+
+77 ---->  1   0   0   1  1  0  1
+7 ------>0   0    0   0  1  1  1  &
+========================
+               0    0   0   0   1  0  1
+=========================
+
+
+Ex1:
+===
+import time 
+print("The result_set is:",77 & 7)
+print()
+time.sleep(3)
+print('End of an application')
+
+print((10&7)|(15^10))
+print((9|7)&(17^12))
+
+
+Ex2:
+===
+import time 
+print((10&7)|(15^10))
+print()
+print((9|7)&(17^12))
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Bitwise complement operator(~):
+======================
+->if the number is positive number increament by one and apply - symbol
+->If the number is negative number decreaement by one and it removes negative symbol
+
+
+Ex1:
+===
+import time 
+X1=1005 
+X2=~X1 
+print("The result_set is:",X2)
+print()
+time.sleep(2)
+print('End of an application')
+
+
+Ex2:
+===
+import time 
+X1=-98
+X2=~X1 
+print("The result_set is:",X2)
+print()
+time.sleep(2)
+print('End of an application')
+
+
+Bitwise left_shift operators(<<):
+=====================
+X1=20 
+X2=X1<<2
+
+
+20         ------->     1   0    1   0   0 
+
+                apply or add two zero 0's in the left side
+ 
+                          0   0   1  0   1  0  0
+                                   1  0  1  0  0  0  0 
+
+
+Ex1:
+==
+import time 
+X1=20 
+X2=X1<<2 
+print("The result_set is:",X2)
+print()
+time.sleep(2)
+print('End of an application')
+
+
+Bitwise Right_shift(>>)
+=================
+X1=20 
+X2=X1>>2
+
+
+20         ------->     1   0    1   0   0 
+
+     apply or add two zero 0's in the left side
+ 
+                          0   0   1  0   1  0  0
+
+                              0   0   0  0  1  0  1
+
+
+Ex1:
+===
+import time 
+X1=20 
+X2=X1>>2 
+print("The result_set is:",X2)
+print()
+time.sleep(2)
+print('End of an application')
+
+
+X1=50 
+X2=X1<<3
+
+
+->How to define or declare a binary number in Python:
+=================================
+
+0b1010101010 
+or
+0B10101010010
+
+
+bin():
+====
+It is used to convert the interger_values,Octal values,Hexa_decimal values
+
+
+
+Ex1:
+==
+import time 
+X1=0b111 
+X2=0B000101 
+print(X1,X2)
+print()
+time.sleep(2)
+print('End of an application')
+
+
+Ex2:
+===
+import time 
+X1=eval(input('Enter the value of X1:'))
+print(X1)
+print()
+X2=bin(X1)
+print(X2)
+print()
+time.sleep(2)
+print('End of an application')
+
+
+->How to define or declare Octal number in Python:
+=================================
+Octal allows only from 0-7 numbers 
+
+0o01234567
+or
+0O341232 
+or
+0O122389 ----> Not a octal number
+
+
+oct():
+====
+It is used to convert from interger,binary,hexadecimal to octal number
+
+
+Ex1:
+===
+import time 
+Y1=0o01234567
+Y2=0O12345 
+print(Y1)
+print()
+print(Y2)
+print()
+time.sleep(2)
+print('End of an application')
+
+
+Ex2:
+===
+import time 
+Y1=eval(input("Enter the number"))
+print(Y1)
+print()
+Y2=oct(Y1)
+print(Y2)
+print()
+time.sleep(3)
+print('End of an application')
+
+
+->How to define or declare Hexadecimal number in Python:
+=====================================
+Numbers are allowed from 0-9
+a or A ---10 
+b or B --- 11
+c or C  --- 12
+d or D ----13 
+e or E ----14 
+f or F ---->15
+
+0XA --->10
+or
+0xb ---> 11
+or
+0XabcABC
+
+
+hex()
+====
+
+
+Ex1:
+==
+import time 
+X1=0XA 
+X2=0xb 
+print(X1)
+print()
+print(X2)
+print()
+time.sleep(3)
+print("End of an application")
+
+
+Ex2:
+===
+import time 
+X1=eval(input('Enter the Number:'))
+print(X1)
+print()
+X2=hex(X1)
+print(X2)
+print()
+time.sleep(3)
+print('End of an application')
+
+
+
+

@@ -1,0 +1,412 @@
+while loop:
+=======
+Python supports while loop.It is a iterative statement in Python.The main 
+objective of while loop is to execute the number of statements number of
+times if our data/information is not in sequennce or infinite loop then we can 
+go with while loop.
+
+a=value 
+while(condition):
+          ----
+          a+=1 
+
+or 
+
+a=value 
+while condition:
+       ----
+       a+=1
+
+
+Ex1:
+===
+import time 
+a=0 
+while(a<11):
+    print("Software Developer")
+    a+=1 
+print()
+time.sleep(3)
+print("End of an application")
+
+
+Ex2:
+===
+import time 
+a=0 
+while a<5:
+    print("Application developer")
+    a+=1 
+print()
+time.sleep(3)
+print("End of an application")
+
+
+Ex3:
+===
+import time 
+a=0 
+while(True):
+    print(a)
+    a+=1 
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Ex4:
+===
+import time 
+a=0 
+while(1):
+    print(a)
+    a+=1 
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Ex5:
+===
+import time 
+a=0 
+while(False):
+    print(a)
+    a+=1 
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Ex6:
+===
+import time 
+str1=input("Enter the String_Object:")
+print(str1)
+print()
+print(type(str1))
+print()
+a=0 
+while(a<len(str1)):
+    print(a)
+    a+=1 
+print()
+time.sleep(2)
+print('End of an application')
+
+
+Ex7:
+===
+import time 
+str1=input("Enter the String_Object:")
+print(str1)
+print()
+print(type(str1))
+print()
+a=0 
+while(a<len(str1)):
+    print(str1[a])
+    a+=1 
+print()
+time.sleep(2)
+print('End of an application')
+
+
+Ex8:
+===
+import time 
+str1=input("Enter the String_Object:")
+print(str1)
+print()
+print(type(str1))
+print()
+a=0 
+while(a<len(str1)):
+    print(a,"--",str1[a])
+    a+=1 
+print()
+time.sleep(2)
+print('End of an application')
+
+
+Ex9:
+===
+import time 
+L1=[101,102,103,104,105,106,107,108,109,110,111,112]
+a=0 
+while(a<len(L1)):
+    if(L1[a]%2==1):
+        print(L1[a])
+    a+=1 
+print()
+time.sleep(3)
+print('End of an application')
+
+
+Nested while loop(Inner While loop):
+======================
+Python supports Nested while loop.It is also known as Nested/Inner while loop.
+Nested of Inner while loop can be represent as defing or declaring a while loop inside 
+another while loop then it is said to be Nested while or Inner While loop.
+
+
+Note:
+====
+While working with nested while loop/inner while loop.If outer while loop condition
+is true then inner while will be executed until it's condition.
+
+
+a=0 
+while(condition): ----->Outer while loop
+           ----
+           b=0 
+           while(condition): ---->Inner while loop
+                    ----
+                    b+=1
+           a+=1 
+
+1----->Outer while loop
+1---
+2-----
+3-----
+4--------Inner while loop
+2 ------>Outer while loop
+1----
+2------
+3-------
+4----------Inner while loop
+3------
+1-------
+2--------
+3--------
+4---------
+4 ---------Outer while loop
+1----
+2------
+3------
+4----------Inner while loop
+
+
+Ex1:
+===
+import time 
+L1=[1,2,3,4]
+L2=[1,2,3,4]
+a=0
+while(a<len(L1)):
+    print(L1[a])
+    b=0 
+    while(b<len(L2)):
+        print(L2[b])
+        b+=1
+    a+=1 
+print()
+time.sleep(2)
+print('End of an application')
+
+
+Ex2:
+===
+import time 
+a=1 
+while(a<5):
+    print(a)
+    b=1 
+    while(b<5):
+        print(b)
+        b+=1
+    a+=1
+print()
+time.sleep(2)
+print('End of an application')
+
+
+L1=[[1,2,3],[4,5,6],[7,8,9]]
+
+Ist_Output:
+=======
+[1,2,3]
+1
+2
+3
+[4,5,6]
+4
+5
+6
+[7,8,9]
+7
+8
+9
+
+IInd_Output:
+========
+1
+2
+3
+4
+5
+6
+7
+8
+9
+
+
+IIIrd_Output:
+=========
+1  2  3 4 5 6 7 8 9
+
+
+Iv_th Output:
+=========
+1  2  3
+4  5  6
+7  8  9
+
+
+Ex1:
+==
+import time 
+L1=[[1,2,3],[4,5,6],[7,8,9]]
+print(L1)
+a=0 
+while(a<len(L1)):
+    print(L1[a])
+    b=0 
+    while(b<len(L1[a])):
+        print(L1[a][b])
+        b+=1 
+    a+=1
+print()
+time.sleep(3)
+print('End of an application')
+
+
+
+Ex2:
+===
+import time 
+L1=[[1,2,3],[4,5,6],[7,8,9]]
+print(L1)
+a=0 
+while(a<len(L1)):
+    b=0 
+    while(b<len(L1[a])):
+        print(L1[a][b])
+        b+=1 
+    a+=1
+print()
+time.sleep(3)
+print('End of an application')
+
+
+Ex3:
+===
+import time 
+L1=[[1,2,3],[4,5,6],[7,8,9]]
+print(L1)
+a=0 
+while(a<len(L1)):
+    b=0 
+    while(b<len(L1[a])):
+        print(L1[a][b],end=" ")
+        b+=1 
+    a+=1
+print()
+time.sleep(3)
+print('End of an application')
+
+
+Ex4:
+===
+import time 
+L1=[[1,2,3],[4,5,6],[7,8,9]]
+print(L1)
+a=0 
+while(a<len(L1)):
+    b=0 
+    while(b<len(L1[a])):
+        print(L1[a][b],end=" ")
+        b+=1 
+    print()
+    a+=1
+print()
+time.sleep(3)
+print('End of an application')
+
+
+Ex5:
+===
+import time 
+a=1 
+while(a<11):
+    b=1 
+    while(b<11):
+        print(a*b,end=" ")
+        b+=1
+    print()
+    a+=1 
+print()
+time.sleep(3)
+print('End of an application')
+
+
+
+Ex6:
+===
+import time 
+a=1 
+while(a<11):
+    b=1 
+    while(b<11):
+        print(a,"X",b,"=",a*b)
+        b+=1
+    print()
+    a+=1 
+print()
+time.sleep(3)
+print('End of an application')
+
+
+
+
+String_One:1234
+String_Two:ABCD
+
+
+1
+A
+B
+C
+D
+2
+A
+B
+C
+D
+3
+A
+B
+C
+D
+4
+A
+B
+C
+D
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+

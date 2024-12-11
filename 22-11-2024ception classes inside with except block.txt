@@ -1,0 +1,414 @@
+Can we use more than one Exception classes inside with except block:
+============================================
+Yes we can define or decalre more than exception classes with in single 
+except block.
+
+Ex1:
+===
+import time 
+try:
+    X1=int(input("Enter the value of X1:"))
+    X2=int(input("Enter the value of X2:"))
+    res1=X1//X2 
+    print("The result_set is:",res1)
+except(ZeroDivisionError,ArithmeticError,ValueError as e):
+    print("Exception_Name is:",e)
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Ex2:
+==
+import time 
+try:
+    X1=int(input("Enter the value of X1:"))
+    X2=int(input("Enter the value of X2:"))
+    res1=X1//X2 
+    print("The result_set is:",res1)
+except(ZeroDivisionError,ArithmeticError,ValueError) as e:
+    print("Exception_Name is:",e)
+print()
+time.sleep(2)
+print("End of an application")
+
+finally:
+=====
+finally is a keyword in Python.The main objective of finally block is meant for cleanup
+activity or resource deallocation.finally block will be executed if the exception handled
+or not handled except one if we use os._exit(0) as per the application reqn
+
+os._eixt(0) ---->PVM will be done  ---->For backup operations
+
+0 is status code 
+
+status_code can be  Either 0 or + number or - number
+
+
+try:
+  ---
+except:
+    ---
+finally:
+    ---
+
+Ex1:
+===
+import time 
+try:
+    print("Python Developer")
+    print()
+except:
+    print("Angular Developer")
+    print()
+finally:
+    print("Full Stack Python Developer")
+    print()
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Ex2:
+===
+import time 
+try:
+    print("Python Developer")
+    print()
+    print(1000//0)
+    
+except:
+    print("Angular Developer")
+    print()
+finally:
+    print("Full Stack Python Developer")
+    print()
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Ex3:
+==
+import time 
+import os
+try:
+    print("Python Developer")
+    print()
+    print(1000//0)
+    os._exit(0) 
+except:
+    print("Angular Developer")
+    print()
+finally:
+    print("Full Stack Python Developer")
+    print()
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Ex4:
+===
+import time 
+import os
+try:
+    print("Python Developer")
+    print()
+    os._exit(0) 
+    print(1000//0) 
+except:
+    print("Angular Developer")
+    print()
+finally:
+    print("Full Stack Python Developer")
+    print()
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Ex5:
+===
+import time 
+import os
+try:
+    print("Python Developer")
+    print()
+    os._exit(1000) 
+    print(1000//0) 
+except:
+    print("Angular Developer")
+    print()
+finally:
+    print("Full Stack Python Developer")
+    print()
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Ex6:
+===
+import time 
+import os
+try:
+    print("Python Developer")
+    print()
+    os._exit(-123) 
+    print(1000//0) 
+except:
+    print("Angular Developer")
+    print()
+finally:
+    print("Full Stack Python Developer")
+    print()
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Ex7:
+===
+import time 
+import os
+try:
+    print("Python Developer")
+    print()
+    os._exit(123.56) 
+    print(1000//0) 
+except:
+    print("Angular Developer")
+    print()
+finally:
+    print("Full Stack Python Developer")
+    print()
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Ex8:
+===
+import time 
+import os
+try:
+    print("Python Developer")
+    print()
+    os._exit("ABCD") 
+    print(1000//0) 
+except:
+    print("Angular Developer")
+    print()
+finally:
+    print("Full Stack Python Developer")
+    print()
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Ex9:
+===
+import time 
+import os
+try:
+    print("Python Developer")
+    print()
+    os._exit() 
+    print(1000//0) 
+except:
+    print("Angular Developer")
+    print()
+finally:
+    print("Full Stack Python Developer")
+    print()
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Ex10:
+===
+import time 
+import os
+try:
+    print("Python Developer")
+    print()
+    os._exit(True) 
+    print(1000//0) 
+except:
+    print("Angular Developer")
+    print()
+finally:
+    print("Full Stack Python Developer")
+    print()
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Ex11:
+===
+import time 
+import os
+try:
+    print("Python Developer")
+    print()
+    os._exit(False) 
+    print(1000//0) 
+except:
+    print("Angular Developer")
+    print()
+finally:
+    print("Full Stack Python Developer")
+    print()
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Ex12:
+====
+import time 
+import os
+try:
+    print("Python Developer")
+    print()
+    os._exit(chr(65)) 
+    print(1000//0) 
+except:
+    print("Angular Developer")
+    print()
+finally:
+    print("Full Stack Python Developer")
+    print()
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Ex13:
+===
+import time 
+import os
+try:
+    print("Python Developer")
+    print()
+    os._exit(ord('a')) 
+    print(1000//0) 
+except:
+    print("Angular Developer")
+    print()
+finally:
+    print("Full Stack Python Developer")
+    print()
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Ex14:
+===
+import time 
+import os
+try:
+    print("Python Developer")
+    print()
+    print(1000//0) 
+except:
+    print("Angular Developer")
+    print()
+    os._exit(chr(65))
+finally:
+    print("Full Stack Python Developer")
+    print()
+print()
+time.sleep(2)
+print("End of an application")
+
+
+OUTPUT:
+=====
+
+C:\Users\Admin\Desktop>Python test1.py
+Python Developer
+
+Angular Developer
+
+Full Stack Python Developer
+
+Traceback (most recent call last):
+  File "test1.py", line 6, in <module>
+    print(1000//0)
+ZeroDivisionError: integer division or modulo by zero
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "test1.py", line 10, in <module>
+    os._exit(chr(65))
+TypeError: an integer is required (got type str)
+
+C:\Users\Admin\Desktop>
+
+
+Note:
+====
+if we are using os._exit() method inside the except block with status code only
+valid status code is required 
+
+
+Working with except with esle block:
+=======================
+While working with Exception Handling we can use except with esle block.else block will
+be executed if except block will not executed.
+
+
+try:
+  --
+except:
+     ---
+else:
+    --
+finally:
+    ---
+
+Ex1:
+===
+import time 
+try:
+    print("JavaScript Developer")
+except:
+    print("Angular Developer")
+else:
+    print("TypeScript Developer")
+finally:
+    print("Full Stack Python Developer")
+print()
+time.sleep(2)
+print("End of an applicaiton")
+
+Ex2:
+===
+import time 
+try:
+    print("JavaScript Developer")
+    print(1000//0)
+except:
+    print("Angular Developer")
+else:
+    print("TypeScript Developer")
+finally:
+    print("Full Stack Python Developer")
+print()
+time.sleep(2)
+print("End of an applicaiton")
+
+->An exception can be occured in try_block or except block or else block or 
+finally block.Nested try_except_else_finally block.
+
+
+
+
+

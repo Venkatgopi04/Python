@@ -1,0 +1,502 @@
+Form_3:
+======
+str1[begin:end(end-1)]
+
+Here step is optional.The output of the string would be from begining value to till
+end-1th position
+
+str1[2:7]
+
+
+Ex1:
+===
+import time 
+str1="Core Python"
+print(str1)
+print()
+print(type(str1))
+print()
+print("=====Using Slice_Operators with + index=====")
+print()
+print("====Form_3====")
+print(str1[2:7])
+print()
+time.sleep(2)
+print('End of an application')
+
+
+Ex2:
+==
+import time 
+str1="Core Python"
+print(str1)
+print()
+print(type(str1))
+print()
+print("=====Using Slice_Operators with + index=====")
+print()
+print("====Form_3====")
+print(str1[0:11])
+print()
+time.sleep(2)
+print('End of an application')
+
+
+Ex3:
+===
+import time 
+str1="Core Python"
+print(str1)
+print()
+print(type(str1))
+print()
+print("=====Using Slice_Operators with + index=====")
+print()
+print("====Form_3====")
+print(str1[5:11])
+print()
+time.sleep(2)
+print('End of an application')
+
+Form_4:
+=====
+str1[begin:end(end-1):step]
+
+Here output will display on the top of step values
+
+str1[0:11:1]
+
+
+Ex1:
+==
+import time 
+str1="Core Python"
+print(str1)
+print()
+print(type(str1))
+print()
+print("=====Using Slice_Operators with + index=====")
+print()
+print("====Form_4====")
+print(str1[0:11:1])
+print()
+time.sleep(2)
+print('End of an application')
+
+
+Ex2:
+==
+import time 
+str1="Core Python"
+print(str1)
+print()
+print(type(str1))
+print()
+print("=====Using Slice_Operators with + index=====")
+print()
+print("====Form_4====")
+print(str1[0:11:2])
+print()
+time.sleep(2)
+print('End of an application')
+
+Ex3:
+===
+import time 
+str1="Core Python"
+print(str1)
+print()
+print(type(str1))
+print()
+print("=====Using Slice_Operators with + index=====")
+print()
+print("====Form_4====")
+print(str1[0:11:3])
+print()
+time.sleep(2)
+print('End of an application')
+
+
+Ex4:
+===
+import time 
+str1="Core Python"
+print(str1)
+print()
+print(type(str1))
+print()
+print("=====Using Slice_Operators with + index=====")
+print()
+print("====Form_4====")
+print(str1[5:11:3])
+print()
+time.sleep(2)
+print('End of an application')
+
+
+
+Form_5:
+=====
+str1[0:]
+or
+str1[:]
+or
+str1[::] ---->Core Python
+
+
+Ex1:
+==
+import time 
+str1="Core Python"
+print(str1)
+print()
+print(type(str1))
+print()
+print("=====Using Slice_Operators with + index=====")
+print()
+print("====Form_5====")
+print(str1[0:])
+print()
+print(str1[:])
+print()
+print(str1[::])
+print()
+time.sleep(2)
+print('End of an application')
+
+
+Ex2:
+===
+import time 
+str1="Core Python"
+print(str1)
+print()
+print(type(str1))
+print()
+print("=====Using Slice_Operators with + index=====")
+print()
+print("====Form====")
+print(str1[1:9:0])
+print()
+time.sleep(2)
+print('End of an application')
+
+
+OUTPUT:
+=====
+C:\Users\Admin\Desktop>Python test1.py
+Core Python
+
+<class 'str'>
+
+=====Using Slice_Operators with + index=====
+
+====Form====
+Traceback (most recent call last):
+  File "test1.py", line 10, in <module>
+    print(str1[1:9:0])
+ValueError: slice step cannot be zero
+
+
+Note:
+====
+While working with Slice operator Either Positive_Direction or Negative_Direction
+step value cannot be zero.It may be + step_value or - step_step value.
+
+
+Ex1:
+===
+import time 
+str1="Core Python"
+print("Reverse of a string is:",str1[::-1])
+print()
+time.sleep(3)
+print('End of an application')
+
+
+Ex2:
+===
+import time 
+str1="Core Python"
+print("Our String_Object is in ascending_order:",str1[0:])
+print()
+print("Our String_Object is in decending_order is:",str1[::-1])
+print()
+time.sleep(3)
+print("End of an application")
+
+
+->Slice operator with Negative direction:
+===========================
+Python supports Slice operator with Negative direction which starts from -1 to end+1.
+While working with Slice operator with negative direction step value must be negative number otherwise
+most of the cases output will be empty.
+
+str1[-1:-7:-1] ---->-7+1=-6
+
+
+Ex1:
+==
+import time 
+str1="Core Python"
+print(str1)
+print()
+print(type(str1))
+print()
+print("====Slice_Operator with Negative Direction====")
+print()
+print(str1[-1:-7:-1])
+print()
+time.sleep(3)
+print("End of an application")
+
+
+Ex2:
+==
+import time 
+str1="Core Python"
+print(str1)
+print()
+print(type(str1))
+print()
+print("====Slice_Operator with Negative Direction====")
+print()
+print(str1[-1:-7:-2])
+print()
+time.sleep(3)
+print("End of an application")
+
+
+Ex3:
+===
+import time 
+str1="Core Python"
+print(str1)
+print()
+print(type(str1))
+print()
+print("====Slice_Operator with Negative Direction====")
+print()
+print(str1[-1:-7:-3])
+print()
+time.sleep(3)
+print("End of an application")
+
+
+Ex4:
+===
+import time 
+str1="Core Python"
+print(str1)
+print()
+print(type(str1))
+print()
+print("====Slice_Operator with Negative Direction====")
+print()
+print(str1[-1:-7:0])
+print()
+time.sleep(3)
+print("End of an application")
+
+
+Ex5:
+===
+import time 
+str1="Core Python"
+print(str1)
+print()
+print(type(str1))
+print()
+print("====Slice_Operator with Negative Direction====")
+print()
+print(str1[-1:-7:1])
+print()
+time.sleep(3)
+print("End of an application")
+
+
+Ex6:
+===
+import time 
+str1="Core Python"
+print(str1)
+print()
+print(type(str1))
+print()
+print("====Slice_Operator with Negative Direction====")
+print()
+print(str1[-1:-7])
+print()
+time.sleep(3)
+print("End of an application")
+
+
+Ex7:
+===
+import time 
+str1="Core Python"
+print(str1)
+print()
+print(type(str1))
+print()
+print("====Slice_Operator with Negative Direction====")
+print()
+print(str1[-1:])
+print()
+time.sleep(3)
+print("End of an application")
+
+
+Ex8:
+===
+import time 
+str1="Core Python"
+print(str1)
+print()
+print(type(str1))
+print()
+print("====Slice_Operator with Negative Direction====")
+print()
+print(str1[-2:])
+print()
+time.sleep(3)
+print("End of an application")
+
+
+Ex9:
+===
+import time 
+str1="Core Python"
+print(str1)
+print()
+print(type(str1))
+print()
+print("====Slice_Operator with Negative Direction====")
+print()
+print(str1[-5:])
+print()
+time.sleep(3)
+print("End of an application")
+
+
+Ex10:
+===
+import time 
+str1="Core Python"
+print(str1)
+print()
+print(type(str1))
+print()
+print("====Slice_Operator with Negative Direction====")
+print()
+print(str1[:-3])
+print()
+time.sleep(3)
+print("End of an application")
+
+
+Ex11:
+===
+import time 
+str1="Core Python"
+print(str1)
+print()
+print(type(str1))
+print()
+print("====Slice_Operator with Negative Direction====")
+print()
+print(str1[:-7])
+print()
+time.sleep(3)
+print("End of an application")
+
+
+Ex12:
+===
+import time 
+str1="Core Python"
+print(str1)
+print()
+print(type(str1))
+print()
+print("====Slice_Operator with Negative Direction====")
+print()
+print(str1[::-1])
+print()
+time.sleep(3)
+print("End of an application")
+
+
+Ex13:
+===
+import time 
+str1="Core Python"
+print(str1)
+print()
+print(type(str1))
+print()
+print("====Slice_Operator with Negative Direction====")
+print()
+print(str1[::-2])
+print()
+time.sleep(3)
+print("End of an application")
+
+
+Ex14:
+===
+import time 
+str1="Core Python"
+print(str1)
+print()
+print(type(str1))
+print()
+print("====Slice_Operator with Negative Direction====")
+print()
+print(str1[::-5])
+print()
+time.sleep(3)
+print("End of an application")
+
+
+Ex15:
+===
+import time 
+str1="Core Python"
+print(str1)
+print()
+print(type(str1))
+print()
+print("====Slice_Operator with Negative Direction====")
+print()
+print(str1[::1])
+print()
+time.sleep(3)
+print("End of an application")
+
+
+Ex16:
+====
+import time 
+str1="Core Python"
+print(str1)
+print()
+print(type(str1))
+print()
+print("====Slice_Operator with Negative Direction====")
+print()
+print(str1[::3])
+print()
+time.sleep(3)
+print("End of an application")
+
+
+
+
+
+
+
+
+
+
+

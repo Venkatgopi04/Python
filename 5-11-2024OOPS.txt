@@ -1,0 +1,289 @@
+Ex1:
+===
+import time 
+class I_HUB_1:
+    def m1(self):
+        print("This is Service_One")
+class I_HUB_2:
+    def m2(self):
+        print("This is Service_Two")
+class I_HUB_3:
+    def m3(self):
+        print("This is Service_Three")
+class I_HUB_4:
+    def m4(self):
+        print("This is Service_Four")
+class I_HUB_5(I_HUB_1,I_HUB_2,I_HUB_3,I_HUB_4):
+    def m5(self):
+        print("This is Service_Five")
+i1=I_HUB_5()
+i1.m1()
+i1.m2()
+i1.m3()
+i1.m4()
+i1.m5()
+print()
+time.sleep(3)
+print("End of an application")
+
+
+Note:
+====
+While working with multiple Inheritance if the methods are same then Python
+follows MRO algorithm.
+
+
+Rule_1:
+=====
+It will first search in child class.if there is no implmentation in child class it follows
+the order what we have provided in our Pyhton Script
+
+Rule_2:
+=====
+It follows left to right methodlogy.
+
+
+Ex1:
+===
+import time 
+class I_HUB_1:
+    def m1(self):
+        print("This is Service_One")
+class I_HUB_2:
+    def m1(self):
+        print("This is Service_Two")
+class I_HUB_3:
+    def m1(self):
+        print("This is Service_Three")
+class I_HUB_4:
+    def m1(self):
+        print("This is Service_Four")
+class I_HUB_5(I_HUB_1,I_HUB_2,I_HUB_3,I_HUB_4):
+    def m1(self):
+        print("This is Service_Five")
+i1=I_HUB_5()
+i1.m1()
+print()
+time.sleep(3)
+print("End of an application")
+
+
+Ex2:
+===
+import time 
+class I_HUB_1:
+    def m1(self):
+        print("This is Service_One")
+class I_HUB_2:
+    def m1(self):
+        print("This is Service_Two")
+class I_HUB_3:
+    def m1(self):
+        print("This is Service_Three")
+class I_HUB_4:
+    def m1(self):
+        print("This is Service_Four")
+class I_HUB_5(I_HUB_1,I_HUB_2,I_HUB_3,I_HUB_4):pass
+i1=I_HUB_5()
+i1.m1()
+print()
+time.sleep(3)
+print("End of an application")
+
+
+Ex3:
+===
+import time 
+class I_HUB_1:pass
+   
+class I_HUB_2:
+    def m1(self):
+        print("This is Service_Two")
+class I_HUB_3:
+    def m1(self):
+        print("This is Service_Three")
+class I_HUB_4:
+    def m1(self):
+        print("This is Service_Four")
+class I_HUB_5(I_HUB_1,I_HUB_2,I_HUB_3,I_HUB_4):pass
+i1=I_HUB_5()
+i1.m1()
+print()
+time.sleep(3)
+print("End of an application")
+
+
+Ex4:
+==
+import time 
+class I_HUB_1:pass
+class I_HUB_2:pass
+class I_HUB_3:
+    def m1(self):
+        print("This is Service_Three")
+class I_HUB_4:
+    def m1(self):
+        print("This is Service_Four")
+class I_HUB_5(I_HUB_1,I_HUB_2,I_HUB_3,I_HUB_4):pass
+i1=I_HUB_5()
+i1.m1()
+print()
+time.sleep(3)
+print("End of an application")
+
+
+Ex5:
+===
+import time 
+class I_HUB_1:pass
+class I_HUB_2:pass
+class I_HUB_3:pass
+      
+class I_HUB_4:
+    def m1(self):
+        print("This is Service_Four")
+class I_HUB_5(I_HUB_1,I_HUB_2,I_HUB_3,I_HUB_4):pass
+i1=I_HUB_5()
+i1.m1()
+print()
+time.sleep(3)
+print("End of an application")
+
+
+Ex6:
+===
+import time 
+class I_HUB_1:pass
+class I_HUB_2:pass
+class I_HUB_3:pass     
+class I_HUB_4:pass
+class I_HUB_5(I_HUB_1,I_HUB_2,I_HUB_3,I_HUB_4):pass
+i1=I_HUB_5()
+print()
+time.sleep(3)
+print("End of an application")
+
+
+->Hybrid Inheritance:
+==============
+Python supports Hybrid Inheritance.It is a combination of Single/multilevel/multiple/Hiechical
+
+
+mro():
+====
+It is a predefine function in Python.The main objective of mro() function is to know
+mro of each class.
+
+
+Ex1:
+==
+import time 
+class A_class:pass 
+class B_class(A_class):pass 
+class C_class(A_class):pass 
+class D_class(B_class,C_class):pass 
+print()
+print("====MRO OF A_CLASS====")
+print(A_class.mro())
+print()
+print("====MRO OF B_CLASS====")
+print(B_class.mro())
+print()
+print("====MRO OF C_CLASS=====")
+print(C_class.mro())
+print()
+print("====MRO OF D_CLASS====")
+print(D_class.mro())
+print()
+time.sleep(2)
+print('End of an application')
+
+
+OUTPUT:
+======
+
+====MRO OF A_CLASS====
+[<class '__main__.A_class'>, <class 'object'>]
+
+====MRO OF B_CLASS====
+[<class '__main__.B_class'>, <class '__main__.A_class'>, <class 'object'>]
+
+====MRO OF C_CLASS=====
+[<class '__main__.C_class'>, <class '__main__.A_class'>, <class 'object'>]
+
+====MRO OF D_CLASS====
+[<class '__main__.D_class'>, <class '__main__.B_class'>, <class '__main__.C_class'>, <class '__main__.A_class'>, <class 'object'>]
+
+End of an application
+
+
+Ex2:
+===
+import time 
+class A_class:pass 
+class B_class:pass 
+class C_class:pass 
+class X_class(A_class,B_class):pass 
+class Y_class(B_class,C_class):pass 
+class Z_class(X_class,Y_class,C_class):pass 
+print()
+print("====MRO OF A_CLASS====")
+print(A_class.mro())
+print()
+print("====MRO OF B_CLASS====")
+print(B_class.mro())
+print()
+print("====MRO OF C_CLASS====")
+print(C_class.mro()) 
+print()
+print("====MRO OF X_CLASS====")
+print(X_class.mro())
+print()
+print("===MRO OF Y_CLASS====")
+print(Y_class.mro())
+print()
+print("====MRO OF Z_CLASS====")
+print(Z_class.mro())
+print()
+time.sleep(2)
+print("End of an application")
+
+
+OUTPUT:
+=====
+
+C:\Users\Admin\Desktop>Python test1.py
+
+====MRO OF A_CLASS====
+[<class '__main__.A_class'>, <class 'object'>]
+
+====MRO OF B_CLASS====
+[<class '__main__.B_class'>, <class 'object'>]
+
+====MRO OF C_CLASS====
+[<class '__main__.C_class'>, <class 'object'>]
+
+====MRO OF X_CLASS====
+[<class '__main__.X_class'>, <class '__main__.A_class'>, <class '__main__.B_class'>, <class 'object'>]
+
+===MRO OF Y_CLASS====
+[<class '__main__.Y_class'>, <class '__main__.B_class'>, <class '__main__.C_class'>, <class 'object'>]
+
+====MRO OF Z_CLASS====
+[<class '__main__.Z_class'>, <class '__main__.X_class'>, <class '__main__.A_class'>, <class '__main__.Y_class'>, <class '__main__.B_class'>, <class '__main__.C_class'>, <class 'object'>]
+
+End of an application
+
+C:\Users\Admin\Desktop>
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,375 @@
+Polymorphism:
+=========
+Python supports Polymorphsim.Here Poly means many and morphism forms.
+In Python Programming Polymorphism can be implemented as follows
+
+->Overaloading
+          .An operator overloading
+          .Method overloading
+          .Constructor overloading
+->Overriding
+            .Method Overriding
+            .Constructor Overriding
+           
+->Duck Typing
+
+
++ ---->NAO,SC
+*  ---->M,SR
+
+
+->An operator overloading:
+=================
+Python supports An operator overloading using magic method.Following are 
+the magic methods to implement an operator overloading.
+
+
+Magic methods for AO:
+==============
++ ---->def __add__(self,other)
+* ---->def __mul__(self,other)
+/ ----> def __truediv__(self,other)
+// ---> def __floordiv__(self,other)
+- ----> def __sub__(self,other)
+% ---> def __mod__(self,other)
+** ---> def __pow__(self,other)
+
+
+Magic methods for Assingnment operators:
+===========================
++= ---->def __iadd__(self,other)
+*= ---->def __imul__(self,other)
+/= ----> def __itruediv__(self,other)
+//= ---> def __ifloordiv__(self,other)
+-= ----> def __isub__(self,other)
+%=---> def __imod__(self,other)
+** =---> def __ipow__(self,other)
+
+> --->def __gt__(self,other)
+>= ---> def __ge__(self,other)
+< ---> def __lt__(self,other)
+<= --->def __le__(self,other)
+== ---> def __eq__(self,other)
+!= ---> def __ne__(self,other)
+
+
+Ex1:
+==
+import time 
+class Product_Class:
+    def __init__(self,items):
+        self.items=items 
+p1=Product_Class(190)
+print(p1)
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Ex2:
+===
+import time 
+class Product_Class:
+    def __init__(self,items):
+        self.items=items 
+    def __str__(self):
+        return "Number of items is in p1:"+str(self.items)
+p1=Product_Class(190)
+print(p1)
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Ex3:
+==
+import time 
+class Product_Class:
+    def __init__(self,items):
+        self.items=items 
+    def __str__(self):
+        return str(self.items)
+p1=Product_Class(190)
+print("Number of items in P1 is:",p1)
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Ex4:
+===
+import time 
+class Product_Class:
+    def __init__(self,items):
+        self.items=items 
+    def __str__(self):
+        return str(self.items)
+    def __add__(self,other):
+        return self.items+other.items
+p1=Product_Class(190)
+print("Number of items in P1 is:",p1)
+print()
+p2=Product_Class(110)
+print("Number of items in P2 is:",p2)
+print()
+print("The result_set is:",p1+p2)
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Ex5:
+===
+import time 
+class Product_Class:
+    def __init__(self,items):
+        self.items=items 
+    def __str__(self):
+        return str(self.items)
+    def __mul__(self,other):
+        return self.items*other.items
+p1=Product_Class(190)
+print("Number of items in P1 is:",p1)
+print()
+p2=Product_Class(110)
+print("Number of items in P2 is:",p2)
+print()
+print("The result_set is:",p1*p2)
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Ex6:
+===
+import time 
+class Product_Class:
+    def __init__(self,items):
+        self.items=items 
+    def __str__(self):
+        return str(self.items)
+    def __truediv__(self,other):
+        return self.items/other.items
+p1=Product_Class(190)
+print("Number of items in P1 is:",p1)
+print()
+p2=Product_Class(19)
+print("Number of items in P2 is:",p2)
+print()
+print("The result_set is:",p1/p2)
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Ex7:
+===
+import time 
+class Product_Class:
+    def __init__(self,items):
+        self.items=items 
+    def __str__(self):
+        return str(self.items)
+    def __floordiv__(self,other):
+        return self.items//other.items
+p1=Product_Class(190)
+print("Number of items in P1 is:",p1)
+print()
+p2=Product_Class(19)
+print("Number of items in P2 is:",p2)
+print()
+print("The result_set is:",p1//p2)
+print()
+time.sleep(2)
+print("End of an application")
+
+Ex8:
+==
+import time 
+class Product_Class:
+    def __init__(self,items):
+        self.items=items 
+    def __str__(self):
+        return str(self.items)
+    def __mod__(self,other):
+        return self.items%other.items
+p1=Product_Class(190)
+print("Number of items in P1 is:",p1)
+print()
+p2=Product_Class(19)
+print("Number of items in P2 is:",p2)
+print()
+print("The result_set is:",p1%p2)
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Ex9:
+===
+import time 
+class Product_Class:
+    def __init__(self,items):
+        self.items=items 
+    def __str__(self):
+        return str(self.items)
+    def __add__(self,other):
+        return self.items+other.items
+p1=Product_Class(190)
+print("Number of items in P1 is:",p1)
+print()
+p2=Product_Class(19)
+print("Number of items in P2 is:",p2)
+print()
+p3=Product_Class(1000)
+print("Number of items in P2 is:",p3)
+print()
+p4=Product_Class(575)
+print("Number of items in P2 is:",p4)
+print()
+p5=Product_Class(2100)
+print("Number of items in P2 is:",p5)
+print()
+print("The result_set is:",p1+p2+p3+p4+p5)
+print()
+time.sleep(2)
+print("End of an application")
+
+OUTPUT:
+======
+C:\Users\Admin\Desktop>Python test1.py
+Number of items in P1 is: 190
+
+Number of items in P2 is: 19
+
+Number of items in P2 is: 1000
+
+Number of items in P2 is: 575
+
+Number of items in P2 is: 2100
+
+Traceback (most recent call last):
+  File "test1.py", line 24, in <module>
+    print("The result_set is:",p1+p2+p3+p4+p5)
+TypeError: unsupported operand type(s) for +: 'int' and 'Product_Class'
+
+C:\Users\Admin\Desktop>
+
+
+Ex10:
+===
+import time 
+class Product_Class:
+    def __init__(self,items):
+        self.items=items 
+    def __str__(self):
+        return str(self.items)
+    def __add__(self,other):
+        obj1=self.items+other.items 
+        P1=Product_Class(obj1)
+        return P1
+p1=Product_Class(190)
+print("Number of items in P1 is:",p1)
+print()
+p2=Product_Class(19)
+print("Number of items in P2 is:",p2)
+print()
+p3=Product_Class(1000)
+print("Number of items in P2 is:",p3)
+print()
+p4=Product_Class(575)
+print("Number of items in P2 is:",p4)
+print()
+p5=Product_Class(2100)
+print("Number of items in P2 is:",p5)
+print()
+print("The result_set is:",p1+p2+p3+p4+p5)
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Ex11:
+===
+import time 
+class Product_Class:
+    def __init__(self,items):
+        self.items=items 
+    def __str__(self):
+        return str(self.items)
+    def __iadd__(self,other):
+        return self.items+other.items
+        
+p1=Product_Class(190)
+print("Number of items in P1 is:",p1)
+print()
+p2=Product_Class(19)
+print("The result_set is:",p1+=p2)
+print()
+time.sleep(3)
+print("End of an application")
+
+OUTPUT:
+=====
+C:\Users\Admin\Desktop>Python test1.py
+  File "test1.py", line 14
+    print("The result_set is:",p1+=p2)
+                                  ^
+SyntaxError: invalid syntax
+
+
+Ex12:
+===
+import time 
+class Product_Class:
+    def __init__(self,items):
+        self.items=items 
+    def __str__(self):
+        return str(self.items)
+    def __iadd__(self,other):
+        return self.items+other.items
+        
+p1=Product_Class(190)
+print("Number of items in P1 is:",p1)
+print()
+p2=Product_Class(19)
+p1+=p2
+print("The result_set is:",p1)
+print()
+time.sleep(3)
+print("End of an application")
+
+
+->Method Overloading:
+===============
+Method Overloading can be represent as if we are using same method_name with
+zero or more than one number of arguments then it is said to method overloading.
+
+
+Ex1:
+===
+import time 
+class I_HUB_1:
+    def m1(self):
+        print("Zero_Number of arguments")
+    def m1(self,X1):
+        print("One_Number of arguments")
+    def m1(self,X1,X2):
+        print("Two_Number of arguments")
+    def m1(self,X1,X2,X3):
+        print("Three_Number of arguments")
+i1=I_HUB_1()
+i1.m1()
+print()
+i1.m1(10)
+print()
+i1.m1(10,20)
+print()
+i1.m1(10,20,30)
+print()
+time.sleep(3)
+print("End of an application")
+
+
+
+

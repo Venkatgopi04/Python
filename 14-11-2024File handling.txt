@@ -1,0 +1,203 @@
+Ex1:
+===
+import time 
+f1=open("ihub_1.txt","x")
+f1.write("UUUUU\n")
+f1.write("MMMMMM\n")
+f1.write("LLLLL\n")
+print()
+print("A file is created successfully ...")
+print()
+f1.close()
+print()
+time.sleep(2)
+print("End of an application")
+
+OUTPUT:
+=====
+FileExistsError: [Errno 17] File exists: 'ihub_1.txt'
+
+
+Ex2:
+==
+import time 
+f1=open("ihub_2.txt","x")
+f1.write("UUUUU\n")
+f1.write("MMMMMM\n")
+f1.write("LLLLL\n")
+print()
+print("A file is created successfully ...")
+print()
+f1.close()
+print()
+time.sleep(2)
+print("End of an application")
+
+->writelines():
+=========
+It is a predefine function in Python while working with  File Handling.The main objective of 
+writelines()  function is to store objects with its properties
+
+
+Ex1:
+===
+import time 
+f1=open("ihub_3.txt","w")
+L1=["1001\n","Jessica_1\n","39000.0\n","Developer_1\n","HCL\n"]
+f1.writelines(L1)
+print("A new file is created successfully ...")
+print()
+f1.close()
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Ex2:
+===
+import time 
+f1=open("ihub_3.txt","w")
+L1=["1001\n","Jessica_1\n","39000.0\n","Developer_1\n","HCL\n"]
+L2=["1002\n","Jessica_2\n","41000.0\n","Developer_2\n","HCL\n"]
+L3=["1003\n","Jessica_3\n","42000.0\n","Developer_3\n","HCL\n"]
+L4=["1004\n","Jessica_4\n","43000.0\n","Developer_4\n","HCL\n"]
+f1.writelines(L1,L2,L3,L4)
+print("A new file is created successfully ...")
+print()
+f1.close()
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Ex3:
+===
+import time 
+f1=open("ihub_3.txt","w")
+L1=["1001\n","Jessica_1\n","39000.0\n","Developer_1\n","HCL\n"]
+L2=["1002\n","Jessica_2\n","41000.0\n","Developer_2\n","HCL\n"]
+L3=["1003\n","Jessica_3\n","42000.0\n","Developer_3\n","HCL\n"]
+L4=["1004\n","Jessica_4\n","43000.0\n","Developer_4\n","HCL\n"]
+f1.writelines(L1)
+f1.writelines(L2)
+f1.writelines(L3)
+f1.writelines(L4)
+print("A new file is created successfully ...")
+print()
+f1.close()
+print()
+time.sleep(2)
+print("End of an application")
+
+
+
+To read the data/information from the file to console or application console we do have 
+following predefine functions.
+
+->read():It is used to read the complete content from the File
+->read(n):It is used to read number of characters from the File
+->readline():It is used to read only one line from file.
+->readlines():It is used to read an object and perform the operation and goes next 
+line.readlines return the data in List form.
+
+
+Ex1:
+==
+import time 
+f1=open("ihub_3.txt","r")
+X1=f1.read()
+print("**********************")
+print("File_Name is:",f1.name)
+print()
+print("***********************")
+print(X1)
+print()
+f1.close()
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Ex2:
+===
+import time 
+f1=open("ihub_3.txt","r")
+X1=f1.read(17)
+print("**********************")
+print("File_Name is:",f1.name)
+print()
+print("***********************")
+print(X1)
+print()
+f1.close()
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Ex3:
+===
+import time 
+f1=open("ihub_3.txt","r")
+X1=f1.readline()
+print("**********************")
+print("File_Name is:",f1.name)
+print()
+print("***********************")
+print(X1)
+print()
+f1.close()
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Ex4:
+===
+import time 
+f1=open("ihub_3.txt","r")
+X1=f1.readlines()
+print("**********************")
+print("File_Name is:",f1.name)
+print()
+print("***********************")
+print(X1)
+print()
+f1.close()
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Ex5:
+===
+import time 
+f1=open("ihub_3.txt","r")
+X1=f1.readlines()
+print("**********************")
+print("File_Name is:",f1.name)
+print()
+print("***********************")
+for x1 in X1:
+    print(x1,end=" ")
+print()
+f1.close()
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Ex6:
+===
+import time 
+f1=open("ihub_3.txt","r")
+for x1 in f1:
+    print(x1)
+print()
+f1.close()
+print()
+time.sleep(3)
+print('End of an application')
+
+
+

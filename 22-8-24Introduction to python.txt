@@ -1,0 +1,73 @@
+->Full Stack Python Development with Cloud Integration:
+====================================
+It is a combination of FrontEnd and Backend Technologies with Databases
+
+
+FrontEnd Technologies:
+==============
+HTML & HTML5
+CSS & CSS3
+****JavaScript****
+Bootstrap
+AngularJS
+Angular 
+ReactJS
+
+BackEnd Technologies:
+===============
+It is a combination of Programming and Frameworks with Databases
+
+
+Programming Language:
+================
+->Core Python
+->Advance Python
+
+Frameworks:
+=========
+->Django & Dajngo_Rest_Framework
+->Flask and Flask_rest_ful
+->FastAPI Framework
+
+
+Database Language:
+============
+SQL/PLSQL
+
+
+SDLC --->Software Development Life Cycle
+
+GITHUB
+
+Cloud Integation:
+===========
+Python AWS integration
+Python with Azure Integration
+
+
+Three Live Project Implementation with end to end coding:
+=====================================
+->Angular with Django & Django Rest_Framework
+->ReactJS with Django & Django_Rest_Framework Flask  & FastAPI
+->Desktop application/Stand_alone application
+
+
+
+Q1)What are the softwares do we require to Full Stack Python Development with Cloud Integration
+==============================================================
+
+->Python 3.7.0
+->IDET --->Visual Studio Code,PyCharm,Anaconda Python,Jyputer,Atom,subline_text
+
+
+
+Python Programming language:
+====================
+
+
+
+
+
+
+
+

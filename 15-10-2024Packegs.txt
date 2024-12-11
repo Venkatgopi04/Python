@@ -1,0 +1,142 @@
+Packages in Python:
+=============
+
+Q1)What is a Module?
+Q2)What is a Package?
+Q3)What is a Libary?
+Q4)What is a Framework?
+
+
+Q1)What is a Module?
+==============
+A Module can be represent as if it contains variables,functions,methods,classes,
+objects then it is said to be a Module.Our Python Program/Python Script itself is a
+module
+
+Ex1:
+ ===
+     test1.py ----> A Pyhon Module
+
+
+Q2)What is a Package?
+==============
+Package can be represent as collection of one or more than one module then it is
+said to be a Package.
+
+Ex1:
+===
+     ->Package_1
+             test1.py
+             test2.py
+             test3.py
+
+
+Q3)What is a Libary?
+=============
+A libary can be represent as collection of one or more than one package then 
+it is said to be a Libary.
+
+Ex1:
+====
+       Libary_1:
+
+           ->Package_1
+             test1.py
+             test2.py
+             test3.py
+
+           ->Package_2
+             test1.py
+             test2.py
+             test3.py
+
+        ->Package_3
+             test1.py
+             test2.py
+             test3.py
+
+
+Backend ----> Flask
+FrontEnd ---->ReactJS
+
+
+Q4)What is a Framework?:
+================
+A Framework can be represent as collection of one or more than one 
+Libaries then it is said to be Framework.
+
+
+Ex1:
+===
+      ->Framework
+
+ 
+           Libary_1:
+
+           ->Package_1
+             test1.py
+             test2.py
+             test3.py
+
+           ->Package_2
+             test1.py
+             test2.py
+             test3.py
+
+        ->Package_3
+             test1.py
+             test2.py
+             test3.py
+
+
+     Libary_2:
+
+           ->Package_1
+             test1.py
+             test2.py
+             test3.py
+
+           ->Package_2
+             test1.py
+             test2.py
+             test3.py
+
+        ->Package_3
+             test1.py
+             test2.py
+             test3.py
+
+ 
+        Libary_3:
+
+           ->Package_1
+             test1.py
+             test2.py
+             test3.py
+
+           ->Package_2
+             test1.py
+             test2.py
+             test3.py
+
+        ->Package_3
+             test1.py
+             test2.py
+             test3.py
+
+
+
+Packages in Python:
+============
+->Package can represent as collection of one or more than one module.
+
+->In Pyhton we can define a package using a file_name as __init__.py which 
+is empty file
+
+->Package is nothing but a folder/directory in O/S
+
+->As per the application reqn we can create nested packages as well.
+              
+             
+
+

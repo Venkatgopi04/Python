@@ -1,0 +1,195 @@
+Working with random module:
+===================
+Python supports random module.It is a predefine module in Python while working
+with Modular Programming language.The main objective of random module to used in
+gaming applicaitons.random module always generate the output in random_format.
+
+
+Ex1:
+==
+import time 
+from random import * 
+print("====Sub_Modules====")
+print(dir(random))
+print()
+time.sleep(3)
+print("End of an application")
+
+
+While working with random module we do have following predefine functions
+
+->random()
+========
+It is a predefine function in Python.The main objective of random() function is to
+generate the random values from 0.0 to 1.1
+
+
+Ex1:
+===
+import time 
+from random import * 
+print("====Random_Objects====")
+for x1 in range(10):
+    print(random())
+print()
+time.sleep(3)
+print("End of an application")
+
+
+OUTPUT:
+=====
+====Random_Objects====
+0.2611283740718523
+0.1932981346236644
+0.8386376136046652
+0.3880295723537487
+0.10565395074022965
+0.5486011759579072
+0.5207731137914835
+0.31850025941610227
+0.8390552798257532
+0.07431848486071113
+
+End of an application
+
+
+randint():
+======
+It is a predefine function in Python.The main objective of randint() function is
+to generate the random OTP's or Random mobile numbers
+
+
+Ex1:
+===
+import time 
+from random import * 
+print("====OTP====")
+for x1 in range(15):
+    print(randint(1,100000))
+print()
+time.sleep(3)
+print("End of an application")
+
+
+OUTPUT:
+=====
+====OTP====
+18224
+34266
+97188
+89625
+67131
+48869
+14476
+416
+76542
+43824
+71865
+90648
+85568
+71264
+44296
+
+End of an application
+
+
+Ex2:
+===
+import time 
+from random import * 
+print("====OTP====")
+for x1 in range(15):
+    print(randint(1,10000000000))
+print()
+time.sleep(3)
+print("End of an application")
+
+
+->randrange(begin,end(end-1),step):
+========================
+It is a predefine function in Python.The main objective of randrange() function is to
+generate the random objects.
+
+
+Ex1:
+===
+import time 
+from random import * 
+print("====Random_Objects====")
+for x1 in range(10):
+    print(randrange(10))
+print()
+time.sleep(3)
+print("End of an application")
+
+
+Ex2:
+===
+import time 
+from random import * 
+print("====Random_Objects====")
+for x1 in range(10):
+    print(randrange(5,21))
+print()
+time.sleep(3)
+print("End of an application")
+
+
+Ex3:
+==
+import time 
+from random import * 
+print("====Even_Random_Objects====")
+for x1 in range(10):
+    print(randrange(0,10,2))
+print()
+print("====Odd_Random_Objects=====")
+for y1 in range(10):
+    print(randrange(1,10,2))
+print()
+time.sleep(3)
+print("End of an application")
+
+
+->uniform(p1,p2):
+============
+It is a predefine function in Python.The main objective of uniform() function is to generate
+the random floating objects as per the application reqn.
+
+
+Ex1:
+===
+import time 
+from random import * 
+print("====Floating random_objects====")
+for x1 in range(10):
+    print(uniform(1,11))
+print()
+time.sleep(3)
+print("End of an application")
+
+
+choice():
+======
+It is a predefine function in Python.The main objective of choice() function is to
+generate the random string object as per the application reqn.
+
+
+Ex1:
+===
+import time 
+from random import * 
+print("====String_Random_Objects====")
+List_1=['A','B','C','D','E']
+for x1 in range(10):
+    print(choice(List_1))
+print()
+time.sleep(3)
+print('End of an application')
+
+
+
+
+
+
+

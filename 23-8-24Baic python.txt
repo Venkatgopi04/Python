@@ -1,0 +1,97 @@
+Python Programming Language:
+====================
+
+
+Q1)How to create a Python_File?
+======================
+We can create a Python_File using .py extension with Any_Name.
+
+
+Python_Valid_File_Names:
+================
+ihub1.py
+test1.py
+demo1.py
+rahul1.py
+priya1.py
+
+
+In_Valid_Python_Names:
+===============
+12345.py
+ihub   1.py
+
+
+->print()
+->id()
+->type()
+
+
+->print():
+======
+It is a predefine function in Python.The main objective of print() function is to 
+display the content on console/application console using '' or "" or '''''' or """"""
+or variable_name/an identifier_name.
+
+
+Ex1:
+===
+print('Core Python session is going on at IHUB')
+print("Core Python session is going on at IHUB")
+print('''Core Python session is going on at IHUB''')
+print("""Core Python session is going on at IHUB""")
+Eid=1001 
+print(Eid)
+
+
+OUTPUT:
+======
+Core Python session is going on at IHUB
+Core Python session is going on at IHUB
+1001
+
+C:\Users\Admin\Desktop\Python_Development>python iub1.py
+(null): can't open file 'iub1.py': [Errno 2] No such file or directory
+
+C:\Users\Admin\Desktop\Python_Development>python ihub1.py
+Core Python session is going on at IHUB
+Core Python session is going on at IHUB
+
+
+Ex2:
+===
+print('Core Python session is going on at IHUB')
+print()
+print("Core Python session is going on at IHUB")
+print()
+print('''Core Python session is going on at IHUB''')
+print()
+print("""Core Python session is going on at IHUB""")
+print()
+Eid=1001 
+print(Eid)
+print()
+print('End of an application')
+
+
+Core Python session is going on at IHUB
+Core Python session is going on at IHUB
+1001
+
+C:\Users\Admin\Desktop\Python_Development>py ihub1.py
+Core Python session is going on at IHUB
+Core Python session is going on at IHUB
+Core Python session is going on at IHUB
+Core Python session is going on at IHUB
+1001
+
+C:\Users\Admin\Desktop\Python_Development>
+
+
+Interview_Question:
+=============
+Q1)What is difference between a Program and  a Script?
+
+
+
+

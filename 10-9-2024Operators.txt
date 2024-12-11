@@ -1,0 +1,352 @@
+Ex1:
+===
+import time 
+for x1 in range(True+1+2+False,6+True+5+True+1,1+True+True):
+    print(x1)
+print()
+time.sleep(2)
+print("End of an application ...")
+
+
+None data type:
+==========
+Python supports None data type which means nothing or empty.
+
+
+Ex1:
+===
+import time 
+Emp_salary=28000 
+print("At time of joining salary is:",Emp_salary)
+print()
+print("The data type is:",type(Emp_salary))
+print()
+Emp_salary=None 
+print("The result_set is:",Emp_salary)
+print()
+print("The data type is:",type(Emp_salary))
+print()
+Emp_salary=28000+12000 
+print("Emp_salary is:",Emp_salary)
+print()
+print("The Data type is:",type(Emp_salary))
+print()
+time.sleep(2)
+print("End of an applicaiton")
+
+
+An operators in Python:
+===============
+Python supports an operators.An operator is a symbol which is used to perform
+operations between operands or variables.In Python we do have following types of 
+operators are there which are as follows
+
+->Arithmetic operators
+->Assignment operators
+->Logical operators
+->Equality operators
+->Comparision operators
+->Chainging operators
+->Specail type of operators
+->Ternary operators
+->Bitwise operators
+
+
+->Arithmetic operators:
+================
+Python supports AO.The main objective of AO is perform aritmetic operations
+as per the application reqn.Following are the AO in Python.
+
++,/,//,*,-,%,**
+
+
+Ex1:
+==
+import time 
+X1=eval(input('Enter the value of X1:'))
+X2=eval(input('Enter the value of X2:'))
+res1=X1+X2 
+print("The sum is:",res1)
+print()
+time.sleep(3)
+print('End of an application')
+
+
+Ex2:
+===
+import time 
+X1=eval(input('Enter the value of X1:'))
+X2=eval(input('Enter the value of X2:'))
+res1=X1/X2 
+print("The sum is:",res1)
+print()
+time.sleep(3)
+print('End of an application')
+
+
+Ex3:
+==
+import time 
+X1=eval(input('Enter the value of X1:'))
+X2=eval(input('Enter the value of X2:'))
+res1=X1//X2 
+print("The sum is:",res1)
+print()
+time.sleep(3)
+print('End of an application')
+
+
+
+->Assignment operators:
+================
+Python supports Assingnment operators.The main objective of Assignment operators
+is to perfomr matmatical operations by utilizing the memory management.
+
+
+X1=X1+X2                                   X1+=X2
+X1=X1/X2                                    X1/=X2 
+X1=X1*X2                                    X1*=X2
+
+
+Ex1:
+==
+import time 
+X1=eval(input('Enter the value of X1:'))
+X2=eval(input('Enter the value of X2:'))
+print("The sum is:",X1+=X2)
+print()
+time.sleepp(3)
+print('End of an application')
+
+
+Ex2:
+===
+import time 
+X1=eval(input('Enter the value of X1:'))
+X2=eval(input('Enter the value of X2:'))
+X1+=X2  # X1=X1+X2
+print("The sum is:",X1)
+print()
+time.sleep(3)
+print('End of an application')
+
+
+Ex3:
+===
+import time 
+X1=eval(input('Enter the value of X1:')) #10
+X2=eval(input('Enter the value of X2:'))  #5
+X1+=X2 
+print("The sum is:",X1)
+print()
+X1*=X2 
+print("The Product is:",X1)
+print()
+X1/=X2 
+print("Divsion is:",X1)
+print()
+X1//=X2 
+print("Floor_Division is:",X1)
+print()
+time.sleep(3)
+print('End of an application')
+
+
+Specail type of operators in Python:
+======================
+Python supports STO.Following are the STO in Python
+
+->Indentity operators
+->Membership operators
+
+->Indentity operators:
+===============
+It is a specail type of operators in Python.The main objective of identity operators is meant
+address comparision.If the address are same return boolean values either True or False.Following
+are identity operators in Python
+
+->is 
+->is not
+
+
+Ex1:
+==
+import time 
+L1=[1001,1002,1003,1004]
+L2=[1001,1002,1003,1004]
+print("=====Values=====")
+print(L1,L2)
+print()
+print("====Addresses=====")
+print(id(L1),id(L2))
+print()
+print("====Using An indentity operator=======")
+print("The result is:",L1 is L2)
+print()
+print("The data type is:",type(L1 is L2))
+print()
+print("The result is:",L1 is not L2)
+print()
+print("The data type is:",type(L1 is not L2))
+print()
+time.sleep(2)
+print('End of an application')
+
+
+Ex2:
+===
+import time 
+L1=(1001,1002,1003,1004)
+L2=(1001,1002,1003,1004)
+print("=====Values=====")
+print(L1,L2)
+print()
+print("====Addresses=====")
+print(id(L1),id(L2))
+print()
+print("====Using An indentity operator=======")
+print("The result is:",L1 is L2)
+print()
+print("The data type is:",type(L1 is L2))
+print()
+print("The result is:",L1 is not L2)
+print()
+print("The data type is:",type(L1 is not L2))
+print()
+time.sleep(2)
+print('End of an application')
+
+Ex3:
+===
+import time 
+L1=(1001,1002,1003)
+L2=(1001,1002,1003,1004)
+print("=====Values=====")
+print(L1,L2)
+print()
+print("====Addresses=====")
+print(id(L1),id(L2))
+print()
+print("====Using An indentity operator=======")
+print("The result is:",L1 is L2)
+print()
+print("The data type is:",type(L1 is L2))
+print()
+print("The result is:",L1 is not L2)
+print()
+print("The data type is:",type(L1 is not L2))
+print()
+time.sleep(2)
+print('End of an application')
+
+
+Ex4:
+==
+import time 
+L1=(chr(65),chr(66),chr(67))
+L2=(chr(65),chr(66),chr(67))
+print("=====Values=====")
+print(L1,L2)
+print()
+print("====Addresses=====")
+print(id(L1),id(L2))
+print()
+print("====Using An indentity operator=======")
+print("The result is:",L1 is L2)
+print()
+print("The data type is:",type(L1 is L2))
+print()
+print("The result is:",L1 is not L2)
+print()
+print("The data type is:",type(L1 is not L2))
+print()
+time.sleep(2)
+print('End of an application')
+
+
+
+Ex5:
+===
+import time 
+L1=('A','B','C')
+L2=('A','B','C')
+print("=====Values=====")
+print(L1,L2)
+print()
+print("====Addresses=====")
+print(id(L1),id(L2))
+print()
+print("====Using An indentity operator=======")
+print("The result is:",L1 is L2)
+print()
+print("The data type is:",type(L1 is L2))
+print()
+print("The result is:",L1 is not L2)
+print()
+print("The data type is:",type(L1 is not L2))
+print()
+time.sleep(2)
+print('End of an application')
+
+
+
+Ex6:
+===
+import time 
+L1=[1001,1002,1003]
+L2=[1001,1002,1003]
+print("=====Values=====")
+print(L1,L2)
+print()
+print("====Addresses=====")
+print(id(L1),id(L2))
+print()
+print("=====Using == =======")
+print("The result_set is:",L1==L2)
+print()
+print("The data type is:",type(L1==L2))
+print()
+print("====Using is_operator =====")
+print("The result_set is:",L1 is L2)
+print()
+print("The data type is:",type(L1 is L2))
+print()
+time.sleep(3)
+print('End of an application')
+
+
+
+Ex7:
+===
+import time 
+L1=[1001,1002]
+L2=[1001,1002,1003]
+print("=====Values=====")
+print(L1,L2)
+print()
+print("====Addresses=====")
+print(id(L1),id(L2))
+print()
+print("=====Using == =======")
+print("The result_set is:",L1==L2)
+print()
+print("The data type is:",type(L1==L2))
+print()
+print("====Using is_operator =====")
+print("The result_set is:",L1 is L2)
+print()
+print("The data type is:",type(L1 is L2))
+print()
+time.sleep(3)
+print('End of an application')
+
+
+
+
+
+
+
+
+
+
+    

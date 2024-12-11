@@ -1,0 +1,323 @@
+While working with regular expression we do have following predefine functions
+which are as follows
+===================================================
+->match()
+->fullmatch()
+->search()
+->findall()
+->sub()
+->subn()
+->split()
+
+->match():
+=======
+It is a predefine function in Python while working with regular expression.The main objective
+of match() function is match the pattern from the indexing position and return that pattern as per
+the application reqn.
+
+
+Ex1:
+===
+import time 
+import re
+str1=input("Enter the String_Object:")
+A1=re.match(str1,"Django",re.I)
+if(A1!=None):
+    print(str1,": Pattern is matched from indexing_position successfully")
+else:
+    print(str1,": Pattern is not matched from indexing ....")
+print()
+time.sleep(2)
+print("End of an application")
+
+
+->fullmatch():
+==========
+It is a predefine function in Python while working with regular expression.The main 
+objective of fullmatch() function is match the complete pattern and return that pattern.
+
+
+Ex1:
+==
+import time 
+import re
+str1=input("Enter the String_Object:")
+A1=re.fullmatch(str1,"Django",re.I)
+if(A1!=None):
+    print(str1,": 100% pattern matched ...")
+else:
+    print(str1,": Pattern is not matched ...")
+print()
+time.sleep(2)
+print("End of an application")
+
+
+->search():
+=======
+It is a predefine function in Python while working with regular expression.The main 
+objective of search() function and search the particular object from the pattern and 
+return that pattern if duplicate patten found simply ignore that one.
+
+
+Ex1:
+===
+import time 
+import re
+str1=input("Enter the String_Object:")
+A1=re.search(str1,"Django",re.I)
+if(A1!=None):
+    print(str1,": Object is found successfully")
+else:
+    print(str1,": Object is not found")
+print()
+time.sleep(2)
+print("End of an application")
+
+
+^A ---->Wheather our pattern starts with A or not
+===============================
+Ex1:
+===
+import time 
+import re
+str1=input("Enter the String_Object:")
+A1=re.search("^A",str1,re.I)
+if(A1!=None):
+    print(str1,": Pattern starts with A|a")
+else:
+    print(str1,":Pattern not starts with A|a")
+print()
+time.sleep(2)
+print("End of an application")
+
+
+
+A$ --->Wheather our ends with a|A or not
+============================
+
+Ex1:
+===
+import time 
+import re
+str1=input("Enter the String_Object:")
+A1=re.search("A$",str1,re.I)
+if(A1!=None):
+    print(str1,": Pattern ends with A|a")
+else:
+    print(str1,":Pattern not ends with A|a")
+print()
+time.sleep(2)
+print("End of an application")
+
+
+findall():
+=====
+It is a predefine function in Python while working with regular expression.The main 
+objective of findall() return pattern objects inside the list as per the application reqn.
+
+
+Ex1:
+==
+import time 
+import re
+res1=re.findall("\d","ABC_abc_1234567@gmail.com")
+print(res1)
+print()
+print(type(res1))
+print()
+for x1 in res1:
+    print(x1)
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Ex2:
+===
+import time 
+import re
+res1=re.findall("[A-Z]","ABC_abc_1234567@gmail.com")
+print(res1)
+print()
+print(type(res1))
+print()
+for x1 in res1:
+    print(x1)
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Ex3:
+===
+import time 
+import re
+res1=re.findall("[a-zA-Z]","ABC_abc_1234567@gmail.com")
+print(res1)
+print()
+print(type(res1))
+print()
+for x1 in res1:
+    print(x1)
+print()
+time.sleep(2)
+print("End of an application")
+
+
+->sub():
+======
+It is a predefine function in Python while working with regular expression.The main
+objective of sub() function is replace character as per the application reqn.
+
+sub("any_class","What to replace","Our Pattern")
+
+
+Ex1:
+===
+import time 
+import re
+res2=re.sub("\d","X","ABC_abc_1234567@gmail.com")
+print(res2)
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Ex2:
+===
+import time 
+import re
+res2=re.sub("[ABCabc]","X","ABC_abc_1234567@gmail.com")
+print(res2)
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Ex3:
+===
+import time 
+import re
+res2=re.sub("[.]","X","ABC_abc_1234567@gmail.com")
+print(res2)
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Ex4:
+===
+import time 
+import re
+res2=re.sub(".","X","ABC_abc_1234567@gmail.com")
+print(res2)
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Ex5:
+===
+import time 
+import re
+res2=re.sub("[^.]","X","ABC_abc_1234567@gmail.com")
+print(res2)
+print()
+time.sleep(2)
+print("End of an application")
+
+
+subn():
+====
+It is a predefine function in Python while working with regular expression.The main 
+objective of subn() is repalce the pattern and return that pattern as per the application
+req.subn() function return the data in tuple format.
+
+subn("any_class","Replacement","Pattern")
+
+res1[0] ---->Replacement objects
+res1[1] --->How many number of time a character has replaced.
+
+
+Ex1:
+===
+import time 
+import re
+res2=re.subn("[0-9]","X","ABC_abc_1234567@gmail.com")
+print(res2[0])
+print()
+print(res2[1])
+print()
+print(type(res2))
+print()
+time.sleep(2)
+print("End of an application")
+
+
+->split():
+======
+It is a predefine function in Python with working with regular expression.The main 
+objective of split() function is split() the pattern objects as per the application reqn.split()
+function return the data inside the List.
+
+
+Ex1:
+==
+import time 
+import re
+data_set="2001-2002-2003-2004-2005"
+res1=re.split("-",data_set)
+print(res1)
+print()
+print(type(res1))
+print()
+for x1 in res1:
+    print(x1)
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Ex2:
+===
+import time 
+import re
+data_set="2001,2002,2003,2004,2005"
+res1=re.split(",",data_set)
+print(res1)
+print()
+print(type(res1))
+print()
+for x1 in res1:
+    print(x1)
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Ex3:
+===
+import time 
+import re
+data_set="www.google.com"
+res1=re.split("[.]",data_set)
+print(res1)
+print()
+print(type(res1))
+print()
+for x1 in res1:
+    print(x1)
+print()
+time.sleep(2)
+print("End of an application")
+
+
+
+
+
+
+
+
+
+
+

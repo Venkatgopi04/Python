@@ -1,0 +1,112 @@
+Inner class/Nested classes:
+=================
+Python supports Nested classes/Inner classes.It can be represent as defining or
+declaring a class inside another class then we can go inner classes/nested classes.
+
+
+Without existing one type of object there is no chance of existing another type of
+object then we can go with Inner classes/Nested classes
+
+
+class Car_Class:
+          -----
+          class Engine_Class:
+                   ----
+
+class Univercity:
+              ----
+             class Colleges:
+                    ----
+
+Ex1:
+===
+import time 
+class Univercity:
+    print("Univercity_class Implementation ...")
+    class College:
+        print("College_class Implementation ...")
+        def m1(self):
+            print("1.AI with 4 years")
+            print("2.DL with 4 years")
+            print("3.ML with 4 years")
+u1=Univercity()
+c1=u1.College()
+c1.m1()
+print()
+time.sleep(3)
+print("End of an application")
+
+Ex2:
+===
+import time 
+class Univercity:
+    print("Univercity_class Implementation ...")
+    class College:
+        print("College_class Implementation ...")
+        def m1(self):
+            print("1.AI with 4 years")
+            print("2.DL with 4 years")
+            print("3.ML with 4 years")
+u1=Univercity().College().m1()
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Name of the Employee:Tannay Kumar
+Date of Joining:1/11/2024
+
+
+Ex3:
+===
+import time 
+class Employee_Class:
+    def __init__(self):
+        self.name="Tanay Kumar"
+        self.doj=self.DOJ() 
+    def m1(self):
+        print("Name of the employee is:",self.name)
+        self.doj.m2()
+    class DOJ:
+        def __init__(self):
+            self.day=1
+            self.month=11 
+            self.year=2024 
+        def m2(self):
+            print("Date of Joining is:{}/{}/{}".format(self.day,self.month,self.year))
+e1=Employee_Class()
+e1.m1()
+
+print()
+time.sleep(3)
+print("End of an application")
+
+
+
+Ex4:
+==
+import time 
+class Robot_Class:
+    def __init__(self):
+        self.name="Chitti_3 with AI"
+        self.head=self.HEAD() 
+    def m1(self):
+        print("Robot_Name is:",self.name)
+        self.head.talk()
+        self.head.chip.think()
+    class HEAD:
+        def __init__(self):
+            self.chip=self.CHIP() 
+        def talk(self):
+            print()
+            print("Chitti_3 is talking about sana")
+        class CHIP:
+            def think(self):
+                print()
+                print("Chitti_3 is thinking about sana ..")
+r1=Robot_Class()
+r1.m1()
+print()
+time.sleep(3)
+print("End of an application")
+

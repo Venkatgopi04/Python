@@ -1,0 +1,236 @@
+Advance Python(OOPL):
+==============
+
+Q1)When do we say a programming language is said to be Object Oriented
+Programming Language?
+
+->A Programming Language is said to be Object Oriented Programming
+Language if it contains classes,objects,methods and if our Python Script/Python
+Program starts with class?
+
+
+What is a class?
+===========
+class is a design or blueprint or template
+
+How to create a class in Python:
+====================
+A class can be created in Python using class keyword followed class_name.
+
+class IHUB_1:
+        -----
+
+
+What is an Object?
+============
+An object is a Physical exitance of class or real time entity.
+
+
+How to create an Object in Python?
+=====================
+class I_HUB: ---->Class_Name
+      ----
+i1=I_HUB() ---->An object creation
+
+
+While working with OOPL we do have following methods:
+===================================
+->Constructor
+->Instance Method(Non static method)
+->Class Method
+->Static Method 
+
+
+While working with OOPL we do have following variables:
+===================================
+->Instance variable(Non static variable)
+->Static variable
+->Local variable
+->Default variable
+
+
+Note:
+====
+      While working with OOPL root class is a Object_Class
+
+
+Constructor:
+==========
+->In python constructor can be define or declare as follows
+
+                             def __init__(self):
+                                   ---
+->The main objective of constructor method/function is to define or delcare
+application variables.
+
+->Constructor will be executed automatically when we create an object of class.
+
+->Per object constructor will be executed only once
+
+->If we are not defining or declaring a constructor method/function then 
+PVM will respsonsible to define default constructor.
+
+
+Ex1:
+==
+import time  
+class I_HUB_1:
+    def __init__(self):
+        print("Constructor_Method/Constrcutor_Function")
+i1=I_HUB_1()
+print()
+time.sleep(3)
+print("End of an application")
+
+
+Ex2:
+===
+import time  
+class I_HUB_1:
+    def __init__(X1):
+        print("Constructor_Method/Constrcutor_Function")
+i1=I_HUB_1()
+print()
+time.sleep(3)
+print("End of an application")
+
+
+Ex3:
+===
+import time  
+class I_HUB_1:
+    def __init__(self):
+        print("Constructor_Method/Constrcutor_Function")
+i1=I_HUB_1()
+print()
+i2=I_HUB_1()
+print()
+i3=I_HUB_1()
+print()
+time.sleep(3)
+print("End of an application")
+
+
+Instance Method(Non static method):
+=========================
+->In python we can define or declare a Intance method/non static method as 
+follows
+                               def m1(self):
+                                     ----
+
+->The main objective of Instance Method(Non static method) is to write the 
+business logic as per the application reqn
+
+
+->We can access Instance method(Non static method) using object reference 
+variable.
+
+
+Ex1:
+===
+import time 
+class I_HUB_2:
+    def m1(self):
+        print("Intance_Method/Non Static_Method")
+i1=I_HUB_2()
+i1.m1()
+print()
+time.sleep(3)
+print("End of an application")
+
+
+Static method:
+===========
+->Static method can be define or declare using @classmethod name which are
+as follows
+    
+                                      @classmethod
+                                        def m2(cls):
+                                            ----
+->The main objective of Static method is perform class level operations
+
+->We can access static method using following ways
+
+                              ->Using class_name
+                              ->Using object reference variable
+
+
+Ex1:
+==
+import time 
+class I_HUB_3:
+    @classmethod 
+    def m2(cls):
+        print("Class_Method")
+i1=I_HUB_3()
+i1.m2()
+print()
+I_HUB_3.m2()
+print()
+time.sleep(3)
+print("End of an application")
+
+
+Static Method:
+=========
+->In Python we can define or declare a Static method using @staticmethod which
+are as follows
+
+                                              @staticmethod
+                                                def m3():
+                                                      ---
+
+->The main objective of static method is meant for general utility purpose or
+instance use. 
+
+
+->We can access static method using following ways
+
+                                       ->Using object referecne variable
+                                       ->Using class_name
+
+
+Ex1:
+===
+import time 
+class I_HUB_3:
+    @staticmethod 
+    def m3():
+        print("Static_Method ....")
+i1=I_HUB_3()
+i1.m3()
+print()
+I_HUB_3.m3()
+print()
+time.sleep(3)
+print("End of an application")
+
+
+Ex2:
+===
+import time 
+class I_HUB_3:
+    @staticmethod 
+    def m3(X1,X2):
+        print("Sum is:",X1+X2)
+        
+i1=I_HUB_3()
+i1.m3(1000,2000)
+print()
+I_HUB_3.m3(3000,4000)
+print()
+time.sleep(3)
+print("End of an application")
+
+
+
+
+                                     
+
+ 
+
+
+
+
+
+

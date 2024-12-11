@@ -1,0 +1,322 @@
+An interface:
+========
+An interface can be represent as if abstract classes can only contains abstract methods
+then it is said to be An interface.In real world application an interface can be implmented for 
+specification purpose.
+
+globals()[] ---->Converts string into a object
+
+
+Ex1:
+===
+import time 
+from abc import * 
+class I_HUB_IT_SERVICES(ABC):
+    @abstractmethod 
+    def m1(self):
+        pass 
+    @abstractmethod 
+    def m2(self):
+        pass 
+class MYSQL_DB(I_HUB_IT_SERVICES):
+    def m1(self):
+        print("Connecting to MYSQL_DB for Indian_Userrs")
+    def m2(self):
+        print("Disconneting form MYSQL_DB for Indain_Users")
+class MONGO_DB(I_HUB_IT_SERVICES):
+    def m1(self):
+        print("Connecting to MONGO_DB for USA_Userrs")
+    def m2(self):
+        print("Disconneting form MONGO_DB for USA_Users")
+class Oracle(I_HUB_IT_SERVICES):
+    def m1(self):
+        print("Connecting to Oracle for Cananda_Userrs")
+    def m2(self):
+        print("Disconneting form Oracle for Canada_Users")
+class PostGreSQL(I_HUB_IT_SERVICES):
+    def m1(self):
+        print("Connecting to PosGRESQL for chinese_Userrs")
+    def m2(self):
+        print("Disconneting form Oracle for Chinese_Users")
+DB_Name=input("Enter the Database_Name:")
+X1=globals()[DB_Name]
+obj1=X1()
+time.sleep(3)
+obj1.m1()
+print()
+time.sleep(3)
+obj1.m2()
+print()
+time.sleep(3)
+print("End of an application")
+
+
+Q1)What is the difference between an abstract classes and an interface?
+=============================================
+
+An abstract classes can contains abstract methods and non abstract methods as well
+
+An interface can only contains an abstract methods
+
+
+Ex1:
+==
+import time 
+from abc import * 
+class I_HUB_1(ABC):
+    def m1(self):
+        pass 
+    @abstractmethod 
+    def m2(self):
+        pass 
+class I_HUB_2(I_HUB_1):
+    def m1(self):
+        print("This is m1 method")
+    def m2(self):
+        print("This is m2 method")
+i1=I_HUB_2()
+i1.m1()
+print()
+i1.m2()
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Ex2:
+===
+import time 
+from abc import * 
+class I_HUB_1(ABC):
+    @abstractmethod
+    def m1(self):
+        pass 
+    @abstractmethod 
+    def m2(self):
+        pass 
+class I_HUB_2(I_HUB_1):
+    def m1(self):
+        print("This is m1 method")
+    def m2(self):
+        print("This is m2 method")
+i1=I_HUB_2()
+i1.m1()
+print()
+i1.m2()
+print()
+time.sleep(2)
+print("End of an application")
+
+
+concrete classes:
+===========
+Python supports concrete classes.The main objective of concrete classses is to provide the
+complete services to the application.
+
+
+Ex1:
+===
+import time 
+from abc import *
+class I_HUB_1(ABC):
+    @abstractmethod 
+    def m1(self):
+        pass 
+    @abstractmethod 
+    def m2(self):
+        pass 
+    @abstractmethod 
+    def m3(self):
+        pass 
+    @abstractmethod 
+    def m4(self):
+        pass 
+class I_HUB_2(I_HUB_1):
+    def m1(self):
+        print("M1_service")
+    def m2(self):
+        print("M2_service")
+    def m3(self):
+        print("M3_service")
+i1=I_HUB_2()
+i1.m1()
+print()
+i1.m2()
+print()
+i1.m3()
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Ex2:
+===
+import time 
+from abc import *
+class I_HUB_1(ABC):
+    @abstractmethod 
+    def m1(self):
+        pass 
+    @abstractmethod 
+    def m2(self):
+        pass 
+    @abstractmethod 
+    def m3(self):
+        pass 
+    @abstractmethod 
+    def m4(self):
+        pass 
+class I_HUB_2(I_HUB_1):
+    def m1(self):
+        print("M1_service")
+    def m2(self):
+        print("M2_service")
+    def m3(self):
+        print("M3_service")
+class I_HUB_3(I_HUB_2):
+    def m4(self):
+        print("M4_Service")
+i1=I_HUB_3()
+i1.m1()
+print()
+i1.m2()
+print()
+i1.m3()
+print()
+i1.m4()
+print()
+time.sleep(3)
+print("End of an application")
+
+
+why do we require concrete classes:
+=======================
+
+Ex1:
+===
+import time 
+from abc import *
+class I_HUB_1(ABC):
+    @abstractmethod 
+    def m1(self):
+        pass 
+    @abstractmethod 
+    def m2(self):
+        pass 
+    @abstractmethod 
+    def m3(self):
+        pass 
+    @abstractmethod 
+    def m4(self):
+        pass 
+class I_HUB_2(I_HUB_1):
+    def m1(self):
+        print("M1_service")
+    def m2(self):
+        print("M2_service")
+    def m3(self):
+        print("M3_service")
+    def m4(self):
+        print("M4_Service")
+i1=I_HUB_2()
+i1.m1()
+print()
+i1.m2()
+print()
+i1.m3()
+print()
+i1.m4() 
+print()
+time.sleep(3)
+print("End of an application")
+
+
+Access modifiers:
+===========
+Python supports Access modifier.Following are the Access modifier in Python
+
+->public 
+->protected
+->private
+
+
+->public:
+======
+public is a access modifier.We can define as delcare as follows
+
+A=1000  ---->public access modifier
+
+The scope of the public access modifier we can access any where in our application.
+
+
+->protected:
+=========
+protected access  modifier can be define or declare _ followed variable_name.
+
+_B=2000 
+
+The scope  of  the protected access modifier can access with_in the class and outsite the
+class as well.
+
+
+->private:
+======
+private access modifier can be define or declare __ followed variable_name.
+
+__C=3000 
+
+The scope of the private access modifier can access with in the class.
+
+
+Ex1:
+==
+import time 
+class I_HUB_APP_STORE:
+    Pid=1001 
+    _Pname="Mobile_1"
+    __Price=29000 
+    def __ini__(self):
+        pass 
+    def m1(self):
+        print("Pid is:",I_HUB_APP_STORE.Pid)
+        print()
+        print("Pname is:",I_HUB_APP_STORE._Pname)
+        print()
+        print("Price is:",I_HUB_APP_STORE.__Price)
+i1=I_HUB_APP_STORE()
+i1.m1()
+print()
+print("Pid is:",I_HUB_APP_STORE.Pid)
+print()
+print("Pname is:",I_HUB_APP_STORE._Pname)
+print()
+print("Price is:",I_HUB_APP_STORE.__Price)
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Encupsulation:
+==========
+Python supports Encupsulation.It is the process or methodlogy to hide the internal 
+implementation and showing the services what we are seeing.The main objective o f
+Encupsulation is to provide the security to the data/information
+
+
+setter():It is used to set the data 
+getter():It is used to get the data.
+
+
+
+
+
+
+
+
+
+
+   
+   
+
+
+    

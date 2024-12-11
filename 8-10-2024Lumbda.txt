@@ -1,0 +1,177 @@
+Names less function(Lamda function):
+=======================
+Name less function can be represent as a function which does not have any 
+name then it is said to be Name less function.In Python nameless function can
+be represent as using lambda keyword
+
+S1=lambda:expression
+
+Ex1:
+==
+import time 
+if(__name__=="__main__"):
+    S1=lambda x1:x1*x1 
+    print("Square of + number is:",S1(12))
+    print()
+    print("Square of - number is:",S1(-9))
+    print()
+    print("Square of floating_Number is:",S1(11.34))
+print()
+time.sleep(3)
+print('End of an application')
+
+
+Ex2:
+===
+import time 
+if(__name__=="__main__"):
+    A1=lambda a,b:a+b 
+    print("Sum is:",A1(120,180))
+    print()
+    print("Sum is:",A1(123.12,178.123))
+print()
+time.sleep(2)
+print('End of an application')
+
+
+Ex4:
+==
+import time 
+if(__name__=="__main__"):
+    max=lambda a,b:a if a>b else b 
+    print("Max of two number is:",max(1001,3001))
+print()
+time.sleep(2)
+print('End of an application')
+
+
+Ex5:
+===
+import time 
+if(__name__=="__main__"):
+    max=lambda a,b,c:a if a>b and a>c else b if b>c else c 
+    print("Max of three number is:",max(1001,3001,5001))
+print()
+time.sleep(2)
+print('End of an application')
+
+
+->filter()
+->map()
+->reduce()
+
+
+->filter():
+======
+It is a predefine function in Python.The main objective of filter() function is to 
+filter the data/information as per the application reqn.filter() is applicable for 
+name_full function and name_less function.
+
+
+filter() using Name_Full function:
+=====================
+Ex1:
+==
+import time 
+def Test_Case1(Number_1):
+    if(Number_1%2==0):
+        return True 
+    else:
+        return False 
+if(__name__=="__main__"):
+    Number_1=[1,2,3,4,5,6,7,8,9,10]
+    L1=list(filter(Test_Case1,Number_1))
+    print(L1)
+    print()
+    for x1 in L1:
+        print("Even_Numbers are:",x1)
+print()
+time.sleep(3)
+print('End of an application')
+
+
+filter() function with Name_less function:
+=========================
+
+Ex1:
+===
+import time 
+if(__name__=="__main__"):
+    Number_1=[1,2,3,4,5,6,7,8,9,10]
+    L1=list(filter(lambda x1:x1%2==0,Number_1))
+    print(L1)
+    print()
+    for y1 in L1:
+        print('Even_Numbers are:',y1)
+print()
+time.sleep(3)
+print('End of an application')
+
+
+->map():
+======
+It is a predefine function in Python.The main objective of map() function is  to 
+take each object from list and perform some operations and store into another
+list.map() function is applicable for both name_full and name_less function.
+
+
+map() with name_full function:
+====================
+
+Ex1:
+===
+import time 
+def Test_Case1(Number_2):
+    return Number_2*5
+if(__name__=="__main__"):
+    Number_2=[121,145,167,189,211,212,278]
+    obj1=list(map(Test_Case1,Number_2))
+    print(obj1)
+    print()
+    for z1 in obj1:
+        print("The result_set processing values are:",z1)
+print()
+time.sleep(3)
+print('End of an application')
+
+
+map() function with name_less function(lambda function):
+====================================
+
+Ex1:
+==
+import time 
+if(__name__=="__main__"):
+    Number_2=[121,145,167,189,211,212,278]
+    X1=list(map(lambda obj1:obj1*5,Number_2))
+    print(X1)
+    print()
+    for x1 in X1:
+        print("The processing_values are:",x1)
+print()
+time.sleep(3)
+print("End of an application")
+
+->reduce():
+========
+It is a predefine function in Python.The main objective of reduce() function is combine
+multiple objects into single entity.reduce() is present in functools module.
+
+
+Ex1:
+===
+import time 
+from functools import reduce 
+if(__name__=="__main__"):
+    Emp_Salary=[29000,31000,34000,37000,43000,56000]
+    Total_Salary=reduce(lambda x1,y1:x1+y1,Emp_Salary)
+    print("Total Salary of Python developer's Team is:",Total_Salary)
+print()
+time.sleep(2)
+print('End of an application')
+
+
+
+
+
+   

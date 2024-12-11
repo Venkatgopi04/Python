@@ -1,0 +1,318 @@
+Generators in Python:
+==============
+Python supports Generators.In Python generators are functions.Which return the generator
+object and class generator.The main objective of Generators is to read any size of data with
+disturbing the operating system.In Python generators can be implemented using yield keyword and
+next().
+
+Ex1:
+==
+import time 
+def Test_Case1():
+    str1="Core Python"
+    yield str1 
+    str2="Advance Python"
+    yield str2 
+    str3="FrontEnd with Django"
+    yield str3 
+    str4="Angular/React with Flask"
+    yield str4
+
+if(__name__=="__main__"):
+    x1=Test_Case1()
+    print(next(x1))
+    print()
+    print(next(x1))
+    print()
+    print(next(x1))
+    print()
+    print(next(x1))
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Ex2:
+===
+import time 
+def Test_Case1():
+    str1="Core Python"
+    yield str1 
+    str2="Advance Python"
+    yield str2 
+    str3="FrontEnd with Django"
+    yield str3 
+    str4="Angular/React with Flask"
+    yield str4
+
+if(__name__=="__main__"):
+    x1=Test_Case1()
+    print(next(x1))
+    print()
+    print(next(x1))
+    print()
+    print(next(x1))
+    print()
+    print(next(x1))
+    print()
+    print(next(x1))
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Ex3:
+===
+import time 
+def Test_Case1():
+    str1="Core Python"
+    yield str1 
+    str2="Advance Python"
+    yield str2 
+    str3="FrontEnd with Django"
+    yield str3 
+    str4="Angular/React with Flask"
+    yield str4
+
+if(__name__=="__main__"):
+    x1=Test_Case1()
+    for x2 in x1:
+        print(x2)
+ 
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Ex4:
+===
+import time 
+def Test_Case1():
+    T1=(x*x for x in range(15))
+    print(T1)
+    print()
+    print(type(T1))
+if(__name__=="__main__"):
+    Test_Case1()
+print()
+time.sleep(2)
+print("End of an application")
+
+Ex5:
+===
+import time 
+def Test_Case1():
+    L1=[x*x for x in range(10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000)]
+    print(L1)
+   
+if(__name__=="__main__"):
+    Test_Case1()
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Ex6:
+===
+import time 
+def Test_Case1():
+    L1=[101,102,103,104,105,106,107,108,109]
+    S1=0 
+    for x1 in L1:
+        S1=S1+x1 
+    yield S1 
+if(__name__=="__main__"):
+    x1=Test_Case1()
+    print("Sum of a list is:",next(x1))
+print()
+time.sleep(3)
+print("End of an application")
+
+
+Ex7:
+===
+import time 
+def Test_Case1():
+    L1=[101,102,103,104,105,106,107,108,109]
+    for x1 in range(len(L1)):
+        if(L1[x1]%2==1):
+            yield L1[x1]
+   
+if(__name__=="__main__"):
+    obj1=Test_Case1()
+    for obj2 in obj1:
+        print(obj2)
+   
+print()
+time.sleep(3)
+print("End of an application")
+
+
+Ex8:
+===
+import time 
+def Test_Case1():
+    str1="Data Engineer"
+    str2="" 
+    for x1 in range(len(str1)):
+        str2=str1[x1]+str2 
+    yield str2 
+if(__name__=="__main__"):
+    x1=Test_Case1()
+    print("Reverse of a string is:",next(x1))
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Ex9:
+===
+import time 
+def Test_Case1():
+    str1="Data Engineer"
+    for x1 in range(len(str1)):
+        if(str1[x1] in ("AEIOUaeiou")):
+            yield str1[x1]
+  
+if(__name__=="__main__"):
+    x1 = Test_Case1()
+    for x2 in x1:
+        print("Vowels are:",x2)
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Asseration in Python:
+=============
+Python supports Asserations.Asseration is nothing but performing debuging operations using
+Python.Debuging can be represent as find and fix the errors as the application reqn.In Python 
+asseration can be implemented using assert keyword.
+
+
+Note:
+====
+        assert is a ulternative solution for print() function
+
+
+In Python we do have typed asserations
+
+->Simple asseration:It is used to display the asseration error
+->Augmented Asseration:It is used to display asseration errors with meaning full message.
+
+
+In real world application Asseration(Debugging) can be implemented in Following phases of 
+SDLC(Software Development Life Cycle):
+====================================================
+->Assertation(Debugging) Can be implemented in Development Phase
+->Asseration(Debugging) Can be implenented in Test Phase 
+->Not in Deployment/Production Phase
+
+
+Ex1:
+===
+import time 
+Pid=1001
+Pid>1001 
+print()
+print("Pid is:",Pid)
+print()
+time.sleep(3)
+print("End of an application")
+
+
+Ex2:
+===
+import time 
+Pid=1001
+assert Pid>1001 
+print()
+print("Pid is:",Pid)
+print()
+time.sleep(3)
+print("End of an application")
+
+
+Ex3:
+===
+import time 
+Pid=1001
+assert Pid>1001,"Dear Customer how 1001 >1001 sorry ...."
+print()
+print("Pid is:",Pid)
+print()
+time.sleep(3)
+print("End of an application")
+
+
+Developer's Code:
+============
+import time 
+def Test_Square_Case1(X1):
+    return X1**X1 
+if(__name__=="__main__"):
+    print(Test_Square_Case1(2))
+    print()
+    print(Test_Square_Case1(3))
+    print()
+    print(Test_Square_Case1(4))
+    print()
+    print(Test_Square_Case1(5))
+    print()
+    print(Test_Square_Case1(6))
+print()
+time.sleep(3)
+print("End of an application")
+
+
+Tester's code:
+==========
+import time 
+def Test_Square_Case1(X1):
+    return X1**X1 
+assert Test_Square_Case1(3)==9,"Square of 3 is 9"
+assert Test_Square_Case1(4)==16,"Square of 4 is 16"
+assert Test_Square_Case1(5)==25,"Square of 5 is 25"
+assert Test_Square_Case1(6)==36,"Square of 6 is 36"
+if(__name__=="__main__"):
+    print(Test_Square_Case1(2))
+    print()
+    print(Test_Square_Case1(3))
+    print()
+    print(Test_Square_Case1(4))
+    print()
+    print(Test_Square_Case1(5))
+    print()
+    print(Test_Square_Case1(6))
+print()
+time.sleep(3)
+print("End of an application")
+
+
+Ex2:
+====
+import time 
+def Test_Square_Case1(X1):
+    return X1*X1 
+assert Test_Square_Case1(3)==9,"Square of 3 is 9"
+assert Test_Square_Case1(4)==16,"Square of 4 is 16"
+assert Test_Square_Case1(5)==25,"Square of 5 is 25"
+assert Test_Square_Case1(6)==36,"Square of 6 is 36"
+if(__name__=="__main__"):
+    print(Test_Square_Case1(2))
+    print()
+    print(Test_Square_Case1(3))
+    print()
+    print(Test_Square_Case1(4))
+    print()
+    print(Test_Square_Case1(5))
+    print()
+    print(Test_Square_Case1(6))
+print()
+time.sleep(3)
+print("End of an application")
+
+
+
+
+

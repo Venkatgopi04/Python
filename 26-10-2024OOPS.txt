@@ -1,0 +1,118 @@
+Ex1:
+==
+import time 
+class I_HUB_IT_SERVICES:
+    def __init__(self):
+        self.Eid=1001 
+        self.Ename="Jessica_1"
+        self.Esal=47000.0 
+        self.Design="Software Engineer"
+        self.Company="HCL"
+    def m1(self):
+        print("====Employees_Information====")
+        print("Eid is:",self.Eid)
+        print("Ename is:",self.Ename)
+        print("Esal is:",self.Esal)
+        print("Design is:",self.Design)
+        print("Company is:",self.Company)
+i1=I_HUB_IT_SERVICES()
+i1.m1()
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Ex2:
+==
+import time 
+class I_HUB_IT_SERVICES:
+    def __init__(self,Eid,Ename,Esal,Design,Company):
+        self.Eid=Eid
+        self.Ename=Ename
+        self.Esal=Esal
+        self.Design=Design
+        self.Company=Company
+    def m1(self):
+        print("====Employees_Information====")
+        print("Eid is:",self.Eid)
+        print("Ename is:",self.Ename)
+        print("Esal is:",self.Esal)
+        print("Design is:",self.Design)
+        print("Company is:",self.Company)
+i1=I_HUB_IT_SERVICES(1001,"Jessica_1",47000.0,"Application Developer","HCL")
+i1.m1()
+print()
+time.sleep(2)
+print("End of an application")
+
+Ex3:
+==
+import time 
+class I_HUB_IT_SERVICES:
+    def __init__(self,Eid,Ename,Esal,Design,Company):
+        self.Eid=Eid
+        self.Ename=Ename
+        self.Esal=Esal
+        self.Design=Design
+        self.Company=Company
+    def m1(self):
+        print("====Employees_Information====")
+        print("Eid is:",self.Eid)
+        print("Ename is:",self.Ename)
+        print("Esal is:",self.Esal)
+        print("Design is:",self.Design)
+        print("Company is:",self.Company)
+        print()
+i1=I_HUB_IT_SERVICES(1001,"Jessica_1",47000.0,"Application Developer","HCL")
+i1.m1()
+print()
+i2=I_HUB_IT_SERVICES(1002,"Jessica_2",49000.0,"Software Developer","HCL")
+i2.m1()
+i3=I_HUB_IT_SERVICES(1003,"Jessica_3",57000.0,"Application Developer","HCL")
+i3.m1()
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Ex4:
+===
+import time 
+class I_HUB_IT_SERVICES:
+    def __init__(self):
+        self.Eid=int(input("Enter the Eid:"))
+        self.Ename=input("Enter the Ename:")
+        self.Esal=float(input("Enter the Esal:"))
+        self.Company=input("Enter the Company:")
+    def m1(self):
+        print("=====Employees_Details=====")
+        print(self.Eid,self.Ename,self.Esal,self.Company)
+i1=I_HUB_IT_SERVICES()
+i1.m1()
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Ex5:
+===
+import time 
+class I_HUB_IT_SERVICES:
+    def __init__(self,Eid,Ename,Esal,Company):
+        self.Eid=int(input("Enter the Eid:"))
+        self.Ename=input("Enter the Ename:")
+        self.Esal=float(input("Enter the Esal:"))
+        self.Company=input("Enter the Company:")
+    def m1(self):
+        print("=====Employees_Details=====")
+        print(self.Eid,self.Ename,self.Esal,self.Company)
+i1=I_HUB_IT_SERVICES(Eid=None,Ename=None,Esal=None,Company=None)
+i1.m1()
+print()
+time.sleep(2)
+print("End of an application")
+
+       
+
+
+       

@@ -1,0 +1,491 @@
+CLA in Python :
+==========
+Python supports CLA which stands for command line argument.CLA or command
+line argument can be represent if we are passing one or more than one arguments
+at time of executing Python Script then it is said to be CLA or command line argument.
+To implement CLA in Python we do have a module named sys module inside the 
+sys module we do have a variable named as argv variable.
+
+
+->argv_variable returns the data or information in List_Format
+
+->Inside the List at indexing position file_name will be placed
+
+->While working argv_variable indexing is applicable
+
+->While working with argv_variable slicing is also applicable
+
+->Each argument inside the List bydefault are string type we need to
+perform Typecasting
+
+->While working with argv_variable if you want to  enter the Full_Name 
+we must "" not single quotation
+
+
+Ex1:
+==
+import time 
+from sys import * 
+print(argv)
+print()
+print(type(argv))
+print()
+time.sleep(2)
+print('End of an application')
+
+
+OUTPUT:
+======
+
+C:\Users\Admin\Desktop>Python test1.py 10 20 30
+['test1.py', '10', '20', '30']
+
+<class 'list'>
+
+End of an application
+
+
+Ex2:
+===
+import time 
+from sys import * 
+print(argv)
+print()
+print(type(argv))
+print()
+print("====Using_Indexing====")
+print(argv[0])
+print(argv[1])
+print(argv[2])
+print(argv[3])
+print()
+time.sleep(2)
+print('End of an application')
+
+
+OUTPUT:
+=====
+
+C:\Users\Admin\Desktop>Python test1.py 10 20 30
+['test1.py', '10', '20', '30']
+
+<class 'list'>
+
+====Using_Indexing====
+test1.py
+10
+20
+30
+
+End of an application
+
+C:\Users\Admin\Desktop>
+
+
+Ex3:
+===
+import time 
+from sys import * 
+print(argv)
+print()
+print(type(argv))
+print()
+print("====Slicing====")
+print(argv[1:])
+print()
+time.sleep(2)
+print('End of an application')
+
+
+OUTPUT:
+=====
+
+C:\Users\Admin\Desktop>Python test1.py 10 20 30
+['test1.py', '10', '20', '30']
+
+<class 'list'>
+
+====Slicing====
+['10', '20', '30']
+
+End of an application
+
+C:\Users\Admin\Desktop>
+
+
+Ex4:
+===
+import time 
+from sys import * 
+print(argv)
+print()
+print(type(argv))
+print()
+print("==== + ====")
+print(argv[1]+argv[2]+argv[3])
+print()
+time.sleep(2)
+print('End of an application')
+
+
+OUTPUT:
+=====
+
+C:\Users\Admin\Desktop>Python test1.py 10 20 30
+['test1.py', '10', '20', '30']
+
+<class 'list'>
+
+==== + ====
+102030
+
+End of an application
+
+C:\Users\Admin\Desktop>
+
+
+
+Ex5:
+===
+import time 
+from sys import * 
+print(argv)
+print()
+print(type(argv))
+print()
+print("==== + ====")
+print(int(argv[1]+argv[2]+argv[3]))
+print()
+time.sleep(2)
+print('End of an application')
+
+
+Ex6:
+===
+import time 
+from sys import * 
+print(argv)
+print()
+print(type(argv))
+print()
+print("==== + ====")
+print(int(argv[1])+int(argv[2])+int(argv[3]))
+print()
+time.sleep(2)
+print('End of an application')
+
+
+Ex7:
+===
+import time 
+from sys import * 
+print(argv)
+print()
+print(type(argv))
+print()
+S1=0 
+for x1 in argv[1:]:
+    S1=S1+x1 
+print("The sum is:",S1)
+print()
+time.sleep(2)
+print('End of an application')
+
+
+OUTPUT:
+======
+C:\Users\Admin\Desktop>Python test1.py 10 20 30
+['test1.py', '10', '20', '30']
+
+<class 'list'>
+
+Traceback (most recent call last):
+  File "test1.py", line 9, in <module>
+    S1=S1+x1
+TypeError: unsupported operand type(s) for +: 'int' and 'str'
+
+C:\Users\Admin\Desktop>
+
+
+Ex8:
+===
+import time 
+from sys import * 
+print(argv)
+print()
+print(type(argv))
+print()
+S1=0 
+for x1 in argv[1:]:
+    x2=int(x1)
+    S1=S1+x2 
+print("The sum is:",S1)
+print()
+time.sleep(2)
+print('End of an application')
+
+
+OUTPUT:
+=====
+
+C:\Users\Admin\Desktop>Python test1.py 10 20 30
+['test1.py', '10', '20', '30']
+
+<class 'list'>
+
+The sum is: 60
+
+End of an application
+
+C:\Users\Admin\Desktop>Python test1.py 10 20 30 40 50 60 70
+['test1.py', '10', '20', '30', '40', '50', '60', '70']
+
+<class 'list'>
+
+The sum is: 280
+
+End of an application
+
+C:\Users\Admin\Desktop>
+
+
+Ex9:
+===
+import time 
+from sys import * 
+print("My full_name is:",argv[1])
+print()
+time.sleep(2)
+print('End of an application')
+
+
+
+Comprehension in Python:
+=================
+Python supports Comprehension.Comprehension can be represent as if we are 
+using one or more than one expresion with one or more than one condition then it 
+is said to be Comprehension in Python.Following data types are supported in Python
+which are as follows
+
+->List Comprehension
+->Tuple Comprehension
+->Set Comprehension
+->Dict Comprehension
+
+
+->List Comprehension:
+===============
+
+Ex1:
+===
+import time 
+L1=[x*x for x in range(5,16)]
+print(L1)
+print()
+print(type(L1))
+print()
+for x1 in L1:
+    print(x1)
+print()
+time.sleep(2)
+print('End of an application')
+
+
+Ex2:
+===
+import time 
+L1=[x*x for x in range(5,16) if x%2==0]
+print(L1)
+print()
+print(type(L1))
+print()
+for x1 in L1:
+    print(x1)
+print()
+time.sleep(2)
+print('End of an application')
+
+
+Ex3:
+===
+import time 
+L1=[x*x+1000 for x in range(5,16) if x%2==0]
+print(L1)
+print()
+print(type(L1))
+print()
+for x1 in L1:
+    print(x1)
+print()
+time.sleep(2)
+print('End of an application')
+
+
+->Tuple Comprehension:
+===============
+Python supports Tuple Comprehension.Tuple comprehension return the data or information
+in generator object and class in generator_class.
+
+
+Ex1:
+==
+import time 
+T1=(y1*y1 for y1 in range(10,31))
+print(T1)
+print()
+print(type(T1))
+print()
+time.sleep(2)
+print('End of an application')
+
+OUTPUT:
+======
+C:\Users\Admin\Desktop>Python test1.py "Rahul Veram"
+<generator object <genexpr> at 0x0000019A56286A20>
+
+<class 'generator'>
+
+End of an application
+
+
+Ex2:
+==
+import time 
+T1=(y1*y1 for y1 in range(10,31))
+print(*T1)
+print()
+print(type(T1))
+print()
+time.sleep(2)
+print('End of an application')
+
+
+Ex3:
+===
+import time 
+T1=(y1*y1 for y1 in range(10,31) if y1%2==1)
+for x1 in T1:
+    print(x1)
+print(type(T1))
+print()
+time.sleep(2)
+print('End of an application')
+
+
+->Set Comprehension:
+==============
+Ex1:
+==
+import time 
+S1={x1*x1 for x1 in range(3,31)}
+print(S1)
+print()
+print(type(S1))
+print()
+for y1 in S1:
+    print(y1)
+print()
+time.sleep(2)
+print('End of an application')
+
+
+Ex2:
+==
+import time 
+S1={x1*x1 for x1 in range(3,31) if x1%2==1}
+print(S1)
+print()
+print(type(S1))
+print()
+for y1 in S1:
+    print(y1)
+print()
+time.sleep(2)
+print('End of an application')
+
+
+->Dict Comprehension:
+================
+
+Ex1:
+===
+import time 
+D1={obj1:obj1*obj1 for obj1 in range(1,11)}
+print(D1)
+print()
+print(type(D1))
+print()
+print("Number","----","Square of Number")
+for y1,y2 in D1.items():
+    print(y1,"---",y2)
+print()
+time.sleep(2)
+print('End of an application')
+
+
+Ex2:
+===
+import time 
+D1={obj1:obj1*obj1 for obj1 in range(1,11) if obj1%2==0}
+print(D1)
+print()
+print(type(D1))
+print()
+print("Number","----","Square of Number")
+for y1,y2 in D1.items():
+    print(y1,"---",y2)
+print()
+time.sleep(2)
+print('End of an application')
+
+
+Ex3:
+===
+import time 
+D1={obj1:obj1*obj1 for obj1 in range(1,11) if obj1%2==1}
+print(D1)
+print()
+print(type(D1))
+print()
+print("Number","----","Square of Number")
+for y1,y2 in D1.items():
+    print(y1,"---",y2)
+print()
+time.sleep(2)
+print('End of an application')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

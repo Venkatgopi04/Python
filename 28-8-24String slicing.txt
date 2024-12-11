@@ -1,0 +1,454 @@
+String data type:
+==========
+
+->What is String?
+===========
+
+->String data type can be represent as collection of characters or sequence  of
+characters enclosed with '' or "" or '''''' or """""".
+
+
+->While working with String data type space is also consider a character.
+
+->Python supports Positive index which starts from 0 to end-1 and It is also known 
+as forward direction.
+
+->Python supports Negative index which starts from -1 to end+1.It is also known 
+Negative direction.
+
+->'''''' or """"" is also used for multiline content or paragraph format.
+
+
+Ex1:
+==
+import time 
+str1='Core Python'
+str2="Advance Python"
+str3='''FrontEnd with Django'''
+str4="""ReactJS/Angular with FastAPI and Flaskrestful"""
+str5='10'
+str6="True"
+str7="156.1"
+print()
+print("=====Values=====")
+print(str1)
+print(str2)
+print(str3)
+print(str4)
+print(str5)
+print(str6)
+print(str7)
+print()
+print("=====Data Types=====")
+print(type(str1))
+print(type(str2))
+print(type(str3))
+print(type(str4))
+print(type(str5))
+print(type(str6))
+print(type(str7))
+print()
+time.sleep(3)
+print('End of an application')
+
+
+I will be a 'Software Engineer' after Full Stack Python Development
+
+
+Ex1:
+==
+import time 
+str1="I will be a 'Software Engineer' after Full Stack Python Development"
+print()
+print(str1)
+print()
+print(type(str1))
+print()
+time.sleep(3)
+print("End of an application")
+
+
+Ex2:
+===
+import time 
+str1='''I will be a 'Software Engineer' after Full Stack Python Development'''
+print()
+print(str1)
+print()
+print(type(str1))
+print()
+time.sleep(3)
+print("End of an application")
+
+
+Ex3:
+===
+import time 
+str1="""I will be a 'Software Engineer' after Full Stack Python Development"""
+print()
+print(str1)
+print()
+print(type(str1))
+print()
+time.sleep(3)
+print("End of an application")
+
+
+Ex4:
+===
+import time 
+str1='I will be a 'Software Engineer' after Full Stack Python Development'
+print()
+print(str1)
+print()
+print(type(str1))
+print()
+time.sleep(3)
+print("End of an application")
+
+
+I will be a 'Software Engineer' after Full Stack "Python" Development
+
+
+Ex1:
+===
+import time 
+str1='''I will be a 'Software Engineer' after Full Stack "Python" Development'''
+print()
+print(str1)
+print()
+print(type(str1))
+print()
+time.sleep(3)
+print('End of an application')
+
+
+Ex2:
+===
+import time 
+str1="""I will be a 'Software Engineer' after Full Stack "Python" Development"""
+print()
+print(str1)
+print()
+print(type(str1))
+print()
+time.sleep(3)
+print('End of an application')
+
+
+Ex3:
+==
+import time 
+str1="I will be a 'Software Engineer' after Full Stack "Python" Development"
+print()
+print(str1)
+print()
+print(type(str1))
+print()
+time.sleep(3)
+print('End of an application')
+
+
+Ex4:
+===
+import time 
+str1='I will be a 'Software Engineer' after Full Stack "Python" Development'
+print()
+print(str1)
+print()
+print(type(str1))
+print()
+time.sleep(3)
+print('End of an application')
+
+
+Good morning
+Dear Students 
+Hope you are getting the concept
+Thank you
+
+
+Ex1:
+===
+import time 
+str1='''
+Good morning
+Dear Students 
+Hope you are getting the concept
+Thank you'''
+print()
+print(str1)
+print()
+print(type(str1))
+print()
+time.sleep(2)
+print('End of an application')
+
+
+Ex2:
+===
+import time 
+str1="""
+Good morning
+Dear Students 
+Hope you are getting the concept
+Thank you"""
+print()
+print(str1)
+print()
+print(type(str1))
+print()
+time.sleep(2)
+print('End of an application')
+
+
+Ex3:
+===
+import time 
+str1="Good morning
+Dear Students 
+Hope you are getting the concept
+Thank you"
+print()
+print(str1)
+print()
+print(type(str1))
+print()
+time.sleep(2)
+print('End of an application')
+
+
+Ex4:
+===
+import time 
+str1='Good morning
+Dear Students 
+Hope you are getting the concept
+Thank you'
+print()
+print(str1)
+print()
+print(type(str1))
+print()
+time.sleep(2)
+print('End of an application')
+
+->Python supports Positive index which starts from 0 to end-1 and Python also 
+supports Negative index which starts from -1 to end+1
+
+
+Ex1:
+==
+import time 
+str1="Core Python"
+print(str1)
+print()
+print(type(str1))
+print()
+print("====Using Positive_Direction====")
+print(str1[0])
+print(str1[1])
+print(str1[2])
+print(str1[3])
+print()
+print("=====Using Negative _Direction====")
+print(str1[-11])
+print(str1[-10])
+print(str1[-9])
+print(str1[-8])
+print()
+time.sleep(2)
+print('End of an application')
+
+
+Slice opeator In Python:
+===============
+Python supports Slice Operartors.The main objective of slice operators is to 
+make the peices of the string as per the application reqn.Slice operator is applicable 
+for + direction and - direction as well.Following syntax for Slice operator in Python.
+
+str1[begin:end(end-1):step] --->Syntax for slice operator.
+
+
+Slice operator with Positive Direction:
+========================
+
+Form_1:
+=====
+str1[begin:]
+
+Here end(end-1) and step value is optional.The output of the string would be 
+from begining or given position till end of the string.
+
+str1[2:]
+
+
+Ex1:
+===
+import time 
+str1="Core Python"
+print(str1)
+print()
+print(type(str1))
+print()
+print("====SLICE_OPERATOR WITH + DIRECTION=====")
+print()
+print("====Form_1=====")
+print(str1[2:])
+print()
+time.sleep(3)
+print('End of an application')
+
+
+Ex2:
+===
+import time 
+str1="Core Python"
+print(str1)
+print()
+print(type(str1))
+print()
+print("====SLICE_OPERATOR WITH + DIRECTION=====")
+print()
+print("====Form_1=====")
+print(str1[5:])
+print()
+time.sleep(3)
+print('End of an application')
+
+
+Ex3:
+===
+import time 
+str1="Core Python"
+print(str1)
+print()
+print(type(str1))
+print()
+print("====SLICE_OPERATOR WITH + DIRECTION=====")
+print()
+print("====Form_1=====")
+print(str1[0:])
+print()
+time.sleep(3)
+print('End of an application')
+
+
+Ex4:
+===
+import time 
+str1="Core Python"
+print(str1)
+print()
+print(type(str1))
+print()
+print("====SLICE_OPERATOR WITH + DIRECTION=====")
+print()
+print("====Form_1=====")
+print(str1[11:])
+print()
+time.sleep(3)
+print('End of an application')
+
+
+Ex5:
+===
+import time 
+str1="Core Python"
+print(str1)
+print()
+print(type(str1))
+print()
+print("====SLICE_OPERATOR WITH + DIRECTION=====")
+print()
+print("====Form_1=====")
+print(str1[1000:])
+print()
+time.sleep(3)
+print('End of an application')
+
+
+Form_2:
+=====
+str1[:end(end-1)]
+
+Here begin and step value is optional.The output of the string would be from 
+indexing position(Starting with 0) till end-1 th position
+
+
+str1[:4]
+
+
+Ex1:
+===
+import time 
+str1="Core Python"
+print(str1)
+print()
+print(type(str1))
+print()
+print("====SLICE_OPERATOR WITH + DIRECTION=====")
+print()
+print("====Form_2=====")
+print(str1[:4])
+print()
+time.sleep(3)
+print('End of an application')
+
+
+Ex2:
+===
+import time 
+str1="Core Python"
+print(str1)
+print()
+print(type(str1))
+print()
+print("====SLICE_OPERATOR WITH + DIRECTION=====")
+print()
+print("====Form_2=====")
+print(str1[:11])
+print()
+time.sleep(3)
+print('End of an application')
+
+
+Ex3:
+===
+import time 
+str1="Core Python"
+print(str1)
+print()
+print(type(str1))
+print()
+print("====SLICE_OPERATOR WITH + DIRECTION=====")
+print()
+print("====Form_2=====")
+print(str1[:1])
+print()
+time.sleep(3)
+print('End of an application')
+
+
+Ex4:
+===
+import time 
+str1="Core Python"
+print(str1)
+print()
+print(type(str1))
+print()
+print("====SLICE_OPERATOR WITH + DIRECTION=====")
+print()
+print("====Form_2=====")
+print(str1[:15])
+print()
+time.sleep(3)
+print('End of an application')
+
+
+
+
+
+
+

@@ -1,0 +1,269 @@
+Modular Programming Language:
+=====================
+Python supports Modular Programming language.The main objective of 
+Modular Programming language is to import and export the data/information
+from one module to another module or from one application to another application
+
+test1.py:
+======
+print("This is core Python")
+
+test2.py:
+=====
+import time 
+import test1 
+print()
+print("This is Advance Python")
+print()
+time.sleep(2)
+print("End of an application")
+
+
+test1.py:
+=====
+Product_Id=1001 
+def Test_Case1(X1,X2):
+    return X1+X2 
+def Test_Case2(Y1,Y2):
+    return Y1/Y2 
+def Test_Case3(N1,N2):
+    return N1//N2 
+def Test_Case4(M1,M2):
+    return M1-M2 
+def Test_Case5(O1,O2):
+    return O1*O2
+
+
+test2.py:
+=====
+import time 
+import test1 
+if(__name__=="__main__"):
+    print("Pid is:",test1.Product_Id)
+    print()
+    print("Sum is:",test1.Test_Case1(100,121))
+    print()
+    print("Division is:",test1.Test_Case2(100,10))
+    print()
+    print("Floor_Division:",test1.Test_Case3(120,2))
+    print()
+    print("Substraction is:",test1.Test_Case4(1000,999))
+    print()
+    print("Multiplication is:",test1.Test_Case5(12,20))
+print()
+time.sleep(2)
+print("End of an application")
+
+
+test1.py:
+=====
+Product_Id=1001 
+def Test_Case1(X1,X2):
+    return X1+X2 
+def Test_Case2(Y1,Y2):
+    return Y1/Y2 
+def Test_Case3(N1,N2):
+    return N1//N2 
+def Test_Case4(M1,M2):
+    return M1-M2 
+def Test_Case5(O1,O2):
+    return O1*O2
+
+test2.py:
+======
+import time 
+from test1 import *
+if(__name__=="__main__"):
+    print("Pid is:",Product_Id)
+    print()
+    print("Sum is:",Test_Case1(100,121))
+    print()
+    print("Division is:",Test_Case2(100,10))
+    print()
+    print("Floor_Division:",Test_Case3(120,2))
+    print()
+    print("Substraction is:",Test_Case4(1000,999))
+    print()
+    print("Multiplication is:",Test_Case5(12,20))
+print()
+time.sleep(2)
+print("End of an application")
+
+
+test1.py:
+=====
+Product_Id=1001 
+def Test_Case1(X1,X2):
+    return X1+X2 
+def Test_Case2(Y1,Y2):
+    return Y1/Y2 
+def Test_Case3(N1,N2):
+    return N1//N2 
+def Test_Case4(M1,M2):
+    return M1-M2 
+def Test_Case5(O1,O2):
+    return O1*O2
+
+test2.py:
+=====
+import time 
+from test1 import Product_Id,Test_Case1,Test_Case2,Test_Case3,Test_Case4,Test_Case5
+if(__name__=="__main__"):
+    print("Pid is:",Product_Id)
+    print()
+    print("Sum is:",Test_Case1(100,121))
+    print()
+    print("Division is:",Test_Case2(100,10))
+    print()
+    print("Floor_Division:",Test_Case3(120,2))
+    print()
+    print("Substraction is:",Test_Case4(1000,999))
+    print()
+    print("Multiplication is:",Test_Case5(12,20))
+print()
+time.sleep(2)
+print("End of an application")
+
+
+test1.py:
+=====
+Product_Id=1001 
+def Test_Case1(X1,X2):
+    return X1+X2 
+def Test_Case2(Y1,Y2):
+    return Y1/Y2 
+def Test_Case3(N1,N2):
+    return N1//N2 
+def Test_Case4(M1,M2):
+    return M1-M2 
+def Test_Case5(O1,O2):
+    return O1*O2
+
+
+test2.py:
+=====
+import time 
+from test1 import Product_Id as T1,Test_Case1 as T2,Test_Case2 as T3,Test_Case3 as T4,Test_Case4 as T5,Test_Case5 as T6
+if(__name__=="__main__"):
+    print("Pid is:",T1)
+    print()
+    print("Sum is:",T2(100,121))
+    print()
+    print("Division is:",T3(100,10))
+    print()
+    print("Floor_Division:",T4(120,2))
+    print()
+    print("Substraction is:",T5(1000,999))
+    print()
+    print("Multiplication is:",T6(12,20))
+print()
+time.sleep(2)
+print("End of an application")
+
+
+test1.py:
+=====
+print("Welcome to IHUB_IT_SERVICES")
+
+test2.py:
+=====
+import time 
+import test1 
+import test1 
+import test1 
+import test1 
+print()
+print("Welcome to IHUB_IT_SERVICES for Web applicaiton development")
+print()
+time.sleep(3)
+print("End of an application")
+
+
+
+test1.py:
+=====
+print("Welcome to IHUB_IT_SERVICES")
+
+test2.py:
+=====
+import time 
+import test1 
+import test1 
+import test1 
+import test1 
+print()
+from imp import * 
+reload(test1)
+reload(test1)
+reload(test1)
+print()
+print("Welcome to IHUB_IT_SERVICES for Web applicaiton development")
+print()
+time.sleep(3)
+print("End of an application")
+
+->Working on math module:
+==================
+It is a predefine module in Python while working with MPL.The main 
+objective of math module is to work on complex mathmatical operations
+
+Ex1:
+===
+import time 
+import math 
+print("====Sub_Modules=====")
+print(dir(math))
+print("=================")
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Ex2:
+===
+import time 
+import math 
+print(math.sqrt(25))
+print()
+print(math.sqrt(49))
+print()
+print(math.sqrt(64))
+print()
+print(math.sqrt(81))
+print()
+time.sleep(3)
+print("End of an application")
+
+
+Ex3:
+===
+import time 
+from math import *
+print(sin(45))
+print()
+print(cos(90))
+print()
+print(tan(180))
+print()
+print(sin(360))
+print()
+time.sleep(2)
+print('End of an application')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

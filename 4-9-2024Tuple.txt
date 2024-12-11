@@ -1,0 +1,316 @@
+Properties for tuple data type:
+===================
+->Inseration is preserved 
+->Duplicate objects are allowed
+->Hetrogenious objects are allowed
+->Tuple is a immutable object
+->Tuple is a not dynamic or not growable
+->Indexing and slice operator is applicable for Tuple data type
+
+->Inseration is preserved(Input==Output) :
+===========================
+
+Ex1:
+===
+import time 
+T1=eval(input("Enter the Tuple_Data:"))
+print(T1)
+print()
+print(type(T1))
+print()
+print("====Fetching_Data====")
+for x1 in T1:
+    print(x1)
+print()
+time.sleep(3)
+print('End of an application')
+
+OUTPUT:
+======
+C:\Users\Admin\Desktop>Python test1.py
+Enter the Tuple_Data:(1001,1002,1003,1004,1005,1006)
+(1001, 1002, 1003, 1004, 1005, 1006)
+
+<class 'tuple'>
+
+====Fetching_Data====
+1001
+1002
+1003
+1004
+1005
+1006
+
+End of an application
+
+->Duplicate objects are allowed:
+====================
+
+Ex1:
+===
+import time 
+T1=eval(input("Enter the Tuple_Data:"))
+print(T1)
+print()
+print(type(T1))
+print()
+print("====Fetching_Data====")
+for x1 in T1:
+    print(x1)
+print()
+time.sleep(3)
+print('End of an application')
+
+OUTPUT:
+=====
+C:\Users\Admin\Desktop>Python test1.py
+Enter the Tuple_Data:(1001,1002,1003,1004,1005,1001,1002,1003)
+(1001, 1002, 1003, 1004, 1005, 1001, 1002, 1003)
+
+<class 'tuple'>
+
+====Fetching_Data====
+1001
+1002
+1003
+1004
+1005
+1001
+1002
+1003
+
+End of an application
+
+->Hetrogenious objects are allowed:
+=======================
+
+Ex1:
+==
+import time 
+T1=eval(input("Enter the Tuple_Data:"))
+print(T1)
+print()
+print(type(T1))
+print()
+print("====Fetching_Data====")
+for x1 in T1:
+    print(x1)
+print()
+time.sleep(3)
+print('End of an application')
+
+OUTPUT:
+=====
+C:\Users\Admin\Desktop>Python test1.py
+Enter the Tuple_Data:(1001,"Mobile_1",23000,"S1")
+(1001, 'Mobile_1', 23000, 'S1')
+
+<class 'tuple'>
+
+====Fetching_Data====
+1001
+Mobile_1
+23000
+S1
+
+End of an application
+
+->Tuple is a immutable object(State_Less object):
+===============================
+
+Ex1:
+===
+import time 
+T1=(1001,1002,1003,1004,1005)
+print("====Before_Immutable_Operations=====")
+print(T1)
+print()
+print(type(T1))
+print()
+print("====After_Immutable_Operations====")
+T1[0]=2001
+T1[1]=2002 
+T1[2]=2003 
+T1[3]=2004 
+T1[4]=2005 
+print(T1)
+print()
+print(type(T1))
+print()
+time.sleep(2)
+print('End of an applicaiton')
+
+OUTPUT:
+======
+
+C:\Users\Admin\Desktop>Python test1.py
+====Before_Immutable_Operations=====
+(1001, 1002, 1003, 1004, 1005)
+
+<class 'tuple'>
+
+====After_Immutable_Operations====
+Traceback (most recent call last):
+  File "test1.py", line 9, in <module>
+    T1[0]=2001
+TypeError: 'tuple' object does not support item assignment
+
+C:\Users\Admin\Desktop>
+
+
+->Tuple is not dynamic or not growable:
+==========================
+Tuple is a not dynamic or not growable.Tuple is a immutable object which 
+means once we create object we can not modify it.Except following functions
+
+->max()
+->min()
+->len()
+
+Ex1:
+===
+import time 
+T1=(1001,1002,1003,1004,1005,1006)
+print(T1)
+print()
+print(type(T1))
+print()
+print("Max_Object is:",max(T1))
+print()
+print("Min_Object is:",min(T1))
+print()
+print("Length is:",len(T1))
+print()
+time.sleep(3)
+print("End of an application")
+
+
+Ex2:
+===
+import time 
+T1=(1001,1002,1003,1004,1005,1006)
+print(T1)
+print()
+print(type(T1))
+print()
+T1.remove(1001)
+print()
+print(T1)
+print()
+print(type(T1))
+print()
+time.sleep(3)
+print('End of an application')
+
+
+->Indexing and slice operator is applicable:
+============================
+
+Ex1:
+==
+import time 
+T1=(1001,"Mobile_1",27000,"S1")
+print(T1)
+print()
+print(type(T1))
+print()
+print("====Product_Details====")
+print("Pid is:",T1[0])
+print("Pname is:",T1[1])
+print("Price is:",T1[2])
+print("Company is:",T1[3])
+print()
+print("===Using Slice_Operator====")
+print(T1[0:])
+print()
+print(T1[::-1])
+print()
+time.sleep(3)
+print('End of an application')
+
+OUTPUT:
+=====
+
+C:\Users\Admin\Desktop>Python test1.py
+(1001, 'Mobile_1', 27000, 'S1')
+
+<class 'tuple'>
+
+====Product_Details====
+Pid is: 1001
+Pname is: Mobile_1
+Price is: 27000
+Company is: S1
+
+===Using Slice_Operator====
+(1001, 'Mobile_1', 27000, 'S1')
+
+('S1', 27000, 'Mobile_1', 1001)
+
+End of an application
+
+C:\Users\Admin\Desktop>
+
+Where can use Tuple data type in real world application:
+===================================
+In real world application tuple can be used to  perform readability operations.Tuple is a
+more faster than List data type.
+
+
+Interview_Question:
+=============
+Q1)What is common differences between List data type and Tuple data type?
+
+
+Set data type:
+=========
+Python supports Set data type.If you want to represent one or more than one 
+object or group of objects as single entity then we can go with Set data type.
+In Python set data type can be define or declare as {}.
+
+
+Note:
+====
+In Python Programming language Set data type and Dict data type can be define or 
+declare using {}.If we define or declare {} then PVM will consider bydefault dict data type.
+
+
+Ex1:
+===
+import time 
+S1={}
+print(S1)
+print()
+print(type(S1))
+print()
+S2=set()
+print(S2)
+print()
+print(type(S2))
+print()
+time.sleep(3)
+print('End of an application')
+
+
+Ex2:
+==
+import time 
+S1={1001}
+print(S1)
+print()
+print(type(S1))
+print()
+time.sleep(3)
+print('End of an application')
+
+
+
+
+
+
+
+
+
+
+    
+

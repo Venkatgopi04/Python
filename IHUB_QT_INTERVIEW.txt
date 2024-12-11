@@ -1,0 +1,990 @@
+========================================================================
+WELCOME QUALITY THOUGHT & IHUB TALENT MANAGEMENT NO.1 FULL STACK 
+PYTHON DEVELOPMENT TRAINING & LIVE PROJECT IMPLEMENTATION & PLACEMENTS
+=========================================================================
+
+100 + Students are working as Software Developer who has successfully done 
+full stack python development Course at Quality Thought & IHUB.Our Students
+placed in various Companies
+
+->Accenture
+->HCL
+->Cloud4c
+->Stic Soft
+->Jokshio
+->Mindtree
+->Vsoft
+->Arrow electronic(USA)
+->Unirac IT services
+->Navsoft
+->People Tech
+->TCS
+->Infosys
+->Phonix
+->Mantra technologies
+->Vollmond IT services
+->Truminds
+->Wipro
+->DXC technology
+->IBM
+
+Positions in IT companies for full stack python development
+==========================================================
+->Python developer
+->Django developer(Full Stack developer)
+->Data Engineer
+->Data Sceitist
+->Data Analysis developer
+->AL developer
+->ML developer
+->IOT developer
+->Python with automation developer
+->Python with selenium developer
+->Angular developer
+->ReactJS developer
+->SQL developer
+->FrontEnd developer
+
+Interview Question from Python:
+==============================
+Q1)Why can't I use an assignment in an expression?
+
+The reason for not allowing assignment in Python expressions is a common, hard-to-find bug in those other languages, 
+caused by this construct
+
+if (x = 0) {
+...error handling...
+}
+else {
+...code that only works for nonzero x...
+}
+
+
+Q2)Is there a tool to help find bugs or perform static analysis?
+
+Pychecker and Pylint are the static analysis tools that help to find bugs in python. 
+Pychecker is an open source tool for static analysis that detects the bugs from source code and warns about the style and complexity of the bug
+
+
+Q3)How do you set a global variable in a function?
+
+Normally, when you create a variable inside a function, that variable is local, and can only be used inside that function. To create a global variable inside a function, you can use the global keyword
+
+Q4)What are the rules for local and global variables in Python?
+
+In python, the variables referenced inside a function are global.
+When a variable is assigned new value anywhere in the body of a function then it is assumed as local.
+In a function, if a variable ever assigned new value then the variable is implicitly local and explicitly it should be declared as global.
+
+
+Q5)How can we create an empty class in Python?
+
+In Python, to write an empty class pass statement is used. Pass is a special statement in Python that does nothing. It only works as a dummy statement. However, objects of an empty class can also be created.
+
+Q6)What are the key features of Python?
+
+Python is a dynamic, high level, free open source and interpreted programming language. It supports object-oriented programming as well as procedural oriented programming. In Python, we don't need to declare the type of variable because it is a dynamically typed language.
+
+
+Q7)What is the difference between list and tuple in Python?
+
+One of the most important differences between list and tuple is that list is mutable, whereas a tuple is immutable. This means that lists can be changed, and tuples cannot be changed.
+
+
+Q8) List steps for setting up static files in Django?
+
+set STATIC_ROOT in settings.py
+run python2.7 manage.py collectstatic (or python3.5 or python3.6 as appropriate)
+Set up a Static Files entry on the PythonAnywhere Web tab.
+
+
+Q9)What is Dogpile effect?
+
+The Dogpile effect occurs when cache expires and websites are hit by numerous requests the same time. Dogpile effect can be prevented using semaphore lock.
+
+
+Q10)How do I share global variables across modules?
+
+In the update.py file, we import the config.py module and modify the values of a and b . Similarly, in the main.py file, we import both config.py and update.py module. Finally, we print and test the values of global variables whether they are changed or not.
+
+Q11)How do we reverse a list in Python
+
+Reversing a list in-place with the list. reverse() method. Using the “[::-1]” list slicing trick to create a reversed copy. List comprehension and loop statement can also help.
+
+
+Q12)How can Python be an interpreted language?
+
+Python is called an interpreted language because it goes through an interpreter, which turns code you write into the language understood by your computer's processor. Python is an “interpreted” language. This means it uses an interpreter. An interpreter is very different from the compiler.
+
+
+Q13)What do you understand by the term PEP8?
+
+PEP 8 stands for Python Enhancement Proposal which ,is Python's style guide. It's a set of rules for how to format your Python code to maximize its readability.
+
+Q14)Define slicing in Python?
+
+Python slicing is about obtaining a sub-string from the given string by slicing it respectively from start to end. Python slicing can be done in two ways.
+
+slice() Constructor ,Syntax string[start:end:step] start, end and step have the same mechanism as slice() constructor.
+
+
+Q15)How can I pass optional or keyword parameters from one function to another?
+
+To pass the keywords from func() into funcy(),
+def func (**kwargs):
+ print('func kwargs:', kwargs)
+def funcy (a, b, c, **kwargs):
+  print('other args:', a, b, c)
+  print('keyword args:', kwargs)
+def funcy(a, b, c, **kwargs):
+    print('other args:', a, b, c)
+    print('keyword args:', kwargs)
+    func(**kwargs)
+
+
+Q16)How do you make a higher order function in Python?
+
+A higher-order function accepts one or more functions as input and returns a new function. Sometimes it is required to use function as data. - To make high order function , we need to import functools module.
+
+Q17)How do I copy an object in Python
+
+In Python, there are two ways to create copies
+Deep copy
+Shallow copy
+
+Q18)How can I find the methods or attributes of an object?
+
+Attributes of a class can also be accessed using the following built-in methods and functions:
+getattr() – This function is used to access the attribute of object.
+hasattr() – This function is used to check if an attribute exist or not.
+setattr() – This function is used to set an attribute.
+
+
+Q19)What type of language is Python? Programming or Scripting?
+
+Python is considered a scripting language because of a historical blur between scripting languages and general purpose programming languages. In fact, Python is not a scripting language, but a general purpose programming language that also works nicely as a scripting language. It is also an interpreted and high-level programming language for the purpose of general programming requirements.
+
+
+Q20)What are the applications of Python?
+
+Web and Internet Development
+Scientific and Numeric Applications
+Education and training programs
+Artificial intelligence and Machine learning
+Software and Game Development
+Business Application
+
+Q21)Which command is used to delete files in Python?
+
+In Python, you can use the os. remove() method to remove files, and the os. rmdir() method to delete an empty folder. If you want to delete a folder with all of its files, you can use the shutil.
+
+Q22)Define the term lambda?
+
+In Python, a lambda function refers to a small anonymous function. We call them “anonymous functions” because technically they have no name. Unlike a normal function, we do not define it with the standard keyword def that we use in Python
+
+Q23)Why do we use the split method in Python?
+
+Split Function is In-Build function of Python String Data Type, The Main purpose of split data type is to separate the string into different elements, and the separated string will actually store in the format of List data type.
+
+Q24)Define modules in Python
+
+A module is a file containing Python definitions and statements. A module can define functions, classes, and variables. A module can also include runnable code. Grouping related code into a module makes the code easier to understand and use.
+
+Q25)What are Python Decorators?
+
+Decorators are a very powerful and useful tool in Python since it allows programmers to modify the behaviour of function or class. Decorators allow us to wrap another function in order to extend the behaviour of the wrapped function, without permanently modifying it.
+
+Q26)How do we find bugs and statistical problems in Python?
+
+Pychecker and Pylint are the static analysis tools that help to find bugs in python.
+
+Q27)What is the difference between .py and .pyc files?
+
+py files contain the source code of a program. Whereas,. pyc file contains the bytecode of your program.
+
+
+Q28)What do you understand by the term namespace in Python?
+
+A namespace is a system that has a unique name for each and every object in Python. An object might be a variable or a method. Python itself maintains a namespace in the form of a Python dictionary.
+
+
+Q29)Write a program to display the Fibonacci sequence in Python?
+
+def Fibonacci(n):
+ # Check if input is 0 then it will
+# print incorrect input
+
+if n < 0:
+ print("Incorrect input")
+  # Check if n is 0
+# then it will return 0
+elif n == 0:
+ return 0
+# Check if n is 1,2
+ # it will return 1
+ elif n == 1 or n == 2:
+ return 1
+else:
+return Fibonacci(n-1) + Fibonacci(n-2)
+# Driver Program
+print(Fibonacci(9))
+
+Q30)Why should we use Django framework?
+
+Django is an open-source framework for backend web applications based on Python — one of the top web development languages. Its main goals are simplicity, flexibility, reliability, and scalability. Django has its own naming system for all functions and components (e.g., HTTP responses are called “views”).
+
+Q31)List out the inheritance styles in Django?
+
+Abstract Base Class Inheritance->This style is used when you only want the parent class to hold information that you don't want to type out for each child model
+
+Q32)Does Python make use of access specifiers
+
+Python doesn't have any mechanism that effectively restricts access to any instance variable or method. Python prescribes a convention of prefixing the name of the variable/method with a single or double underscores to emulate the behaviour of protected and private access specifiers.
+
+
+Q33)Write Python code to sort a numerical dataset?
+
+# Python program to demonstrate sorting by user's choice 
+# function to return the second element of the 
+# two elements passed as the parameter 
+
+def sortSecond(val): 
+return val[1] 
+# list1 to demonstrate the use of sorting using second key 
+list1 = [(1, 2), (3, 3), (1, 1)] 
+# sorts the array in ascending according to second element 
+list1.sort (key = sortSecond) 
+print(list1) 
+# sorts the array in descending according to second element 
+list1.sort (key = sortSecond, reverse = True) 
+print(list1) 
+
+Q34)What is the difference range and xrange
+
+range returns the data in list format
+xrange returns the data in generator objects
+
+
+Q35)What is difference between tell() & seek() function in Python?
+
+tell() functions is used to check current cursor pointer of file which is 0 bydefault
+
+seek() functions is used to change the position of cursor pointer of file
+
+Q36)Why do we use a cookie in Django?
+
+A cookie is a small piece of information which is stored in the client browser. It is used to store user's data in a file permanently (or for the specified time). Django provides built-in methods to set and fetch cookie.
+
+Q37)How can we access a module written in Python from C?
+
+The header file in your C source file, which gives you access to the internal Python API used to hook your module into the interpreter. Make sure to include Python, before any other headers you might need.
+
+
+Q38)Differentiate between SciPy and NumPy?
+
+Both NumPy and SciPy are Python libraries used for used mathematical and numerical analysis. NumPy contains array data and basic operations such as sorting, indexing, etc whereas, SciPy consists of all the numerical code
+
+Q39)Why do we use join() function in Python?
+
+The join() method provides a flexible way to create strings from iterable objects. It joins each element of an iterable (such as list, string, and tuple) by a string separator (the string on which the join() method is called) and returns the concatenated string.
+
+String join() function:
+
+firstname = "Bugs"
+lastname = "Bunny"
+# define our sequence                                                    
+sequence = (firstname,lastname)
+# join into new string                                                   
+name = " ".join(sequence)
+print(name) 
+
+Array join() function:
+
+words = ["How","are","you","doing","?"]
+sentence = ' '.join(words)
+print(sentence)	
+
+ 
+
+
+
+Q40)Define Python Path?
+
+PYTHON PATH is an environment variable which you can set to add additional directories where python will look for modules and packages. For most installations, you should not set these variables since they are not needed for Python to run. Python knows where to find its standard library.
+
+
+Q41)How memory management is done in Python?
+
+Memory management in Python involves a private heap containing all Python objects and data structures. The management of this private heap is ensured internally by the Python memory manager.
+
+Q42)What are Dict and List comprehensions in Python?
+
+In Python, dictionary comprehensions are very similar to list comprehensions – only for dictionaries. They provide an elegant method of creating a dictionary from an iterable or transforming one dictionary into another.Using an if statement allows you to filter out values to create your new dictionary.
+
+
+Q43)How does a function return values?
+
+A return statement is used to end the execution of the function call and “returns” the result (value of the expression following the return keyword) to the caller. The statements after the return statements are not executed
+
+
+Q44)Explain help() and dir() functions in Python.
+
+Help() and dir(), are the two functions that are reachable from the python interpreter. Both functions are utilized for observing the combine dump of build-in-function.
+
+
+Q45)Explain about Django session?
+
+Django provides full support for anonymous sessions. The session framework lets you store and retrieve arbitrary data on a per-site-visitor basis. It stores data on the server side and abstracts the sending and receiving of cookies.
+
+Q46)How would you define a block in Python?
+
+To indicate a block of code in Python, you must indent each line of the block by the same amount. The two blocks of code in our example if-statement are both indented four spaces, which is a typical amount of indentation for Python.
+
+Q47)Explain the procedure to minimize or lower the outages of Memcached server in your Python development?
+
+The procedure to minimize or lower the outages of Memcached server in your Python development.
+Use code to minimize cache stampedes to leave a minimal impact
+Another way on a new machine is to use the lost machines IP address
+Setting timeout value
+
+Q48)What is the use of manage.py?
+
+manage.py: A command-line utility that lets you interact with this Django project in various ways. You can read all the details about manage.py in django-admin and manage.py. The inner mysite/ directory is the actual Python package for your project.
+
+Q49)Is Django stable?
+Django is committed to API stability and forwards-compatibility. You may need to make minor changes when upgrading the version of Django your project uses: see the “Backwards incompatible changes” section of the release note for the version or versions to which you are upgrading.
+
+
+Q50)Write a program to count the number of capital letters in a file?
+
+Python Program to count the number of capital letters in a file
+
+def upper(string):
+upper = 0  
+for i in range(len(string)):
+# For upper letters
+elif (ord(string[i]) >= 65 and
+ord(string[i]) <= 90):
+upper += 1
+print('Upper case characters = %s' %upper)
+# Driver Code
+string = 'God is Great'
+upper(string)
+
+
+Q51)Define generators in Python?
+
+A Python generator is a function that produces a sequence of results. It works by maintaining its local state, so that the function can resume again exactly where it left off when called subsequent times.
+
+
+Q52)Write a program to check whether the given number is prime or not?
+
+# To take input from the user
+num = int(input("Enter a number: "))
+# prime numbers are greater than 1
+if num > 1:
+   # check for factors
+   for i in range(2,num):
+       if (num % i) == 0:
+           print(num,"is not a prime number")
+           print(i,"times",num//i,"is",num)
+           break
+   else:
+       print(num,"is a prime number")
+  # if input number is less than
+# or equal to 1, it is not prime
+else:
+   print(num,"is not a prime number")
+
+
+Q53)Define pickling and unpickling in Python.
+
+Pickling” is the process whereby a Python object hierarchy is converted into a byte stream, and “unpickling” is the inverse operation, whereby a byte stream (from a binary file or bytes-like object) is converted back into an object hierarchy.
+
+
+Q54) What is __init__ in Python?
+
+"__init__" is a reseved method in python classes. It is known as a constructor in object oriented concepts. This method called when an object is created from the class and it allow the class to initialize the attributes of a class.
+
+
+Q55)Write Python code to check the given sequence is a palindrome or not?
+
+Python program to check the given number is a palindrome or not
+
+number=int(input("Enter any number :"))
+#store a copy of this number
+temp=number
+#calculate reverse of this number
+reverse_num=0
+while(number>0):
+extract last digit of this number
+digit=number%10
+#append this digit in reveresed number
+reverse_num=reverse_num*10+digit
+#floor divide the number leave out the last digit from number
+number=number//10
+#compare reverse to original number
+if(temp==reverse_num):
+print("The number is palindrome!")
+else:
+print("Not a palindrome")
+
+
+Q56)Does multiple inheritances is supported in Python?
+
+When a child class inherits from multiple parent classes, it is called multiple inheritance. Unlike Java and like C++, Python supports multiple inheritance.
+
+
+Q57)What do you mean by Python literals?
+
+A literal is a succinct and easily visible way to write a value. Literals represent the possible choices in primitive types for that language. Some of the choices of types of literals are often integers, floating point, Booleans and character strings.
+
+String literals :: "halo" , '12345'
+Int literals :: 0,1,2,-1,-2
+Long literals :: 89675L
+Float literals :: 3.14
+Complex literals :: 12j
+Boolean literals :: True or False
+Special literals :: None
+Unicode literals :: u"hello"
+List literals :: [], [5,6,7]
+Tuple literals :: (), (9,),(8,9,0)
+Dict literals :: {}, {'x':1}
+Set literals :: {8,9,10}
+
+
+Q58)What is zip() function in Python?
+
+The zip() function returns a zip object, which is an iterator of tuples where the first item in each passed iterator is paired together, and then the second item in each passed iterator are paired together etc.
+
+If the passed iterators have different lengths, the iterator with the least items decides the length of the new iterator.
+
+Syntax
+
+zip(iterator1, iterator2, iterator3 ...)
+
+
+Q59)What is Python's parameter passing mechanism?
+
+All parameters (arguments) in the Python language are passed by reference. It means if you change what a parameter refers to within a function, the change also reflects back in the calling function.
+
+Example
+
+student={'Archana':28,'krishna':25,'Ramesh':32,'vineeth':25}
+def test(student):
+new={'alok':30,'Nevadan':28}
+student.update(new)
+print("Inside the function",student)
+return
+test(student)
+print("outside the function:",student)
+
+Q60) Explain the different ways to write a function using call by reference?
+
+Python in different ways for write a function that known as “call by reference”. In this event , pass the argument as whole numbers, string, or tuples of the function. By “call by value” because cannot change the value of the immutable objects passed to the function.
+
+#call by value;
+
+String = “morning”;
+def data(string):
+	string = “Good Morning”
+	print(“Inside the Function”,string)
+data(string)
+print(“Outside the Function”,string)
+
+#call by Reference
+
+def data(string):
+string = “Good Morning”
+print(“Inside the Function”,string)
+data(string)
+print(“Outside the Function”,string)
+
+Q61)What is the difference between remove() function and del statement?
+
+remove() delete the matching element/object whereas del and pop removes the element at a specific index.
+
+remove : remove() removes the first matching value or object, not a specific indexing. lets say list.remove(value)
+
+Example
+list=[10,20,30,40]
+list.remove(30)
+print(list)
+
+Example
+list = [10,20,30,40,55]
+del list[1]
+print(list)
+
+Q62)What is swapcase() function in the Python?
+
+Python string swapcase() function is basically used to converts case of each character of the input string.
+
+Example:
+
+
+input_str = “Amazon Prime is a great OTT Platform
+		input_str.swapcase()
+		aMAZON pRIME IS A GREAT ott pLATFORM.
+
+
+Q63)How to remove whitespaces from a string in Python?
+
+It will print complete tuple. Output would be (‘abcd’, 786, 2.23, ‘john’, 70.200000000000003).
+
+The strip() function basically removes the leading(front) and the trailing(end) spaces of the string.
+
+Key points:
+
+strip(): This function removes the leading(front) and the trailing(end) spaces from an array including the tabs(\t).
+
+lstrip(): This function removes spaces from the left end of the string.
+
+rstrip(): This function removes spaces from the right end of the string.
+
+Example:
+
+
+string = '   Safa Mulani is a student of Engineering Discipline.    '
+print(f'String =\'{string}\'')
+print(f'After Removing Leading Whitespaces String =\'{string.lstrip()}\'')
+print(f'After Removing Trailing Whitespaces String =\'{string.rstrip()}\'')
+print(f'After Trimming Whitespaces String =\'{string.strip()}\'')
+
+
+Q64)Give an example of shuffle() method?
+
+Python number method shuffle() randomizes the items of a list in place.
+
+
+import random
+
+list = [20, 16, 10, 5];
+random.shuffle(list)
+print "Reshuffled list : ",  list
+random.shuffle(list)
+print "Reshuffled list : ",  list
+Reshuffled list :  [16, 5, 10, 20]
+Reshuffled list :  [16, 5, 20, 10]
+
+
+Q65)Define package in Python?
+
+Packages are a way of structuring Python's module namespace by using “dotted module names”. Suppose you want to design a collection of modules (a “package”) for the uniform handling of sound files and sound data.
+
+
+Q66)What is the difference between Python Arrays and lists?
+
+Arrays can store data very compactly and are more efficient for storing large amounts of data. Arrays are great for numerical operations; lists cannot directly handle math operations.
+
+For example, you can divide each element of an array by the same number with just one line of code.
+
+
+Q67)What is self in Python?
+
+In Python, the word self is the first parameter of methods that represents the instance of the class. Therefore, in order to call attributes and methods of a class, the programmer needs to use self.
+
+Q68)What is the difference sort() and sorted function in python
+
+sort() funtion sorts the only list data into ascending and decending order
+
+sorted() function sorts the any data into asending to decending order
+
+Q69)What are the difference beteen pop() and popitem() while working with 
+dict data type.
+
+pop() function removes the values by passing key as argument
+popitem() function removes last key and value pair.
+
+
+Q70)What are the advantages of Python Recursion?
+
+Python Recursion reduces unnecessary calling of function that reduces length of program. Very flexible in data structure like stacks, queues, linked list and quick sort. Big and complex iterative solutions are easy and simple with Python recursion.
+
+
+Q71)What are the disadvantages of Python Recursion?
+
+Disadvantages of Python Recursion
+Slow.
+Logical but difficult to trace and debug.
+Requires extra storage space. For every recursive calls separate memory is allocated for the variables.
+Recursive functions often throw a Stack Overflow Exception when processing or operations are too large.
+
+Q72)Why don’t Python lambda have any statement?
+
+A lambda function doesn't contain a return statement because it will have only a single expression which is always returned by default.
+
+Q73)How to get current directory using Python?
+
+To find the current working directory in Python, use os. getcwd() , and to change the current working directory, use os. chdir(path)
+
+Q74)Why Should We Use File Operation?
+
+Python file handling (File I/O) is one of the essential topics for programmers and automation testers. It is required to work with files for either writing to a file or read data from it. Also, if you are not already aware, I/O operations are the costliest operations where a program can stumble.
+
+
+Q75)Why should we close files?
+
+The close() method of a file object flushes any unwritten information and closes the file object, after which no more writing can be done.
+Python automatically closes a file when the reference object of a file is reassigned to another file. It is a good practice to use the close() method to close a file.
+
+
+Q76)Is python statically typed or dynamically typed?
+
+Python is dynamic typed and strong typed; Java is static typed and strong typed; PHP is dynamic typed and weak typed; C is static typed and weak typed (owing to its casting ability).
+
+
+Q77)Is python strongly typed or weakly typed language?
+
+Python is both a strongly typed and a dynamically typed language. Strong typing means that variables do have a type and that the type matters when performing operations on a variable.
+
+Dynamic typing means that the type of the variable is determined only during runtime.
+
+Q78)When is not a good time to use python generators?
+
+In general, don't use a generator when you need list operations, like len(), reversed(), and so on. There may also be times when you don't want lazy evaluation (e.g. to do all the calculation up front so you can release a resource). In that case, a list expression might be better.
+
+Q79)How to create a multidimensional list in Python?
+
+Lists are a very widely use data structure in python. They contain a list of elements separated by comma. But sometimes lists can also contain lists within them. These are called nested lists or multidimensional lists.
+
+Example:
+    multlist = [[0 for columns in range(4)] for rows in range(3)
+    print(multlist)
+     Output: [[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]]
+
+
+Q80)Explain how to make Forms in python.
+
+
+form.name: The name of the field, if specified.
+filename: If an FTP transaction, the client-side filename.
+value: The value of the field as a string.
+file: file object from which data can be read.
+type: The content type, if applicable
+
+
+Q81)List the common security issues that can be avoided by using Django?
+
+Cross site scripting (XSS) protection.
+Cross site request forgery (CSRF) protection.
+SQL injection protection.
+Clickjacking protection.
+SSL/HTTPS.
+Host header validation.
+Referrer policy.
+Session security.
+
+
+Q82)What are docstrings in Python?
+
+A docstring is a string literal that occurs as the first statement in a module, function, class, or method definition. Such a docstring becomes the __doc__ special attribute of that object.
+
+All modules should normally have docstrings, and all functions and classes exported by a module should also have docstrings.
+
+
+Q83)How can the ternary operators be used in python?
+
+Ternary operators also known as conditional expressions are operators that evaluate something based on a condition being true or false.
+
+It was added to Python in version 2.5. It simply allows to test a condition in a single line replacing the multiline if-else making the code compact.
+
+
+Q84)What is Polymorphism in Python?
+
+Polymorphism in python defines methods in the child class that have the same name as the methods in the parent class. In inheritance, the child class inherits the methods from the parent class.
+
+Q85) How can we debug a Python program?
+
+In order to run the debugger just type c and press enter. As the same suggests, PDB means Python debugger. To use the PDB in the program we have to use one of its method named set_trace().
+
+Q86)How do you invoke the Python interpreter for interactive use?
+
+Start the Python Interpreter
+
+You can use it in a REPL (Read-Evaluate-Print-Loop) fashion. To enter interactive mode after running a script, you can pass –i before the script. The command python -c command [arg] … executes statements in command, and python -m module [arg]
+
+
+Q87)What is Python String format and Python String replace?
+
+Python String format() is a function used to replace, substitute, or convert the string with placeholders with valid values in the final string. It is a built-in function of the Python string class, which returns the formatted string as an output.
+
+Q88)Define encapsulation in Python?
+
+Encapsulation is one of the fundamental concepts in object-oriented programming (OOP). It describes the idea of wrapping data and the methods that work on data within one unit.
+
+This puts restrictions on accessing variables and methods directly and can prevent the accidental modification of data
+
+
+Q89)Why do we need break and continue in Python?
+
+The Python break and continue statements modify the behavior of the loop while the loop runs. Consider an example where you are running a loop for a specific period.
+
+
+Q90)In Python what are iterators?
+
+Iterator is an object which allows a programmer to traverse through all the elements of a collection, regardless of its specific implementation. In Python, an iterator is an object which implements the iterator protocol.
+
+
+Q91)What is an Interface in python?
+
+An interface can be represent an abstract class only contains abstract methods for 
+specification purpose in real world applications or software.
+
+
+Q92)What is difference abstract class & An interface
+
+Abstract classes can only contains abstract classes & non abstract classes\
+
+An interface can only contains abstract methods
+
+Q93)What is difference inheritance and inner classes?
+
+Q94)What is difference between destructor and finally block 
+
+Q95)Why do we use exception handling in python in real world application & why?
+
+Q96)What is usage of Multithreading in python?
+
+Q97)Explain File & folder operations of django projects?
+
+Q98)Explain monkey patching in django with its implementation?
+
+Q99)What are the importance of ORM queries in django?
+
+Q100)How to integrate angular in django for single page application?
+
+Q101)How to intergrate reactJS in django for single application?
+
+Q102)How to integrate reactJS and FastAPI for Data Sceince RestFul API 
+Implementation?
+
+
+JavaScript Interview Questions:
+===============================
+Q1)Why JavaScript and Importance of JavaScript in Web applications
+Q2)What is difference var & let or const in JavaScript?
+Q3)What are Callback functions in JavaScript
+Q4)What are closures in JavaScript?
+Q5)What are the High order functions in JavaScript?
+Q6)What are Promises in JavaScript?
+Q7)Why DOM document object model?
+Q8)What is difference for loop and for_in loop and while loop
+Q9)What is difference onclick() event and onsubmit() event?
+Q10)What is client_side validation in JavaScript?
+Q11)What is difference object data type and an array data type?
+Q12)What is JSON in JavaScript?
+Q13)When do we use namefull function & arrow function & anoymous function?
+Q14)Does javascript support OOPL features?
+Q15)What are regex object in JavaScript & Explain its importance?
+
+
+AngularJS & Angular Interview Question:
+======================================
+Q1)What is difference between AngularJS & Angular?
+Q2)What is MVC in AngularJS?
+Q3)How angularJS follows MVC design pattern to ERP web applications
+Q4)What are directives in AngularJS
+Q5)What is typescript?
+Q6)What is difference JavaScript & Typescript?
+Q7)What is template in Angular?
+Q8)What is lazy loading in Angular?
+Q9)What is single page application?
+Q10)How to implement single page application in Angular?
+Q11)What are types of binding in Angular?
+Q12)What are the two ways data binding in angular?
+Q13)What are dependency injection in Angular?
+Q14)What is the difference module & component in angular?
+Q15)What is routing in Angular?
+Q16)What are the services in Angular?
+Q17)What are custom pipes in angular? 
+Q18)What is package.json in angular?
+Q19)What is usage assert folder in angular?
+Q20)What is difference beteen Angular & ReactJS
+
+
+ReactJS Interview question:
+==========================
+Q1)What is ReactJS?
+Q2)Why ReactJS?
+Q3)Explain the ReactJS application file & folder structure?
+Q4)Why react over angular?
+Q5)What is JSX in ReactJS?
+Q6)What are Fragements in ReactJS?
+Q7)Why states in ReactJS not varibles?
+Q8)What are props in ReactJS?
+Q9)What are types of componets in ReactJS?
+Q10)How to pass props in functional and class compoment?
+Q11)How to implement events in ReactJS?
+Q12)How many ways we can add CSS in ReactJS?
+Q13)What is routing in ReactJS?
+Q14)Why redux is important in every reactJS application?
+Q15)Explain about react material?
+Q16)What is react_native framework?
+Q17)Why do we use react_Native framework?
+Q18)Differnece between React_Native & Flutter?
+
+
+SQL Interview Questions:
+========================
+Q1)What is SQL? 
+Q2)What is a database? 
+Q3)Does SQL support programming language features? 
+Q4)What are the differences between SQL and PL/SQL? 
+Q5)What is the difference between BETWEEN and IN operators in SQL? 
+Q6)Write an SQL query to find the names of employees starting with ‘A’.
+Q7)What is the difference between CHAR and VARCHAR2 datatype in SQL? 
+Q8)Name different types of case manipulation functions available in SQL. 
+Q9)What do you mean by data definition language? 
+Q10)What do you mean by data manipulation language?
+Q11)What is the difference between primary key and unique constraints? 
+Q12)What is the view in SQL? 
+Q13)What do you mean by foreign key? 
+Q14)What is a join in SQL? What are the types of joins? 
+Q15)What is an index? 
+Q16)What are table and Field?
+Q17)What is a Default constraint?
+Q18)What is the On Delete cascade constraint?
+Q19)What is normalization?
+Q20)What is Denormalization?
+Q21)Explain  WITH clause in SQL
+Q22)What are all the different attributes of indexes?
+Q23)What is a Cursor?
+Q24)Write down various types of relationships in SQL?
+Q25)What is a query?
+Q26)What is a subquery?
+Q27)What are the different operators available in SQL?
+Q28)What is the difference between DELETE and TRUNCATE commands?
+Q29)What are local and global variables and their differences?
+Q30)What is Data Integrity?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

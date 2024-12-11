@@ -1,0 +1,358 @@
+List data type:
+=========
+Python supports List data type.The main objective of List data type if you want to
+represent one or more than one object or group of objects as a single entity then we can
+go with List data type.In Python we can define or declare List data type using [] and list().
+
+
+Ex1:
+==
+import time 
+L1=[]
+print(L1)
+print()
+print(type(L1))
+print()
+L2=list()
+print(L2)
+print()
+print(type(L2))
+print()
+time.sleep(3)
+print('End of an application')
+
+
+Ex2:
+===
+import time 
+L1=[1001]
+print(L1)
+print()
+print(type(L1))
+print()
+time.sleep(3)
+print('End of an application')
+
+
+Ex3:
+===
+import time 
+L1=[1001,2001,3001]
+print(L1)
+print()
+print(type(L1))
+print()
+time.sleep(3)
+print('End of an application')
+
+
+Properties for List data type:
+==================
+->Inseration is preserved
+->Duplicate objects are allowed
+->Hetrogenious objects are allowed
+->List is Mutable object(State_Full Object)
+->List is a Dynamic or Growable 
+->Indexing and Slice operator is applicable for List
+
+->Inseration is preserved(Input==Output)
+===========================
+
+Ex1:
+===
+import time 
+L1=eval(input('Enter the List_data_type:'))
+print(L1)
+print()
+print(type(L1))
+print()
+print("====Fetching_List_Data=====")
+for x1 in L1:
+    print(x1)
+print()
+time.sleep(3)
+print("End of an application")
+
+
+OUTPUT:
+=====
+C:\Users\Admin\Desktop>Python test1.py
+Enter the List_data_type:[1,2,3,4,5,6,7]
+[1, 2, 3, 4, 5, 6, 7]
+
+<class 'list'>
+
+====Fetching_List_Data=====
+1
+2
+3
+4
+5
+6
+7
+
+End of an application
+
+->Duplicate objects are allowed:
+=====================
+
+Ex1:
+===
+import time 
+L1=eval(input('Enter the List_data_type:'))
+print(L1)
+print()
+print(type(L1))
+print()
+print("====Fetching_List_Data=====")
+for x1 in L1:
+    print(x1)
+print()
+time.sleep(3)
+print("End of an application")
+
+
+OUTPUT:
+=====
+Enter the List_data_type:[1,2,3,4,5,6,7,1,2,3,4,5]
+[1, 2, 3, 4, 5, 6, 7, 1, 2, 3, 4, 5]
+
+<class 'list'>
+
+====Fetching_List_Data=====
+1
+2
+3
+4
+5
+6
+7
+1
+2
+3
+4
+5
+
+End of an application
+
+->Hetrogenious objects are allowed
+=======================
+
+Ex1:
+===
+import time 
+L1=eval(input('Enter the List_data_type:'))
+print(L1)
+print()
+print(type(L1))
+print()
+print("====Fetching_List_Data=====")
+for x1 in L1:
+    print(x1)
+print()
+time.sleep(3)
+print("End of an application")
+
+OUTPUT:
+=====
+C:\Users\Admin\Desktop>Python test1.py
+Enter the List_data_type:[1001,"Jessica",78000.0,"Python Developer","JP Morgan"]
+[1001, 'Jessica', 78000.0, 'Python Developer', 'JP Morgan']
+
+<class 'list'>
+
+====Fetching_List_Data=====
+1001
+Jessica
+78000.0
+Python Developer
+JP Morgan
+
+End of an application
+
+
+->List is Mutable object(State_Full Object):
+===========================
+
+Ex1:
+==
+import time 
+L1=['A','B','C','D','E','F']
+print("====Before Mutable_Operations=====")
+print(L1)
+print()
+print(type(L1))
+print()
+print("====After Mutable_Operations=====")
+L1[0]="A for Apple"
+L1[1]="B for Bannana"
+L1[2]="C for Carrot"
+L1[3]="D for Dragon_Fruit"
+L1[4]="E for Eggs"
+L1[5]="F for Fish"
+print(L1)
+print()
+print(type(L1))
+print()
+time.sleep(2)
+print('End of an application')
+
+
+OUTPUT:
+=====
+C:\Users\Admin\Desktop>Python test1.py
+====Before Mutable_Operations=====
+['A', 'B', 'C', 'D', 'E', 'F']
+
+<class 'list'>
+
+====After Mutable_Operations=====
+['A for Apple', 'B for Bannana', 'C for Carrot', 'D for Dragon_Fruit', 'E for Eggs', 'F for Fish']
+
+<class 'list'>
+
+End of an application:
+
+
+->List is a Dynamic or Growable:
+====================
+List data type is a Dynamic or Growable which means we can increase or decrease the 
+size of the list using following predefine functions in Python
+
+->append():It is used to add only one object at time
+->remove():It is used to remove only one object at time
+
+
+Problem_1:
+=======
+import time 
+L1=[] 
+print(L1)
+print()
+print("=====Adding the Product_Details====")
+L1.append(1001,"Mobile_1")
+print(L1)
+
+
+Ex1:
+===
+import time 
+L1=[] 
+print(L1)
+print()
+print("=====Adding the Product_Details====")
+L1.append(1001)
+L1.append("Mobile_1")
+L1.append(23000.0)
+L1.append("S1")
+print(L1)
+print()
+print("====Removing the Product_Details===")
+L1.remove(1001)
+L1.remove("Mobile_1")
+L1.remove(23000.0)
+L1.remove("S1")
+print(L1)
+print()
+time.sleep(2)
+print('End of an application')
+
+
+OUTPUT:
+=====
+C:\Users\Admin\Desktop>Python test1.py
+[]
+
+=====Adding the Product_Details====
+[1001, 'Mobile_1', 23000.0, 'S1']
+
+====Removing the Product_Details===
+[]
+
+End of an application
+
+C:\Users\Admin\Desktop>
+
+
+
+->Indexing and Slice operator is applicable:
+============================
+
+Ex1:
+===
+import time 
+Employee_Details=[1001,"Jessica",45000.0,"HCL"]
+print(Employee_Details)
+print()
+print(type(Employee_Details))
+print()
+print("=====Employee_Details====")
+print("Eid is:",Employee_Details[0])
+print("Ename is:",Employee_Details[1])
+print("Esal is:",Employee_Details[2])
+print("Company is:",Employee_Details[3])
+print()
+print("====Using Slice_Operartors=====")
+print(Employee_Details[0:])
+print()
+print(Employee_Details[::-1])
+print()
+time.sleep(2)
+print('End of an application')
+
+
+Q1)Where can use List data type in Real world application?
+=====================================
+We can use List data type in real world application to perfrom Dynamic 
+Operations such as inserting_data,updating_data,deleting_data as per the
+application reqn.
+
+
+While working with List data type we do have following predefine functions
+===============================================
+
+->append()
+->remove()
+->clear()
+->copy()
+->insert()
+->pop()
+->sort()
+->sorted()
+
+
+->clear():
+======
+It is used to clear complete List data as per the application reqn
+
+
+Ex1:
+===
+import time 
+L1=[1,2,3,4,5]
+print("Before_Operation:",L1)
+print()
+L2=L1.clear()
+print("After_Operation:",L2)
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Ex2:
+===
+import time 
+L1=[1,2,3,4,5]
+print("Before_Operation:",L1)
+print()
+L1.clear()
+print("After_Operation:",L1)
+print()
+time.sleep(2)
+print("End of an application")
+
+
+
+  
+  
+  

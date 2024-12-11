@@ -1,0 +1,398 @@
+Asseration in Python:
+=============
+Python supports Asseration.It is process to methodlogy to perform debugging operations.
+Debugging can be represent as finding and fix the bugs as per the application reqn.In python
+asseration can be implemented using assert keyword
+
+In Python we do have two types of asseration
+
+->Simple asseration:It is used to display the asseration error
+->Augmented asseration:It is used to display the asseration error with meaning_full 
+message
+
+
+In real world application asseration can be implemented in following area of SDLC:
+===================================================
+->Asseration(Debugging) can be implemented in Development Phase
+->Asseration(Debugging) can be implemented in Testing Phase
+->Asseration(Debugging) can not be implemented in ProductionPhase(Deployment phase)
+
+
+note:
+===
+assert keyword is ulternative solution for print()
+
+Ex1:
+==
+import time 
+Eid=1007 
+Eid>1007 
+print()
+print("Eid is:",Eid)
+print()
+time.sleep(2)
+print("End of an application")
+
+Ex2:
+===
+import time 
+Eid=1007 
+assert Eid>1007 
+print()
+print("Eid is:",Eid)
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Ex3:
+===
+import time 
+Eid=1007 
+assert Eid>1007,"Dear User/Customer how 1007 > 1007"
+print()
+print("Eid is:",Eid)
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Developer's Code:
+===========
+Ex1:
+===
+import time 
+def Test_Add_Case1(X1,X2):
+    return X1*X2 
+if(__name__=="__main__"):
+    print(Test_Add_Case1(2,5))
+    print()
+    print(Test_Add_Case1(10,15))
+    print()
+    print(Test_Add_Case1(120,150))
+    print()
+    print(Test_Add_Case1(190,120))
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Tester's Code:
+=========
+Ex1:
+==
+import time 
+def Test_Add_Case1(X1,X2):
+    return X1*X2 
+assert Test_Add_Case1(2,5)==7,"2+5=7"
+assert Test_Add_Case1(10,15)==25,"10+15=25"
+assert Test_Add_Case1(120,150)==270,"120+150=270"
+assert Test_Add_Case1(190,120)==310,"190+120=310"
+if(__name__=="__main__"):
+    print(Test_Add_Case1(2,5))
+    print()
+    print(Test_Add_Case1(10,15))
+    print()
+    print(Test_Add_Case1(120,150))
+    print()
+    print(Test_Add_Case1(190,120))
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Developers_Code:
+===========
+import time 
+def Test_Add_Case1(X1,X2):
+    return X1+X2 
+assert Test_Add_Case1(2,5)==7,"2+5=7"
+assert Test_Add_Case1(10,15)==25,"10+15=25"
+assert Test_Add_Case1(120,150)==270,"120+150=270"
+assert Test_Add_Case1(190,120)==310,"190+120=310"
+if(__name__=="__main__"):
+    print(Test_Add_Case1(2,5))
+    print()
+    print(Test_Add_Case1(10,15))
+    print()
+    print(Test_Add_Case1(120,150))
+    print()
+    print(Test_Add_Case1(190,120))
+print()
+time.sleep(2)
+print("End of an application")
+
+
+An Exception Handling in Python:
+=====================
+
+In programming languages we do have following two types of errors which are as follows
+
+->Syntax error
+->Runtime error(An Exception)
+
+->Syntax error:
+==========
+Syntax error can be represent if we are not following the rules of programming language 
+then we will get syntax error.
+
+import time 
+str1=input("Enter the string:")
+if(str1=="A")
+    print(str1,"It is a uppecase character")
+print()
+time.sleep(2)
+print("End of an application")
+
+OUTPUT:
+=====
+C:\Users\Admin\Desktop>Python test1.py
+  File "test1.py", line 3
+    if(str1=="A")
+                ^
+SyntaxError: invalid syntax
+
+
+->Runtime error(An Exception):
+====================
+Runtime error(An Exception).It can be represent as unexpected or unwanted events 
+that disturb the flow of execution then it is said to be Runtime error(An Exception).
+Runtime error(An Exception) can be occured via memory management/End_user
+
+
+What is an Exception in Python?
+===================
+An Exception in Python is a class.
+
+
+While working with An Exception Handling in Python the root execption is Base Exception
+
+
+Ex1:
+===
+import time 
+print("Python Developer")
+print("AI Developer")
+print("Data Engineer")
+print("Full Stack Ptyhon Developer")
+print(10000//0)
+print("Angular Developer")
+print("ReactJS Developer")
+print("FrontEnd Developer")
+print()
+time.sleep(3)
+print("End of an application")
+
+
+OUTPUT:
+=====
+
+C:\Users\Admin\Desktop>Python test1.py
+Python Developer
+AI Developer
+Data Engineer
+Full Stack Ptyhon Developer
+Traceback (most recent call last):
+  File "test1.py", line 6, in <module>
+    print(10000//0)
+ZeroDivisionError: integer division or modulo by zero
+
+
+Note:
+====
+The above script is a abmormal script/non gracefull termination.
+
+
+The main objective of An Exception Handling is to provide graceful termaintion/normal
+termination using try,except,finally block
+
+
+try:
+===
+try is a keyword in Python.The main objective of try keyowrd is put all risky code of 
+the appliction.try block is meant for to write the business logic
+
+
+except:
+====
+except is keyword in Python.The main objective of except block is to provide the
+gracefull termination/normal termination
+
+
+try:
+   ---
+except:
+     ---
+
+
+Ex1:
+===
+import time 
+try:
+    X1=int(input('Enter the value of X1:'))
+    X2=int(input('Enter the value of X2:'))
+    res1=X1//X2  
+    print("The result_set is:",res1)
+except BaseException as e:
+    print('Exception_Name is:',e)
+print()
+time.sleep(2)
+print('End of an application')
+
+Ex2:
+===
+import time 
+try:
+    X1=int(input('Enter the value of X1:'))
+    X2=int(input('Enter the value of X2:'))
+    res1=X1//X2  
+    print("The result_set is:",res1)
+except Exception as e:
+    print('Exception_Name is:',e)
+print()
+time.sleep(2)
+print('End of an application')
+
+Ex3:
+===
+import time 
+try:
+    X1=int(input('Enter the value of X1:'))
+    X2=int(input('Enter the value of X2:'))
+    res1=X1//X2  
+    print("The result_set is:",res1)
+except ArithmeticError as e:
+    print('Exception_Name is:',e)
+print()
+time.sleep(2)
+print('End of an application')
+
+Ex4:
+===
+import time 
+try:
+    X1=int(input('Enter the value of X1:'))
+    X2=int(input('Enter the value of X2:'))
+    res1=X1//X2  
+    print("The result_set is:",res1)
+except ZeroDivisionError as e:
+    print(X2,":Dear Customer a number is not divided by 0.Use anoher number")
+print()
+time.sleep(2)
+print('End of an application')
+
+Can we use more than one except block with single try block:
+======================================
+Yes we can define or declare more than one except block with single try block.
+
+try:
+   ---
+except:
+    ---
+except:
+     ---
+except:
+     ---
+
+The main objective of using more than one except block is to provide the meaning_full
+messge/content for the application
+
+
+Ex1:
+===
+import time 
+try:
+    X1=int(input('Enter the value of X1:'))
+    X2=int(input('Enter the value of X2:'))
+    res1=X1//X2  
+    print("The result_set is:",res1)
+except ArithmeticError:
+    print("AE_Error")
+except ZeroDivisionError:
+    print("ZE_Error")
+except ValueError:
+    print("Value_Error")
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Ex2:
+===
+import time 
+try:
+    X1=int(input('Enter the value of X1:'))
+    X2=int(input('Enter the value of X2:'))
+    res1=X1//X2  
+    print("The result_set is:",res1)
+except ZeroDivisionError:
+    print("ZE_Error")
+except ArithmeticError:
+    print("AE_Error")
+except ValueError:
+    print("Value_Error")
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Working with Default Except block:
+=====================
+Python supports Default Except block while working with an Exception Handling.Default except
+block can be represent as if we are using except block with no exception class name.Default 
+except block must be placed in last position
+
+Ex1:
+===
+
+import time 
+try:
+    X1=int(input('Enter the value of X1:'))
+    X2=int(input('Enter the value of X2:'))
+    res1=X1//X2  
+    print("The result_set is:",res1)
+except ZeroDivisionError:
+    print("ZE_Error")
+except :
+    print("Value_Error")
+except ArithmeticError:
+    print("AE_Error")
+print()
+time.sleep(2)
+print("End of an application")
+
+
+OUTPUT:
+=====
+C:\Users\Admin\Desktop>Python test1.py
+  File "test1.py", line 8
+    print("ZE_Error")
+         ^
+SyntaxError: default 'except:' must be last
+
+
+Ex2:
+===
+import time 
+try:
+    X1=int(input('Enter the value of X1:'))
+    X2=int(input('Enter the value of X2:'))
+    res1=X1//X2  
+    print("The result_set is:",res1)
+except ZeroDivisionError:
+    print("ZE_Error")
+except ArithmeticError:
+    print("AE_Error")
+except :
+    print("Value_Error")
+print()
+time.sleep(2)
+print("End of an application")
+
+
+
+
+
+
+
+

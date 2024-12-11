@@ -1,0 +1,471 @@
+->extend():
+=======
+It is a predefine function in Python while working with List data type.The main
+objective of extend()  is add more than one object or complete list into another list.
+
+
+Ex1:
+===
+import time 
+L1=[1,2,3,4,5]
+L2=[6,7,8,9,10]
+print(L1)
+print()
+print(L2)
+print()
+L1.extend(L2)
+print(L1)
+print()
+time.sleep(3)
+print('End of an application')
+
+
+Ex2:
+===
+import time 
+L1=[1,2,3,4,5]
+L2=[6,7,8,9,10]
+print(L1)
+print()
+print(L2)
+print()
+L2.extend(L1)
+print(L2)
+print()
+time.sleep(3)
+print('End of an application')
+
+
+
+Ex3:
+===
+import time 
+L1=[1,2,3,4,5]
+L2=[6,7,8,9,10]
+print(L1)
+print()
+print(L2)
+print()
+res1=L1+L2
+print(res1)
+print()
+time.sleep(3)
+print('End of an application')
+
+
+->insert():
+=======
+It is a predefine function in Python while working with List data type.The main objective of
+insert() function is insert the data/information using following ways
+                    ->Inserting the data using Positive direction
+                    ->Inserting the data using Negative direction
+
+
+Ex1:
+==
+import time 
+L1=['A','B','C','D']
+print("Before_Operation:",L1)
+print()
+L1.insert(1,25000)
+print("After_Operations:",L1)
+print()
+time.sleep(3)
+print('End of an application')
+
+
+Ex2:
+==
+import time 
+L1=[] 
+print(L1)
+print()
+print("====Product_Details====")
+L1.insert(0,1001)
+L1.insert(1,"Mobile_1")
+L1.insert(2,29000)
+L1.insert(3,"S1")
+print()
+print(L1)
+print()
+time.sleep(3)
+print('End of an application')
+
+
+Ex3:
+==
+import time 
+L1=[] 
+print(L1)
+print()
+print("====Product_Details====")
+L1.insert(-1,1001)
+L1.insert(-2,"Mobile_1")
+L1.insert(-3,29000)
+L1.insert(-4,"S1")
+print()
+print(L1)
+print()
+time.sleep(3)
+print('End of an application')
+
+
+Ex4:
+===
+import time 
+L1=[1,2,3,4,5,6]
+print("Before_Operations:",L1)
+print()
+L1.insert(-2,"Software Developer")
+print()
+print("After_Operations:",L1)
+print()
+time.sleep(2)
+print('End of an application')
+
+
+OUTPUT:
+=====
+
+C:\Users\Admin\Desktop>Python test1.py
+Before_Operations: [1, 2, 3, 4, 5, 6]
+
+
+After_Operations: [1, 2, 3, 4, 'Software Developer', 5, 6]
+
+End of an application
+
+C:\Users\Admin\Desktop>
+
+
+->pop():
+======
+It is a predefine function in Python while working with list data type.The main 
+objective of pop() function as follows
+ 
+                            ->pop()--->It will remove/delete last object from the list
+                            ->pop(+Index_value or -Index_value)
+
+
+Ex1:
+==
+import time 
+L1=[1001,1002,1003,1004,1005,1006]
+print("Before_Operations:",L1)
+print()
+L2=L1.pop()
+print("Remove/Deleted_Items:",L2)
+print()
+print("After_Operations:",L1)
+print()
+time.sleep(3)
+print('End of an application')
+
+
+Ex2:
+==
+import time 
+L1=[1001,1002,1003,1004,1005,1006]
+print("Before_Operations:",L1)
+print()
+L2=L1.pop(2)
+print("Remove/Deleted_Items:",L2)
+print()
+print("After_Operations:",L1)
+print()
+time.sleep(3)
+print('End of an application')
+
+
+Ex3:
+==
+import time 
+L1=[1001,1002,1003,1004,1005,1006]
+print("Before_Operations:",L1)
+print()
+L2=L1.pop(-2)
+print("Remove/Deleted_Items:",L2)
+print()
+print("After_Operations:",L1)
+print()
+time.sleep(3)
+print('End of an application')
+
+
+Ex4:
+===
+import time 
+L1=[1001,1002,1003,1004,1005,1006]
+print("Before_Operations:",L1)
+print()
+L2=L1.pop(0,1)
+print("Remove/Deleted_Items:",L2)
+print()
+print("After_Operations:",L1)
+print()
+time.sleep(3)
+print('End of an application')
+
+
+
+->sort():
+======
+It is a predefine function in Python while working with List data type.The main 
+objective of sort() function is to sort the data/information from ascending to decending
+order.sort() only applicable for List data type.
+
+
+Ex1:
+==
+import time 
+L1=[0,7,2,1,5,9,11,4]
+print("Before_Operations:",L1)
+print()
+L2=L1.sort()
+print("After_Operations:",L2)
+print()
+time.sleep(2)
+print('End of an application')
+
+
+Ex2:
+===
+import time 
+L1=[0,7,2,1,5,9,11,4]
+print("Before_Operations:",L1)
+print()
+L1.sort()
+print("After_Operations:",L1)
+print()
+L1.sort(reverse=True)
+print("Reverse of List:",L1)
+print()
+time.sleep(2)
+print('End of an application')
+
+
+Ex3:
+==
+import time 
+L1=(0,7,2,1,5,9,11,4)
+print(L1)
+print()
+print(type(L1))
+print()
+L2=list(L1)
+print(L2)
+print()
+L2.sort()
+print(L2)
+print()
+L2.sort(reverse=True)
+print(L2)
+print()
+time.sleep(3)
+print('End of an application')
+
+
+sorted():
+=====
+It is a predefine function in Python.The main objective of sorted() is to sort any
+type of data/information.
+
+
+Ex1:
+==
+import time 
+L1=[0,7,2,1,5,9,11,4]
+print("Before_Operations:",L1)
+print()
+L2=sorted(L1)
+print("After_Operations:",L2)
+print()
+L2=sorted(L1,reverse=True)
+print("Reverse of a List:",L2)
+print()
+time.sleep(3)
+print('End of an application')
+
+
+Ex2:
+===
+import time 
+L1=(0,7,2,1,5,9,11,4)
+print("Before_Operations:",L1)
+print()
+L2=sorted(L1)
+print("After_Operations:",L2)
+print()
+L2=sorted(L1,reverse=True)
+print("Reverse of a List:",L2)
+print()
+time.sleep(3)
+print('End of an application')
+
+
+Ex3:
+===
+import time 
+L1={0,7,2,1,5,9,11,4}
+print("Before_Operations:",L1)
+print()
+L2=sorted(L1)
+print("After_Operations:",L2)
+print()
+L2=sorted(L1,reverse=True)
+print("Reverse of a List:",L2)
+print()
+time.sleep(3)
+print('End of an application')
+
+
+Ex4:
+===
+import time 
+L1={5:112,1:90,9:1200,0:10}.keys()
+print("Before_Operations:",L1)
+print()
+L2=sorted(L1)
+print("After_Operations:",L2)
+print()
+L2=sorted(L1,reverse=True)
+print("Reverse of a List:",L2)
+print()
+time.sleep(3)
+print('End of an application')
+
+
+Ex5:
+===
+import time 
+L1={5:112,1:90,9:1200,0:10}.values()
+print("Before_Operations:",L1)
+print()
+L2=sorted(L1)
+print("After_Operations:",L2)
+print()
+L2=sorted(L1,reverse=True)
+print("Reverse of a List:",L2)
+print()
+time.sleep(3)
+print('End of an application')
+
+
+
+Ex6:
+===
+import time 
+L1={9:112,1:90,5:1200,0:10}.items()
+print("Before_Operations:",L1)
+print()
+L2=sorted(L1)
+print("After_Operations:",L2)
+print()
+L2=sorted(L1,reverse=True)
+print("Reverse of a List:",L2)
+print()
+time.sleep(3)
+print('End of an application')
+
+
+
+Tuple data type:
+==========
+Python supports Tuple data type.If you want to represent more than one object or
+group of objects as a single entity then we can go with Tuple data type.In Python
+we can define or declare Tuple data type () and Tuple().
+
+
+Note:
+====
+While working with Tuple data type () are optional 
+
+
+Ex1:
+==
+import time 
+T1=()
+print(T1)
+print()
+print(type(T1))
+print()
+T2=tuple()
+print(T2)
+print()
+print(type(T2))
+print()
+time.sleep(2)
+print('End of an application')
+
+
+Ex2:
+==
+import time 
+T1=(1001)
+print(T1)
+print()
+print(type(T1))
+print()
+time.sleep(2)
+print('End of an application')
+
+
+Ex3:
+===
+import time 
+T1=(1001,)
+print(T1)
+print()
+print(type(T1))
+print()
+time.sleep(2)
+print('End of an application')
+
+
+Ex4:
+===
+import time 
+T1=1001,
+print(T1)
+print()
+print(type(T1))
+print()
+time.sleep(2)
+print('End of an application')
+
+
+Ex5:
+===
+import time 
+T1=1001,2001,3001,4001
+print(T1)
+print()
+print(type(T1))
+print()
+time.sleep(2)
+print('End of an application')
+
+
+Ex6:
+===
+import time 
+T1=(1001,2001,3001,4001)
+print(T1)
+print()
+print(type(T1))
+print()
+time.sleep(2)
+print('End of an application')
+
+
+
+
+
+
+
+
+                   
+
+
+
+

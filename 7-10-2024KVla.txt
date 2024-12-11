@@ -1,0 +1,295 @@
+Keyword variable length argument:
+================================
+KVLA can be define or declare as ** followed variable name.The main objective of 
+KVLA is read one or more than number of arguments in key and value format and perform
+some operations.KVLA returns the data/information in Dict format.
+
+def Test_Case1(**variable_name):
+          -----
+
+Ex1:
+===
+import time 
+def Test_Case1(**obj1):
+    for x1,x2 in obj1.items():
+        print(x1,"---",x2)
+if(__name__=="__main__"):
+    Test_Case1(Pid=1001,Pname="Mobile_1",Price=29000,Company="S1")
+    print()
+    Test_Case1(Pid=1002,Pname="Mobile_2",Price=31000,Company="S2")
+print()
+time.sleep(3)
+print('End of an application')
+
+
+Ex2:
+===
+import time 
+def Test_Case1(**obj1):
+    print(obj1)
+    print()
+    print(type(obj1))
+if(__name__=="__main__"):
+    Test_Case1(Pid=1001,Pname="Mobile_1",Price=29000,Company="S1")
+    print()
+    Test_Case1(Pid=1002,Pname="Mobile_2",Price=31000,Company="S2")
+print()
+time.sleep(3)
+print('End of an application')
+
+
+Q1)What is difference between *variable_name & **variable_name?
+
+*variable_name means variable length argument which represents the data/information in
+Tuple format
+
+**variable_name means keyword variable length argument which returns the data or 
+information in Dict or key and value format.
+
+
+Ex1:
+===
+import time 
+def Test_Case1(*obj1):
+    print(obj1)
+    print()
+    print(type(obj1))
+    print()
+    for x1 in obj1:
+        print(x1)
+def Test_Case2(**obj2):
+    print(obj2)
+    print()
+    print(type(obj2))
+    print()
+    for x1,x2 in obj2.items():
+        print(x1,"---",x2)
+if(__name__=="__main__"):
+    Test_Case1(1001,"Mobile_1",23000,"S1")
+    print()
+    Test_Case2(Pid=1001,Pname="Mobile_1",Price=23000,Company="S1")
+print()
+time.sleep(3)
+print('End of an application')
+
+
+While working with functional programing language we do have following
+types of variables
+======================================================================
+->global variable
+->local variable
+->how to define or declare global variable inside a function
+
+
+->global variable:
+=================
+global variable can be represent as a variable which is define or declare outsite
+the function then it is said to be global variable.The scope of global variable 
+we can access global variable anywhere in our entire application.
+
+
+Ex1:
+===
+import time 
+L1=[1001,1002,1003,1004,1005,1001,1002,1003]
+def Test_Case1():
+    for x1 in range(len(L1)):
+        print(L1[x1])
+def Test_Case2():
+    a=0
+    while(a<len(L1)):
+        print(L1[a])
+        a+=1 
+def Test_Case3():
+    S1=0 
+    for x1 in L1:
+        S1=S1+x1 
+    print("Sum of list:",S1)
+def Test_Case4():
+    L2=[] 
+    for x1 in L1:
+        if(x1 not in L2):
+            L2.append(x1)
+    print("The result_set is:",L2)
+def Test_Case5():
+    for x1 in range(len(L1)):
+        if(L1[x1]%2==0):
+            print("Even_numbers are:",L1[x1])
+if(__name__=="__main__"):
+    Test_Case1()
+    print()
+    Test_Case2()
+    print()
+    Test_Case3()
+    print()
+    Test_Case4()
+    print()
+    Test_Case5()
+    print()
+    print(L1)
+print()
+time.sleep(3)
+print("End of an application")
+
+
+->local variable:
+===========
+local variable can be represent as a variable which is define or declare inside a function
+then it is said to be local variable.The scope of the local variable we can access with_in
+the function itself
+
+
+Ex1:
+===
+import time 
+def Test_Case1():
+    D1={"Pid":1001,"Pname":"Laptop_1","Price":29000,"Company":"S1"}
+    for y1,y2 in D1.items():
+        print(y1,"---",y2)
+def Test_Case2():
+    pass 
+def Test_Case3():
+    pass 
+if(__name__=="__main__"):
+    Test_Case1()
+    print()
+    Test_Case2()
+    print()
+    Test_Case3()
+print()
+time.sleep(2)
+print('End of an application')
+
+
+Ex2:
+===
+import time 
+def Test_Case1():
+    D1={"Pid":1001,"Pname":"Laptop_1","Price":29000,"Company":"S1"}
+    for y1,y2 in D1.items():
+        print(y1,"---",y2)
+def Test_Case2():
+    for x1 in D1.keys():
+        print(x1)
+def Test_Case3():
+    for z1 in D1.values():
+        print(z1)  
+if(__name__=="__main__"):
+    Test_Case1()
+    print()
+    Test_Case2()
+    print()
+    Test_Case3()
+print()
+time.sleep(2)
+print('End of an application')
+
+
+->how to define or declare global variable inside a function:
+============================================================
+We can define or declare a global variable inside a function using global variable
+followed variable_name.The scope of global variable we can access any where in our
+entire application.
+
+def Test_Case1():
+      global a
+      a=1001
+
+
+Ex1:
+===
+import time 
+def Test_Case1():
+    global a=1001 
+    print(a)
+if(__name__=="__main__"):
+    Test_Case1()
+print()
+time.sleep(3)
+print('End of an application')
+
+OUTPUT:
+=====
+C:\Users\Admin\Desktop>Python test1.py
+  File "test1.py", line 3
+    global a=1001
+            ^
+SyntaxError: invalid syntax
+
+
+Ex2:
+===
+import time 
+def Test_Case1():
+    global a
+    a=1001
+    print(a)
+def Test_Case2():
+    print(a)
+def Test_Case3():
+    print(a)
+if(__name__=="__main__"):
+    Test_Case1()
+    print()
+    Test_Case2()
+    print()
+    Test_Case3()
+print()
+time.sleep(3)
+print('End of an application')
+
+
+Ex3:
+===
+import time 
+Product_Id=1001 
+def Test_Case1():
+    global Product_Name 
+    Product_Name="Laptop_1"
+    Product_Price=21000 
+    print(Product_Id)
+    print(Product_Name)
+    print(Product_Price)
+def Test_Case2():
+    print(Product_Id)
+    print(Product_Name)
+def Test_Case3():
+    print(Product_Id)
+    print(Product_Name)
+    print(Product_Price)
+if(__name__=="__main__"):
+    Test_Case1()
+    print()
+    Test_Case2()
+    print()
+    Test_Case3()
+print()
+time.sleep(3)
+print("End of an application")
+
+
+   
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    

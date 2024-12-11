@@ -1,0 +1,381 @@
+Pandas module:
+==========
+It is a predefine module in Python.The main objective of pandas module to 
+work on data sceince applications.Pandas represent the data in rows and column format
+or two diamentional format using DataFrame()
+
+
+How to install pandas module in O/S
+=======================
+pip install pandas 
+
+Ex1:
+===
+import time 
+import pandas as pd 
+print("=======Sub_Modules====")
+print(dir(pd))
+print()
+time.sleep(3)
+print("End of an application")
+
+
+Ex2:
+===
+import time 
+import pandas as pd 
+import numpy  as np
+X1=pd.DataFrame()
+print(X1)
+print()
+print(X1.ndim)
+print()
+time.sleep(3)
+print('End of an application')
+
+
+Ex3:
+===
+import time 
+import pandas as pd 
+X1=pd.DataFrame([1001,1002,1003,1004,1005])
+print(X1)
+print()
+time.sleep(3)
+print('End of an application')
+
+
+Ex4:
+===
+import time 
+import pandas as pd 
+X1=pd.DataFrame([[1001,1002,1003,1004,1005],[2001,2002,2003,2004,2005]])
+print(X1)
+print()
+time.sleep(3)
+print('End of an application')
+
+
+Ex5:
+===
+import time 
+import pandas as pd 
+Data_Set=[[1001,"Mobile_1",23000,"S1"],[1002,"Mobile_2",25000,"S2"],[1003,"Mobile_3",29000,"S3"],[1004,"Mobile_4",31000,"S4"],[1005,"Mobile_5",37000,"S5"]]
+X1=pd.DataFrame(Data_Set)
+print()
+print("===========Product_Details===========")
+print(X1)
+print("=======================================")
+print()
+time.sleep(3)
+print("End of an application")
+
+
+Ex6:
+===
+import time 
+import pandas as pd 
+Data_Set=[[1001,"Mobile_1",23000,"S1"],[1002,"Mobile_2",25000,"S2"],[1003,"Mobile_3",29000,"S3"],[1004,"Mobile_4",31000,"S4"],[1005,"Mobile_5",37000,"S5"]]
+X1=pd.DataFrame(Data_Set,columns=['Pid','Pname','Price','Company'])
+print()
+print("===========Product_Details===========")
+print(X1)
+print("=======================================")
+print()
+time.sleep(3)
+print("End of an application")
+
+
+Ex7:
+==
+import time 
+import pandas as pd 
+Data_Set=[[1001,"Mobile_1",23000,"S1"],[1002,"Mobile_2",25000,"S2"],[1003,"Mobile_3",29000,"S3"],[1004,"Mobile_4",31000,"S4"],[1005,"Mobile_5",37000,"S5"]]
+X1=pd.DataFrame(Data_Set,columns=['Pid','Pname','Price','Company'],index=['A1','A2','A3','A4','A5'])
+print()
+print("===========Product_Details===========")
+print(X1)
+print("=======================================")
+print()
+time.sleep(3)
+print("End of an application")
+
+
+->head():
+======
+It is a predefine function while working with pandas module in Python.The main 
+objective of head() function is to display top rows as per the application reqn.
+
+
+Ex1:
+===
+import time 
+import pandas as pd 
+Data_Set=[[1001,"Mobile_1",23000,"S1"],[1002,"Mobile_2",25000,"S2"],[1003,"Mobile_3",29000,"S3"],[1004,"Mobile_4",31000,"S4"],[1005,"Mobile_5",37000,"S5"]]
+X1=pd.DataFrame(Data_Set,columns=['Pid','Pname','Price','Company'],index=['A1','A2','A3','A4','A5'])
+print()
+print("===========Product_Details===========")
+print(X1)
+print("=======================================")
+print()
+print("======Top_2_Rows======")
+print(X1.head(2))
+print()
+time.sleep(3)
+print("End of an application")
+
+
+->tail():
+======
+It is a predefine function in pandas module.The main objective of tail() function
+is to display the button rows as per the application reqn.
+
+
+Ex1:
+==
+import time 
+import pandas as pd 
+Data_Set=[[1001,"Mobile_1",23000,"S1"],[1002,"Mobile_2",25000,"S2"],[1003,"Mobile_3",29000,"S3"],[1004,"Mobile_4",31000,"S4"],[1005,"Mobile_5",37000,"S5"]]
+X1=pd.DataFrame(Data_Set,columns=['Pid','Pname','Price','Company'],index=['A1','A2','A3','A4','A5'])
+print()
+print("===========Product_Details===========")
+print(X1)
+print("=======================================")
+print()
+print("======Buttom_2_Rows======")
+print(X1.tail(2))
+print()
+time.sleep(3)
+print("End of an application")
+
+
+sum():
+===
+It is a predefine funciton in Pandas module.The main objective of sum() is perform
+the sum column_wise.
+
+Ex1:
+==
+import time 
+import pandas as pd 
+Data_Set=[[1001,"Mobile_1",23000,"S1"],[1002,"Mobile_2",25000,"S2"],[1003,"Mobile_3",29000,"S3"],[1004,"Mobile_4",31000,"S4"],[1005,"Mobile_5",37000,"S5"]]
+X1=pd.DataFrame(Data_Set,columns=['Pid','Pname','Price','Company'],index=['A1','A2','A3','A4','A5'])
+print()
+print("===========Product_Details===========")
+print(X1)
+print("=======================================")
+print()
+print("======sum()======")
+print(X1.sum())
+print()
+time.sleep(3)
+print("End of an application")
+
+sum(1):
+=====
+
+Ex1:
+==
+import time 
+import pandas as pd 
+Data_Set=[[1001,"Mobile_1",23000,"S1"],[1002,"Mobile_2",25000,"S2"],[1003,"Mobile_3",29000,"S3"],[1004,"Mobile_4",31000,"S4"],[1005,"Mobile_5",37000,"S5"]]
+X1=pd.DataFrame(Data_Set,columns=['Pid','Pname','Price','Company'],index=['A1','A2','A3','A4','A5'])
+print()
+print("===========Product_Details===========")
+print(X1)
+print("=======================================")
+print()
+print("======sum(1)======")
+print(X1.sum(1))
+print()
+time.sleep(3)
+print("End of an application")
+
+
+max():
+===
+import time 
+import pandas as pd 
+Data_Set=[[1001,"Mobile_1",23000,"S1"],[1002,"Mobile_2",25000,"S2"],[1003,"Mobile_3",29000,"S3"],[1004,"Mobile_4",31000,"S4"],[1005,"Mobile_5",37000,"S5"]]
+X1=pd.DataFrame(Data_Set,columns=['Pid','Pname','Price','Company'],index=['A1','A2','A3','A4','A5'])
+print()
+print("===========Product_Details===========")
+print(X1)
+print("=======================================")
+print()
+print("======max()======")
+print(X1.max())
+print()
+time.sleep(3)
+print("End of an application")
+
+
+min():
+===
+import time 
+import pandas as pd 
+Data_Set=[[1001,"Mobile_1",23000,"S1"],[1002,"Mobile_2",25000,"S2"],[1003,"Mobile_3",29000,"S3"],[1004,"Mobile_4",31000,"S4"],[1005,"Mobile_5",37000,"S5"]]
+X1=pd.DataFrame(Data_Set,columns=['Pid','Pname','Price','Company'],index=['A1','A2','A3','A4','A5'])
+print()
+print("===========Product_Details===========")
+print(X1)
+print("=======================================")
+print()
+print("======min()======")
+print(X1.min())
+print()
+time.sleep(3)
+print("End of an application")
+
+
+
+count():
+====
+import time 
+import pandas as pd 
+Data_Set=[[1001,"Mobile_1",23000,"S1"],[1002,"Mobile_2",25000,"S2"],[1003,"Mobile_3",29000,"S3"],[1004,"Mobile_4",31000,"S4"],[1005,"Mobile_5",37000,"S5"]]
+X1=pd.DataFrame(Data_Set,columns=['Pid','Pname','Price','Company'],index=['A1','A2','A3','A4','A5'])
+print()
+print("===========Product_Details===========")
+print(X1)
+print("=======================================")
+print()
+print("======count()======")
+print(X1.count())
+print()
+time.sleep(3)
+print("End of an application")
+
+
+->iteritems()
+->iterrows()
+->itertuples()
+
+
+->iteritems():
+=========
+It is used to fetch the data/information of panda using column_wise
+
+
+Ex1:
+==
+import time 
+import pandas as pd 
+Data_Set=[[1001,"Mobile_1",23000,"S1"],[1002,"Mobile_2",25000,"S2"],[1003,"Mobile_3",29000,"S3"],[1004,"Mobile_4",31000,"S4"],[1005,"Mobile_5",37000,"S5"]]
+X1=pd.DataFrame(Data_Set,columns=['Pid','Pname','Price','Company'],index=['A1','A2','A3','A4','A5'])
+print()
+print("===========Product_Details===========")
+print(X1)
+print("=======================================")
+print()
+print("====Fetching_Data_Column_Wise====")
+for x1 in X1.iteritems():
+    print(x1)
+print()
+time.sleep(3)
+print("End of an application")
+
+->iterrows():
+========
+It is used to fetch the data/information of pandas using row_wise.
+
+Ex1:
+===
+import time 
+import pandas as pd 
+Data_Set=[[1001,"Mobile_1",23000,"S1"],[1002,"Mobile_2",25000,"S2"],[1003,"Mobile_3",29000,"S3"],[1004,"Mobile_4",31000,"S4"],[1005,"Mobile_5",37000,"S5"]]
+X1=pd.DataFrame(Data_Set,columns=['Pid','Pname','Price','Company'],index=['A1','A2','A3','A4','A5'])
+print()
+print("===========Product_Details===========")
+print(X1)
+print("=======================================")
+print()
+print("====Fetching_Data_Row_Wise====")
+for x1 in X1.iterrows():
+    print(x1)
+print()
+time.sleep(3)
+print("End of an application")
+
+
+->itertuples:
+=========
+import time 
+import pandas as pd 
+Data_Set=[[1001,"Mobile_1",23000,"S1"],[1002,"Mobile_2",25000,"S2"],[1003,"Mobile_3",29000,"S3"],[1004,"Mobile_4",31000,"S4"],[1005,"Mobile_5",37000,"S5"]]
+X1=pd.DataFrame(Data_Set,columns=['Pid','Pname','Price','Company'],index=['A1','A2','A3','A4','A5'])
+print()
+print("===========Product_Details===========")
+print(X1)
+print("=======================================")
+print()
+print("====Fetching_Data_Tuple_Wise====")
+for x1 in X1.itertuples():
+    print(x1)
+print()
+time.sleep(3)
+print("End of an application")
+
+
+
+Ex1:
+==
+import time 
+import csv 
+with open("ihub1.csv","w",newline="") as f:
+    A1=csv.writer(f)
+    A1.writerow(["Pid","Pname","Price","Company"])
+    n=eval(input("Enter the number of Rows:"))
+    for x1 in range(n):
+        Pid=int(input("Enter the Pid:"))
+        Pname=input("Enter the Pname:")
+        Price=float(input("Enter the Price:"))
+        Company=input("Enter the Company:")
+        A1.writerow([Pid,Pname,Price,Company])
+    print()
+    print("A csv file is created successfully ...")
+print()
+time.sleep(3)
+print("End of an application")
+
+
+Ex2:
+===
+import time 
+import pandas as pd 
+print("=====Product_Details_CSV_File======")
+A2=pd.read_csv("ihub1.csv")
+print(A2)
+print()
+print()
+print("Total_Records")
+print(A2.count())
+print()
+print("====Max_Object====")
+print(A2.max())
+print()
+print("====Min_Object=====")
+print(A2.min())
+print()
+for a1 in A2.iteritems():
+    print(a1)
+print()
+for a2 in A2.iterrows():
+    print(a2)
+print()
+for a3 in A2.itertuples():
+    print(a3)
+print()
+time.sleep(3)
+print("End of an application")
+
+
+
+
+
+
+
+
+
+
+

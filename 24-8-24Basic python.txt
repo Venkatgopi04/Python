@@ -1,0 +1,146 @@
+Q1)What is the difference between a Program & a Script?
+
+
+Python as a Program:
+=============
+If the developers/programmers/Software developers/application developers 
+are writing the business logic without using any predefine module then Python 
+act as a Program
+
+Ex1:
+==
+print('Core Python session is going on ...')
+print()
+print("Core Python session is going on ....")
+print()
+print('''Core Python session is going on ...''')
+print()
+print("""Core Python session is going on ...""")
+print()
+print("End of an application")
+
+
+Ex2:
+==
+print('Core Python')
+print()
+print('Advance Python')
+print()
+print('FrontEnd with Django & Django_Rest_Framework')
+print()
+print('ReactJS/Angular with FastAPI/Flask')
+print()
+print("End of an application")
+
+
+Python as a Script:
+============
+If the developers/programmers/software developers/application developers are
+writing the business logic with one or more than one predefine module then Python 
+act as a Script.
+
+
+Note:
+====
+In Python Programming language we do have 160000+ Predefine modules are there
+
+
+time module:
+========
+It is a predefine module in python.The main objective of time module is to work on 
+time in hour_format,minute_format,second_format.To use time module inside the python
+we use import module_name
+
+import time 
+time.sleep(3) --->seconds
+
+
+Ex1:
+===
+import time 
+time.sleep(3)
+print("Welcome to Quality Thought for Full Stack Python Development with CLoud")
+
+
+
+Ex2:
+===
+import time 
+print('Core Python')
+print()
+print('Advance Python')
+print()
+print('FrontEnd with Django & Django_Rest_Framework')
+print()
+print('ReactJS/Angular with FastAPI/Flask')
+print()
+time.sleep(2)
+print("End of an application")
+
+
+id():
+===
+It is a predefine function in Python.The main objective of id() function is to know the 
+adderss of a variable at memory allocation where our data is stored at memory allocation.
+
+
+Ex1:
+===
+import time 
+Eid=1002
+print(Eid)
+print()
+print(id(Eid))
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Ex2:
+==
+import time 
+Eid=1001 
+print("Eid is:",Eid)
+print()
+print("Address of Eid is:",id(Eid))
+print()
+time.sleep(2)
+print('End of an application')
+
+
+Interview_Question:
+=============
+Q1)What is the difference between Java & Python Programming Language?
+
+
+type():
+====
+It is a predefine function in Python.The main objective of type() function is to know 
+the what type of data type we are using in our Python Script/Python Program.
+
+a=10
+type() -----><class 'int'>
+
+
+Ex1:
+===
+import time 
+Eid=1001 
+print("Eid is:",Eid)
+print()
+print("Address is:",id(Eid))
+print()
+print("Data type is:",type(Eid))
+print()
+time.sleep(2)
+print('End of an application')
+
+
+Note:
+===
+All data types in Python are classes.
+
+
+
+
+

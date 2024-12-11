@@ -1,0 +1,442 @@
+Multithreading/Multi tasking in Python:
+========================
+Python supports Multithreading.It is also known as multitasking.Multithreading/Multitasking
+can be represent as executing the serveral task/job simaltiously where each job/task either dependent
+or independent.
+
+In Python we do have following types of MultiThreading:
+==================================
+->Process based multithreading
+->Thread based multithreading
+
+
+->Process based multithreading:
+=====================
+Process based multithreading can be represent as executing the serveral tasks/jobs simaltiously
+where each job/task is independent to other.
+
+
+Ex:
+==
+   Any ---> O/S
+
+
+->Thread based multithreading:
+====================
+Thread based multithreading can be represent as executing the serveral task where each job/task
+are dependent to other job/task.Then it is said to be Thread based multithreading.
+
+
+What is Thread?
+=========
+->Thread is a Python object
+->It is flow of an execution
+
+How to create a thread?
+===============
+t1=Thread(target)  ---->Thread creation in Python
+t1.srart()
+
+->While working with Multithreading in Python the root thread name is MainThread.
+
+->The main objective of multithreading is improve the perfomance of a an application
+
+->In Python we do have a module name threading to implement multithreading
+
+->While working with Multithreading always output will be generated in random format.
+
+
+In Python Programming language Thread will be created using following methodlogies:
+========================================================
+->A Thread can be created using Functional approach
+->A Thread can be created using Inheritance approach
+->A Thread can be created using Class approach
+
+
+Ex1:
+===
+import time 
+from threading import * 
+print("Current_Thread_Name is:",current_thread().getName())
+current_thread().setName("IHUB_IT_SERVICES")
+print()
+print("Current_Thread_Name is:",current_thread().getName())
+print()
+time.sleep(2)
+print("End of an application")
+
+
+->A Thread can be created using Functional approach:
+==================================
+
+Ex1:
+===
+import time 
+from threading import * 
+def Test_Case1():
+    for x1 in range(10):
+        time.sleep(1)
+        print("Child_Thread_Services ...")
+if(__name__=="__main__"):
+    t1=Thread(target=Test_Case1)
+    t1.start()
+    for y1 in range(10):
+        time.sleep(1)
+        print("Main_Thread_Services...")
+print()
+time.sleep(2)
+print("End of an application")
+
+
+->A Thread can be created using Inheritance approach:
+===================================
+
+Ex1:
+===
+import time 
+from threading import * 
+class Test_Case1(Thread):
+    def m1(self):
+        for x1 in range(10):
+            time.sleep(1)
+            print("Child_Thread_Services ...")
+t1=Test_Case1()
+t1.start()
+for y1 in range(10):
+    time.sleep(1) 
+    print("Main_Thread_Services ...")
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Ex2:
+===
+import time 
+from threading import * 
+class Test_Case1(Thread):
+    def run(self):
+        for x1 in range(10):
+            time.sleep(1)
+            print("Child_Thread_Services ...")
+t1=Test_Case1()
+t1.start()
+for y1 in range(10):
+    time.sleep(1) 
+    print("Main_Thread_Services ...")
+print()
+time.sleep(2)
+print("End of an application")
+
+
+->A Thread can be created using Class approach:
+===============================
+
+
+
+
+
+
+Ex1:
+===
+import time 
+def Test_Case1(Number_List):
+    for x1 in Number_List:
+        time.sleep(1)
+        print("Square of number is:",x1*x1)
+def Test_Case2(Number_List):
+    for y1 in Number_List:
+        time.sleep(1)
+        print("Product is:",y1*10)
+def Test_Case3(Number_List):
+    for z1 in Number_List:
+        time.sleep(1)
+        print("Power is:",z1**z1)
+def Test_Case4(Number_List):
+    for m1 in Number_List:
+        time.sleep(1)
+        print("Add_result is:",m1+1000)
+def Test_Case5(Number_List):
+    for n1 in Number_List:
+        time.sleep(1)
+        print("Substraction is:",n1-5)
+if(__name__=="__main__"):
+    Number_List=[25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42]
+    begin_time=time.time()
+    Test_Case1(Number_List)
+    Test_Case2(Number_List)
+    Test_Case3(Number_List)
+    Test_Case4(Number_List)
+    Test_Case5(Number_List)
+    end_time=time.time()
+    print("Total_Time is:",end_time-begin_time)
+print()
+time.sleep(3)
+print("End of an application")
+
+OUTPUT:
+=====
+
+C:\Users\Admin\Desktop>Python test1.py
+Square of number is: 625
+Square of number is: 676
+Square of number is: 729
+Square of number is: 784
+Square of number is: 841
+Square of number is: 900
+Square of number is: 961
+Square of number is: 1024
+Square of number is: 1089
+Square of number is: 1156
+Square of number is: 1225
+Square of number is: 1296
+Square of number is: 1369
+Square of number is: 1444
+Square of number is: 1521
+Square of number is: 1600
+Square of number is: 1681
+Square of number is: 1764
+Product is: 250
+Product is: 260
+Product is: 270
+Product is: 280
+Product is: 290
+Product is: 300
+Product is: 310
+Product is: 320
+Product is: 330
+Product is: 340
+Product is: 350
+Product is: 360
+Product is: 370
+Product is: 380
+Product is: 390
+Product is: 400
+Product is: 410
+Product is: 420
+Power is: 88817841970012523233890533447265625
+Power is: 6156119580207157310796674288400203776
+Power is: 443426488243037769948249630619149892803
+Power is: 33145523113253374862572728253364605812736
+Power is: 2567686153161211134561828214731016126483469
+Power is: 205891132094649000000000000000000000000000000
+Power is: 17069174130723235958610643029059314756044734431
+Power is: 1461501637330902918203684832716283019655932542976
+Power is: 129110040087761027839616029934664535539337183380513
+Power is: 11756638905368616011414050501310355554617941909569536
+Power is: 1102507499354148695951786433413508348166942596435546875
+Power is: 106387358923716524807713475752456393740167855629859291136
+Power is: 10555134955777783414078330085995832946127396083370199442517
+Power is: 1075911801979993982060429252856123779115487368830416064610304
+Power is: 112595147462071192539789448988889059930192105219196517009951959
+Power is: 12089258196146291747061760000000000000000000000000000000000000000
+Power is: 1330877630632711998713399240963346255985889330161650994325137953641
+Power is: 150130937545296572356771972164254457814047970568738777235893533016064
+Add_result is: 1025
+Add_result is: 1026
+Add_result is: 1027
+Add_result is: 1028
+Add_result is: 1029
+Add_result is: 1030
+Add_result is: 1031
+Add_result is: 1032
+Add_result is: 1033
+Add_result is: 1034
+Add_result is: 1035
+Add_result is: 1036
+Add_result is: 1037
+Add_result is: 1038
+Add_result is: 1039
+Add_result is: 1040
+Add_result is: 1041
+Add_result is: 1042
+Substraction is: 20
+Substraction is: 21
+Substraction is: 22
+Substraction is: 23
+Substraction is: 24
+Substraction is: 25
+Substraction is: 26
+Substraction is: 27
+Substraction is: 28
+Substraction is: 29
+Substraction is: 30
+Substraction is: 31
+Substraction is: 32
+Substraction is: 33
+Substraction is: 34
+Substraction is: 35
+Substraction is: 36
+Substraction is: 37
+Total_Time is: 90.89919137954712
+
+End of an application
+
+C:\Users\Admin\Desktop>
+
+
+With_Multithreading:
+==============
+Ex1:
+===
+import time 
+from threading import *
+def Test_Case1(Number_List):
+    for x1 in Number_List:
+        time.sleep(1)
+        print("Square of number is:",x1*x1)
+def Test_Case2(Number_List):
+    for y1 in Number_List:
+        time.sleep(1)
+        print("Product is:",y1*10)
+def Test_Case3(Number_List):
+    for z1 in Number_List:
+        time.sleep(1)
+        print("Power is:",z1**z1)
+def Test_Case4(Number_List):
+    for m1 in Number_List:
+        time.sleep(1)
+        print("Add_result is:",m1+1000)
+def Test_Case5(Number_List):
+    for n1 in Number_List:
+        time.sleep(1)
+        print("Substraction is:",n1-5)
+if(__name__=="__main__"):
+    Number_List=[25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42]
+    begin_time=time.time()
+    t1=Thread(target=Test_Case1,args=(Number_List,))
+    t2=Thread(target=Test_Case2,args=(Number_List,))
+    t3=Thread(target=Test_Case3,args=(Number_List,))
+    t4=Thread(target=Test_Case4,args=(Number_List,))
+    t5=Thread(target=Test_Case5,args=(Number_List,))
+    t1.start()
+    t2.start()
+    t3.start()
+    t4.start()
+    t5.start()
+    t1.join()
+    t2.join()
+    t3.join()
+    t4.join()
+    t5.join()
+    end_time=time.time()
+    print("Total_Time is:",end_time-begin_time)
+print()
+time.sleep(3)
+print("End of an application")
+
+
+OUTPUT:
+======
+
+C:\Users\Admin\Desktop>Python test1.py
+Power is: 88817841970012523233890533447265625
+Add_result is: 1025
+Square of number is: 625
+Product is: 250
+Substraction is: 20
+Substraction is: 21
+Square of number is: 676
+Power is: 6156119580207157310796674288400203776
+Add_result is: 1026
+Product is: 260
+Power is: 443426488243037769948249630619149892803
+Add_result is: 1027
+Product is: 270
+Substraction is: 22
+Square of number is: 729
+Square of number is: 784
+Product is: 280
+Add_result is: 1028
+Substraction is: 23
+Power is: 33145523113253374862572728253364605812736
+Square of number is: 841
+Power is: 2567686153161211134561828214731016126483469
+Substraction is: 24
+Add_result is: 1029
+Product is: 290
+Square of number is: 900
+Add_result is: 1030
+Product is: 300
+Substraction is: 25
+Power is: 205891132094649000000000000000000000000000000
+Square of number is: 961
+Product is: 310
+Substraction is: 26
+Add_result is: 1031
+Power is: 17069174130723235958610643029059314756044734431
+Square of number is: 1024
+Substraction is: 27
+Product is: 320
+Add_result is: 1032
+Power is: 1461501637330902918203684832716283019655932542976
+Square of number is: 1089
+Product is: 330
+Add_result is: 1033
+Substraction is: 28
+Power is: 129110040087761027839616029934664535539337183380513
+Square of number is: 1156
+Substraction is: 29
+Product is: 340
+Add_result is: 1034
+Power is: 11756638905368616011414050501310355554617941909569536
+Square of number is: 1225
+Substraction is: 30
+Product is: 350
+Add_result is: 1035
+Power is: 1102507499354148695951786433413508348166942596435546875
+Square of number is: 1296
+Substraction is: 31
+Product is: 360
+Add_result is: 1036
+Power is: 106387358923716524807713475752456393740167855629859291136
+Square of number is: 1369
+Substraction is: 32
+Product is: 370
+Add_result is: 1037
+Power is: 10555134955777783414078330085995832946127396083370199442517
+Square of number is: 1444
+Substraction is: 33
+Add_result is: 1038
+Product is: 380
+Power is: 1075911801979993982060429252856123779115487368830416064610304
+Square of number is: 1521
+Substraction is: 34
+Product is: 390
+Add_result is: 1039
+Power is: 112595147462071192539789448988889059930192105219196517009951959
+Square of number is: 1600
+Substraction is: 35
+Add_result is: 1040
+Product is: 400
+Power is: 12089258196146291747061760000000000000000000000000000000000000000
+Square of number is: 1681
+Substraction is: 36
+Add_result is: 1041
+Product is: 410
+Power is: 1330877630632711998713399240963346255985889330161650994325137953641
+Square of number is: 1764
+Substraction is: 37
+Add_result is: 1042
+Product is: 420
+Power is: 150130937545296572356771972164254457814047970568738777235893533016064
+Total_Time is: 18.262732982635498
+
+End of an application
+
+C:\Users\Admin\Desktop>
+    
+
+
+
+    
+
+
+
+
+
+
+
+
+
+

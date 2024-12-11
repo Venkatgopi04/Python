@@ -1,0 +1,319 @@
+While working with Functional programming language we do have following
+types arguments which are as follows
+=======================================================================
+->Positional arguments
+->Default arguments
+->Keyword arguments
+->Variable length argument
+->Keyword variable length argument
+
+
+->Positional arguments:
+======================
+Positional arguments can be represent as It is a combination of formal and
+actual parameters.(Positional arguments works based on position).
+
+
+Ex1:
+===
+import time 
+def Test_Case1(x1,x2,x3):
+    print("The value of x1 is:",x1)
+    print()
+    print("The value of x2 is:",x2)
+    print()
+    print("The value of x3 is:",x3)
+if(__name__=="__main__"):
+    Test_Case1(1001,1002,1003)
+print()
+time.sleep(2)
+print('End of an application')
+
+
+Ex2:
+===
+import time 
+def Test_Case1(x3,x2,x1):
+    print("The value of x1 is:",x1)
+    print()
+    print("The value of x2 is:",x2)
+    print()
+    print("The value of x3 is:",x3)
+if(__name__=="__main__"):
+    Test_Case1(1001,1002,1003)
+print()
+time.sleep(2)
+print('End of an application')
+
+
+->Default arguments:
+===================
+Default arguments can be represent as if we are using one or more than one
+one formal parameters with their values then it is said to be Default argument.While
+working with Default arguments Default must be placed in last postion.
+
+
+Ex1:
+===
+import time 
+def Test_Product_Case1(Pid=1001,Pname,Price,Company):
+    print("-----Product_Information-----")
+    print("Pid is:",Pid)
+    print("Pname is:",Pname)
+    print("Price is:",Price)
+    print("Company is:",Company)
+if(__name__=="__main__"):
+    Test_Product_Case1("Laptop_1",23000,"S1")
+print()
+time.sleep(2)
+print('End of an application')
+
+OUTPUT:
+=====
+C:\Users\Admin\Desktop>Python test1.py
+  File "test1.py", line 2
+    def Test_Product_Case1(Pid=1001,Pname,Price,Company):
+                          ^
+SyntaxError: non-default argument follows default argument
+
+
+Ex2:
+==
+import time 
+def Test_Product_Case1(Pname,Price,Company,Pid=1001):
+    print("-----Product_Information-----")
+    print("Pid is:",Pid)
+    print("Pname is:",Pname)
+    print("Price is:",Price)
+    print("Company is:",Company)
+if(__name__=="__main__"):
+    Test_Product_Case1("Laptop_1",23000,"S1")
+print()
+time.sleep(2)
+print('End of an application')
+
+
+Ex3:
+===
+import time 
+def Test_Product_Case1(Pname,Company,Pid=1001,Price=2800):
+    print("-----Product_Information-----")
+    print("Pid is:",Pid)
+    print("Pname is:",Pname)
+    print("Price is:",Price)
+    print("Company is:",Company)
+if(__name__=="__main__"):
+    Test_Product_Case1("Laptop_1","S1")
+print()
+time.sleep(2)
+print('End of an application')
+
+
+Ex4:
+===
+import time 
+def Test_Employees_Case1(Eid=1001,Ename="Rahul",Esal=29000,Design="DAD developer"):
+    print("====Employee_Details=====")
+    print("Eid is:",Eid)
+    print("Ename is:",Ename)
+    print("Esal is:",Esal)
+    print("Design is:",Design)
+if(__name__=="__main__"):
+    Test_Employees_Case1()
+print()
+time.sleep(3)
+print('End of an application')
+
+
+Ex5:
+===
+import time 
+def Test_Employees_Case1(Eid=1001,Ename="Rahul",Esal=29000,Design="DAD developer"):
+    print("====Employee_Details=====")
+    print("Eid is:",Eid)
+    print("Ename is:",Ename)
+    print("Esal is:",Esal)
+    print("Design is:",Design)
+if(__name__=="__main__"):
+    Test_Employees_Case1(1002,"Jessica",56000,"Python Developer")
+print()
+time.sleep(3)
+print('End of an application')
+
+
+Ex6:
+===
+import time 
+def Test_Case1(a,b,c=100):
+    return a+b+c 
+if(__name__=="__main__"):
+    print(Test_Case1(12,18))
+print()
+time.sleep(3)
+print('End of an application')
+
+
+Ex7:
+===
+import time 
+def Test_Case1(a,b,c=100):
+    return a+b+c 
+if(__name__=="__main__"):
+    print(Test_Case1(12,18,1000))
+print()
+time.sleep(3)
+print('End of an application')
+
+
+Ex8:
+===
+import time 
+def Test_Case1(a,b,c=100):
+    return a*b+c 
+if(__name__=="__main__"):
+    print(Test_Case1(12,18,1000))
+print()
+time.sleep(3)
+print('End of an application')
+
+
+->Keyword arguments:
+===================
+Keyword arguments can be represent as if we are using actual parameters with 
+their values then it is said to be Keyword arguments.
+
+
+Ex1:
+===
+import time 
+def Test_Student_Case1(Sid,Sname,Subject,Marks):
+    print("====Student_Details====")
+    print("Sid is:",Sid)
+    print("Sname is:",Sname)
+    print("Subject is :",Subject)
+    print("Marks are:",Marks)
+if(__name__=="__main__"):
+    Test_Student_Case1(Sid=1001,Sname="Jessica",Subject ="Python",Marks=78)
+print()
+time.sleep(3)
+print('End of an application')
+
+
+Ex2:
+===
+import time 
+def Test_Customer_Case1(Cid=1007,Cname="Jessica",Address="New York"):
+    print("====Customer_Information====")
+    print("Cid is:",Cid)
+    print("Cname is:",Cname)
+    print("Address is:",Address)
+if(__name__=="__main__"):
+    Test_Customer_Case1(Cid=1008,Cname="John",Address="Chicago")
+print()
+time.sleep(3)
+print('End of an application')
+
+
+->Variable length argument:
+==========================
+Variable length argument can be represent as * variable_name.The main objective of 
+variable length argument is to read zero or more than one number of arguments and 
+perform some operations as per the application reqn.Variable length arguments return 
+the data in Tuple format
+
+
+def Test_Case1(*variable_name):
+      -----
+
+
+Ex1:
+==
+import time 
+def Test_Case1(*obj1):
+    print(obj1)
+if(__name__=="__main__"):
+    Test_Case1()
+    print()
+    Test_Case1(1001)
+    print()
+    Test_Case1(1001,1002)
+    print()
+    Test_Case1(1001,1002,1003)
+    print()
+    Test_Case1(1001,1002,1003,1004)
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Ex2:
+===
+import time 
+def Test_Case1(*obj1):
+    for x1 in obj1:
+        print(x1)
+  
+if(__name__=="__main__"):
+    Test_Case1()
+    print()
+    Test_Case1(1001)
+    print()
+    Test_Case1(1001,1002)
+    print()
+    Test_Case1(1001,1002,1003)
+    print()
+    Test_Case1(1001,1002,1003,1004)
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Ex3:
+===
+import time 
+def Test_Case1(*obj1):
+    S1=0 
+    for x1 in obj1:
+        S1=S1+x1 
+    print("Sum of argumets are:",S1)
+if(__name__=="__main__"):
+    Test_Case1()
+    print()
+    Test_Case1(1001)
+    print()
+    Test_Case1(1001,1002)
+    print()
+    Test_Case1(1001,1002,1003)
+    print()
+    Test_Case1(1001,1002,1003,1004)
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Ex4:
+===
+import time 
+def Test_Case1(*obj1):
+    for x1 in obj1:
+        time.sleep(1)
+        print(x1)
+ 
+if(__name__=="__main__"):
+    Test_Case1("Jessica_1","John","jessica_12346","JA_12346","JA_12346","jessica_1@gmail.com")
+    print()
+    Test_Case1("Jessica_2","John","jessica_12346","JA_12346","JA_12346","jessica_2@gmail.com")
+   
+print()
+time.sleep(2)
+print("End of an application")
+
+
+
+
+
+
+
+
+
+

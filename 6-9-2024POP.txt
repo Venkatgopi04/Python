@@ -1,0 +1,139 @@
+pop():
+====
+It is a predefine function in Python while working with Dict data type.The main 
+objective of pop() function is to remove particular value by passing key as a parametrer
+
+Ex1:
+==
+import time 
+D1={"Eid":1001,"Ename":"Rahul","Esal":29000,"Company":"S1"}
+print("Before_Operations:",D1)
+print()
+D2=D1.pop("Esal")
+print("Deleted/Remove_Items are:",D2)
+print()
+print("After_Operation:",D1)
+print()
+time.sleep(3)
+print("End of an application")
+
+
+get():
+====
+It is a predefine function in Python while working with Dict data type.The main 
+objective of get() function is to get the values by passing parameter to the function.
+
+
+Ex1:
+===
+import time 
+D1={"Eid":1001,"Ename":"Rahul","Esal":29000,"Company":"S1"}
+print(D1)
+print()
+print(type(D1))
+print()
+print("Eid is:",D1['Eid'])
+print()
+D2=D1.get("Eid")
+print("Eid is:",D2)
+print()
+time.sleep(3)
+print('End of an application')
+
+
+update():
+======
+It is a predefine function in Python while working with Dict data type.The main 
+objective of update() function is to update one or more than one key and value pair.
+
+
+Ex1:
+===
+import time 
+D1={}
+print(D1)
+print()
+print("====Adding the Products====")
+D1.update({"Pid":1001})
+print(D1)
+print()
+time.sleep(2)
+print('End of an applicaition')
+
+
+Ex2:
+===
+import time 
+D1={}
+print(D1)
+print()
+print("====Adding the Products====")
+D1.update({"Pid":1001,"Pname":"Mobile_1","Price":21000})
+print(D1)
+print()
+time.sleep(2)
+print('End of an applicaition')
+
+
+->sorted():
+=======
+It is a predefine function in Python.The main objective of sorted() function 
+is to sort the keys or values and key and values as per the application reqn.
+
+
+keys:
+===
+Ex1:
+---
+import time 
+D1={7:1200,3:120,1:1120}.keys()
+print(D1)
+print()
+D2=sorted(D1)
+print(D2)
+print()
+D2=sorted(D1,reverse=True)
+print(D2)
+print()
+time.sleep(3)
+print('End of an application')
+
+
+Ex2:
+===
+import time 
+D1={7:1200,3:120,1:1120}.values()
+print(D1)
+print()
+D2=sorted(D1)
+print(D2)
+print()
+D2=sorted(D1,reverse=True)
+print(D2)
+print()
+time.sleep(3)
+print('End of an application')
+
+
+Ex3:
+===
+import time 
+D1={7:1200,3:120,1:1120}.items()
+print(D1)
+print()
+D2=sorted(D1)
+print(D2)
+print()
+D2=sorted(D1,reverse=True)
+print(D2)
+print()
+time.sleep(3)
+print('End of an application')
+
+
+
+
+
+
+
+

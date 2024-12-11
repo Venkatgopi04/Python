@@ -1,0 +1,76 @@
+An exception can be occur in try_block or except_block or else_block or finally 
+block.We can implement nested try,except,else,finally block.
+===================================================
+
+Ex1:
+==
+import time 
+try:
+    print("Outer_Try_Block")
+    try:
+        print("Inner_Try_Block")
+    except:
+        print("Inner_Except_Block")
+    else: 
+        print("Inner_Else_Block")
+    finally:
+        print("Inner_Finally_Block")
+except:
+    print("Outer_Except_Block")
+else:
+    print("Outer_Else_Block")
+finally:
+    print("Outer_Finally_Block")
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Ex2:
+===
+import time 
+try:
+    print("Outer_Try_Block")
+    print(1000//0)
+    try:
+        print("Inner_Try_Block")
+    except:
+        print("Inner_Except_Block")
+    else: 
+        print("Inner_Else_Block")
+    finally:
+        print("Inner_Finally_Block")
+except:
+    print("Outer_Except_Block")
+else:
+    print("Outer_Else_Block")
+finally:
+    print("Outer_Finally_Block")
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Ex3:
+===
+import time 
+try:
+    print("Outer_Try_Block")
+    try:
+        print("Inner_Try_Block")
+        print(1000//0)
+    except:
+        print("Inner_Except_Block")
+    else: 
+        print("Inner_Else_Block")
+    finally:
+        print("Inner_Finally_Block")
+except:
+    print("Outer_Except_Block")
+else:
+    print("Outer_Else_Block")
+finally:
+    print("Outer_Finally_Block")
+print()
+time.sleep(2)
+print("End of an application")

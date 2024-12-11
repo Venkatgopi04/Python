@@ -1,0 +1,374 @@
+Membership operators:
+===============
+Python supports memebership.The main objective of membership operators is search for 
+more than one character and return boolean values.Following are the Membership operators
+in Python.
+
+->in
+->not in
+
+
+Ex1:
+===
+import time 
+str1=input("Enter the String_Object:") # I will be a applicaiton developer
+print(str1)
+print()
+print(type(str1))
+print()
+print("====Using MO=======")
+print("I" in str1)
+print()
+print(' ' in str1)
+print()
+print('be' not in str1)
+print()
+print("application" in str1)
+print()
+print('SQL' not in str1)
+print()
+time.sleep(2)
+print('End of an application')
+
+
+Ex2:
+===
+import time 
+Years=[2004,2005,2006,2007,2008]
+print(Years)
+print()
+print("======MO=======")
+print(2004 in Years)
+print()
+print(2011 not in Years)
+print()
+print(2007 in Years)
+print()
+time.sleep(2)
+print('End of an application')
+
+
+Ternary operator:
+============
+->Uniary operator
+->Binary operator
+->Ternary operator
+
+->Uniary operator:
+=============
+Uninary operator can be represent as if we are using one operator with one variable/operand
+to perform then it is said to be Uniary operator.
+
+
+Ex1:
+===
+import time 
+X1=True 
+print(X1)
+print()
+print(type(X1))
+print()
+X2=not X1
+print(X2)
+print()
+print(type(X2))
+print()
+time.sleep(2)
+print("End of an application")
+
+
+->Binary operator:
+============
+Binary operator can be represent as if we are using one operator with two operand/variable
+then it is said to be Binary operator.
+
+
+Ex1:
+===
+import time 
+Y1=1900 
+Y2=2100 
+res1=Y1+Y2 
+print("The result_set is:",res1)
+print()
+time.sleep(3)
+print('End of an application')
+
+
+
+
+Ternary operator:
+===========
+Python supports Ternary operator.It can be represent as if we are using one or
+more than one variable with one or more than one condition then it is said to be
+ternary operator
+
+a=1000 
+b=200 
+res1=a if a>b else b
+
+
+Ex1:
+===
+import time 
+a=eval(input('Enter the number:'))
+b=eval(input('Enter the number:'))
+max=a if a>b else b 
+print("Max_Object is:",max)
+print()
+time.sleep(2)
+print('End of an application')
+
+
+Ex2:
+==
+import time 
+a=eval(input('Enter the number:'))
+b=eval(input('Enter the number:'))
+min=a if a<b else b 
+print("Min_Object is:",min)
+print()
+time.sleep(2)
+print('End of an application')
+
+
+Ex3:
+===
+import time 
+a=eval(input('Enter the number:'))
+b=eval(input('Enter the number:'))
+c=eval(input('Ente the number:'))
+max=a if a>b and a>c else b if b>c else c 
+min=a if a<b and a<c else b if b<c else c 
+print("Maximum of three number is:",max)
+print()
+print("Minimum of three number is:",min)
+print()
+time.sleep(2)
+print("End of an application")
+
+
+->Equality operators:
+===============
+Python supports Equality operators.The main objective of Equality operators is meant 
+for content comparision and return boolean values.Following are the Equality
+operators in Python.
+
+->==
+->!=
+
+
+Ex1:
+===
+import time 
+L1=eval(input('Enter the List_One:'))
+L2=eval(input('Enter the List_Two:'))
+print("======EO=========")
+print(L1,L2)
+print()
+obj1=L1==L2 
+obj2=L1!=L2 
+print("The result_set is:",obj1)
+print()
+print("The data type is:",type(obj1))
+print()
+print("The result_set is:",obj2)
+print()
+print("The data type is:",type(obj2))
+print()
+time.sleep(3)
+print('End of an application')
+
+
+Ex2:
+===
+import time 
+str1=input('Enter the string_Object:')
+str2=input('Enter the String_Object:')
+print(str1,str2)
+print()
+print(str1==str2)
+print()
+print(str1!=str2)
+print()
+time.sleep(3)
+print('End of an applicaition')
+
+
+
+Comparision operators:
+==============
+Python supports Compasision operators.The main objective of Comparsion operators is
+to compare the operands and return boolean values Either True or False.Following are th
+CO in Python
+
+-> > 
+-> >= 
+-><
+-> <= 
+
+Ex1:
+===
+import time 
+Number_1=eval(input("Enter a Number:"))
+Number_2=eval(input("Enter a Number:"))
+print("======CO======")
+print(Number_1,Number_2)
+print()
+obj1=Number_1>Number_2
+obj2=Number_1>=Number_2
+obj3=Number_1<Number_2
+obj4=Number_1<=Number_2
+print(obj1,obj2,obj3,obj4)
+print()
+time.sleep(3)
+print('End of an application')
+
+
+Chaining Operator:
+===========
+Python supports Chaining operator.The main objective of Chaining operator is to perform
+complex comparision as per the application ren.Chaining operators return 
+Boolean values Either True or False.
+
+X1=1000 
+X2=900 
+X3=800 
+X4=700 
+X5=600
+
+res1=X1>X2>X3>X4>X5
+
+
+Note:
+====
+While working with Chainging operator if one of the condition is fasle remaining 
+all condition is false.
+
+
+Ex1:
+==
+import time 
+X1=eval(input("Enter the value of X1:"))
+X2=eval(input("Enter the value of X2:"))
+X3=eval(input("Enter the value of X3:"))
+X4=eval(input("Enter the value of X4:"))
+X5=eval(input("Enter the value of X5:"))
+print()
+print("=====Using Chainging_Operator======")
+res1=X1>X2>X3>X4>X5 
+print("The result_set is:",res1)
+print()
+print("The data type is:",type(res1))
+print()
+time.sleep(3)
+print('End of an application')
+
+
+Ex2:
+==import time 
+X1=eval(input("Enter the value of X1:"))
+X2=eval(input("Enter the value of X2:"))
+X3=eval(input("Enter the value of X3:"))
+X4=eval(input("Enter the value of X4:"))
+X5=eval(input("Enter the value of X5:"))
+print()
+print("=====Using Chainging_Operator======")
+res1=X1>X2>X3<X4>X5 
+print("The result_set is:",res1)
+print()
+print("The data type is:",type(res1))
+print()
+time.sleep(3)
+print('End of an application')
+
+
+Ex3:
+===
+import time 
+X1=eval(input("Enter the value of X1:"))
+X2=eval(input("Enter the value of X2:"))
+X3=eval(input("Enter the value of X3:"))
+X4=eval(input("Enter the value of X4:"))
+X5=eval(input("Enter the value of X5:"))
+print()
+print("=====Using Chainging_Operator======")
+res1=X1==X2==X3==X4==X5 
+print("The result_set is:",res1)
+print()
+print("The data type is:",type(res1))
+print()
+time.sleep(3)
+print('End of an application')
+
+
+Ex4:
+===
+import time 
+X1=eval(input("Enter the value of X1:"))
+X2=eval(input("Enter the value of X2:"))
+X3=eval(input("Enter the value of X3:"))
+X4=eval(input("Enter the value of X4:"))
+print()
+print("=====Using Chainging_Operator======")
+res1=X1+X2==X3*X4
+print("The result_set is:",res1)
+print()
+print("The data type is:",type(res1))
+print()
+time.sleep(3)
+print('End of an application')
+
+
+
+->Logical operators:
+=============
+Python supports Logical operators.The main objective of logical operators is to perform
+logical operations in our application.Following are the Logical operators in Python
+
+->Logical and  ----->  and 
+->Logical or  ------> or 
+->Logical not  ------> not
+
+
+
+True --- 1 
+False --- 0 
+
+->Logical and  ----->  and :
+===================
+
+X1           X2                     X1 and X2
+1              0                          0
+0              1                          0
+1              1                          1
+0              0                          0
+
+
+Ex1:
+==
+import time 
+print("====Welcome to Gmail_Application======")
+gmail=input('Enter the gmail_account:')
+password=input('Enter the password:')
+if(gmail=="abc@gmail.com" and password=="ABC_12345"):
+    print(gmail,password,":Login successfully --->Welcome gmail applicaiton")
+else:
+    print(gmail,password,":In_valid User/Customer")
+print()
+time.sleep(3)
+print('End of an application')
+
+
+
+
+
+
+
+
+
+
+
+
+
+

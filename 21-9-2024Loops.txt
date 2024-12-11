@@ -1,0 +1,299 @@
+Nested for loop/Inner for loop:
+===================
+Python supports Nested for loop.It is also known as Inner for loop.Nested for loop or 
+Inner for loop can be represent as defining or declaring a for loop inside another for 
+loop then it is said to be Nested for loop/Inner for loop.
+
+
+Note:
+====
+While working with Nested for loop/Inner for loop.If outer for loop condition 
+is true then inner for loop will be executed untill it's condition is false.
+
+
+for(condition): ---->Outer for loop
+       -----
+     for(condition): ----->Inner for loop
+              ----
+
+
+0 ----->Outer_For_loop
+0----
+1------
+2----------Inner_For_Loop
+1 ----
+0
+1
+2
+2
+0
+1
+2
+
+
+Ex1:
+==
+import time 
+for x1 in range(3):
+    print("Outer_For_Loop:",x1)
+    for y1 in range(3):
+        print("Inner_For_Loop:",y1)
+print()
+time.sleep(2)
+print('End of an application')
+
+
+Ex2:
+==
+import time 
+for x1 in range(3):
+    for y1 in range(3):
+        print(x1,"---",y1)
+print()
+time.sleep(3)
+print("End of an application")
+
+
+Ex3:
+===
+import time 
+L1=[0,1,2]
+L2=[0,1,2]
+print(L1,L2)
+print()
+for x1 in L1:
+    for y1 in L2:
+        print(x1,"---",y1)
+print()
+time.sleep(3)
+print('End of an application')
+
+
+L1=[['A','B','C'],['D','E','F'],['G','H','I']]
+
+Ist_Output:
+=======
+['A','B','C']
+A
+B
+C
+['D','E','F']
+D
+E
+F
+['G','H','I']
+G
+H
+I
+
+2nd_Output:
+========
+A
+B
+C
+D
+E
+F
+G
+H
+I
+
+3rd_Output:
+========
+A B C D E F G H I 
+
+
+4th_Output
+========
+A  B   C
+D  E   F
+G  H   I
+
+
+Ex1:
+==
+import time 
+L1=[['A','B','C'],['D','E','F'],['G','H','I']]
+print(L1)
+print()
+for x1 in L1:
+    print(x1)
+    for y1 in x1:
+        print(y1)
+print()
+time.sleep(2)
+print('End of an application')
+
+
+Ex2:
+===
+import time 
+L1=[['A','B','C'],['D','E','F'],['G','H','I']]
+print(L1)
+print()
+for x1 in L1:
+    for y1 in x1:
+        print(y1)
+print()
+time.sleep(2)
+print('End of an application')
+
+
+Ex3:
+===
+import time 
+L1=[['A','B','C'],['D','E','F'],['G','H','I']]
+print(L1)
+print()
+for x1 in L1:
+    for y1 in x1:
+        print(y1,end=" ")
+print()
+print()
+time.sleep(2)
+print('End of an application')
+
+
+
+Ex4:
+===
+import time 
+L1=[['A','B','C'],['D','E','F'],['G','H','I']]
+print(L1)
+print()
+for x1 in L1:
+    for y1 in x1:
+        print(y1,end=" ")
+    print()
+print()
+print()
+time.sleep(2)
+print('End of an application')
+
+
+Ex5:
+===
+import time 
+for x1 in range(1,11):
+    for y1 in range(1,11):
+        print(x1*y1,end=" ")
+    print()
+print()
+time.sleep(3)
+print('End of an application')
+
+
+Ex6:
+===
+import time 
+for x1 in range(1,11):
+    for y1 in range(1,11):
+        print(x1,"X",y1,"=",x1*y1)
+    print()
+print()
+time.sleep(3)
+print('End of an application')
+
+
+
+Ex7:
+===
+import time 
+L1=[1001,1002,1003,1004,1005]
+L2=['A','B','C']
+for x1 in L1:
+    for x2 in L2:
+        print(x1,"--",x2)
+
+
+
+A
+1
+2
+3
+B
+1
+2
+3
+C
+1
+2
+3
+
+
+A---1
+A--2
+A--3
+B--1
+B--2
+B--3
+C--1
+C--2
+C--3
+
+
+Ex1:
+==
+import time 
+L1=['A','B','C']
+L2=[1,2,3]
+for x1 in L1:
+    print(x1)
+    for y1 in L2:
+        print(y1)
+print()
+time.sleep(2)
+print('End of an application')
+
+
+Ex2:
+===
+import time 
+L1=['A','B','C']
+L2=[1,2,3]
+for a1 in L1:
+    for a2 in L2:
+        print(a1,"---",a2)
+print()
+time.sleep(2)
+print('End of an applicaiton')
+
+
+ABCD
+abcd 
+
+A
+a
+b
+c
+d
+B
+a
+b
+c
+d
+
+L2=[[1,2,3],[4,5,6]]
+
+1)
+[1,2,3]
+1
+2
+3
+[4,5,6]
+4
+5
+6
+
+2)
+  1   2  3
+  4   5  6
+
+
+
+
+
+
+
+
+

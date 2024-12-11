@@ -1,0 +1,238 @@
+Ex1:
+===
+import time 
+str1=input('Enter the Position:')
+if(str1=="Developer"):
+    print(str1,":One of the Position in IT company ...")
+print()
+time.sleep(3)
+print('End of an application')
+
+Ex2:
+===
+import time 
+str1=input('Enter the Position:')
+if str1=="Developer":
+    print(str1,":One of the Position in IT company ...")
+print()
+time.sleep(3)
+print('End of an application')
+
+
+Ex3:
+===
+import time 
+Mobile_Number=input("Enter the Mobile_Number:")
+if(Mobile_Number=="+91-9090123123" or Mobile_Number=="9090123123" or Mobile_Number=="91-9090123123"):
+    print(Mobile_Number,":It is indian_mobile_number")
+print()
+time.sleep(2)
+print('End of an application')
+
+
+Nested if statements:
+=============
+Python supports Nested if statements.It is also known as Inner if statement.Nested if statement of 
+Inner if statement can be represent as if we are defining or declaring a if statement inside another
+if statement then it is said to be Nested if statement or Inner Statements.
+
+
+
+Note:
+===
+While working with nested if statement.If outer if statement condition is satisfied it will enter in 
+inner if statement.
+
+
+if(condition): ---->Outer_if_Statement
+       ----
+       if(condition): ---->Inner_if_Statement
+              ----
+
+
+Ex1:
+==
+import time 
+First_Name=input("Enter the First_Name:")
+Last_Name=input("Enter the Last_Name:")
+if(First_Name=="Jessica"):
+    print("My First_Name is:",First_Name)
+    if(Last_Name=="Adam"):
+        print("My Last_Name is:",Last_Name)
+print()
+time.sleep(3)
+print('End of an application')
+
+
+Ex2:
+===
+import time 
+First_Name=input("Enter the First_Name:")
+Last_Name=input("Enter the Last_Name:")
+DOB=input("Enter the Date of birth:")
+if(First_Name=="Jessica"):
+    print("My First_Name is:",First_Name)
+    if(Last_Name=="Adam"):
+        print("My Last_Name is:",Last_Name)
+        if(DOB=="16/7/1989"):
+            print("My Date of birth is:",DOB)
+            print()
+            print("Well done you are visa is approved for Dallas_Austin_City in USA")
+print()
+time.sleep(3)
+print('End of an application')
+
+
+->if-else statements:
+=============
+Python supports if-else statements.It is a transfer statement in Python.If "if" condition is
+True then if block will be executed otherwise else block will be executed.
+
+if(condition):
+      ----
+else:
+      -----
+
+Ex1:
+==
+import time 
+P1=input("Enter the Password:")
+P2=input("Enter the Confirm_Password:")
+if(P1=="ihub_123" and P2=="ihub_123"):
+    print(P1,P2,":Valid Password")
+else:
+    print(P1,P2,":In_valid Password")
+print()
+time.sleep(3)
+print('End of an application')
+
+
+Ex2:
+==
+import time 
+P1=input("Enter the Password:")
+P2=input("Enter the Confirm_Password:")
+if(P1==P2):
+    print(P1,P2,":Valid Password")
+else:
+    print(P1,P2,":In_valid Password")
+print()
+time.sleep(3)
+print('End of an application')
+
+
+Ex3:
+===
+import time 
+Number=eval(input("Enter the number either + number/- number:"))
+if(Number>=0):
+    print(Number,": It is Positive_Number")
+else:
+    print(Number,":It is a Negative_Number")
+print()
+time.sleep(3)
+print('End of an application')
+
+
+Ex4:
+===
+import time 
+Number=eval(input("Enter the number:"))
+if(Number%2==0):
+    print(Number,":It is an Even_Number")
+else:
+    print(Number,":It is an Odd_Number")
+print()
+time.sleep(2)
+print('End of an application')
+
+
+Ex5:
+===
+import time 
+str1=input("Enter the String_Objec:")
+if(str1==str1[::-1]):
+    print(str1,str1[::-1],": Given string is palindrom")
+else:
+    print(str1,str1[::-1],":Given string is not a palindrom")
+print()
+time.sleep(3)
+print('End of an application')
+
+
+if-elif-else:
+=======
+Python supports if-elif-else statement.The main objective of if-elif-else block is to check more than
+one condition.
+
+
+if(condition):
+     ---
+elif(condition):
+      ---
+elif(condition):
+      ---
+else:
+      ----
+
+
+Ex1:
+==
+import time 
+technology=input('Enter the technology:')
+if(technology=="Python"):
+    print(technology,":Meant general purpose application developement")
+elif(technology=="Django"):
+    print(technology,": Meant for End to End Web appilication developement")
+elif(technology=="JavaScript"):
+    print(technology,":Meant client_side validation")
+elif(technology=="Angular"):
+    print(technology,":Meant for Single page applications")
+elif(technology=="ReactJS"):
+    print(technology,": Meant of UI components in SPA application")
+elif(technology=="SQL/PLSQL"):
+    print(technology,": Meant for Database_Operations")
+else:
+    print(technology,":Dear Students Please enter technology ...")
+print()
+time.sleep(3)
+print('End of an application')
+
+
+0 ----> Biryani
+1 ---->Chicken_1 
+2---->Mutton_1
+3 ---->Fish_Birya
+4---->Prowns 
+
+
+Ex2:
+===
+import time 
+print('----Welcome to Paradish_Hotel------')
+option=eval(input('Enter the options for receipies:'))
+if(option==0):
+    print(option,"0.Water_bottle order")
+elif(option==1):
+    print(option,":1.Chiken_Biryani")
+elif(option==2):
+    print(option,":2.Mutton_Biryani")
+elif(option==3):
+    print(option,":3.Fish_Biryani")
+elif(option==4):
+    print(option,":4.Prowns_Biryani")
+elif(option==5):
+    print(option,":5.Chicken_1")
+else:
+    print(option,":10.There is no item avaiable_sorry ...")
+print()
+time.sleep(2)
+print('End of an application')
+
+
+
+
+        
+        
+ 
+

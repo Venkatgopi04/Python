@@ -1,0 +1,210 @@
+->Default variable:
+=============
+self is a default variable.The main objective of self is to define or declare instance
+variable and access inside the instance method.
+
+
+
+Ex1:
+===
+import time 
+class Student_Clas:
+    def __init__(self,Sid,Sname,Subject,Marks):
+        self.Sid=Sid 
+        self.Sname=Sname 
+        self.Subject=Subject 
+        self.Marks=Marks 
+    def m1(self):
+        print(self.Sid,self.Sname,self.Subject,self.Marks)
+s1=Student_Clas(1001,"Jessica_1","JavaScript & Python",79)
+s1.m1()
+print()
+time.sleep(3)
+print("End of an application")
+
+
+Ex2:
+===
+import time 
+class Operations_Class:
+    def __init__(self,x1,x2):
+        self.x1=x1 
+        self.x2=x2 
+        print(self.x1+self.x2)
+o1=Operations_Class(100,200)
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Ex3:
+==
+import time 
+class Operations_Class:
+    def __init__(self,x1,x2):
+        self.x1=x1 
+        self.x2=x2 
+        return self.x1+self.x2
+       
+o1=Operations_Class(100,200)
+print(o1)
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Note:
+====
+constrcutor_method/constructor_function is meant for declaration.
+
+
+Ex3:
+==
+import time 
+class Operations_Class:
+    def __init__(self,x1,x2):
+        self.x1=x1 
+        self.x2=x2 
+    def m1(self):
+        print("Sum is:",self.x1+self.x2)
+o1=Operations_Class(101,102)
+o1.m1()
+print()
+time.sleep(3)
+print("End of an application")
+
+
+Ex4:
+==
+import time 
+class Operations_Class:
+    def __init__(self,x1,x2):
+        self.x1=x1 
+        self.x2=x2 
+    def m1(self):
+        return self.x1+self.x2
+       
+o1=Operations_Class(101,102)
+print("Sum is:",o1.m1())
+print()
+time.sleep(3)
+print("End of an application")
+
+
+Inner classes/Nested classes:
+==================
+Python supports Inner classes.It is also known as Nested classes.Inner classes or
+Nested class can be represent as if we are defing or declaring a class inside another
+class then it is said to be Inner classes/Nested classes
+
+
+class Outer_Class:
+          ----
+          class Inner_Class:
+                   -----
+
+Without existing one type of object there is no chance of existing another type of
+object then we can go with Inner classes or nested classes.
+
+class Car_Class:
+       ----
+        class Engine_Class:
+                 -----
+
+class Univercity:
+               ----
+               class College:
+                        ----
+
+Ex1:
+===
+import time 
+class Car_Class:
+    print("Car_class Implementation ...")
+    class Engine_Class:
+        print("Engine_class Implementation ...")
+        def m1(self):
+            print("This is First_Service ...")
+c1=Car_Class()
+e1=c1.Engine_Class()
+e1.m1()
+print()
+time.sleep(3)
+print("End of an application")
+
+
+Ex2:
+===
+import time 
+class Car_Class:
+    print("Car_class Implementation ...")
+    class Engine_Class:
+        print("Engine_class Implementation ...")
+        def m1(self):
+            print("This is First_Service ...")
+c1=Car_Class().Engine_Class().m1()
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Name of the language:Python
+Date of release is:16/7/1989
+
+
+Ex1:
+===
+import time 
+class Language_Details:
+    def __init__(self):
+        self.name="Python Programming Language"
+        self.doj=self.DOJ()
+    def m1(self):
+        print("Name of the language is:",self.name)
+        print()
+        self.doj.m2()
+    class DOJ:
+        def __init__(self):
+            self.day=16 
+            self.month=7 
+            self.year=1989 
+        def m2(self):
+            print("Date of release is:{}/{}/{}".format(self.day,self.month,self.year))
+l1=Language_Details()
+l1.m1()
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Name of the student:Rahul Verma
+Date of birth:19/7/2002
+
+
+Ex1:
+===
+import time 
+class Student_Class:
+    def __init__(self):
+        self.name="Rahul Verma"
+        self.dob=self.DOB()
+    def m1(self):
+        print("Name of the student is:",self.name)
+        print()
+        self.dob.m2()
+    class DOB:
+        def __init__(self):
+            self.day=19 
+            self.month=7 
+            self.year=2002 
+        def m2(self):
+            print("Date of birth is:{}/{}/{}".format(self.day,self.month,self.year))
+s1=Student_Class()
+s1.m1()
+print()
+time.sleep(2)
+print("End of an application")
+        
+        
+
+

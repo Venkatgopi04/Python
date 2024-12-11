@@ -1,0 +1,108 @@
+Regex object for Mobile number:
+====================
+8080123123 ---->regex object ---->[6-9]\d{9}
+
+
+Ex1:
+===
+import time 
+import re 
+Mobile_Number=input("Enter the Mobile_Number:")
+res1=re.fullmatch("[6-9]\d{9}",Mobile_Number)
+if(res1!=None):
+    print(Mobile_Number,": It is mobile_number")
+else:
+    print(Mobile_Number,": It is in_valid_mobile_number")
+print()
+time.sleep(2)
+print("End of an application")
+
+Regex object for Indian mobile number:
+=========================
++91-9090123123 --->[+]{1}[9]{1}[1]{1}-[6-9]\d{9}
+
+
+Ex1:
+==
+import time 
+import re 
+Mobile_Number=input("Enter the Mobile_Number:")
+res1=re.fullmatch("[+]{1}[9]{1}[1]{1}-[6-9]\d{9}",Mobile_Number)
+if(res1!=None):
+    print(Mobile_Number,": It is indian_mobile_number")
+else:
+    print(Mobile_Number,": It is in_valid_indian_mobile_number")
+print()
+time.sleep(2)
+print("End of an application")
+
+
+regex object for gmail validation:
+=====================
+abc@gmail.com ---->\w[A-Za-z0-9._]*@gmail[.]com
+
+
+Ex1:
+==
+import time 
+import re 
+Gmail_Account=input("Enter the Gmail_Account:")
+res1=re.fullmatch("\w[A-Za-z0-9._]*@gmail[.]com",Gmail_Account)
+if(res1!=None):
+    print(Gmail_Account,":It is valid_gmail_account")
+else:
+    print(Gmail_Account,": It is in_valid_gmail_account")
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Ex2:
+===
+import time 
+import re 
+Gmail_Account=input("Enter the Gmail_Account:")
+res1=re.fullmatch("\w[A-Za-z0-9._]*@(gmail|yahoo|rediff|[a-z]*)[.]com",Gmail_Account)
+if(res1!=None):
+    print(Gmail_Account,":It is valid_gmail_account")
+else:
+    print(Gmail_Account,": It is in_valid_gmail_account")
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Ex3:
+===
+import time 
+import re 
+Gmail_Account=input("Enter the Gmail_Account:")
+res1=re.fullmatch("\w[A-Za-z0-9._]*@(gmail|yahoo|rediff|[a-z]*)([.]com|[.]co[.]in|[.]in|[.]net)",Gmail_Account)
+if(res1!=None):
+    print(Gmail_Account,":It is valid_gmail_account")
+else:
+    print(Gmail_Account,": It is in_valid_gmail_account")
+print()
+time.sleep(2)
+print("End of an application")
+
+
+
+Ex4:
+===
+import time 
+import re 
+f1=open("ihub_1.txt","r")
+f2=open("ihub_2.txt","w")
+for x1 in f1:
+    L1=re.findall("[+]{1}[9]{1}[1]{1}-[6-9]\d{9}",x1)
+    for x1 in L1:
+        f2.write(x1+"\n")
+        print(x1)
+print()
+f1.close()
+f2.close()
+print()
+time.sleep(2)
+print("End of an application")
+    

@@ -1,0 +1,271 @@
+Decorators in Python:
+=============
+Python supports Decorators.Decorators are function in Python.We can define or 
+declare as @any_decorator_name.Decorators are nothing a function can be used as 
+parameter to another function to provide additional functionality without disturbing
+existing function.
+
+
+Ex1:
+===
+import time 
+def Test_Case1(name):
+    print("Name of the language is:",name)
+if(__name__=="__main__"):
+    Test_Case1("Python")
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Ex2:
+==
+import time
+def Test_Case2(func):
+    def inner(name):
+        if(name=="Python"):
+            print(name,":Meant for general purpose application")
+        else:
+            func(name)
+    return inner
+@Test_Case2
+def Test_Case1(name):
+    print("Name of the language is:",name)
+if(__name__=="__main__"):
+    Test_Case1("Python")
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Ex3:
+===
+import time
+def Test_Case2(Test_Case1):
+    def inner(name):
+        if(name=="Python"):
+            print(name,":Meant for general purpose application")
+        else:
+            Test_Case1(name)
+    return inner
+@Test_Case2
+def Test_Case1(name):
+    print("Name of the language is:",name)
+if(__name__=="__main__"):
+    Test_Case1("Python")
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Ex4:
+===
+import time
+def Test_Case2(Test_Case1):
+    def inner(name):
+        if(name=="python"):
+            print(name,":Meant for general purpose application")
+        else:
+            Test_Case1(name)
+    return inner
+@Test_Case2
+def Test_Case1(name):
+    print("Name of the language is:",name)
+if(__name__=="__main__"):
+    Test_Case1("Python")
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Ex5:
+===
+import time
+def Test_Case2(Test_Case1):
+    def inner(name):
+        if(name=="Python"):
+            print(name,":Meant for general purpose application")
+        elif(name=="JavaScript"):
+            print(name,":Meant for Dynamic web applications")
+        elif(name=="SQL/PLSQL"):
+            print(name,":Meant for Database_Operations")
+        else:
+            Test_Case1(name)
+    return inner
+@Test_Case2
+def Test_Case1(name):
+    print("Name of the language is:",name)
+if(__name__=="__main__"):
+    Test_Case1("Python")
+    print()
+    Test_Case1("JavaScript")
+    print()
+    Test_Case1("SQL/PLSQL")
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Ex6:
+===
+import time
+def Test_Case2(Test_Case1):
+    def inner(name):
+        if(name=="Python"):
+            print(name,":Meant for general purpose application")
+        elif(name=="JavaScript"):
+            print(name,":Meant for Dynamic web applications")
+        elif(name=="SQl/PLSQL"):
+            print(name,":Meant for Database_Operations")
+        else:
+            Test_Case1(name)
+    return inner
+@Test_Case2
+def Test_Case1(name):
+    print("Name of the language is:",name)
+if(__name__=="__main__"):
+    Test_Case1("Python")
+    print()
+    Test_Case1("JavaScript")
+    print()
+    Test_Case1("SQL/PLSQL")
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Ex7:
+===
+import time
+def Test_Case1(X1,X2):
+    return X1//X2 
+if(__name__=="__main__"):
+    print(Test_Case1(120,2))
+    print()
+    print(Test_Case1(180,2))
+    print()
+    print(Test_Case1(200,0))
+    print()
+    print(Test_Case1(1000,10))
+    print()
+    print(Test_Case1(2000,20))
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Ex8:
+===
+import time
+def Test_Case2(Test_Case1):
+    def inner(X1,X2):
+        if(X2==0):
+            print(X2,": Dear Upcoming software engineers how can divide a number 0")
+        else:
+            return Test_Case1(X1,X2)
+    return inner
+@Test_Case2
+def Test_Case1(X1,X2):
+    return X1//X2 
+if(__name__=="__main__"):
+    print(Test_Case1(120,2))
+    print()
+    print(Test_Case1(180,2))
+    print()
+    print(Test_Case1(200,0))
+    print()
+    print(Test_Case1(1000,10))
+    print()
+    print(Test_Case1(2000,20))
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Ex9:
+===
+import time 
+def Test_Case2(Test_Case1):
+    def inner(name):
+        if(name=="Python"):
+            print(name,": Meant for general purpose application development")
+        else:
+            Test_Case1(name)
+    return inner
+def Test_Case1(name):
+    print("Name of the language is:",name)
+decorfunction=Test_Case2(Test_Case1)
+if(__name__=="__main__"):
+    Test_Case1("Python")
+    print()
+    decorfunction("Python")
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Ex10:
+===
+import time 
+def Test_Case2(Test_Case1):
+    def inner(name):
+        if(name=="Python"):
+            print(name,": Meant for general purpose application development")
+        else:
+            Test_Case1(name)
+    return inner
+def Test_Case1(name):
+    print("Name of the language is:",name)
+decorfunction=Test_Case2(Test_Case1)
+if(__name__=="__main__"):
+    decorfunction("Python")
+    print()
+    Test_Case1("Python")
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Ex11:
+===
+import time 
+def Test_Login_Component_Case2(func):
+    def inner(First_Name,Last_Name,Username,P1,P2,Email):
+        if(Username=="rahul_1245" and P1=="RA_1234567"):
+            print(Username,P1,": Login successfully ...") 
+        else:
+            func(First_Name,Last_Name,Username,P1,P2,Email)
+    return inner
+@Test_Login_Component_Case2
+def Test_Register_Component_Case1(First_Name,Last_Name,Username,P1,P2,Email):
+    print("-----New Users_Details------")
+    print("First_Name is:",First_Name)
+    print("Last_Name is:",Last_Name)
+    print("Username is:",Username)
+    print("Password is:",P1)
+    print("Confirm_Password is:",P2)
+    print("Email_Address is:",Email)
+if(__name__=="__main__"):
+    Test_Register_Component_Case1("Rahul","Verma","rahul_1245","RA_1234567","RA_1234567","rahul@gmail.com")
+print()
+time.sleep(2)
+print("End of an application")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

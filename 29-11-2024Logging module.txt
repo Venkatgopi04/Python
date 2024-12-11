@@ -1,0 +1,207 @@
+Logging modules in Python:
+==================
+Python supports Logging module.The main objective of logging modules is to trace the
+information.Information can be Product_Information,Customer_Information,Student_Information,
+Employee_Information.To implement logging module in Python we do have a module name logging 
+module inside the logging modules we do have a class named as basicConfig(File_Name,level)
+
+
+While working with logging module we do have following levels
+
+->CRITICAL ---->50 
+->ERROR    --->40 
+->WARNING ----> 30
+->INFO ---->20
+->DEBUG --->10
+->NOTSET --->0
+
+
+Ex1:
+===
+import time 
+import logging 
+logging.basicConfig(filename="ihub_1.txt",level=logging.DEBUG)
+print("----Welcome to Logging Module----")
+logging.debug("Debug Information")
+logging.warning("Warning Information")
+logging.info("Infor Information")
+logging.error("Error Information")
+logging.critical("Critical Information")
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Ex2:
+===
+import time 
+import logging 
+logging.basicConfig(filename="ihub_1.txt",level=logging.DEBUG,filemode="w")
+print("----Welcome to Logging Module----")
+logging.debug("Debug Information")
+logging.warning("Warning Information")
+logging.info("Infor Information")
+logging.error("Error Information")
+logging.critical("Critical Information")
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Ex3:
+===
+import time 
+import logging 
+logging.basicConfig(filename="ihub_1.txt",level=10,filemode="w")
+print("----Welcome to Logging Module----")
+logging.debug("Debug Information")
+logging.warning("Warning Information")
+logging.info("Infor Information")
+logging.error("Error Information")
+logging.critical("Critical Information")
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Ex4:
+==
+import time 
+import logging 
+logging.basicConfig(filename="ihub_1.txt",filemode="w")
+print("----Welcome to Logging Module----")
+logging.debug("Debug Information")
+logging.warning("Warning Information")
+logging.info("Infor Information")
+logging.error("Error Information")
+logging.critical("Critical Information")
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Ex5:
+===
+import time 
+import logging 
+logging.basicConfig(filename="ihub_1.txt",level=logging.CRITICAL,filemode="w")
+print("----Welcome to Logging Module----")
+logging.debug("Debug Information")
+logging.warning("Warning Information")
+logging.info("Infor Information")
+logging.error("Error Information")
+logging.critical("Critical Information")
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Ex6:
+===
+import time 
+import logging 
+logging.basicConfig(format="%(levelname)s",level=logging.DEBUG)
+print("----Welcome to Logging Module----")
+logging.debug("Debug Information")
+logging.warning("Warning Information")
+logging.info("Infor Information")
+logging.error("Error Information")
+logging.critical("Critical Information")
+print()
+time.sleep(2)
+print("End of an application")
+
+Ex7:
+===
+import time 
+import logging 
+logging.basicConfig(format="%(message)s",level=logging.DEBUG)
+print("----Welcome to Logging Module----")
+logging.debug("Debug Information")
+logging.warning("Warning Information")
+logging.info("Infor Information")
+logging.error("Error Information")
+logging.critical("Critical Information")
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Ex8:
+===
+import time 
+import logging 
+logging.basicConfig(format="%(asctime)s",level=logging.DEBUG)
+print("----Welcome to Logging Module----")
+logging.debug("Debug Information")
+logging.warning("Warning Information")
+logging.info("Infor Information")
+logging.error("Error Information")
+logging.critical("Critical Information")
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Ex9:
+===
+import time 
+import logging 
+logging.basicConfig(format="%(levelname)s:%(message)s:%(asctime)s",level=logging.DEBUG)
+print("----Welcome to Logging Module----")
+logging.debug("Debug Information")
+logging.warning("Warning Information")
+logging.info("Infor Information")
+logging.error("Error Information")
+logging.critical("Critical Information")
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Ex10:
+===
+import time 
+import logging 
+logging.basicConfig(format="%(levelname)s:%(message)s:%(asctime)s",level=logging.DEBUG,datefmt="%d/%m/%Y %H:%M:%S %p")
+print("----Welcome to Logging Module----")
+logging.debug("Debug Information")
+logging.warning("Warning Information")
+logging.info("Infor Information")
+logging.error("Error Information")
+logging.critical("Critical Information")
+print()
+time.sleep(2)
+print("End of an application")
+
+
+
+Ex11:
+====
+import time 
+import logging 
+logging.basicConfig(filename="ihub_2.txt",level=logging.DEBUG,format="%(levelname)s:%(message)s:%(asctime)s",datefmt="%d/%m/%Y %H:%M:%S %p",filemode="w")
+print("----A request came in the desk----")
+try:
+    X1=int(input("Enter the value of X1:"))
+    X2=int(input("Enter the value of X2:"))
+    res1=X1//X2 
+    print("The result_set is:",res1)
+except ZeroDivisionError as e:
+    print("Exception_Name is:",e)
+    logging.exception(e)
+except ValueError as e:
+    print("Exception_Name is:",e)
+    logging.exception(e)
+print()
+print("Request processed succcessfully ....")
+print()
+time.sleep(2)
+print("End of an application")
+
+
+
+
+
+
+

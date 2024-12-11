@@ -1,0 +1,498 @@
+Q1)How to insert the data/information using for loop:
+==================================
+
+Ex1:
+==
+import time 
+import mysql.connector 
+try:
+    con=mysql.connector.connect(host="localhost",user="root",password="",database="my_database_101")
+    cursor=con.cursor()
+    n=eval(input("Enter the number of rows:"))
+    for x1 in range(n):
+        Pid=int(input("Enter the Pid:"))
+        Pname=input("Enter the Pname:")
+        Price=float(input("Enter the Price:"))
+        Company=input("Enter the Company:")
+        sql="insert into p1 values(%s,'%s',%s,'%s')"
+        cursor.execute(sql%(Pid,Pname,Price,Company))
+        con.commit()
+    print("Records are inserted successfully ..")
+except mysql.connector.DatabaseError as e:
+    if con:
+        con.rollback()
+        print("Exception_Name is:",e)
+finally:
+    if cursor:
+        cursor.close()
+    elif con:
+        con.close()
+print()
+time.sleep(2)
+print("End of an application")
+
+
+OUTPUT:
+=====
+
+MariaDB [my_database_101]> select * from p1;
++------+----------+-------+---------+
+| Pid  | Pname    | Price | Company |
++------+----------+-------+---------+
+| 1001 | Mobile_1 | 23000 | Samsung |
+| 1002 | Mobile_2 | 27000 | Samsung |
+| 1003 | Mobile_3 | 28000 | Samsung |
+| 1004 | Mobile_4 | 41000 | Samsung |
+| 1005 | Mobile_5 | 42000 | Samsung |
+| 1005 | Mobile_5 | 49000 | Samsung |
++------+----------+-------+---------+
+6 rows in set (0.000 sec)
+
+MariaDB [my_database_101]>
+
+
+Q2)Inserting the data/information using while loop?
+================================
+
+Ex1:
+===
+import time 
+import mysql.connector 
+try:
+    con=mysql.connector.connect(host="localhost",user="root",password="",database="my_database_101")
+    cursor=con.cursor()
+    while True:
+        Pid=int(input("Enter the Pid:"))
+        Pname=input("Enter the Pname:")
+        Price=float(input("Enter the Price:"))
+        Company=input("Enter the Company")
+        sql="insert into p1 values(%s,'%s',%s,'%s')"
+        cursor.execute(sql%(Pid,Pname,Price,Company))
+        option=input("Enter the option [YES|NO]:")
+        if(option=="NO"):
+            con.commit()
+            break
+  
+ 
+except mysql.connector.DatabaseError as e:
+    if con:
+        con.rollback()
+        print("Exception_Name is:",e)
+finally:
+    if cursor:
+        cursor.close()
+    elif con:
+        con.close()
+print()
+time.sleep(2)
+print("End of an application")
+
+
+OUTPUT:
+=====
+MariaDB [my_database_101]> select * from p1;
++------+----------+-------+---------+
+| Pid  | Pname    | Price | Company |
++------+----------+-------+---------+
+| 1001 | Mobile_1 | 23000 | Samsung |
+| 1002 | Mobile_2 | 27000 | Samsung |
+| 1003 | Mobile_3 | 28000 | Samsung |
+| 1004 | Mobile_4 | 41000 | Samsung |
+| 1005 | Mobile_5 | 42000 | Samsung |
+| 1005 | Mobile_5 | 49000 | Samsung |
+| 1006 | Mobile_6 | 59000 | Samsung |
+| 1007 | Mobile_7 | 63000 | Samsung |
++------+----------+-------+---------+
+8 rows in set (0.000 sec)
+
+
+To fetch the data/information from database to console/application console we do 
+have following methods inside the cursor_object.
+
+->cursor.fetchall():It is used fetch the complete records
+->cursor.fetchone():It is used to fetch only one record
+->cursor.fetchmany():It is used to fetch the parameterized query
+
+
+Ex1:
+===
+import time 
+import mysql.connector 
+try:
+    con=mysql.connector.connect(host="localhost",user="root",password="",database="my_database_101")
+    cursor=con.cursor()
+    cursor.execute("select * from p1")
+    data=cursor.fetchall()
+    print("----Product_Information-----")
+    for x1 in data:
+        print("Pid is:",x1[0])
+        print("Pname is:",x1[1])
+        print("Price is:",x1[2])
+        print("Company is:",x1[3])
+        print()
+except mysql.connector.DatabaseError as e:
+    if con:
+        con.rollback()
+        print("Exception_Name is:",e)
+finally:
+    if cursor:
+        cursor.close()
+    elif con:
+        con.close()
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Ex2:
+===
+import time 
+import mysql.connector 
+try:
+    con=mysql.connector.connect(host="localhost",user="root",password="",database="my_database_101")
+    cursor=con.cursor()
+    cursor.execute("select * from p1")
+    data=cursor.fetchall()
+    print("----Product_Information-----")
+    for x1 in data:
+        for x2 in x1:
+            print(x2,end="  ")
+        print()    
+except mysql.connector.DatabaseError as e:
+    if con:
+        con.rollback()
+        print("Exception_Name is:",e)
+finally:
+    if cursor:
+        cursor.close()
+    elif con:
+        con.close()
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Q3)Deleting a record from the table:
+======================
+Ex1:
+===
+import time 
+import mysql.connector 
+try:
+    sql="delete from p1 where Pid=1005"
+    con=mysql.connector.connect(host="localhost",user="root",password="",database="my_database_101")
+    cursor=con.cursor()
+    cursor.execute(sql)
+    con.commit()
+    print("Records are removed successfully ...")
+except mysql.connector.DatabaseError as e:
+    if con:
+        con.rollback()
+        print("Exception_Name is:",e)
+finally:
+    if cursor:
+        cursor.close()
+    elif con:
+        con.close()
+print()
+time.sleep(2)
+print("End of an application")
+
+
+OUTPUT:
+=====
+MariaDB [my_database_101]> select * from p1;
++------+----------+-------+---------+
+| Pid  | Pname    | Price | Company |
++------+----------+-------+---------+
+| 1001 | Mobile_1 | 23000 | Samsung |
+| 1002 | Mobile_2 | 27000 | Samsung |
+| 1003 | Mobile_3 | 28000 | Samsung |
+| 1004 | Mobile_4 | 41000 | Samsung |
+| 1006 | Mobile_6 | 59000 | Samsung |
+| 1007 | Mobile_7 | 63000 | Samsung |
++------+----------+-------+---------+
+6 rows in set (0.001 sec)
+
+
+Q4)Updating a record:
+===============
+
+Ex1:
+==
+import time 
+import mysql.connector 
+try:
+    sql="update P1 set Price=Price+10000 where Pid=1001"
+    con=mysql.connector.connect(host="localhost",user="root",password="",database="my_database_101")
+    cursor=con.cursor()
+    cursor.execute(sql)
+    con.commit()
+    print("Record is udpated successfully ...")
+except mysql.connector.DatabaseError as e:
+    if con:
+        con.rollback()
+        print("Exception_Name is:",e)
+finally:
+    if cursor:
+        cursor.close()
+    elif con:
+        con.close()
+print()
+time.sleep(2)
+print("End of an application")
+
+
+OUTPUT:
+=====
+
+MariaDB [my_database_101]> select * from p1;
++------+----------+-------+---------+
+| Pid  | Pname    | Price | Company |
++------+----------+-------+---------+
+| 1001 | Mobile_1 | 33000 | Samsung |
+| 1002 | Mobile_2 | 27000 | Samsung |
+| 1003 | Mobile_3 | 28000 | Samsung |
+| 1004 | Mobile_4 | 41000 | Samsung |
+| 1006 | Mobile_6 | 59000 | Samsung |
+| 1007 | Mobile_7 | 63000 | Samsung |
++------+----------+-------+---------+
+6 rows in set (0.000 sec)
+
+
+Q5)Deleting the data/information from the database?
+==================================
+
+Ex1:
+===
+import time 
+import mysql.connector 
+try:
+    sql="truncate table p1"
+    con=mysql.connector.connect(host="localhost",user="root",password="",database="my_database_101")
+    cursor=con.cursor()
+    cursor.execute(sql)
+    print("Records are deleted succssfully ....")
+except mysql.connector.DatabaseError as e:
+    if con:
+        con.rollback()
+        print("Exception_Name is:",e)
+finally:
+    if cursor:
+        cursor.close()
+    elif con:
+        con.close()
+print()
+time.sleep(2)
+print("End of an application")
+
+OUTPUT:
+=====
+MariaDB [my_database_101]> select * from p1;
+Empty set (0.001 sec)
+
+MariaDB [my_database_101]> desc p1;
++---------+-------------+------+-----+---------+-------+
+| Field   | Type        | Null | Key | Default | Extra |
++---------+-------------+------+-----+---------+-------+
+| Pid     | int(11)     | YES  |     | NULL    |       |
+| Pname   | varchar(20) | YES  |     | NULL    |       |
+| Price   | int(11)     | YES  |     | NULL    |       |
+| Company | varchar(20) | YES  |     | NULL    |       |
++---------+-------------+------+-----+---------+-------+
+4 rows in set (0.026 sec)
+
+
+
+Q6)Deleting the table:
+==============
+
+Ex1:
+==
+import time 
+import mysql.connector 
+try:
+    sql="drop table p1"
+    con=mysql.connector.connect(host="localhost",user="root",password="",database="my_database_101")
+    cursor=con.cursor()
+    cursor.execute(sql)
+    print("table is deleted successfully ....")
+except mysql.connector.DatabaseError as e:
+    if con:
+        con.rollback()
+        print("Exception_Name is:",e)
+finally:
+    if cursor:
+        cursor.close()
+    elif con:
+        con.close()
+print()
+time.sleep(2)
+print("End of an application")
+
+
+OUTPUT:
+======
+4 rows in set (0.026 sec)
+
+MariaDB [my_database_101]> show tables;
+Empty set (0.001 sec)
+
+MariaDB [my_database_101]> desc p1;
+ERROR 1146 (42S02): Table 'my_database_101.p1' doesn't exist
+MariaDB [my_database_101]>
+
+
+Q7)Deleting the database?
+=================
+Ex1:
+===
+import time 
+import mysql.connector 
+try:
+    sql="drop database my_database_101"
+    con=mysql.connector.connect(host="localhost",user="root",password="",database="my_database_101")
+    cursor=con.cursor()
+    cursor.execute(sql)
+    print("Database is deleted successfully ....")
+except mysql.connector.DatabaseError as e:
+    if con:
+        con.rollback()
+        print("Exception_Name is:",e)
+finally:
+    if cursor:
+        cursor.close()
+    elif con:
+        con.close()
+print()
+time.sleep(2)
+print("End of an application")
+
+OUTPUT:
+======
+MariaDB [my_database_101]> show databases;
++--------------------+
+| Database           |
++--------------------+
+| abcd_12345         |
+| abcde_123          |
+| ihub_77551         |
+| information_schema |
+| my_database_1      |
+| my_database_10     |
+| my_database_11     |
+| my_database_2      |
+| my_database_25     |
+| my_database_26     |
+| my_database_3      |
+| my_database_7      |
+| mysql              |
+| performance_schema |
+| phpmyadmin         |
+| qt_12345           |
+| qualitythought_2   |
+| sms_111            |
+| sms_555            |
+| sms_999            |
+| test               |
++--------------------+
+21 rows in set (0.001 sec)
+
+MariaDB [my_database_101]>
+
+
+
+SQL/PLSQL:
+=======
+SQL/PLSQL is divided into two parts
+
+SQL ---->Structure Query language ---->Commands/Queries
+
+PL/SQL --->
+
+
+SQL:
+===
+  ->DDL --->Data Defination Language
+          ->create
+          ->alter
+          ->rename
+          ->truncate   
+          ->drop 
+
+  ->DML ---->Data manuplation language
+     
+          ->insert
+          ->update
+          ->delete
+
+  ->TCL ---->Transactional control language
+
+           ->rollback
+           ->commit
+           ->savepoint
+
+  ->DCL ---->Data Control Language
+
+             ->grant
+             ->revoke 
+
+  ->Contrains ---->RDBM
+ 
+          ->primary key
+          ->foreign key 
+          ->null key 
+          ->unique key
+          ->not null key
+
+  ->Joins
+           ->Full join
+           ->Cross join
+            ->left join
+            ->Right joins
+
+  ->Normalization
+
+  ->Sub_queries
+   
+  ->Aggregate functions with where/order by/having
+
+
+->PL/SQL
+           ->triggers
+           ->functions
+           ->store procudure
+             
+
+
+
+   
+  
+           
+   
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

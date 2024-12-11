@@ -1,0 +1,807 @@
+Rule_2:
+=====
+An identifier/variable should not start with number or decimal number from 0-9.
+
+
+Ex1:
+==
+import time 
+12345_ABC_abc=1000 
+print("The value is:",12345_ABC_abc)
+print()
+print("The address is:",id(12345_ABC_abc))
+print()
+print("The data type is:",type(12345_ABC_abc))
+print()
+time.sleep(3)
+print('End of an application')
+
+
+Ex2:
+===
+import time 
+A12345_ABC_abc=1000 
+print("The value is:",A12345_ABC_abc)
+print()
+print("The address is:",id(A12345_ABC_abc))
+print()
+print("The data type is:",type(A12345_ABC_abc))
+print()
+time.sleep(3)
+print('End of an application')
+
+
+Ex3:
+===
+import time 
+a12345_ABC_abc=1000 
+print("The value is:",a12345_ABC_abc)
+print()
+print("The address is:",id(a12345_ABC_abc))
+print()
+print("The data type is:",type(a12345_ABC_abc))
+print()
+time.sleep(3)
+print('End of an application')
+
+
+Ex4:
+===
+import time 
+_12345_ABC_abc=1000 
+print("The value is:",_12345_ABC_abc)
+print()
+print("The address is:",id(_12345_ABC_abc))
+print()
+print("The data type is:",type(_12345_ABC_abc))
+print()
+time.sleep(3)
+print('End of an application')
+
+
+Rule_3:
+=====
+There is no length limit for an indentifier/variable.
+
+
+Ex1:
+==
+import time 
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=2500 
+print("The value is:",AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA)
+print()
+print("The address is:",id(AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA))
+print()
+print("The data type is:",type(AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA))
+print()
+time.sleep(2)
+print('End of an application')
+
+
+->SDLC --->Software Development Life Cycle.
+==============================
+->Development Phase
+->Testing Phase
+
+
+Ex1:
+==
+import time 
+A=2500 
+print("The value is:",A)
+print()
+print("The address is:",id(A))
+print()
+print("The data type is:",type(A))
+print()
+time.sleep(2)
+print('End of an application')
+
+
+Ex2:
+==
+import time 
+age=21 
+print("Age is:",age)
+print()
+print("Address is:",id(age))
+print()
+print("Data type is:",type(age))
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Ex3:
+===
+import time 
+Emp_age=21 
+print("Age is:",Emp_age)
+print()
+print("Address is:",id(Emp_age))
+print()
+print("Data type is:",type(Emp_age))
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Rule_4:
+=====
+Python indentifier/variable are case sensitive & case in sensitive.
+
+
+case sensitive:
+=========
+case sensitive can be represent as if the address of a variable are different then it 
+is said to be case sensitive
+
+A=15000 ---->id(A)---->12345
+a=18000---->id(a)----->54321
+
+
+Ex1:
+===
+import time 
+A=15000 
+a=18000 
+print("=====Values=====")
+print(A,a)
+print()
+print("====Addresses=====")
+print(id(A),id(a))
+print()
+time.sleep(3)
+print("End of an application")
+
+
+OUTPUT:
+======
+C:\Users\Admin\Desktop>Python test1.py
+=====Values=====
+15000 18000
+
+====Addresses=====
+2015497242512 2015498843632
+
+End of an application
+
+
+case in sensitive:
+===========
+case in sensitive can be represent as if the addresses of a variable/an identifier are same
+then it is said to be case in sensitive.
+
+
+B=100 ---->id(B) ----->77661
+b=100----->id(b)----->77661
+
+
+Ex1:
+===
+import time 
+B=100 
+b=100 
+print("====Values====")
+print(B,b)
+print()
+print("====Addresses======")
+print(id(B),id(b))
+print()
+time.sleep(3)
+print("End of an application")
+
+
+OUTPUT:
+=====
+C:\Users\Admin\Desktop>Python test1.py
+====Values====
+100 100
+
+====Addresses======
+140707234504832 140707234504832
+
+End of an application
+
+
+Ex2:
+===
+import time 
+A=1000 
+A=2000 
+A=3000 
+A=4000 
+A=5000
+print("====Values====")
+print(A,A)
+print()
+print("====Addresses====")
+print(id(A),id(A))
+print()
+time.sleep(3)
+print('End of an application')
+
+
+OUTPUT:
+=====
+C:\Users\Admin\Desktop>Python test1.py
+====Values====
+5000 5000
+
+====Addresses====
+2329462305328 2329462305328
+
+End of an application
+
+C:\Users\Admin\Desktop>
+
+
+Rule_5:
+====
+An identifier/variable should not start with reserved keyword as we know that 
+in python we do have 35_reserved keywords in that first three are in title case 
+True,False,None and remaining all are in lowercase case
+
+keyword ---->kwlist
+
+
+Ex1:
+===
+import time 
+import keyword as IHUB 
+print("====35_Reserved_Keywords====")
+print(IHUB.kwlist)
+print("======================")
+print()
+time.sleep(2)
+print("End of an application")
+
+
+OUTPUT:
+=====
+
+C:\Users\Admin\Desktop>Python test1.py
+====35_Reserved_Keywords====
+['False', 'None', 'True', 'and', 'as', 'assert', 'async', 'await', 'break', 'class', 'continue', 'def', 'del', 'elif', 'else', 'except', 'finally', 'for', 'from', 'global', 'if', 'import', 'in', 'is', 'lambda', 'nonlocal', 'not', 'or', 'pass', 'raise', 'return', 'try', 'while', 'with', 'yield']
+======================
+
+End of an application
+
+
+Ex2:
+===
+import time 
+if=19000 
+print("The value is:",if)
+print()
+print("The address is:",id(if))
+print()
+print("The data type is:",type(if))
+print()
+time.sleep(2)
+print('End of an applicaition')
+
+
+Ex3:
+===
+import time 
+If=19000 
+print("The value is:",If)
+print()
+print("The address is:",id(If))
+print()
+print("The data type is:",type(If))
+print()
+time.sleep(2)
+print('End of an applicaition')
+
+
+Ex4:
+===
+import time 
+iF=19000 
+print("The value is:",iF)
+print()
+print("The address is:",id(iF))
+print()
+print("The data type is:",type(iF))
+print()
+time.sleep(2)
+print('End of an applicaition')
+
+
+Ex5:
+===
+import time 
+True=19000 
+print("The value is:",True)
+print()
+print("The address is:",id(True))
+print()
+print("The data type is:",type(True))
+print()
+time.sleep(2)
+print('End of an applicaition')
+
+
+Ex6:
+===
+import time 
+true=19000 
+print("The value is:",true)
+print()
+print("The address is:",id(true))
+print()
+print("The data type is:",type(true))
+print()
+time.sleep(2)
+print('End of an applicaition')
+
+
+Task_One:
+======
+->Develop 15 valid_cases on 5 rules of an identifier/variable
+
+
+Task_Two:
+======
+->Develop 15 in_valid_cases on 5 rules of an identifier/variable
+
+
+Data types in Python:
+==============
+
+Q1)Why data types are used for?
+=====================
+Data types are used to store the different values at memory allocation as per the application
+ren via variable.Following are data types are supported in Python.
+
+
+->Integer data type
+->Floating data type
+->Boolean data type
+->String data type
+->Complex data type
+->List data type
+->Tuple data type
+->Set data type
+->Dict data type
+->Bytes data type
+->Bytearray data type
+->Frosenset data type
+->Range data type 
+->None data type
+
+
+->Integer data type:
+=============
+Python supports integer data type.It can be represent as number or decimal number 
+from 0-9.It may be either + number or - number with any length.
+
+Ex1:
+===
+import time 
+X1=1500 
+print("The value of X1 is:",X1)
+print()
+print("The data type is:",type(X1))
+print()
+X2=-1250 
+print("The value of X2 is:",X2)
+print()
+print("The data type is:",type(X2))
+print()
+time.sleep(2)
+print('End of an application')
+
+
+->Floating data type:
+=============
+Python supports Floating data type.It can be represent as decimal point number or
+Floating point number.It may be + floating number or - floating number.In Python
+1.3e/E is also consider as floating data type.
+
+e/E ---->Expo_value ---->10*10
+
+
+Ex1:
+===
+import time 
+Y1=123.12
+print("The value of Y1 i:",Y1)
+print()
+print("The data type is:",type(Y1))
+print()
+Y2=-178.1745
+print("The value of Y2 is:",Y2)
+print()
+print("The data type is:",type(Y2))
+print()
+time.sleep(2)
+print('End of an application')
+
+
+Ex2:
+===
+import time 
+X1=1.3e 
+print("The value of X1 is:",X1)
+print()
+print("The data type is:",type(X1))
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Ex3:
+===
+import time 
+X1=1.3E
+print("The value of X1 is:",X1)
+print()
+print("The data type is:",type(X1))
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Ex4:
+===
+import time 
+X1=1.3*10*10
+print("The value of X1 is:",X1)
+print()
+print("The data type is:",type(X1))
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Ex5:
+===
+import time 
+X1=1.3e1
+print("The value of X1 is:",X1)
+print()
+print("The data type is:",type(X1))
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Ex6:
+===
+import time 
+X1=1.3E2
+print("The value of X1 is:",X1)
+print()
+print("The data type is:",type(X1))
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Ex7:
+===
+import time 
+X1=1.3e0
+print("The value of X1 is:",X1)
+print()
+print("The data type is:",type(X1))
+print()
+time.sleep(2)
+print("End of an application")
+
+
+->Boolean data type:
+==============
+Python supports Boolean data type.The main objective of boolean data type is return boolean
+values Either True or False after checking the condition.
+
+==
+!=
+
+Ex1:
+===
+import time 
+X1=23000 
+X2=29000 
+print("====Using Boolean_Data_Type=====")
+print(X1,X2)
+print()
+res1=X1==X2 
+res2=X1!=X2 
+print("The result_set is:",res1)
+print()
+print("The data type is:",type(res1))
+print()
+print("The result_set is:",res2)
+print()
+print("The data type is:",type(res2))
+print()
+time.sleep(2)
+print('End of an application')
+
+
+
+->input():
+=======
+It is a predefine function in Python.The main objective of input() function is to read the 
+dynamically value from the keyboard.While working with input() if want to read any 
+data/information from the keyboard PVM(Python Virtual Machine) will consider bydefault as
+String data type.
+
+
+Ex1:
+===
+import time 
+X1=input("Enter the value of X1:")
+print(X1)
+print()
+print(type(X1))
+print()
+time.sleep(2)
+print('End of an application')
+
+
+Ex2:
+===
+import time 
+X1=input("Enter the value of X1:")
+X2=input("Enter the value of X2:")
+res1=X1+X2 
+print("The result_set is:",res1)
+print()
+time.sleep(3)
+print('End of an application')
+
+
+Typecasting in Python:
+==============
+Python supports Typecasting.It is the process or methodlogy to convert from
+one data type into another data type using following functions.
+
+->int()
+->float()
+->complex()
+->bool()
+->str()
+
+
+Ex1:
+===
+import time 
+X1=int(input("Enter the value of X1:"))
+X2=int(input("Enter the value of X2:"))
+res1=X1+X2 
+print("The result_set is:",res1)
+print()
+time.sleep(3)
+print('End of an application')
+
+
+Ex2:
+===
+import time 
+X1=float(input("Enter the value of X1:"))
+X2=float(input("Enter the value of X2:"))
+res1=X1+X2 
+print("The result_set is:",res1)
+print()
+time.sleep(3)
+print('End of an application')
+
+
+Ex3:
+==
+import time 
+X1=complex(input("Enter the value of X1:"))
+X2=complex(input("Enter the value of X2:"))
+res1=X1+X2 
+print("The result_set is:",res1)
+print()
+time.sleep(3)
+print('End of an application')
+
+
+Ex4:
+===
+import time 
+X1=bool(input("Enter the value of X1:"))
+X2=bool(input("Enter the value of X2:"))
+res1=X1+X2 
+print("The result_set is:",res1)
+print()
+time.sleep(3)
+print('End of an application')
+
+
+->eval():
+======
+It is a predefine function in Python.The main objective o eval() function is read any 
+data from keyboard.While reading string data type we must use '' or "".
+
+
+->eval() function is also used for:
+======================
+->NAO
+->SC
+->SR 
+
+
+Ex1:
+===
+import time 
+X1=eval(input("Enter the value of X1:"))
+print(X1)
+print()
+print(type(X1))
+print()
+time.sleep(2)
+print('End of an application')
+
+
+OUTPUT:
+=====
+
+C:\Users\Admin\Desktop>Python test1.py
+Enter the value of X1:10
+10
+
+<class 'int'>
+
+End of an application
+
+C:\Users\Admin\Desktop>Python test1.py
+Enter the value of X1:123.21
+123.21
+
+<class 'float'>
+
+End of an application
+
+C:\Users\Admin\Desktop>Python test1.py
+Enter the value of X1:True
+True
+
+<class 'bool'>
+
+End of an application
+
+C:\Users\Admin\Desktop>Python test1.py
+Enter the value of X1:False
+False
+
+<class 'bool'>
+
+End of an application
+
+C:\Users\Admin\Desktop>Python test1.py
+Enter the value of X1:A
+Traceback (most recent call last):
+  File "test1.py", line 2, in <module>
+    X1=eval(input("Enter the value of X1:"))
+  File "<string>", line 1, in <module>
+NameError: name 'A' is not defined
+
+C:\Users\Admin\Desktop>Python test1.py
+Enter the value of X1:'A'
+A
+
+<class 'str'>
+
+End of an application
+
+C:\Users\Admin\Desktop>Python test1.py
+Enter the value of X1:[]
+[]
+
+<class 'list'>
+
+End of an application
+
+C:\Users\Admin\Desktop>
+
+
+Ex2:
+===
+import time 
+X1=eval(input("Enter the value of X1:"))
+X2=eval(input("Enter the value of X2:"))
+res1=X1+X2 
+print("The result_set is:",res1)
+print()
+time.sleep(3)
+print('End of an application')
+
+
+Ex3:
+==
+import time 
+X1=eval(input("Enter the value of X1:"))
+X2=eval(input("Enter the value of X2:"))
+res1=X1+X2 
+print("SC is:",res1)
+print()
+time.sleep(3)
+print('End of an application')
+
+
+Ex4:
+===
+import time 
+X1=eval(input("Enter the value of X1:"))
+X2=eval(input("Enter the value of X2:"))
+res1=X1*X2 
+print("SR is:",res1)
+print()
+time.sleep(3)
+print('End of an application')
+
+
+Ex5:
+===
+import time 
+X1=eval(input("Enter the value of X1:"))
+print(X1)
+print()
+time.sleep(2)
+print('End of an application')
+
+
+OUTPUT:
+=====
+
+C:\Users\Admin\Desktop>Python test1.py
+Enter the value of X1:1000+2000
+3000
+
+End of an application
+
+C:\Users\Admin\Desktop>Python test1.py
+Enter the value of X1:1000-999
+1
+
+End of an application
+
+C:\Users\Admin\Desktop>Python test1.py
+Enter the value of X1:'A'+'B'
+AB
+
+End of an application
+
+C:\Users\Admin\Desktop>Python test1.py
+Enter the value of X1:'A'+' ' +'B'
+A B
+
+End of an application
+
+C:\Users\Admin\Desktop>Python test1.py
+Enter the value of X1:'abc '*5
+abc abc abc abc abc
+
+End of an application
+
+C:\Users\Admin\Desktop>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

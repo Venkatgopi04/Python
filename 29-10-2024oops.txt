@@ -1,0 +1,328 @@
+->Static variable:
+===========
+Static variable can be define or declare as inside the class and outsite the methods.
+We can access the static variable only class_name.
+
+
+Ex1:
+==
+import time 
+class I_HUB_1:
+    Product_Id=1001 
+    def __init__(self):
+        pass 
+    def m1(self):
+        pass 
+    @classmethod 
+    def m2(cls):
+        pass 
+    @staticmethod 
+    def m3():
+        pass 
+i1=I_HUB_1()
+print("Pid is:",i1.Product_Id)
+print()
+print("Pid is:",I_HUB_1.Product_Id)
+print()
+time.sleep(2)
+print("End of an application")
+
+->Static variable can be define or declare in following methods
+  
+                                ->Inside the constructor using class_name followed variable_name
+                                ->Inside the instance method using class_name followed by variable_name
+                                ->Inside the class method using class_name and cls variable_name
+                                ->Inside the static method using class_name 
+                                ->Outsite the class using class_name followed by variable_name.
+
+
+->Defining and declaring
+->Printing or Accessing
+->Deleting
+->Updating
+
+
+->Defining and declaring:
+=================
+
+Ex1:
+===
+import time 
+class I_HUB_1:
+    def __init__(self):
+        I_HUB_1.A1=101 
+        I_HUB_1.A2=102 
+        I_HUB_1.A3=103 
+        I_HUB_1.A4=104 
+i1=I_HUB_1()
+print(i1.__dict__)
+print()
+time.sleep(2)
+print('End of an application')
+
+{}
+
+
+Ex2:
+===
+import time 
+class I_HUB_1:
+    def __init__(self):
+        I_HUB_1.A1=101 
+        I_HUB_1.A2=102 
+        I_HUB_1.A3=103 
+        I_HUB_1.A4=104 
+    def m1(self):
+        I_HUB_1.B1=201 
+        I_HUB_1.B2=202 
+        I_HUB_1.B3=203 
+        I_HUB_1.B4=204
+    @classmethod 
+    def m2(cls):
+        I_HUB_1.C1=301 
+        I_HUB_1.C2=302 
+        cls.C3=303 
+        cls.C4=304
+    @staticmethod 
+    def m3():
+        I_HUB_1.D1=501 
+        I_HUB_1.D2=502 
+        I_HUB_1.D3=503 
+        I_HUB_1.D4=504
+i1=I_HUB_1()
+print(I_HUB_1.__dict__)
+print()
+i1.m1()
+print()
+print(I_HUB_1.__dict__)
+print()
+i1.m2()
+print(I_HUB_1.__dict__)
+print()
+i1.m3()
+print()
+print(I_HUB_1.__dict__)
+print()
+I_HUB_1.E1=901 
+I_HUB_1.E2=902 
+I_HUB_1.E3=903
+print(I_HUB_1.__dict__)
+print()
+time.sleep(2)
+print('End of an application')
+
+
+Printing and Accessing the values:
+======================
+import time 
+class I_HUB_1:
+    def __init__(self):
+        I_HUB_1.A1=101 
+        I_HUB_1.A2=102 
+        I_HUB_1.A3=103 
+        I_HUB_1.A4=104 
+        print(I_HUB_1.A1,I_HUB_1.A2,I_HUB_1.A3,I_HUB_1.A4)
+    def m1(self):
+        I_HUB_1.B1=201 
+        I_HUB_1.B2=202 
+        I_HUB_1.B3=203 
+        I_HUB_1.B4=204
+        print(I_HUB_1.B1,I_HUB_1.B2,I_HUB_1.B3,I_HUB_1.B4)
+    @classmethod 
+    def m2(cls):
+        I_HUB_1.C1=301 
+        I_HUB_1.C2=302 
+        cls.C3=303 
+        cls.C4=304
+        print(I_HUB_1.C1,I_HUB_1.C2,cls.C3,cls.C4)
+    @staticmethod 
+    def m3():
+        I_HUB_1.D1=501 
+        I_HUB_1.D2=502 
+        I_HUB_1.D3=503 
+        I_HUB_1.D4=504
+        print(I_HUB_1.D1,I_HUB_1.D2,I_HUB_1.D3,I_HUB_1.D4)
+i1=I_HUB_1()
+print()
+i1.m1()
+print()
+i1.m2()
+print()
+i1.m3()
+I_HUB_1.E1=701 
+I_HUB_1.E2=702 
+I_HUB_1.E3=703 
+print()
+print(I_HUB_1.E1,I_HUB_1.E2,I_HUB_1.E3)
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Deleting a static variable:
+===============
+We can delete a static variable using del keyword followed by variable_name.
+
+Ex1:
+==
+import time 
+class I_HUB_1:
+    def __init__(self):
+        I_HUB_1.A1=101 
+        I_HUB_1.A2=102 
+        I_HUB_1.A3=103 
+        I_HUB_1.A4=104 
+        del I_HUB_1.A1,I_HUB_1.A2
+    def m1(self):
+        I_HUB_1.B1=201 
+        I_HUB_1.B2=202 
+        I_HUB_1.B3=203 
+        I_HUB_1.B4=204
+        del I_HUB_1.B1,I_HUB_1.B2,I_HUB_1.B3
+    @classmethod 
+    def m2(cls):
+        I_HUB_1.C1=301 
+        I_HUB_1.C2=302 
+        cls.C3=303 
+        cls.C4=304
+        del cls.C4,cls.C3
+       
+    @staticmethod 
+    def m3():
+        I_HUB_1.D1=501 
+        I_HUB_1.D2=502 
+        I_HUB_1.D3=503 
+        I_HUB_1.D4=504
+        del I_HUB_1.D1,I_HUB_1.D2,I_HUB_1.D3
+        
+i1=I_HUB_1()
+print(I_HUB_1.__dict__)
+print()
+i1.m1()
+print(I_HUB_1.__dict__)
+print()
+i1.m2()
+print(I_HUB_1.__dict__)
+print()
+i1.m3()
+print(I_HUB_1.__dict__)
+print()
+I_HUB_1.E1=701 
+I_HUB_1.E2=702 
+I_HUB_1.E3=703 
+del I_HUB_1.E1,I_HUB_1.E2 
+print(I_HUB_1.__dict__)
+print()
+time.sleep(2)
+print("End of an application")
+
+
+
+Updating a static variable:
+================
+
+Ex1:
+===
+import time 
+class I_HUB_1:
+    Eid=1001 
+    def __init__(self):
+        I_HUB_1.Eid=1002 
+    def m1(self):
+        I_HUB_1.Eid=1003 
+    @classmethod 
+    def m2(cls):
+        cls.Eid=1004 
+    @staticmethod 
+    def m3():
+        I_HUB_1.Eid=1005
+i1=I_HUB_1()
+i1.m1()
+print()
+i1.m2()
+print()
+i1.m3()
+print()
+I_HUB_1.Eid=1006 
+print("Eid is:",I_HUB_1.Eid)
+print()
+time.sleep(3)
+print("End of an application")
+
+
+Local variable:
+=========
+Local variable can be define or declare inside the following methods 
+
+                    ->Inside the constructor
+                    ->Inside the instance method 
+                    ->inside the class method
+                    ->inside the static method 
+
+The scope of local variable we can access with_in the methods
+
+
+Ex1:
+===
+import time 
+class I_HUB_1:
+    def __init__(self):
+        A1=1001 
+        A2=1002 
+        A3=1003 
+        print(A1,A2,A3)
+    def m1(self):
+        B1=2001 
+        B2=2002 
+        B3=2003 
+        print(B1,B2,B3)
+    @classmethod 
+    def m2(cls):
+        C1=3001 
+        C2=3002 
+        C3=3003 
+        print(C1,C2,C3)
+    @staticmethod 
+    def m3():
+        D1=4001 
+        D2=4002
+        D3=4003 
+        print(D1,D2,D3)
+i1=I_HUB_1()
+i1.m1()
+i1.m2()
+i1.m3()
+print()
+time.sleep(2)
+print('End of an application')
+
+
+Ex2:
+===
+import time 
+class I_HUB_1:
+    def __init__(self):
+        A1=1001 
+        A2=1002 
+        A3=1003
+    def m1(self):
+        print(A1,A2,A3)
+    @classmethod 
+    def m2(cls):
+        pass
+     
+    @staticmethod 
+    def m3():
+        pass
+    
+i1=I_HUB_1()
+i1.m1()
+print()
+time.sleep(2)
+print('End of an application')
+
+
+
+
+
+

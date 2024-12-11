@@ -1,0 +1,276 @@
+Composition & Aggregation:
+==================
+
+Composition(Strong relationship):
+====================
+Composition(Strong relationship) can be represent as the relationship an instance 
+variable and object then it is said to be Composition(Strong relationship).
+
+
+Aggregation(Weak relationship):
+===================
+Aggregation(Weak relationship) can be represent as the relationship between 
+a static variable and object then it said to be Aggregation(Weak relationship).
+
+
+Ex1:
+===
+import time 
+class Product_Details:
+    Company_Name="Samsung"
+    def __init__(self):
+        self.Pid=1001 
+        self.Pname="Mobile_1"
+        self.Price=23000.0 
+    def m1(self):
+        print("=====Product_Details====")
+        print("Pid is:",self.Pid)
+        print("Pname is:",self.Pname)
+        print("Price is:",self.Price)
+p1=Product_Details()
+p1.m1()
+print("Company_Name is:",Product_Details.Company_Name)
+print()
+time.sleep(3)
+print("End of an application")
+
+->Inheritance in Python:
+================
+Python supports Inheritance.It can be represent as extending from one class to 
+another class.The main objective of inheritance is to provide the code resuaability.
+In python we do have following types of inheritance.
+
+->Single Inheritance
+->Multilevel Inheritance
+->Hiechical Inheritance
+->Multiple Inheritance 
+->Hydrid Inheritance
+
+
+->Single Inheritance:
+==============
+Python support Single Inheritance.It is process or methodlogy extending from
+one parent to only one child class.
+
+class Quality_Thought:
+              ----
+class I_HUB_1(Quality Thought):
+            ----
+
+
+Ex2:
+===
+import time 
+class Quality_Thought:
+    def m1(self):
+        print("Quality_Thought is a Parent Software institute")
+class I_HUB_1(Quality_Thought):
+    def m2(self):
+        print("IHUB_1 is a Child Software institute")
+q1=Quality_Thought()
+q1.m1()
+print()
+i1=I_HUB_1()
+i1.m1()
+print()
+i1.m2()
+print()
+time.sleep(2)
+print("End of an application")
+
+->Multilevel Inheritance:
+================
+Python supports Multilevel inheritance.It is process or methodlogy to extend from 
+one class to another class continously.
+
+
+class I_HUB_1:
+      ---
+class I_HUB_2(I_HUB_1):
+     ---
+class I_HUB_3(I_HUB_2):
+       ---
+class I_HUB_4(I_HUB_3):
+       ----
+
+Ex1:
+===
+import time 
+class I_HUB_1:
+    def m1(self):
+        print("This is Service_One")
+class I_HUB_2(I_HUB_1):
+    def m2(self):
+        print("This is Service_Two")
+class I_HUB_3(I_HUB_2):
+    def m3(self):
+        print("This is Service_Three")
+class I_HUB_4(I_HUB_3):
+    def m4(self):
+        print("This is Service_Four")
+print()
+i1=I_HUB_1()
+i1.m1()
+print()
+i2=I_HUB_2()
+i2.m1()
+i2.m2()
+print()
+i3=I_HUB_3()
+i3.m1()
+i3.m2()
+i3.m3()
+print()
+print()
+i4=I_HUB_4()
+i4.m1()
+i4.m2()
+i4.m3()
+i4.m4()
+print()
+time.sleep(3)
+print("End of an application")
+
+
+Ex2:
+===
+import time 
+class I_HUB_1:
+    def m1(self):
+        print("This is Service_One")
+class I_HUB_2(I_HUB_1):
+    def m2(self):
+        print("This is Service_Two")
+class I_HUB_3(I_HUB_2):
+    def m3(self):
+        print("This is Service_Three")
+class I_HUB_4(I_HUB_3):
+    def m4(self):
+        print("This is Service_Four")
+print()
+i4=I_HUB_4()
+i4.m1()
+i4.m2()
+i4.m3()
+i4.m4()
+print()
+time.sleep(3)
+print("End of an application")
+
+
+->Hiechical Inheritance:
+===============
+Python supports H_I.It is process or methodlogy to extend from one parent class to one
+or more than one child classes then it is said to be H_I.
+
+
+class Father_Class:
+      ----
+class Son1_Class(Father_Class):
+     ----
+class Son2_Class(Father_Class):
+    ----
+class Son3_Class(Father_Class):
+       ---
+
+Ex1:
+==
+import time 
+class Father_Class:
+    def m1(self):
+        print("This is Father_Class ...")
+class Son1_Class(Father_Class):
+    def m2(self):
+        print("This is Son1_Class ...")
+class Son2_Class(Father_Class):
+    def m3(self):
+        print("This is Son2_Class ...")
+class Son3_Class(Father_Class):
+    def m4(self):
+        print("This is Son_3 class ...")
+f1=Father_Class()
+f1.m1()
+print()
+s1=Son1_Class()
+s1.m1()
+s1.m2()
+print()
+s2=Son2_Class()
+s2.m1()
+s2.m3()
+print()
+s3=Son3_Class()
+s3.m1()
+s3.m4()
+print()
+time.sleep(3)
+print("End of an application")
+
+
+->Multiple Inheritance:
+===============
+Python supports Multiple Inheritance.It is the process or methodlogy to extend more than
+one parent classes with single child class then it is said to be Multilevel inheritance.
+
+class A_class:
+      ---
+class B_class:
+      ---
+class C_class:
+        ---
+class D_class:
+      ---
+class S1_class(A_class,B_class,C_class,D_class):
+      ---
+
+
+Ex1:
+===
+import time 
+class A_class:
+    def m1(self):
+        print("A_class ....")
+class B_class:
+    def m2(self):
+        print("B_class ...")
+class C_class:
+    def m3(self):
+        print("C_class ...")
+class D_class:
+    def m4(self):
+        print("D_class ...")
+class S1_class(A_class,B_class,C_class,D_class):
+    def m5(self):
+        print("S1_class ...")
+s1=S1_class()
+s1.m1()
+s1.m2()
+s1.m3()
+s1.m4()
+s1.m5()
+print()
+time.sleep(3)
+print("End of an application")
+
+
+Note:
+====
+While working with Multiple inheritance if the methods are same Python follows
+a algorithm named as MRO
+
+
+MRO rules:
+======
+rule_1:
+=====
+           If the methods are same it will first search in child class if there no
+           Implementation in child class then it will based on order what we have 
+          provided in our Python Script
+
+rule_2:
+====
+        It follows left to right methodlogy.
+
+
+
+

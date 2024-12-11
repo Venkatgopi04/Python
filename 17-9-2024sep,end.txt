@@ -1,0 +1,386 @@
+Input & Output statements in Python:
+=======================
+Python supports I/O statements.The main objective of I/O statements  is to
+generate the various application output as per the application reqn.
+
+
+->input():To read input data
+->print():To display the output
+
+Ex1:
+===
+import time 
+Pid=int(input('Enter the Pid:'))
+Pname=input('Enter the Pname:')
+Price=float(input('Enter the Price:'))
+Company=input('Enter the Company:')
+print()
+print("====Product_Information=====")
+print("Pid is:",Pid)
+print("Pname is:",Pname)
+print("Price is:",Price)
+print("Company is:",Company)
+print()
+time.sleep(2)
+print('End of an application')
+
+
+sep:
+===
+It is a an attribute which can be return inside the print() statements.The main 
+objective of sep attribute is to display the amount,date,time format.
+
+
+Ex1:
+===
+import time 
+X1,Y1,Z1=17,9,2024 
+print("====Date=====")
+print(X1,Y1,Z1,sep="/")
+print()
+print("===Another_Date====")
+print(X1,Y1,Z1,sep="-")
+print()
+print("====Time=====")
+print(X1,Y1,Z1,sep=":")
+print()
+print("===Digital_Time_Format====")
+print(X1,Y1,Z1,sep="::")
+print()
+print("====Amount_In_INR_Format====")
+print(X1,Y1,Z1,sep=",")
+print()
+time.sleep(3)
+print('End of an application')
+
+
+end:
+===
+It is a attribute in Python which can be return inside the print() function.The
+main objective of end attribut is to display the multiline content into single
+line.
+
+
+Ex1:
+==
+import time 
+for y1 in range(1,11):
+    print(y1)
+print()
+time.sleep(3)
+print('End of an application')
+
+OUTPUT:
+=====
+C:\Users\Admin\Desktop>Python test1.py
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+
+End of an application
+
+
+Ex2:
+==
+import time 
+for y1 in range(1,11):
+    print(y1,end="")
+print()
+print()
+time.sleep(3)
+print('End of an application')
+
+
+Ex3:
+==
+import time 
+for y1 in range(1,11):
+    print(y1,end=" ")
+print()
+print()
+time.sleep(3)
+print('End of an application')
+
+
+Ex4:
+===
+import time 
+for y1 in range(1,11):
+    print(y1,end="   ")
+print()
+print()
+time.sleep(3)
+print('End of an application')
+
+
+Formatted string:
+===========
+Following are formatted stirng in Python
+
+
+%d or %i ---->Integer data type
+
+%s ---->string data type 
+
+%f  ---->Floating data type
+
+%s ---->List,Tuple,Set,Dict
+
+
+Note:
+====
+While working with formatted string no need to use , otherwise we will get syntax
+error.
+
+
+Ex1:
+==
+import time 
+Eid=int(input('Enter the Eid:'))
+Ename=input('Enter the Ename:')
+Esal=float(input('Enter the Esal:'))
+Company=input('Enter the Company:')
+Skills=eval(input('Enter the Skill_Set:'))
+print()
+print("=====Employee_Information=====")
+print("Eid is:%d"%Eid)
+print()
+print("Ename is:%s"%Ename)
+print()
+print("Esal is:%f"%Esal)
+print()
+print("Company is:%s"%Company)
+print()
+print("Skills are:%s"%Skills)
+print()
+time.sleep(2)
+print('End of an application')
+
+
+Ex2:
+==
+import time 
+Eid=int(input('Enter the Eid:'))
+Ename=input('Enter the Ename:')
+Esal=float(input('Enter the Esal:'))
+Company=input('Enter the Company:')
+Skills=eval(input('Enter the Skill_Set:'))
+print()
+print("=====Employee_Information=====")
+print("Eid is:%d"%Eid)
+print()
+print("Ename is:%s"%Ename)
+print()
+print("Esal is:%f",%Esal)
+print()
+print("Company is:%s"%Company)
+print()
+print("Skills are:%s"%Skills)
+print()
+time.sleep(2)
+print('End of an application')
+
+
+OUTPUT:
+=====
+
+C:\Users\Admin\Desktop>Python test1.py
+  File "test1.py", line 13
+    print("Esal is:%f",%Esal)
+                       ^
+SyntaxError: invalid syntax
+
+My name is Keerathna and placed in Tech mahindra and my salary is 29000.0
+
+
+Ex1:
+===
+import time 
+Name=input("Enter the Name_Emp:")
+Company=input("Enter the Company_Name:")
+Salary=float(input('Enter the Emp_Sal:'))
+print()
+print("=====Employee_Details=====")
+print("My name is %s and placd in %s and my salary is %f"%(Name,Company,Salary))
+print()
+time.sleep(3)
+print('End of an application')
+
+
+Replacement operator--->{}
+==================
+Replacement operator can be define or declare {} which can be return inside the 
+print() statement.The main objective of replacement operator is replace centent 
+as per the application reqn.
+
+
+print(val1,val2,val3.format(val1,val2,val3)
+
+Name of the language:Python
+Date of release is:16/7/1989
+
+
+Ex1:
+===
+import time 
+Name=input("Enter the Name of the language:")
+Day=int(input("Enter the Day:"))
+Month=int(input("Enter the Month:"))
+Year=int(input("Enter the Year:"))
+print()
+print("=====Python Programming language release_date=====")
+print("Name of the language is:",Name)
+print("Date of release is:{}/{}/{}".format(Day,Month,Year))
+print("=====================================================")
+print()
+time.sleep(3)
+print("End of an application")
+
+
+Ex2:
+===
+import time 
+Name=input("Enter the Name of the language:")
+Day=int(input("Enter the Day:"))
+Month=int(input("Enter the Month:"))
+Year=int(input("Enter the Year:"))
+print()
+print("=====Python Programming language release_date=====")
+print("Name of the language is:",Name)
+print("Date of release is:{0}/{1}/{2}".format(Day,Month,Year))
+print("=====================================================")
+print()
+time.sleep(3)
+print("End of an application")
+
+
+Ex3:
+===
+import time 
+Name=input("Enter the Name of the language:")
+Day=int(input("Enter the Day:"))
+Month=int(input("Enter the Month:"))
+Year=int(input("Enter the Year:"))
+print()
+print("=====Python Programming language release_date=====")
+print("Name of the language is:",Name)
+print("Date of release is in USA_Format:{1}/{0}/{2}".format(Day,Month,Year))
+print("=====================================================")
+print()
+time.sleep(3)
+print("End of an application")
+
+
+Ex4:
+===
+import time 
+Name=input("Enter the Name of the language:")
+Day=int(input("Enter the Day:"))
+Month=int(input("Enter the Month:"))
+Year=int(input("Enter the Year:"))
+print()
+print("=====Python Programming language release_date=====")
+print("Name of the language is:",Name)
+print("Date of release is in UK_Format:{2}/{1}/{0}".format(Day,Month,Year))
+print("=====================================================")
+print()
+time.sleep(3)
+print("End of an application")
+
+
+Ex5:
+===
+import time 
+Name=input("Enter the Name of the language:")
+Day=int(input("Enter the Day:"))
+Month=int(input("Enter the Month:"))
+Year=int(input("Enter the Year:"))
+print()
+print("=====Python Programming language release_date=====")
+print("Name of the language is:",Name)
+print("Date of release is in UK_Format:{obj1}/{obj2}/{obj3}".format(obj1=Day,obj2=Month,obj3=Year))
+print("=====================================================")
+print()
+time.sleep(3)
+print("End of an application")
+
+
+Ex6:
+===
+import time 
+Username=input('Enter the username:')
+P1=input('Enter the Password:')
+P2=input('Enter the Confirm_Password:')
+print()
+print("====User_Login_Details====")
+print(f"Username is:{Username}")
+print()
+print(f"Password is:{P1}")
+print()
+print(f"Confirm_Password is:{P2}")
+print()
+time.sleep(3)
+print("End of an application")
+
+->Control Statements in Python:
+====================
+Python supports Control statements.The main objective of control statements
+is control the application.Following are the Constrol statements in Python
+
+->Decision Making Statements/Conditional Statements
+->Iterative statements
+->Transfer statement
+
+
+
+Note:
+====
+In Python programming language do while loop and switch statement is not
+supported.
+
+
+->Decision Making Statements/Conditional Statements:
+===================================
+Python supports Decision making statement/Conditional Statements.Following 
+are the Decision Making statement in Pyhton
+
+->if statement
+->nested if statement
+->if-else statement
+->if-elif-else statement
+
+
+->if statement:
+==========
+if is transfer statement in Python.If "if" statement condition is true then 
+if block will be executed 
+
+
+if(condtion):
+     ---
+
+or
+if condition:
+      ---
+
+
+Ex1:
+===
+import time 
+str1=input("Enter the String_Object:")
+if(str1=="Developer"):
+    print(str1,": One of the position in IT_Companies")
+print()
+time.sleep(3)
+print("End of an application")
+
+
+
+

@@ -1,0 +1,238 @@
+While working with OOPL we do have following types of variables:
+=========================================
+->Instance variable(non static variable)
+->Static variable
+->Local variable
+->Default variable
+
+
+->Instance variable(non static variable):
+=========================
+Instance variable(non static variable) can be define or declare inside the
+class using self.followed variable_name and outsite the class using object
+reference variable.
+
+->Instance variable can be define or declare inside the contrcutor_method and
+instance method and outsite the class.
+
+
+__dict__:
+======
+It is a method in Python which is used to represent the data/information in 
+key and value format.
+
+
+->Defining or Declaring
+->Accessing or Printting
+->Deleting
+->Updating
+
+
+->Defining or declaring a instance variables(non static variables):
+==========================================
+import time 
+class I_HUB_APP_STORE:
+    def __init__(self):
+        self.A1=1001
+        self.A2=1002 
+        self.A3=1003 
+    def m1(self):
+        self.B1=3001 
+        self.B2=3002 
+        self.B3=3003 
+        self.B4=3004
+    @classmethod 
+    def m2(cls):
+        pass 
+    @staticmethod 
+    def m3():
+        pass
+i1=I_HUB_APP_STORE()
+print(i1.__dict__)
+print()
+i1.m1()
+print(i1.__dict__)
+i1.C1=5001 
+i1.C2=5002 
+i1.C3=5003 
+i1.C4=5004 
+print(i1.__dict__)
+print()
+time.sleep(3)
+print("End of an application")
+
+
+->Accessing or Printting:
+================
+
+Ex1:
+===
+
+import time 
+class I_HUB_APP_STORE:
+    def __init__(self):
+        self.A1=1001
+        self.A2=1002 
+        self.A3=1003 
+        print(self.A1,self.A2,self.A3)
+    def m1(self):
+        self.B1=3001 
+        self.B2=3002 
+        self.B3=3003 
+        self.B4=3004
+        print(self.B1,self.B2,self.B3,self.B4)
+    @classmethod 
+    def m2(cls):
+        pass 
+    @staticmethod 
+    def m3():
+        pass
+i1=I_HUB_APP_STORE()
+print()
+i1.m1()
+print()
+i1.C1=6001 
+i1.C2=6002 
+i1.C3=6003 
+print(i1.C1,i1.C2,i1.C3)
+print()
+time.sleep(2)
+print('End of an application')
+
+
+Ex2:
+===
+import time 
+class I_HUB_APP_STORE:
+    def __init__(self):
+        self.A1=1001
+        self.A2=1002 
+        self.A3=1003 
+    def m1(self):
+        print(self.A1,self.A2,self.A3)
+    @classmethod 
+    def m2(cls):
+        pass 
+    @staticmethod 
+    def m3():
+        pass
+i1=I_HUB_APP_STORE()
+print()
+i1.m1()
+print()
+time.sleep(2)
+print('End of an application')
+
+
+Ex3:
+===
+import time 
+class I_HUB_APP_STORE:
+    def __init__(self):
+        self.A1=1001
+        self.A2=1002 
+        self.A3=1003 
+    def m1(self):
+        pass
+    @classmethod 
+    def m2(cls):
+        pass 
+    @staticmethod 
+    def m3():
+        pass
+i1=I_HUB_APP_STORE()
+print()
+print(i1.A1,i1.A2,i1.A3)
+print()
+time.sleep(2)
+print('End of an application')
+
+
+
+Deleting an instance variables:
+===================
+We can delete an instance variable using del keyword followed by
+instance variable name.
+
+
+Ex1:
+==
+import time 
+class I_HUB_APP_STORE:
+    def __init__(self):
+        self.A1=1001
+        self.A2=1002 
+        self.A3=1003 
+        del self.A2,self.A3 
+    def m1(self):
+        self.B1=2001 
+        self.B2=2002 
+        self.B3=2003 
+        self.B4=2004 
+        del self.B1,self.B2
+    @classmethod 
+    def m2(cls):
+        pass 
+    @staticmethod 
+    def m3():
+        pass
+
+i1=I_HUB_APP_STORE()
+print(i1.__dict__)
+print()
+i1.m1()
+print(i1.__dict__)
+print()
+i1.C1=7001 
+i1.C2=7002 
+i1.C3=7003 
+del i1.C1,i1.C2
+print(i1.__dict__)
+print()
+print()
+time.sleep(3)
+print("End of an application")
+
+
+
+Updating an instance variable:
+===================
+
+Ex1:
+==
+import time 
+class I_HUB_APP_STORE:
+    def __init__(self):
+        self.Pid=1001 
+    def m1(self):
+        self.Pid=1002 
+    @classmethod 
+    def m2(cls):
+        pass 
+    @staticmethod 
+    def m3():
+        pass 
+i1=I_HUB_APP_STORE()
+print()
+i1.m1()
+print()
+i1.Pid=1010
+print("Pid is:",i1.Pid)
+print()
+time.sleep(2)
+print("End of an application")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

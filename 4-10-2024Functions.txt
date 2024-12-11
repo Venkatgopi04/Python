@@ -1,0 +1,169 @@
+Working with return keyword:
+===========================
+return is a keyword in Python.The main objective of return keyword is meant for
+a function can return another function.While working with return keyword if we use
+return keyword inside the function that function must be called inside the print() function otherwise
+None will be output.
+
+
+Ex1:
+===
+import time 
+def Test_Case1():
+    print("Python Developer")
+    return "Data Engineer"
+if(__name__=="__main__"):
+    Test_Case1()
+    print()
+    Test_Case1()
+    print()
+    print(Test_Case1())
+print()
+time.sleep(3)
+print('End of an application')
+
+
+Ex2:
+===
+import time 
+def Test_Case1():
+    print("Python Developer")
+if(__name__=="__main__"):
+    Test_Case1()
+    print()
+    Test_Case1()
+    print()
+    print(Test_Case1())
+print()
+time.sleep(3)
+print('End of an application')
+
+
+Ex3:
+===
+import time 
+def Test_Case1():
+    return "Welcome to IHUB_APP_STORE"
+if(__name__=="__main__"):
+    Test_Case1()
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Ex4:
+===
+import time 
+def Test_Case1():
+    return "Welcome to IHUB_APP_STORE"
+if(__name__=="__main__"):
+    print(Test_Case1())
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Ex5:
+===
+import time 
+def Test_Case1(X1,X2):
+    return "Welcome to IHUB_APP_STORE"
+if(__name__=="__main__"):
+    print(Test_Case1(1000,2000))
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Ex6:
+===
+import time 
+def Test_Case1(Y1,Y2,Y3):
+    print("The value of Y1 is:",Y1)
+    print()
+    print("The value of Y2 is:",Y2)
+    print()
+    print("The value of Y3 is:",Y3)
+    print()
+    return Y1+Y2+Y3 
+if(__name__=="__main__"):
+    Test_Case1(101,102,103)
+print()
+time.sleep(3)
+print("End of an application")
+
+Ex7:
+===
+import time 
+def Test_Case1(Y1,Y2,Y3):
+    print("The value of Y1 is:",Y1)
+    print()
+    print("The value of Y2 is:",Y2)
+    print()
+    print("The value of Y3 is:",Y3)
+    print()
+    return Y1+Y2+Y3 
+    print()
+if(__name__=="__main__"):
+    print("The sum is:",Test_Case1(101,102,103))
+print()
+time.sleep(3)
+print("End of an application")
+
+
+Ex8:
+==
+import time 
+def Test_Case1(Y1,Y2,Y3):
+    print("The value of Y1 is:",Y1)
+    print()
+    print("The value of Y2 is:",Y2)
+    print()
+    print("The value of Y3 is:",Y3)
+    print()
+    return Y1+Y2*Y3 
+    print()
+if(__name__=="__main__"):
+    print("The result_set is:",Test_Case1(4,5,6))
+print()
+time.sleep(3)
+print("End of an application")
+
+
+Ex9:
+===
+import time 
+def Test_Case1(X1,X2):
+    return X1+X2 
+    return X1*X2 
+    return X1/X2 
+    return X1//X2 
+    return X1-X2 
+if(__name__=="__main__"):
+    print("The result_set is:",Test_Case1(4,5))
+    print()
+    print("The result_set is:",Test_Case1(10,15))
+    print()
+    print("The result_set is:",Test_Case1(20,5))
+    print()
+    print("The result_set is:",Test_Case1(24,15))
+print()
+time.sleep(3)
+print('End of an application')
+
+
+Ex10:
+====
+import time 
+def Test_Case1(X1,X2):
+    return (X1+X2,X1*X2,X1/X2,X1//X2,X1-X2,X1%X2) 
+if(__name__=="__main__"):
+    obj1=Test_Case1(14,2)
+    print(obj1)
+    print()
+    for x1 in obj1:
+        print(x1)
+     
+print()
+time.sleep(3)
+print('End of an application')

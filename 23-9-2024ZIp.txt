@@ -1,0 +1,154 @@
+====================
+Pid   Pname  Price  Compnay
+====================
+101    A1      100       A11
+102    B1       200      B11
+103    C1      300       C11
+104    D1      400       D11
+==================
+
+
+zip():
+====
+It is a predefine function in Python.The main objective of  zip() function as 
+follows
+           ->It is used to convert from one data structure to another data structure
+            ->It is used to fetch more than two values
+
+
+Ex1:
+==
+import time 
+L1=[1001,1002,1003,1004,1005]
+print(L1)
+print()
+print(type(L1))
+print()
+T1=tuple(L1)
+print(T1)
+print()
+print(type(T1))
+print()
+time.sleep(3)
+print('End of an application')
+
+
+Ex2:
+==
+import time 
+L1=[1001,1002,1003,1004,1005]
+L2=[2001,2002,2003,2004,2005]
+print(L1)
+print()
+print(type(L1))
+print()
+print(L2)
+print()
+print(type(L2))
+print()
+T1=tuple(zip(L1,L2))
+print(T1)
+print()
+print(type(T1))
+print()
+time.sleep(3)
+print('End of an application')
+
+Ex3:
+===
+import time 
+L1=[1001,1002,1003,1004,1005]
+L2=[2001,2002,2003,2004,2005]
+L3=[3001,3002,3003,3004,3005]
+T1=tuple(zip(L1,L2,L3))
+print(T1)
+print()
+print(type(T1))
+print()
+time.sleep(3)
+print('End of an application')
+
+
+L1=['Eid','Ename','Esal','Design','Company']
+L2=[1001,"Jessica",29000,"DAD","HCL"}
+
+{'Eid':1001,'Ename':'Jessica','Design':29000,'Company':'HCL'}
+
+
+Ex1:
+===
+import time 
+L1=['Eid','Ename','Esal','Design','Company']
+L2=[1001,"Jessica",29000,"DAD","HCL"]
+print(L1)
+print()
+print(L2)
+print()
+res1=dict(zip(L1,L2))
+print(res1)
+print()
+for a,b in res1.items():
+    print(a,"-",b)
+print()
+time.sleep(2)
+print('End of an application')
+
+
+Ex2:
+===
+import time 
+Pid=[] 
+Pname=[]
+Price=[] 
+Company=[] 
+n=eval(input("Enter the number of rows:"))
+for x1 in range(n):
+    obj1=int(input('Enter the Pid:'))
+    Pid.append(obj1)
+    obj2=input('Enter the Pname:')
+    Pname.append(obj2)
+    obj3=float(input("Enter the Price:"))
+    Price.append(obj3)
+    obj4=input('Enter the Company:')
+    Company.append(obj4)
+print()
+print("------------------------------")
+print("Pid","Pname","Price","Company")
+print('---------------------------------')
+for x1,x2,x3,x4 in zip(Pid,Pname,Price,Company):
+    print(x1,x2,x3,x4)
+print("--------------------------------")
+print()
+time.sleep(3)
+print('End of an application')
+
+
+Ex3:
+==
+import time 
+import numpy as np 
+res1=np.array([[1,2,3,4,5],[5,6,7,8,9]],ndmin=7)
+print(res1)
+print()
+print(res1.ndim)
+print()
+for a1 in res1:
+    for a2 in a1:
+        for a3 in a2:
+            for a4 in a3:
+                for a5 in a4:
+                    for a6 in a5:
+                        for a7 in a6:
+                            print(a7,end=" ")
+                        print()
+print()
+time.sleep(3)
+print('End of an application')
+
+
+
+
+
+
+
+

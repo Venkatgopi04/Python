@@ -1,0 +1,267 @@
+Encupsulation in Python:
+===============
+Python supports Encupsulation.It is the process or methodlogy to hide the internal
+implementation and showing the services what we are seeing.The main objective of
+Encupsulation is provide the security to the data/information.
+
+setter():It is used to set the data
+getter():It is used to get  the data.
+
+
+Ex1:
+==
+import time 
+class Employees_Class:
+    def setEid(self,Eid):
+        self.Eid=Eid
+    def getEid(self):
+        return self.Eid 
+    def setEname(self,Ename):
+        self.Ename=Ename 
+    def getEname(self):
+        return self.Ename
+    def setEsal(self,Esal):
+        self.Esal=Esal 
+    def getEsal(self):
+        return self.Esal
+    def setDesign(self,Design):
+        self.Design=Design 
+    def getDesign(self):
+        return self.Design 
+    def setCompany(self,Company):
+        self.Company=Company 
+    def getCompany(self):
+        return self.Company
+e1=Employees_Class()
+e1.setEid(1001)
+e1.setEname("Jessica_1")
+e1.setEsal(29000)
+e1.setDesign("DAD developer")
+e1.setCompany("HCL")
+print()
+print("=====Employees_Details====")
+print("Eid is:",e1.getEid())
+print("Ename is:",e1.getEname())
+print("Esal is:",e1.getEsal())
+print("Design is:",e1.getDesign())
+print("Company is:",e1.getCompany())
+print()
+time.sleep(2)
+print("End  of an application")
+
+
+File handling in Python:
+===============
+Python supports File handling.It is process or methodlogy to store the limited data 
+and perform some operations on that data as per the application reqn.
+
+
+
+While working with File Handling we do have following functions and attribute
+
+
+->open():It is used to open the file
+->close():It is used to close the file 
+->name:It is used to know the name of the file
+->mode:It is used tp know the mode of the file
+->closed:It is used to closed the file or not
+->readable():It is used to know wheather a file is readable or not 
+->writable():It is used to know the wheather a file is writable or not
+
+
+
+While working with File Handing we can insert following types of data.
+
+->Alpha_numerical data
+->Binary data
+
+
+To insert the Alpha_numerical data we do have following modes
+
+r --->read only
+r+ --->read and write
+w ---->write only 
+w+ --->write and read 
+x ---->Exclusive mode 
+x+ ---->Exclusive and read mode 
+a ---->append mode 
+a+ ---->append and read mode
+
+
+
+To insert Binary data we do have following modes:
+================================
+rb --->read only
+r+b --->read and write
+wb ---->write only 
+w+b --->write and read 
+xb ---->Exclusive mode 
+x+b ---->Exclusive and read mode 
+ab---->append mode 
+a+b ---->append and read mode
+
+
+Note:
+====
+Bydefault mode is read mode ----> r
+
+Ex1:
+===
+import time 
+f1=open("ABC.txt","r")
+print("=====File_Details=====")
+print("File_Name is:",f1.name)
+print("File_Mode is:",f1.mode)
+print("File is closed or not:",f1.closed)
+print("File is readable or not:",f1.readable())
+print("File is writable or not:",f1.writable())
+print()
+f1.close()
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Ex2:
+===
+import time 
+f1=open("ABC.txt")
+print("=====File_Details=====")
+print("File_Name is:",f1.name)
+print("File_Mode is:",f1.mode)
+print("File is closed or not:",f1.closed)
+print("File is readable or not:",f1.readable())
+print("File is writable or not:",f1.writable())
+print()
+f1.close()
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Ex3:
+===
+import time 
+f1=open("ABC.txt","r+")
+print("=====File_Details=====")
+print("File_Name is:",f1.name)
+print("File_Mode is:",f1.mode)
+print("File is closed or not:",f1.closed)
+print("File is readable or not:",f1.readable())
+print("File is writable or not:",f1.writable())
+print()
+f1.close()
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Ex4:
+===
+import time 
+f1=open("ABC.txt","w")
+print("=====File_Details=====")
+print("File_Name is:",f1.name)
+print("File_Mode is:",f1.mode)
+print("File is closed or not:",f1.closed)
+print("File is readable or not:",f1.readable())
+print("File is writable or not:",f1.writable())
+print()
+f1.close()
+print()
+time.sleep(2)
+print("End of an application")
+
+Ex5:
+===
+import time 
+f1=open("ABC.txt","w+")
+print("=====File_Details=====")
+print("File_Name is:",f1.name)
+print("File_Mode is:",f1.mode)
+print("File is closed or not:",f1.closed)
+print("File is readable or not:",f1.readable())
+print("File is writable or not:",f1.writable())
+print()
+f1.close()
+print()
+time.sleep(2)
+print("End of an application")
+
+
+While working with File Handling to create new file and its content we do have following
+predefine functions
+
+->write()
+->writelines()
+
+
+->write():
+======
+It is a predefine function in python while working with File handling.The main 
+objective of write() is to create a new file and it's content.
+
+
+Ex1:
+===
+import time 
+f2=open("ihub_1.txt","w")
+f2.write("ABC")
+f2.write("abc")
+f2.write("123")
+print()
+print("New file is created successfully")
+print()
+f2.close()
+print()
+print("End of an application")
+
+
+Ex2:
+===
+import time 
+f2=open("ihub_1.txt","w")
+f2.write("ABC\n")
+f2.write("abc\n")
+f2.write("123\n")
+print()
+print("New file is created successfully")
+print()
+f2.close()
+print()
+print("End of an application")
+
+
+Ex3:
+===
+import time 
+f2=open("ihub_1.txt","w")
+f2.write("12345\n")
+f2.write("54321\n")
+f2.write("11331\n")
+print()
+print("New file is created successfully")
+print()
+f2.close()
+print()
+print("End of an application")
+
+
+Ex4:
+===
+import time 
+f2=open("ihub_1.txt","a")
+f2.write("ABC\n")
+f2.write("abc\n")
+f2.write("_@$\n")
+print()
+print("New file is created successfully")
+print()
+f2.close()
+print()
+print("End of an application")
+
+
+
+
+

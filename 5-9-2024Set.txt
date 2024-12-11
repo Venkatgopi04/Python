@@ -1,0 +1,566 @@
+Ex1:
+===
+import time 
+S1={1001}
+print(S1)
+print()
+print(type(S1))
+print()
+time.sleep(3)
+print('End of an application')
+
+
+Properties for Set data type:
+==================
+->Inseration is not preserved
+->Duplicate objects are not allowed
+->Hetrogenious objects are allowed
+->Set is a mutable object(State_Full Object)
+->Set is a Dynamic or Growable
+->Indexing and Slice operator is not applicable
+
+
+->Inseration is not preserved(Input!=Output):
+=============================
+
+Ex1:
+===
+import time 
+S1=eval(input('Enter the set_data_type:'))
+print(S1)
+print()
+print(type(S1))
+print()
+print("=====Fetching_Set_data====")
+for x1 in S1:
+    print(x1)
+print()
+time.sleep(3)
+print('End of an application')
+
+OUTPUT:
+=====
+Enter the set_data_type:{'A','B','C','D','E','F','G','H','I'}
+{'I', 'E', 'A', 'D', 'C', 'G', 'F', 'B', 'H'}
+
+<class 'set'>
+
+=====Fetching_Set_data====
+I
+E
+A
+D
+C
+G
+F
+B
+H
+
+End of an application
+
+->Duplicate objects are not allowed:
+=======================
+
+Ex2:
+===
+import time 
+S1=eval(input('Enter the set_data_type:'))
+print(S1)
+print()
+print(type(S1))
+print()
+print("=====Fetching_Set_data====")
+for x1 in S1:
+    print(x1)
+print()
+time.sleep(3)
+print('End of an application')
+
+OUTPUT:
+======
+Enter the set_data_type:{'A','B','C','D','E','F','G','H','I','A','B','C'}
+{'F', 'C', 'I', 'A', 'H', 'G', 'B', 'E', 'D'}
+
+<class 'set'>
+
+=====Fetching_Set_data====
+F
+C
+I
+A
+H
+G
+B
+E
+D
+
+End of an application
+
+
+->Hetrogenious objects are allowed:
+=======================
+
+Ex1:
+===
+import time 
+S1=eval(input('Enter the set_data_type:'))
+print(S1)
+print()
+print(type(S1))
+print()
+print("=====Fetching_Set_data====")
+for x1 in S1:
+    print(x1)
+print()
+time.sleep(3)
+print('End of an application')
+
+
+OUTPUT:
+=====
+Enter the set_data_type:{1001,"Mobile_1",27000.0,"S1","2025","2027"}
+{'2025', '2027', 'S1', 1001, 'Mobile_1', 27000.0}
+
+<class 'set'>
+
+=====Fetching_Set_data====
+2025
+2027
+S1
+1001
+Mobile_1
+27000.0
+
+End of an application
+
+->Set is a Mutable object(State_Full Object):
+============================
+
+Ex1:
+==
+import time 
+S1={'a','b','c','d','e','f','g','h','i'}
+print("=====Before_Mutable_Operations=====")
+print(S1)
+print()
+print(type(S1))
+print()
+print("=====After_Mutable_Operations=====")
+S1[0]="A"
+S1[1]="B"
+S1[2]="C"
+print(S1)
+print()
+print(type(S1))
+print()
+time.sleep(3)
+print("End of an application")
+
+
+OUTPUT:
+=====
+=====Before_Mutable_Operations=====
+{'g', 'h', 'i', 'c', 'f', 'd', 'e', 'b', 'a'}
+
+<class 'set'>
+
+=====After_Mutable_Operations=====
+Traceback (most recent call last):
+  File "test1.py", line 9, in <module>
+    S1[0]="A"
+TypeError: 'set' object does not support item assignment
+
+
+Note:
+===
+Set is a mutable object or state_full object we cannot modify the set data using
+indexing and slicing methodlogy.The reason is inseration is not preserved
+
+
+->Set is a Dynamic or Growable:
+====================
+Set data type is a Dynamic or Growable which means we can increase or decrease the
+size of the Set data type using following functions
+
+->add():It is used to add only one obejct at time
+->remove():It is used to remove only object at time 
+
+
+Problem_1:
+======
+import time 
+S1={} 
+print(S1)
+print()
+print("====Adding the Employee_Information====")
+S1.add(1001)
+S1.add("Jessica")
+print(S1)
+
+
+Ex2:
+===
+import time 
+S1=set()
+print(S1)
+print()
+print("====Adding the Employee_Information====")
+S1.add(1001)
+S1.add("Jessica")
+S1.add(23000)
+S1.add("S1")
+print(S1)
+print()
+print("====Removing the Employee_Information====")
+S1.remove(1001)
+S1.remove("Jessica")
+S1.remove(23000)
+S1.remove("S1")
+print(S1)
+print()
+time.sleep(3)
+print('End of an application')
+
+
+OUTPUT:
+=====
+set()
+
+====Adding the Employee_Information====
+{23000, 1001, 'Jessica', 'S1'}
+
+====Removing the Employee_Information====
+set()
+
+End of an application
+
+
+->Indexing and slice operator is not applicable:
+===============================
+
+Ex1:
+===
+import time 
+S1={'Apple','Bannana','Carrot','Mango'}
+print(S1)
+print()
+print(type(S1))
+print()
+print("====Indexing===")
+print(S1[0])
+print()
+print(S1[1])
+print()
+print("====Slice_Opeator====")
+print(S1[0:])
+print()
+print(S1[::-1])
+print()
+time.sleep(3)
+print('End of an applicaition')
+
+
+Dict data type:
+=========
+Python supports dict data type.The main  objective of Dict data type if you want to
+represent one or more than one object or group of object as key and value pair then 
+we can go with  Dict data type.In Python we can define or declare Dict data type using
+{} and dict() function.
+
+Ex:
+==
+D1={key:value}
+
+
+Ex1:
+===
+import time 
+D1={} 
+print(D1)
+print()
+print(type(D1))
+print()
+D2=dict()
+print(D2)
+print()
+print(type(D2))
+print()
+time.sleep(3)
+print('End of an application')
+
+
+Ex2:
+===
+import time 
+D1={"Eid":1001,"Ename":"Jessica_1","Esal":74000} 
+print(D1)
+print()
+print(type(D1))
+print()
+time.sleep(3)
+print('End of an application')
+
+
+Ex3:
+===
+import time 
+D1={'Eid':1001,'Ename':"Jessica_1",'Esal':74000} 
+print(D1)
+print()
+print(type(D1))
+print()
+time.sleep(3)
+print('End of an application')
+
+
+Ex4:
+===
+import time 
+D1={Eid:1001,'Ename':"Jessica_1",'Esal':74000} 
+print(D1)
+print()
+print(type(D1))
+print()
+time.sleep(3)
+print('End of an application')
+
+
+Ex5:
+===
+import time 
+D1={1:1001,2:1002,3:1003} 
+print(D1)
+print()
+print(type(D1))
+print()
+time.sleep(3)
+print('End of an application')
+
+
+Ex6:
+===
+import time 
+D1={"Eid":1001,"Ename":"Jessica_2","Esal":79000.0,"Eid":1002} 
+print(D1)
+print()
+print(type(D1))
+print()
+time.sleep(3)
+print('End of an application')
+
+
+Ex7:
+===
+import time 
+D1={"Eid":1001,"Ename":"Jessica_2","Esal":79000.0,"Eid":1002} 
+print(D1)
+print()
+print(type(D1))
+print()
+time.sleep(3)
+print('End of an application')
+
+
+Ex8:
+===
+import time 
+D1={"Eid":1001,"Ename":"Jessica_2","Esal":79000.0} 
+print(D1)
+print()
+print(type(D1))
+print()
+print("====Updating_Dict=====")
+D1['Company']="JP morgan"
+D1['Email']="jessica@gmail.com"
+print(D1)
+time.sleep(3)
+print('End of an application')
+
+
+Ex9:
+===
+import time 
+D1={"Eid":1001,"Ename":"Jessica_2","Esal":79000.0,"Company":"JPM"} 
+print(D1)
+print()
+print(type(D1))
+print()
+print("=====Accessing the values=====")
+print("Eid is:",D1['Eid'])
+print("Ename is:",D1['Ename'])
+print('Esal is:',D1['Esal'])
+print('Company is:',D1['Company'])
+print()
+time.sleep(3)
+print('End of an application')
+
+
+Ex10:
+====
+import time 
+D1=dict(Eid=1001,Ename="Rahul",Esal=23000.0,Company="HCL")
+print(D1)
+print()
+print(type(D1))
+print()
+time.sleep(3)
+print("End of an application")
+
+
+While working with Dict data type we do have following predefine functions
+in Python  which are as follows
+===============================================
+->keys()
+->values()
+->items()
+->clear()
+->popitem()
+->pop()
+->get()
+->update()
+->sorted()
+
+
+->keys():
+=====
+It is used to fetch the keys from the dict data type.
+
+
+Ex1:
+===
+import time 
+D1=dict(Eid=1001,Ename="Rahul",Esal=23000.0,Company="HCL")
+print(D1)
+print()
+print(type(D1))
+print()
+print("=====Keys====")
+for x1 in D1.keys():
+    print(x1)
+print()
+time.sleep(3)
+print("End of an application")
+
+Ex2:
+===
+import time 
+D1=dict(Eid=1001,Ename="Rahul",Esal=23000.0,Company="HCL")
+print(D1)
+print()
+print(type(D1))
+print()
+print("=====Keys====")
+print(D1.keys())
+print()
+time.sleep(3)
+print("End of an application")
+
+
+->values():
+=======
+It is used to fetch the values from the Dict data type.
+
+Ex1:
+===
+import time 
+D1=dict(Eid=1001,Ename="Rahul",Esal=23000.0,Company="HCL")
+print(D1)
+print()
+print(type(D1))
+print()
+print("=====Values====")
+for x2 in D1.values():
+    print(x2)
+print()
+print(D1.values())
+print()
+time.sleep(3)
+print("End of an application")
+
+->items():
+=======
+It is used fetch the key and value from Dict data type.
+
+Ex1:
+==
+import time 
+D1=dict(Eid=1001,Ename="Rahul",Esal=23000.0,Company="HCL")
+print(D1)
+print()
+print(type(D1))
+print()
+print("=====Keys and Values====")
+for a1,a2 in D1.items():
+    print(a1,"---",a2)
+print()
+time.sleep(3)
+print("End of an application")
+
+
+Ex2:
+===
+import time 
+D1=dict(Eid=1001,Ename="Rahul",Esal=23000.0,Company="HCL")
+print(D1)
+print()
+print(type(D1))
+print()
+print("=====Keys and Values====")
+for a1 in D1.items():
+    print(a1)
+print()
+time.sleep(3)
+print("End of an application")
+
+
+Ex3:
+===
+import time 
+D1=dict(Eid=1001,Ename="Rahul",Esal=23000.0,Company="HCL")
+print(D1)
+print()
+print(type(D1))
+print()
+print("=====Keys and Values====")
+print(D1.items())
+print()
+time.sleep(3)
+print("End of an application")
+
+
+->popitem():
+=========
+It is used to remove/delete the last key and value pair.
+
+
+Ex1:
+===
+import time 
+D1=dict(Eid=1001,Ename="Rahul",Esal=23000.0,Company="HCL")
+print("Before_Operations:",D1)
+print()
+D2=D1.popitem()
+print("Deleted/Remove_Objects:",D2)
+print()
+print("After_Operaations:",D1)
+print()
+time.sleep(3)
+print('End of an application')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

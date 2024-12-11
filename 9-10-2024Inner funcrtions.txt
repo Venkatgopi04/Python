@@ -1,0 +1,69 @@
+Inner functions/Nested functions/Closures:
+=========================================
+Python supports Inner Functions/Nested functions/Closures.It can be represent as
+defining or declaring a function inside another function then it is said to be Inner function/
+Nested function/Closures.
+
+def Test_Case1(): ---->Outer_Function
+         ----
+        def Test_Case2(): ---->Inner_Function
+                  ----
+        Test_Case2()
+if(__name__=="__main__"):
+        Test_Case1()
+
+
+Ex1:
+==
+import time 
+def Test_Case1():
+    print("This is outer_function ....")
+    def Test_Case2():
+        print("This is Inner_function ...")
+    Test_Case2()
+if(__name__=="__main__"):
+    Test_Case1()
+print()
+time.sleep(2)
+print('End of an application')
+
+
+Name of langauge is : Python
+Date of release is : 16/7/1989
+
+
+Ex2:
+===
+import time 
+def Test_Case1(name):
+    print("Name of the language is:",name)
+    def Test_Case2(day,month,year):
+        print("Date of release is:{}/{}/{}".format(day,month,year))
+    Test_Case2(16,7,1989)
+if(__name__=="__main__"):
+    Test_Case1("Python")
+print()
+time.sleep(2)
+print("End of an application")
+
+
+City:Hyderabad
+State:TG
+Country:India
+
+Ex1:
+===
+import time 
+def Test_Case1(city):
+    print("City is:",city)
+    def Test_Case2(state):
+        print("State is:",state)
+    Test_Case2("TG")
+    def Test_Case3(country):
+        print("Country is:",country)
+    Test_Case3("India")
+if(__name__=="__main__"):
+    Test_Case1("Hyderabad")
+print()
+time.sleep(2)
+print("End of an application")

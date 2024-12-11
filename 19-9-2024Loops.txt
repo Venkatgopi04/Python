@@ -1,0 +1,345 @@
+Iterative statements in Python:
+===================
+Python supports Iterative statements.Following are the iterative statements in 
+Python which are as follows
+
+->for loop
+->nested for loop
+->while loop
+->nested while loop
+
+
+Note:
+====
+Python does not support do while loop.
+
+
+->for loop:
+========
+It is a iterative statement in Python.The main objective of for loop if you want to 
+execute number of statements number of times if our data/information are in sequence 
+then we can go with for loop
+
+
+for(condition):
+       -----
+
+
+Ex1:
+==
+import time 
+for x1 in range(10):
+    print(x1)
+print()
+time.sleep(2)
+print('End of an application')
+
+
+Ex2:
+===
+import time 
+for x1 in range(10):
+    print("X",end=" ")
+print()
+print()
+time.sleep(2)
+print('End of an application')
+
+
+Ex3:
+==
+import time 
+for x1 in ['A','B','C','D']:
+    print(x1)
+print()
+time.sleep(3)
+print('End of an application')
+
+
+Ex4:
+===
+import time 
+for x1 in ('A','B','C','D'):
+    print(x1)
+print()
+time.sleep(3)
+print('End of an application')
+
+
+Ex5:
+===
+import time 
+for x1 in {'A','B','C','D'}:
+    print(x1)
+print()
+time.sleep(3)
+print('End of an application')
+
+
+Ex6:
+===
+import time 
+for x1 in {"Pid":1001,"Pname":"Mobile_1","Price":26000.0}.keys():
+    print(x1)
+print()
+time.sleep(3)
+print('End of an application')
+
+
+Ex7:
+==
+import time 
+for x1 in {"Pid":1001,"Pname":"Mobile_1","Price":26000.0}.values():
+    print(x1)
+print()
+time.sleep(3)
+print('End of an application')
+
+
+Ex8:
+===
+import time 
+for x1 in {"Pid":1001,"Pname":"Mobile_1","Price":26000.0}.items():
+    print(x1)
+print()
+time.sleep(3)
+print('End of an application')
+
+
+Ex9:
+===
+import time 
+for x1,x2 in {"Pid":1001,"Pname":"Mobile_1","Price":26000.0}.items():
+    print(x1,"---",x2)
+print()
+time.sleep(3)
+print('End of an application')
+
+
+Ex10:
+====
+import time 
+for str1 in "Data Engineer":
+    print(str1)
+print()
+time.sleep(3)
+print('End of an application')
+
+
+Ex11:
+===
+import time 
+L1=[1001,1002,1003,1004,1005]
+print(L1)
+print()
+print(type(L1))
+print()
+for x1 in L1:
+    print(x1)
+print()
+time.sleep(3)
+print('End of an application')
+
+
+Ex12:
+====
+import time 
+L1=[1001,1002,1003,1004,1005]
+print(L1)
+print()
+print(type(L1))
+print()
+for x1 in L1:
+    print(L1)
+print()
+time.sleep(3)
+print('End of an application')
+
+
+Ex13:
+===
+import time 
+L1=[1001,1002,1003,1004,1005]
+print(L1)
+print()
+print(type(L1))
+print()
+for x1 in range(len(L1)):
+    print(x1)
+print()
+time.sleep(2)
+print('End of an application')
+
+
+Ex14:
+====
+import time 
+L1=[1001,1002,1003,1004,1005]
+print(L1)
+print()
+print(type(L1))
+print()
+for x1 in range(len(L1)):
+    print(L1[x1])
+print()
+time.sleep(2)
+print('End of an application')
+
+
+
+Ex15:
+===
+import time 
+L1=[1001,1002,1003,1004,1005]
+for x1 in range(len(L1)):
+    print(x1,"---",L1[x1])
+print()
+time.sleep(2)
+print('End of an application')
+
+L1=[1001,1002,1003,1004,1005,1006,1007,1008,1001,1002,1003] --->Odd numbers:
+=======================================================
+
+Form_1:
+=====
+import time 
+for x1 in [1001,1002,1003,1004,1005,1006,1007,1008,1001,1002,1003]:
+    if(x1%2==1):
+        print("Odd_List_Objects:",x1)
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Form_2:
+=====
+import time 
+L1=[1001,1002,1003,1004,1005,1006,1007,1008,1001,1002,1003]
+for y1 in L1:
+    if(y1%2==1):
+        print("Odd_List_Objects:",y1)
+print()
+time.sleep(3)
+print('End of an application')
+
+
+Form_3:
+=====
+import time 
+L1=[1001,1002,1003,1004,1005,1006,1007,1008,1001,1002,1003]
+for z1 in range(len(L1)):
+    if(L1[z1]%2==1):
+        print("Odd_List_Objects:",L1[z1])
+print()
+time.sleep(3)
+print('End of an application')
+
+
+L1=[1001,1002,1003,1004,1005,1006,1007,1008,1001,1002,1003]---->Sum of list using three of form of for loop
+==========================================================================
+
+Form_1:
+=====
+import time 
+S1=0
+for x1 in [1001,1002,1003,1004,1005,1006,1007,1008,1001,1002,1003]:
+    S1=S1+x1
+print("Sum of list is:",S1)
+print()
+time.sleep(3)
+print('End of an application')
+
+
+Form_2:
+====
+import time 
+L1=[1001,1002,1003,1004,1005,1006,1007,1008,1001,1002,1003]
+S2=0 
+for y1 in L1:
+    S2=S2+y1 
+print("Sum of list is:",S2)
+print()
+time.sleep(3)
+print('End of an application')
+
+
+Form_3:
+=====
+import time 
+L1=[1001,1002,1003,1004,1005,1006,1007,1008,1001,1002,1003]
+S3=0 
+for z1 in range(len(L1)):
+    S3=S3+L1[z1]
+print("Sum of list is:",S3)
+print()
+time.sleep(3)
+print('End of an application')
+
+
+L1=[1001,1002,1003,1004,1005,1006,1007,1008,1001,1002,1003]---->removes the duplicate objects
+==================================================================
+
+
+Form_1:
+====
+import time 
+L2=[]
+for a1 in [1001,1002,1003,1004,1005,1006,1007,1008,1001,1002,1003]:
+    if(a1 not in L2):
+        L2.append(a1)
+print("After removing_objects:",L2)
+print()
+time.sleep(3)
+print('End of an application')
+
+
+Form_2:
+=====
+import time 
+L1=[1001,1002,1003,1004,1005,1006,1007,1008,1001,1002,1003]
+L3=[] 
+for x1 in L1:
+    if(x1 not in L3):
+        L3.append(x1)
+print("Before_Operations:",L1)
+print()
+print("After_Operations:",L3)
+print()
+time.sleep(3)
+print('End of an applicaiton')
+
+
+Form_3:
+====
+import time 
+L1=[1001,1002,1003,1004,1005,1006,1007,1008,1001,1002,1003]
+L4=[] 
+for z1 in range(len(L1)):
+    if(L1[z1] not in L4):
+        L4.append(L1[z1])
+print("Before_Operations:",L1)
+print()
+print("After_Operations:",L4)
+print()
+time.sleep(3)
+print('End of an application')
+
+
+
+Ex1:
+===
+import time 
+Number=eval(input('Enter any_number:'))
+for a in range(1,11):
+    print(Number,"*",a,"=",Number*a)
+print()
+time.sleep(2)
+print('End of an application')
+
+
+
+
+
+
+
+

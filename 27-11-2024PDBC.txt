@@ -1,0 +1,334 @@
+PDBC  in Python:
+==========
+
+Prerequest to Implement PDBC using Python 
+============================
+XAMPP
+     ->MYSQL_DATABASE
+     ->Drivers for MYSQL_DATABASE
+                 mysql-connector
+      ->How to install mysql-connector
+                pip install mysql-connetor
+
+PDBC stands for Python database connectitvity.The main objective of PDBC or Python
+database connectivity is to communicate the database and perform operations as per the
+application reqn.
+
+
+Q1)How to create a Database?
+===================
+Ex1:
+===
+import time 
+import mysql.connector 
+try:
+    sql_1="create database my_database_101"
+    con=mysql.connector.connect(host="localhost",user="root",password="")
+    cursor=con.cursor()
+    cursor.execute(sql_1)
+    print("Databse is created successfully ...")
+except mysql.connector.DatabaseError as e: 
+    if con:
+        con.rollback()
+        print("Exception_Name is:",e)
+finally:
+    if con:
+        con.close()
+    elif cursor:
+        cursor.close()
+print()
+time.sleep(3)
+print("End of an applicaton")
+
+
+OUTPUT:
+======
++--------------------+
+| Database           |
++--------------------+
+| abcd_12345         |
+| abcde_123          |
+| ihub_77551         |
+| information_schema |
+| my_database_1      |
+| my_database_10     |
+| my_database_101    |
+| my_database_11     |
+| my_database_2      |
+| my_database_25     |
+| my_database_26     |
+| my_database_3      |
+| my_database_7      |
+| mysql              |
+| performance_schema |
+| phpmyadmin         |
+| qt_12345           |
+| qualitythought_2   |
+| sms_111            |
+| sms_555            |
+| sms_999            |
+| test               |
++--------------------+
+22 rows in set (0.001 sec)
+
+MariaDB [(none)]>
+
+
+Ex2:
+===
+import time 
+import mysql.connector 
+try:
+    sql_1="create table Products(Pid INT,Pname VARCHAR(20),Price INT)"
+    con=mysql.connector.connect(host="localhost",user="root",password="",database="my_database_101")
+    cursor=con.cursor()
+    cursor.execute(sql_1)
+    print("Table is created successfully ...")
+except mysql.connector.DatabaseError as e: 
+    if con:
+        con.rollback()
+        print("Exception_Name is:",e)
+finally:
+    if con:
+        con.close()
+    elif cursor:
+        cursor.close()
+print()
+time.sleep(3)
+print("End of an applicaton")
+
+
+OUTPUT:
+======
+MariaDB [(none)]> use my_database101;
+ERROR 1049 (42000): Unknown database 'my_database101'
+MariaDB [(none)]> use my_database_101;
+Database changed
+MariaDB [my_database_101]> show tables;
++---------------------------+
+| Tables_in_my_database_101 |
++---------------------------+
+| products                  |
++---------------------------+
+1 row in set (0.001 sec)
+
+MariaDB [my_database_101]> desc Products;
++-------+-------------+------+-----+---------+-------+
+| Field | Type        | Null | Key | Default | Extra |
++-------+-------------+------+-----+---------+-------+
+| Pid   | int(11)     | YES  |     | NULL    |       |
+| Pname | varchar(20) | YES  |     | NULL    |       |
+| Price | int(11)     | YES  |     | NULL    |       |
++-------+-------------+------+-----+---------+-------+
+3 rows in set (0.034 sec)
+
+MariaDB [my_database_101]>
+
+
+Q3)How to add the additiional column to the existing table?
+======================================
+
+Ex1:
+===
+MariaDB [my_database_101]> desc Products;
++---------+-------------+------+-----+---------+-------+
+| Field   | Type        | Null | Key | Default | Extra |
++---------+-------------+------+-----+---------+-------+
+| Pid     | int(11)     | YES  |     | NULL    |       |
+| Pname   | varchar(20) | YES  |     | NULL    |       |
+| Price   | int(11)     | YES  |     | NULL    |       |
+| Company | varchar(20) | YES  |     | NULL    |       |
++---------+-------------+------+-----+---------+-------+
+4 rows in set (0.030 sec)
+
+
+Q4)How to change the table_name?
+======================
+Ex1:
+===
+
+import time 
+import mysql.connector 
+try:
+    sql_1="alter table Products rename as P1"
+    con=mysql.connector.connect(host="localhost",user="root",password="",database="my_database_101")
+    cursor=con.cursor()
+    cursor.execute(sql_1)
+    print("Table_Name is changed successfully ....")
+except mysql.connector.DatabaseError as e: 
+    if con:
+        con.rollback()
+        print("Exception_Name is:",e)
+finally:
+    if con:
+        con.close()
+    elif cursor:
+        cursor.close()
+print()
+time.sleep(3)
+print("End of an applicaton")
+
+
+OUTPUT:
+=====
+MariaDB [my_database_101]> desc Products;
+ERROR 1146 (42S02): Table 'my_database_101.products' doesn't exist
+MariaDB [my_database_101]> desc P1;
++---------+-------------+------+-----+---------+-------+
+| Field   | Type        | Null | Key | Default | Extra |
++---------+-------------+------+-----+---------+-------+
+| Pid     | int(11)     | YES  |     | NULL    |       |
+| Pname   | varchar(20) | YES  |     | NULL    |       |
+| Price   | int(11)     | YES  |     | NULL    |       |
+| Company | varchar(20) | YES  |     | NULL    |       |
++---------+-------------+------+-----+---------+-------+
+4 rows in set (0.020 sec)
+
+
+
+Q5)How to insert a new record?
+====================
+Ex1:
+==
+import time 
+import mysql.connector 
+try:
+    sql_1="insert into P1 values(1001,'Mobile_1',23000.0,'Samsung')"
+    con=mysql.connector.connect(host="localhost",user="root",password="",database="my_database_101")
+    cursor=con.cursor()
+    cursor.execute(sql_1)
+    con.commit()
+    print("A record is inserted successfully ...")
+except mysql.connector.DatabaseError as e: 
+    if con:
+        con.rollback()
+        print("Exception_Name is:",e)
+finally:
+    if con:
+        con.close()
+    elif cursor:
+        cursor.close()
+print()
+time.sleep(3)
+print("End of an applicaton")
+
+
+OUTPUT:
+=====
+MariaDB [my_database_101]> select * from P1;
+Empty set (0.000 sec)
+
+MariaDB [my_database_101]> select * from P1;
++------+----------+-------+---------+
+| Pid  | Pname    | Price | Company |
++------+----------+-------+---------+
+| 1001 | Mobile_1 | 23000 | Samsung |
++------+----------+-------+---------+
+1 row in set (0.001 sec)
+
+MariaDB [my_database_101]> select Pid from P1;
++------+
+| Pid  |
++------+
+| 1001 |
++------+
+1 row in set (0.001 sec)
+
+MariaDB [my_database_101]> select Pid,Pname from P1;
++------+----------+
+| Pid  | Pname    |
++------+----------+
+| 1001 | Mobile_1 |
++------+----------+
+1 row in set (0.000 sec)
+
+MariaDB [my_database_101]>
+
+
+Q6)Inserting more than one record?
+=====================
+
+Ex1:
+==
+import time 
+import mysql.connector 
+try:
+    sql_1="insert into P1 values(%s,%s,%s,%s)"
+    con=mysql.connector.connect(host="localhost",user="root",password="",database="my_database_101")
+    cursor=con.cursor()
+    record=([1002,"Mobile_2",27000,"Samsung"],[1003,"Mobile_3",28000,"Samsung"])
+    cursor.executemany(sql_1,record)
+    con.commit()
+    print("A record is inserted successfully ...")
+except mysql.connector.DatabaseError as e: 
+    if con:
+        con.rollback()
+        print("Exception_Name is:",e)
+finally:
+    if con:
+        con.close()
+    elif cursor:
+        cursor.close()
+print()
+time.sleep(3)
+print("End of an applicaton")
+
+
+OUTPUT:
+======
+1 row in set (0.000 sec)
+
+MariaDB [my_database_101]> select * from P1;
++------+----------+-------+---------+
+| Pid  | Pname    | Price | Company |
++------+----------+-------+---------+
+| 1001 | Mobile_1 | 23000 | Samsung |
+| 1002 | Mobile_2 | 27000 | Samsung |
+| 1003 | Mobile_3 | 28000 | Samsung |
++------+----------+-------+---------+
+3 rows in set (0.001 sec)
+
+MariaDB [my_database_101]> select * from P1 where Pid=1003;
++------+----------+-------+---------+
+| Pid  | Pname    | Price | Company |
++------+----------+-------+---------+
+| 1003 | Mobile_3 | 28000 | Samsung |
++------+----------+-------+---------+
+1 row in set (0.000 sec)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+         

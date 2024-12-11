@@ -1,0 +1,141 @@
+Web Scraping in Python:
+==============
+Python supports Web Scarping.It is process or methodlogy to fetch the real time application
+data/information from real world application then it is said to be Web Scarping.To implement
+web scarping in Python we do have a module named as urllib and urllib.request.
+
+
+Ex1:
+===
+import time 
+import re 
+import urllib
+import urllib.request 
+res1=['https://www.amazon.in/']
+for x1 in res1:
+    print("Searching_for:",x1)
+    print()
+    obj1=urllib.request.urlopen(x1)
+    obj2=obj1.read()
+    obj3=re.findall("<title>.*</title>",str(obj2),re.I)
+    print(obj3[0])
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Ex2:
+===
+import time 
+import re 
+import urllib
+import urllib.request 
+res1=['https://www.amazon.in/','https://www.alibaba.com/']
+for x1 in res1:
+    print("Searching_for:",x1)
+    print()
+    obj1=urllib.request.urlopen(x1)
+    obj2=obj1.read()
+    obj3=re.findall("<title>.*</title>",str(obj2),re.I)
+    print(obj3[0])
+    print()
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Ex3:
+===
+import time 
+import re 
+import urllib
+import urllib.request 
+res1=['https://www.amazon.in/']
+for x1 in res1:
+    print("Searching_for:",x1)
+    print()
+    obj1=urllib.request.urlopen(x1)
+    obj2=obj1.read()
+    print(obj2)
+    print()
+    print(type(obj2))
+print()
+time.sleep(2)
+print("End of an application")
+
+
++91 78934 18488
+============
+[+]{1}[91]{1}[1]{1}[' ']{1}[0-9]{5}[' '][0-9]{5}
+
+
+Ex1:
+===
+import time 
+import re 
+import urllib
+import urllib.request 
+res1=['https://qualitythought.in/contact-us/']
+for x1 in res1:
+    print("Pleaase reach_us using following contacts:",x1)
+    print()
+    obj1=urllib.request.urlopen(x1)
+    obj2=obj1.read()
+    obj3=re.findall("[+]{1}[91]{1}[1]{1}[' ']{1}[0-9]{5}[' '][0-9]{5}",str(obj2),re.I)
+    for x2 in obj3:
+        print(x2)
+   
+print()
+time.sleep(2)
+print("End of an application")
+
+
+info@qualitythought.in:
+===============
+[info[{1}@[a-z]*[.]in
+
+
+Ex1:
+===
+import time 
+import re 
+import urllib
+import urllib.request 
+res1=['https://qualitythought.in/contact-us/']
+for x1 in res1:
+    print("Pleaase reach_us using following contacts:",x1)
+    print()
+    obj1=urllib.request.urlopen(x1)
+    obj2=obj1.read()
+    obj3=re.findall("[a-z]{4}@[a-z]*[.]in",str(obj2),re.I)
+    for x2 in obj3:
+        print(x2)
+print()
+time.sleep(2)
+print("End of an application")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,234 @@
+Transfer statements in Python:
+===================
+Python supports Transfer statements.Following are transfer statement in 
+Python which are as follows
+
+->break statement
+->continue statement
+->pass statement
+
+
+>break statement:
+===========
+It is a transfer statement in Python.The main objective of break statement is to
+control the loops or to ternimate the script/program
+
+import time 
+Number=eval(input("Enter the Number:"))
+if(Number%2==0):
+      print("Even_Number")
+      break 
+else:
+     print("Odd_Number")
+print()
+time.sleep(2)
+print('End of an application')
+
+
+OUTPUT:
+=====
+C:\Users\Admin\Desktop>Python test1.py
+  File "test1.py", line 5
+    break
+    ^
+SyntaxError: 'break' outside loop
+
+
+Ex1:
+===
+import time 
+for x1 in range(15):
+    if(x1==9):
+        print("Welcome to IHUB_APP_STORE")
+        break
+    print("The Processing_Objects are:",x1)
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Ex2:
+===
+import time 
+L1=[131,132,133,134,135,1700,1,2,3,4,5]
+for x1 in L1:
+    if(x1>1200):
+        print("Welcome to IHUB_APP_STORE")
+        break 
+    print("The Proessing_Objects are:",x1)
+print()
+time.sleep(3)
+print('End of an application')
+
+
+Ex3:
+===
+import time 
+L1=[131,132,133,"Programmers",134,135,1700,1,2,3,4,5]
+for x1 in L1:
+    if(x1>1200):
+        print("Welcome to IHUB_APP_STORE")
+        break 
+    print("The Proessing_Objects are:",x1)
+print()
+time.sleep(3)
+print('End of an application')
+
+OUTPUT:
+=====
+
+C:\Users\Admin\Desktop>Python test1.py
+The Proessing_Objects are: 131
+The Proessing_Objects are: 132
+The Proessing_Objects are: 133
+Traceback (most recent call last):
+  File "test1.py", line 4, in <module>
+    if(x1>1200):
+TypeError: '>' not supported between instances of 'str' and 'int'
+
+C:\Users\Admin\Desktop>
+
+
+Ex4:
+===
+import time 
+L1=[131,132,133,1700,"Programmers",134,135,1,2,3,4,5]
+for x1 in L1:
+    if(x1>1200):
+        print("Welcome to IHUB_APP_STORE")
+        break 
+    print("The Proessing_Objects are:",x1)
+print()
+time.sleep(3)
+print('End of an application')
+
+for with else block:
+===========
+Python supports for with else block.The main objective of for with else block if
+break statement condition is satisfied then else block will not be executed
+
+
+Ex1:
+===
+import time 
+L1=[131,132,133,1700,134,135,1,2,3,4,5]
+for x1 in L1:
+    if(x1>1200):
+        print("Welcome to IHUB_APP_STORE")
+        break 
+    print("The Proessing_Objects are:",x1)
+else:
+    print("For with Else block ....")
+print()
+time.sleep(3)
+print('End of an application')
+
+
+
+Ex2:
+===
+import time 
+L1=[131,132,133,134,135,1,2,3,4,5]
+for x1 in L1:
+    if(x1>1200):
+        print("Welcome to IHUB_APP_STORE")
+        break 
+    print("The Proessing_Objects are:",x1)
+else:
+    print("For with Else block ....")
+print()
+time.sleep(3)
+print('End of an application')
+
+->continue statement:
+===============
+It is a transfer statement in Python.The main objective of continue statement is to skip the
+current iteration even_Though condition is satisfied and continue for next iteration.
+
+
+Ex1:
+===
+import time 
+for x1 in range(20):
+    if(x1==11):
+        print("Welcome to IHUB_IT_SERVICES")
+        continue 
+    print("The values are:",x1)
+print()
+time.sleep(3)
+print('End of an application')
+
+
+Ex2:
+===
+import time 
+for x1 in range(10):
+    if(x1%2==0):
+        continue
+    print("Odd_Numbers are:",x1)
+print()
+time.sleep(3)
+print('End of an application')
+
+
+Ex3:
+===
+import time 
+for x1 in range(10):
+    if(x1%2==0):
+        continue
+    else:
+        print("Odd_Numbers are:",x1)
+   
+print()
+time.sleep(3)
+print('End of an application')
+
+
+Ex4:
+===
+import time 
+L1=[1001,1002,1003,1005,7800,101,102,103]
+for L2 in L1:
+    if(L2>6700):
+        print("We will do smart practice which is impossible")
+        continue 
+    print("The values are:",L2)
+print()
+time.sleep(3)
+print('End of an applicaition')
+
+
+Ex5:
+===
+import time 
+L1=[1001,1002,1003,1005,7800,101,102,103]
+for L2 in L1:
+    if(L2>6700):
+        print("We will do smart practice which is impossible")
+        continue 
+    print("The values are:",L2)
+else:
+    print("For_Else block")
+print()
+time.sleep(3)
+print('End of an applicaition')
+
+
+Ex6:
+===
+import time 
+L1=[1001,1002,1003,1005,101,102,103]
+for L2 in L1:
+    if(L2>6700):
+        print("We will do smart practice which is impossible")
+        continue 
+    print("The values are:",L2)
+else:
+    print("For_Else block")
+print()
+time.sleep(3)
+print('End of an applicaition')
+   
+
+

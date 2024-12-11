@@ -1,0 +1,237 @@
+Functional Programming language in Python:
+=========================================
+
+
+What is Function?
+==============
+A function can be represent as piece of code or block of unit.The main objective of functions is to provide the
+code reusability which means once write call any number of times.In Python we do have two types of functions
+
+
+->Predefine function
+->User define function
+
+
+
+->Predefine function:
+================
+Predefine function can be represent as a function which is created or developed at the time of developing a programing language then it is said to be Predefine function.
+
+->print()
+->id()
+->eval()
+->zip()
+
+
+->User define function:
+=================
+User define function can be represent as A function which is created or developed by developers or programmers  at time of writing the business logic then it is said to be User define function.In Python user define function can be
+define as def followed function_name.
+
+
+What is __name__=="__main__"
+=========================
+It is a method in Python.The main objective of this method is to execute one or more than one block of unit or piece  of code  directly or indirectly
+
+
+def Function_Name(): ----->Called function
+           -----
+if(__name__=="__main__"):
+       Function_Name() ----> Calling function
+
+
+Ex1:
+===
+import time 
+def Test_Case1():
+    print("Welcome to functional programming language in Python")
+if(__name__=="__main__"):
+    Test_Case1()
+print()
+time.sleep(3)
+print("End of an application")
+
+
+Ex2:
+===
+import time 
+def Test_Case1():
+    print("Welcome to functional programming language in Python")
+if(__name__=="__main__"):
+    Test_Case1()
+    print()
+    Test_Case1()
+    print()
+    Test_Case1()
+print()
+time.sleep(3)
+print("End of an application")
+
+
+->Formal Parameters
+->Actual Parameters
+
+
+->Formal Parameters:
+=================
+Formal Parameters can be represent as if we are using one or more than one variable as parameter at time 
+of creating a function then it is said to be Formal Parameters.
+
+
+->Actual Parameters:
+================
+Actual Parameters can be represent as if we are using one or more than one value at the time calling the 
+function then it is said to be Actual Parameters
+
+
+Ex1:
+====
+import time 
+def Test_Employee_Case1(Eid,Ename,Esal,Company):
+    print("=====Employee_Details=====")
+    print("Eid is:",Eid)
+    print("Ename is:",Ename)
+    print("Esal is:",Esal)
+    print("Company is:",Company)
+if(__name__=="__main__"):
+    Test_Employee_Case1(1001,"Rahul",23000,"Dell")
+print()
+time.sleep(3)
+print("End of an application")
+
+
+Ex2:
+===
+import time 
+def Test_Employee_Case1(Eid,Ename,Esal,Company):
+    print("=====Employee_Details=====")
+    print("Eid is:",Eid)
+    print("Ename is:",Ename)
+    print("Esal is:",Esal)
+    print("Company is:",Company)
+if(__name__=="__main__"):
+    Test_Employee_Case1(1001,"Rahul_1",23000,"TCS")
+    print()
+    Test_Employee_Case1(1002,"Rahul_2",29000,"TCS")
+    print()
+    Test_Employee_Case1(1003,"Rahul_3",31000,"TCS")
+
+print()
+time.sleep(3)
+print("End of an application")
+
+
+Ex3:
+===
+import time 
+def Test_Product_Details():
+    Pid=int(input("Enter the Pid:"))
+    Pname=input("Enter the Pname:")
+    Price=float(input("Enter the Price:"))
+    Company=input("Enter the Company:")
+    print()
+    print("=====Product_Details=======")
+    print(Pid,Pname,Price,Company)
+    print("============================")
+if(__name__=="__main__"):
+    Test_Product_Details()
+print()
+time.sleep(3)
+print("End of an application")
+
+Ex4:
+===
+import time 
+def Test_Product_Details(Pid,Pname,Price,Company):
+    Pid=int(input("Enter the Pid:"))
+    Pname=input("Enter the Pname:")
+    Price=float(input("Enter the Price:"))
+    Company=input("Enter the Company:")
+    print()
+    print("=====Product_Details=======")
+    print(Pid,Pname,Price,Company)
+    print("============================")
+if(__name__=="__main__"):
+    Test_Product_Details(Pid=None,Pname=None,Price=23000,Company=None)
+print()
+time.sleep(3)
+print("End of an application")
+
+
+Working on return keyword:
+=====================
+return is a keyword in Python. The main objective of return keyword  a function can return another function.
+While working with return keyword if we use return keyword inside a function that function must be called inside
+print() function
+
+
+Ex1:
+===
+import time 
+def Test_Case1():
+    print("Welcome to TCS Company")
+    print()
+    return "TCS is offering software Engineers"
+if(__name__=="__main__"):
+    Test_Case1()
+    print()
+    Test_Case1()
+    print()
+    Test_Case1()
+    print()
+    print(Test_Case1())
+print()
+time.sleep(3)
+print("End of an application")
+
+
+Ex2:
+===
+import time 
+def Test_Case1():
+    print("Welcome to TCS Company")
+    print()
+if(__name__=="__main__"):
+    Test_Case1()
+    print()
+    Test_Case1()
+    print()
+    Test_Case1()
+    print()
+    print(Test_Case1())
+print()
+time.sleep(3)
+print("End of an application")
+
+
+Ex3:
+===
+import time 
+def Test_Case1():
+    return "Python_34_Batch is waiting the session outsite"
+if(__name__=="__main__"):
+    Test_Case1()
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Ex4:
+====
+import time 
+def Test_Case1():
+    return "Python_34_Batch is waiting the session outsite"
+if(__name__=="__main__"):
+    print(Test_Case1())
+print()
+time.sleep(2)
+print("End of an application")
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,563 @@
+Web scarping with regular expression(regex object):
+================================
+
+regular expression(regex object):
+=====================
+regular expression is also known as regex object.It can be represent as if you want to
+represent group of string as pattern what you are seacrhing for then we can go wtih regular
+expresion in Python.To implement regular expression in Python we do have a  module named
+re module.
+
+
+Where can we use regular expression/regex object in real world application?
+================================================
+->To perform client and server side validation
+->To develop pattern matching application
+->To develop compilers/interpreters 
+->To develop communication protocal's like http,https,smtp,ftp
+
+
+Inside the re module we do have following functions which are as follows
+
+
+->finditer()
+->start()
+->end()
+->group()
+
+->finditer():
+=======
+It is a predefine function in python while working with regular expression.It uses 
+two parameters one is pattern and second string object to perform the operations or
+to search the pattern as per the application reqn.
+
+
+->start():
+======  
+             start() means it will return indexing position of the pattern where our
+             pattern starts
+
+->end():
+=====
+       end always return end+1
+
+group():
+=====
+     It return targeted string_object/pattern
+
+
+Ex1:
+===
+import time 
+import re 
+A1=re.finditer("ABC","ABCRRRRRRWWWWWQQQQABCHHHHABC")
+for x1 in A1:
+    print(x1.start(),"===",x1.end(),"===",x1.group())
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Ex2:
+===
+import time 
+import re 
+C1=0
+A1=re.finditer("ABC","ABCRRRRRRWWWWWQQQQABCHHHHABC")
+for x1 in A1:
+    C1+=1
+    print(x1.start(),"===",x1.end(),"===",x1.group())
+print()
+print("ABC is present:",C1)
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Character classes in Python:
+=================
+[ABC] ---- A or B or C
+[A-Z] ---->All uppercase AtoZ 
+[a-z] ---->Lowercase atoz
+[0-9] ---->Only digit from 0 to 9 
+[a-zA-Z] --->Both lowercase/uppercase atoz/AtoZ 
+[a-zA-Z0-9] --->Alpha numerical values 
+[^a-zA-Z0-9] ---->Only specail characters
+
+
+Ex1:
+===
+import time 
+import re 
+C1=0
+A1=re.finditer("[ABC]","ABCER  abcew_12345@gmai.com")
+for x1 in A1:
+    C1+=1
+    print(x1.start(),"===",x1.end(),"===",x1.group())
+print()
+print("pattern is present:",C1)
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Ex2:
+===
+import time 
+import re 
+C1=0
+A1=re.finditer("[A-Z]","ABCER  abcew_12345@gmai.com")
+for x1 in A1:
+    C1+=1
+    print(x1.start(),"===",x1.end(),"===",x1.group())
+print()
+print("pattern is present:",C1)
+print()
+time.sleep(2)
+print("End of an application")
+
+Ex3:
+==
+import time 
+import re 
+C1=0
+A1=re.finditer("[a-z]","ABCER  abcew_12345@gmai.com")
+for x1 in A1:
+    C1+=1
+    print(x1.start(),"===",x1.end(),"===",x1.group())
+print()
+print("pattern is present:",C1)
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Ex4:
+===
+import time 
+import re 
+C1=0
+A1=re.finditer("[0-9]","ABCER  abcew_12345@gmai.com")
+for x1 in A1:
+    C1+=1
+    print(x1.start(),"===",x1.end(),"===",x1.group())
+print()
+print("pattern is present:",C1)
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Ex5:
+===
+import time 
+import re 
+C1=0
+A1=re.finditer("[a-zA-Z]","ABCER  abcew_12345@gmai.com")
+for x1 in A1:
+    C1+=1
+    print(x1.start(),"===",x1.end(),"===",x1.group())
+print()
+print("pattern is present:",C1)
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Ex6:
+===
+import time 
+import re 
+C1=0
+A1=re.finditer("[a-zA-Z0-9]","ABCER  abcew_12345@gmai.com")
+for x1 in A1:
+    C1+=1
+    print(x1.start(),"===",x1.end(),"===",x1.group())
+print()
+print("pattern is present:",C1)
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Ex7:
+===
+import time 
+import re 
+C1=0
+A1=re.finditer("[^a-zA-Z0-9]","ABCER  abcew_12345@gmai.com")
+for x1 in A1:
+    C1+=1
+    print(x1.start(),"===",x1.end(),"===",x1.group())
+print()
+print("pattern is present:",C1)
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Predefine classes in Python:
+=================
+\S ---->Except spaces 
+\s ---->Only spaces 
+\d ---->Only digits
+\D ---->Except digits 
+\w --->Alpha numerical values _ is a normal character
+\W --->Only specail characters 
+.  ---->It will display the complete pattern
+
+
+Ex1:
+==
+import time 
+import re 
+C1=0
+A1=re.finditer("\S","ABCER  abcew_12345@gmai.com")
+for x1 in A1:
+    C1+=1
+    print(x1.start(),"===",x1.end(),"===",x1.group())
+print()
+print("pattern is present:",C1)
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Ex2:
+===
+import time 
+import re 
+C1=0
+A1=re.finditer("\s","ABCER  abcew_12345@gmai.com")
+for x1 in A1:
+    C1+=1
+    print(x1.start(),"===",x1.end(),"===",x1.group())
+print()
+print("pattern is present:",C1)
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Ex4:
+===
+import time 
+import re 
+C1=0
+A1=re.finditer("\d","ABCER  abcew_12345@gmai.com")
+for x1 in A1:
+    C1+=1
+    print(x1.start(),"===",x1.end(),"===",x1.group())
+print()
+print("pattern is present:",C1)
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Ex5:
+===
+import time 
+import re 
+C1=0
+A1=re.finditer("\D","ABCER  abcew_12345@gmai.com")
+for x1 in A1:
+    C1+=1
+    print(x1.start(),"===",x1.end(),"===",x1.group())
+print()
+print("pattern is present:",C1)
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Ex6:
+===
+import time 
+import re 
+C1=0
+A1=re.finditer("\w","ABCER  abcew_12345@gmai.com")
+for x1 in A1:
+    C1+=1
+    print(x1.start(),"===",x1.end(),"===",x1.group())
+print()
+print("pattern is present:",C1)
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Ex7:
+===
+import time 
+import re 
+C1=0
+A1=re.finditer("\W","ABCER  abcew_12345@gmai.com")
+for x1 in A1:
+    C1+=1
+    print(x1.start(),"===",x1.end(),"===",x1.group())
+print()
+print("pattern is present:",C1)
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Ex8:
+===
+import time 
+import re 
+C1=0
+A1=re.finditer("[.]","ABCER  abcew_12345@gmai.com")
+for x1 in A1:
+    C1+=1
+    print(x1.start(),"===",x1.end(),"===",x1.group())
+print()
+print("pattern is present:",C1)
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Ex9:
+===
+import time 
+import re 
+C1=0
+A1=re.finditer(".","ABCER  abcew_12345@gmai.com")
+for x1 in A1:
+    C1+=1
+    print(x1.start(),"===",x1.end(),"===",x1.group())
+print()
+print("pattern is present:",C1)
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Quantifiers:
+======
+Python supports Quantifiers which are as follows
+
+A ---->Only A's 
+A+ ---->Minimum one A or more than one A's
+A*  ---->Minimum one A or more than one A's and zero number of A's and end+1
+A? ---->Only one A's and zero number of A's and end+1 
+A{2,5} ---> 2 A's to 5 A's depending on the input values 
+^A ---->Wheather our pattern starts with A or not 
+A$ ---->Wheather our pattern ends with or A or not
+
+
+Ex1:
+===
+import time 
+import re 
+C1=0
+A1=re.finditer("A","ABCDEAARRRRAAATTTTAAAAYYYAAAAA")
+for x1 in A1:
+    C1+=1
+    print(x1.start(),"===",x1.end(),"===",x1.group())
+print()
+print("pattern is present:",C1)
+print()
+time.sleep(2)
+print("End of an application")
+
+
+OUTPUT:
+=====
+
+C:\Users\Admin\Desktop>Python test1.py
+0 === 1 === A
+5 === 6 === A
+6 === 7 === A
+11 === 12 === A
+12 === 13 === A
+13 === 14 === A
+18 === 19 === A
+19 === 20 === A
+20 === 21 === A
+21 === 22 === A
+25 === 26 === A
+26 === 27 === A
+27 === 28 === A
+28 === 29 === A
+29 === 30 === A
+
+pattern is present: 15
+
+End of an application
+
+C:\Users\Admin\Desktop>
+
+
+Ex2:
+===
+import time 
+import re 
+C1=0
+A1=re.finditer("A+","ABCDEAARRRRAAATTTTAAAAYYYAAAAA")
+for x1 in A1:
+    C1+=1
+    print(x1.start(),"===",x1.end(),"===",x1.group())
+print()
+print("pattern is present:",C1)
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Ex3:
+===
+import time 
+import re 
+C1=0
+A1=re.finditer("A*","ABCDEAARRRRAAATTTTAAAAYYYAAAAA")
+for x1 in A1:
+    C1+=1
+    print(x1.start(),"===",x1.end(),"===",x1.group())
+print()
+print("pattern is present:",C1)
+print()
+time.sleep(2)
+print("End of an application")
+
+OUTPUT:
+=====
+
+C:\Users\Admin\Desktop>Python test1.py
+0 === 1 === A
+1 === 1 ===
+2 === 2 ===
+3 === 3 ===
+4 === 4 ===
+5 === 7 === AA
+7 === 7 ===
+8 === 8 ===
+9 === 9 ===
+10 === 10 ===
+11 === 14 === AAA
+14 === 14 ===
+15 === 15 ===
+16 === 16 ===
+17 === 17 ===
+18 === 22 === AAAA
+22 === 22 ===
+23 === 23 ===
+24 === 24 ===
+25 === 30 === AAAAA
+30 === 30 ===
+
+pattern is present: 21
+
+End of an application
+
+C:\Users\Admin\Desktop>
+
+
+Ex4:
+===
+import time 
+import re 
+C1=0
+A1=re.finditer("A?","ABCDEAARRRRAAATTTTAAAAYYYAAAAA")
+for x1 in A1:
+    C1+=1
+    print(x1.start(),"===",x1.end(),"===",x1.group())
+print()
+print("pattern is present:",C1)
+print()
+time.sleep(2)
+print("End of an application")
+
+OUTPUT:
+=====
+
+C:\Users\Admin\Desktop>Python test1.py
+0 === 1 === A
+1 === 1 ===
+2 === 2 ===
+3 === 3 ===
+4 === 4 ===
+5 === 6 === A
+6 === 7 === A
+7 === 7 ===
+8 === 8 ===
+9 === 9 ===
+10 === 10 ===
+11 === 12 === A
+12 === 13 === A
+13 === 14 === A
+14 === 14 ===
+15 === 15 ===
+16 === 16 ===
+17 === 17 ===
+18 === 19 === A
+19 === 20 === A
+20 === 21 === A
+21 === 22 === A
+22 === 22 ===
+23 === 23 ===
+24 === 24 ===
+25 === 26 === A
+26 === 27 === A
+27 === 28 === A
+28 === 29 === A
+29 === 30 === A
+30 === 30 ===
+
+pattern is present: 31
+
+End of an application
+
+C:\Users\Admin\Desktop>
+
+
+Ex5:
+===
+import time 
+import re 
+C1=0
+A1=re.finditer("A{2,5}","ABCDEAARRRRAAATTTTAAAAYYYAAAAA")
+for x1 in A1:
+    C1+=1
+    print(x1.start(),"===",x1.end(),"===",x1.group())
+print()
+print("pattern is present:",C1)
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Ex6:
+===
+import time 
+import re 
+C1=0
+A1=re.finditer("A{4,5}","ABCDEAARRRRAAATTTTAAAAYYYAAAAA")
+for x1 in A1:
+    C1+=1
+    print(x1.start(),"===",x1.end(),"===",x1.group())
+print()
+print("pattern is present:",C1)
+print()
+time.sleep(2)
+print("End of an application")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,239 @@
+->Working on csv module:
+=================
+Python supports csv module.It is a predefine module in python.The main objective of 
+csv modules is to perfom operations on csv/excel files.In python we do have a module 
+named as csv module inside the csv module we do have following sub modules
+
+
+writer():It is used to write the data
+reader():It is used to read the csv data
+writerow():It is used to create new file and with its content.
+
+
+Ex1:
+===
+import time 
+import csv 
+with open("ihub_1.csv","w",newline="") as f:
+    obj1=csv.writer(f)
+    obj1.writerow(["Pid","Pname","Price","Company","M_date","Exp_date"])
+    n=eval(input("Enter the number of rows:"))
+    for x1 in range(n):
+        Pid=int(input("Enter the Pid:"))
+        Pname=input("Enter the Pname:")
+        Price=float(input("Enter the Price:"))
+        Company=input("Enter the Company:")
+        M_date=input("Enter the M_date_year:")
+        Exp_date=input("Enter the Exp_date_year:")
+        obj1.writerow([Pid,Pname,Price,Company,M_date,Exp_date])
+    print("A csv file is created successfully ...")
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Ex2:
+==
+import time 
+import csv 
+with open("ihub_1.csv","r",newline="") as f:
+    obj1=csv.reader(f)
+    print(obj1)
+print()
+time.sleep(2)
+print("End of an application")
+
+OUTPUT:
+=====
+C:\Users\Admin\Desktop>Python test1.py
+<_csv.reader object at 0x000001916D8E1EE8>
+
+End of an application
+
+
+Ex3:
+===
+import time 
+import csv 
+with open("ihub_1.csv","r",newline="") as f:
+    obj1=csv.reader(f)
+    obj2=list(obj1)
+    print(obj2)
+   
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Ex4:
+===
+import time 
+import csv 
+with open("ihub_1.csv","r",newline="") as f:
+    obj1=csv.reader(f)
+    obj2=list(obj1)
+    for x1 in obj2:
+        for x2 in x1:
+            print(x2,end="  ")
+        print()
+print()
+time.sleep(2)
+print("End of an application")
+
+
+
+->Zipping & UnZipping:
+===============
+
+
+Zipping:
+=====
+Python supports Zipping methodlogy.It is the process or methodlogy to convert one
+or more than one file into zip_folder format.To implement Zipping methodlogy in python
+we do have a module zipfile inside the zipfile module we do have a class named
+ZipFile(F_name,mode,attribute) and we write an attribute named ZIP_DEFLATED
+
+
+Ex1:
+==
+import time 
+from zipfile import * 
+f1=ZipFile("ihub_3.zip","w",ZIP_DEFLATED)
+f1.write("number.txt")
+f1.write("otp.txt")
+f1.write("email.txt")
+print()
+print("Zip_Folder is created successfully ...")
+print()
+f1.close()
+print()
+time.sleep(2)
+print("End of an application")
+
+
+UnZipping:
+=======
+Python supports UnZipping methodlogy.It is the process or methodlogy to read the 
+file names with its content from zip_folder format then it is said to be Unzipping methodlogy.
+
+ZIP_STORED
+
+
+namelist() ---->converts the objects in List format
+
+
+Ex1:
+===
+import time 
+from zipfile import * 
+f1=ZipFile("ihub_3.zip","r",ZIP_STORED)
+X1=f1.namelist()
+print(X1)
+print()
+f1.close()
+print()
+print("End of an application")
+
+
+Ex2:
+==
+import time 
+from zipfile import * 
+f1=ZipFile("ihub_3.zip","r",ZIP_STORED)
+X1=f1.namelist()
+for x1 in X1:
+    print("File_Name is:",x1)
+    print('------------------')
+    f2=open(x1,"r")
+    obj1=f2.read()
+    print(obj1)
+    print()
+print()
+f1.close()
+f2.close()
+print()
+print("End of an application")
+
+
+
+Object Serializtion  & Object Deserialization:
+=============================
+
+
+Object Serializtion :
+============
+Python supports Object Serializtion.It is process or methodlogy to convert Python objects to 
+JSON object(JavaScript)
+
+
+Python_Objects                                                        JSON(JavaScript)
+============================================
+Int,float                                                                     number
+True,False                                                                 true,false
+List,Set,Tuple                                                             an array
+Dict                                                                            Object
+==============================================
+
+
+In pyton we do have a module named as json module inside the json
+module we do have a function named dump()
+
+
+Ex1:
+===
+import time 
+import json 
+D1={}
+D1['Pid']=1001 
+D1['Pname']="Mobile_1"
+D1['Price']=29000 
+D1['Company']="Samsung" 
+D1['P_status_1']=True 
+D1['P_Status_2']=None 
+print()
+print("====OS=====")
+with open("ihub_111.txt","w") as f:
+    json.dump(D1,f)
+    print()
+    print("OS is done successfully ...")
+print()
+time.sleep(3)
+print("End of an application")
+
+
+Object Deserialization:
+==============
+It is process or methodlogy to convert JSON_data into Python_Object
+
+
+Ex1:
+==
+import time 
+import json 
+D1={}
+D1['Pid']=1001 
+D1['Pname']="Mobile_1"
+D1['Price']=29000 
+D1['Company']="Samsung" 
+D1['P_status_1']=True 
+D1['P_Status_2']=None 
+print()
+print("====OD=====")
+with open("ihub_111.txt","r") as f:
+    obj1=json.load(f)
+    print(obj1)
+    print()
+    for a1,a2 in obj1.items():
+        print(a1,"---",a2)
+print()
+time.sleep(3)
+print("End of an application")
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,457 @@
+Q1)Deleting a row from the table:
+================================
+
+Ex1:
+===
+import time 
+import mysql.connector 
+try:
+    obj1="delete from p1 where Pid=1006"
+    con=mysql.connector.connect(host="localhost",user="root",password="",database="qualitythought_1")
+    cursor=con.cursor() 
+    cursor.execute(obj1)
+    print("A record is deleted successfully ...")
+    con.commit()
+except mysql.connector.DatabaseError as e:
+    if con:
+        con.rollback()
+        print("Exception_Name is:",e)
+finally:
+    if cursor:
+        cursor.close()
+    elif con:
+        con.close()
+print()
+time.sleep(2)
+print("End of an application")
+
+OUTPUT:
+=====
+MariaDB [qualitythought_1]> select * from p1;
++------+----------+-------+---------+
+| Pid  | Pname    | Price | Company |
++------+----------+-------+---------+
+| 1001 | Mobile_1 | 23000 | Samsung |
+| 1002 | Mobile_2 | 26000 | Samsung |
+| 1003 | Mobile_3 | 27000 | Samsung |
+| 1004 | Mobile_4 | 31000 | Samsung |
+| 1005 | Mobile_5 | 32000 | Samsung |
+| 1007 | Mobile_7 | 39000 | Samsung |
+| 1008 | Mobile_8 | 41000 | Samsung |
++------+----------+-------+---------+
+7 rows in set (0.001 sec)
+
+MariaDB [qualitythought_1]>
+
+
+Updating a record:
+============
+
+Ex1:
+==
+import time 
+import mysql.connector 
+try:
+    obj1="update P1 set Price=Price+37000 where Pid=1001"
+    con=mysql.connector.connect(host="localhost",user="root",password="",database="qualitythought_1")
+    cursor=con.cursor() 
+    cursor.execute(obj1)
+    print("Table is updated successfully ...")
+    con.commit()
+except mysql.connector.DatabaseError as e:
+    if con:
+        con.rollback()
+        print("Exception_Name is:",e)
+finally:
+    if cursor:
+        cursor.close()
+    elif con:
+        con.close()
+print()
+time.sleep(2)
+print("End of an application")
+
+
+OUTPUT:
+=====
+MariaDB [qualitythought_1]> select * from p1;
++------+----------+-------+---------+
+| Pid  | Pname    | Price | Company |
++------+----------+-------+---------+
+| 1001 | Mobile_1 | 60000 | Samsung |
+| 1002 | Mobile_2 | 26000 | Samsung |
+| 1003 | Mobile_3 | 27000 | Samsung |
+| 1004 | Mobile_4 | 31000 | Samsung |
+| 1005 | Mobile_5 | 32000 | Samsung |
+| 1007 | Mobile_7 | 39000 | Samsung |
+| 1008 | Mobile_8 | 41000 | Samsung |
++------+----------+-------+---------+
+7 rows in set (0.000 sec)
+
+MariaDB [qualitythought_1]> select * from p1 where Pid=1001;
++------+----------+-------+---------+
+| Pid  | Pname    | Price | Company |
++------+----------+-------+---------+
+| 1001 | Mobile_1 | 60000 | Samsung |
++------+----------+-------+---------+
+1 row in set (0.000 sec)
+
+MariaDB [qualitythought_1]> select Price from P1 where Pid=1001;
++-------+
+| Price |
++-------+
+| 60000 |
++-------+
+1 row in set (0.001 sec)
+
+
+Deleting the complete records permenantly:
+============================
+Ex1:
+==
+import time 
+import mysql.connector 
+try:
+    obj1="truncate table P1"
+    con=mysql.connector.connect(host="localhost",user="root",password="",database="qualitythought_1")
+    cursor=con.cursor() 
+    cursor.execute(obj1)
+    print("Data is deleted successfully ....")
+    con.commit()
+except mysql.connector.DatabaseError as e:
+    if con:
+        con.rollback()
+        print("Exception_Name is:",e)
+finally:
+    if cursor:
+        cursor.close()
+    elif con:
+        con.close()
+print()
+time.sleep(2)
+print("End of an application")
+
+
+OUTPUT:
+======
+ariaDB [qualitythought_1]> select * from p1;
+Empty set (0.000 sec)
+
+MariaDB [qualitythought_1]> desc P1;
++---------+-------------+------+-----+---------+-------+
+| Field   | Type        | Null | Key | Default | Extra |
++---------+-------------+------+-----+---------+-------+
+| Pid     | int(11)     | YES  |     | NULL    |       |
+| Pname   | varchar(25) | YES  |     | NULL    |       |
+| Price   | int(11)     | YES  |     | NULL    |       |
+| Company | varchar(25) | YES  |     | NULL    |       |
++---------+-------------+------+-----+---------+-------+
+4 rows in set (0.025 sec)
+
+MariaDB [qualitythought_1]> show tables;
++----------------------------+
+| Tables_in_qualitythought_1 |
++----------------------------+
+| p1                         |
++----------------------------+
+1 row in set (0.001 sec)
+
+MariaDB [qualitythought_1]>
+
+
+SQL/PLSQL Interview_Question:
+====================
+Q1)What is the difference between delete command & truncate command?
+
+delete:
+====
+        delete is a DML command in SQL/PLSQL.The main objective of delete
+command is remove the data/information from the table not from database
+
+truncate:
+=====
+        truncate is DDL command in SQL/PLSQL.The main objective of truncate
+command is delete the complete data/information permenantly from the database.
+
+
+Droping the table:
+=============
+Ex1:
+===
+import time 
+import mysql.connector 
+try:
+    obj1="drop table P1"
+    con=mysql.connector.connect(host="localhost",user="root",password="",database="qualitythought_1")
+    cursor=con.cursor() 
+    cursor.execute(obj1)
+    print("Table is deleted successfully ....")
+    con.commit()
+except mysql.connector.DatabaseError as e:
+    if con:
+        con.rollback()
+        print("Exception_Name is:",e)
+finally:
+    if cursor:
+        cursor.close()
+    elif con:
+        con.close()
+print()
+time.sleep(2)
+print("End of an application")
+
+
+OUTPUT:
+=====
+4 rows in set (0.020 sec)
+
+MariaDB [qualitythought_1]> show tables;
+Empty set (0.001 sec)
+
+MariaDB [qualitythought_1]> desc p1;
+ERROR 1146 (42S02): Table 'qualitythought_1.p1' doesn't exist
+MariaDB [qualitythought_1]>
+
+
+Droping the database:
+==============
+
+Ex1:
+==
+import time 
+import mysql.connector 
+try:
+    obj1="drop database qualitythought_1"
+    con=mysql.connector.connect(host="localhost",user="root",password="",database="qualitythought_1")
+    cursor=con.cursor() 
+    cursor.execute(obj1)
+    print("Database is deleted successfully ....")
+    con.commit()
+except mysql.connector.DatabaseError as e:
+    if con:
+        con.rollback()
+        print("Exception_Name is:",e)
+finally:
+    if cursor:
+        cursor.close()
+    elif con:
+        con.close()
+print()
+time.sleep(2)
+print("End of an application")
+
+
+OUTPUT:
+=====
+MariaDB [qualitythought_1]> show databases;
++--------------------+
+| Database           |
++--------------------+
+| abcd_12345         |
+| abcde_123          |
+| ihub_77551         |
+| information_schema |
+| mysql              |
+| performance_schema |
+| phpmyadmin         |
+| qt_12345           |
+| sms_111            |
+| sms_555            |
+| sms_999            |
+| test               |
++--------------------+
+12 rows in set (0.001 sec)
+
+
+
+SQL/PLSQL
+=======
+
+SQL
+===
+
+        ->DDL(Data Defination Language)
+       
+                  .create
+                  .truncate
+                  .drop
+                  .rename 
+                  .alter
+
+       ->DML(Data Manipulation Language)
+                
+                  .insert
+                  .update
+                  .delete
+
+       ->TCL(Transactional control language)
+ 
+                   .rollback
+                   .commit
+                   .savepoint
+
+       ->Constrains ---->(RDBMS)
+
+                  .primary key
+                  .foreign key
+                  .unique key
+                  .null key
+
+        ->Joins
+ 
+                left join
+                right join
+                cross join
+                full join
+
+       ->Clauses
+                    where Clause
+                    having Clause
+                    orderBy Clause
+
+        ->Aggregate functions
+ 
+                     count()
+                     max()
+                     min()
+                     sum()
+                     avg()
+
+      ->Normaliztion in SQL/PLSQL
+
+      ->Sub queries in SQL
+
+
+PL/SQL:
+ 
+       ->triggers
+       ->functions
+       ->store producre
+
+
+
+Multithreading in Python:
+================
+Python supports Multithreading.It is also known as Multi tasking.Multithreading or multi
+tasking can be represents executing the task/job simaltiously where each job/task are
+dependent or independent.In Python we do have two types of multithreading/multi tasking
+
+
+->Process based multithreading
+->Thread based multithreading
+
+->Process based multithreading:
+====================
+Process based multithreading can be represent as executing the tasks/job simaltiously where 
+each job or task are independent to eachother then it is said to be Process based multithreading
+
+
+Ex:
+===
+       Any O/S
+
+
+->Thread based multithreading:
+=====================
+Thread based multithreading can be represent as executing the task or job
+simaltiously where each job/task are dependent to other then it is said to be
+Thread based multithreading.
+
+
+What is Thread?
+==========
+Thread is a Python object or it is flow of execution
+
+How to create a Thread:
+================
+We can create a Thread as follows
+
+t1=Thread(target="")
+t1.start()
+
+In Python while working with multithreading the root thread name is Main_Thread
+.The main objective of multithreading is improve the perfomence of an application
+and output will be display in random format.In Python we do have a module named
+threading module to implement multithreading
+
+
+
+In Python we can create a Thread in Following ways:
+=================================
+->Thread can be created using functional approach
+->Thread can be created using Inheritance approach
+->Thread can be created using class approach
+
+
+Ex1:
+===
+import time 
+from threading import * 
+print("Root_Thread Name is:",current_thread().getName())
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Ex2:
+===
+import time 
+from threading import * 
+print("Root_Thread Name is:",current_thread().getName())
+print()
+current_thread().setName("IHUB_IT_SERVICES")
+print("Root_Thread Name is:",current_thread().getName())
+print()
+time.sleep(2)
+print("End of an application")
+
+
+
+
+      
+ 
+  
+ 
+      
+      
+
+
+
+                  
+                       
+
+ 
+
+
+
+
+
+    
+    
+
+
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+
+
+
+    
+    
+
+
+
+    
+    

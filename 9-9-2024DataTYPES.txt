@@ -1,0 +1,502 @@
+Bytes data type:
+==========
+Python supports Bytes data type.The main objective of bytes data type is to work on
+audio,video,semi structure file(JSON,XML).Bytes data type is immutable object.While 
+working with Bytes data type range must be from 0 to 256-1=255
+
+
+Ex1:
+==
+import time 
+L1=[111,112,113,114,115,116,1200,12]
+res1=bytes(L1)
+print(res1)
+print()
+print(type(res1))
+print()
+time.sleep(3)
+print('End of an application')
+
+OUTPUT:
+=====
+
+C:\Users\Admin\Desktop>Python test1.py
+Traceback (most recent call last):
+  File "test1.py", line 3, in <module>
+    res1=bytes(L1)
+ValueError: bytes must be in range(0, 256)
+
+
+Ex2:
+==
+import time 
+L1=[111,112,113,114,115,116,255,12]
+res1=bytes(L1)
+print(res1)
+print()
+print(type(res1))
+print()
+time.sleep(3)
+print('End of an application')
+
+
+Ex3:
+==
+import time 
+L1=[111,112,113,114,115,116,255,12]
+res1=bytes(L1)
+print(res1)
+print()
+print(*res1)
+print()
+print(type(res1))
+print()
+time.sleep(3)
+print('End of an application')
+
+
+Ex4:
+===
+import time 
+L1=[111,112,113,114,115,116,255,12]
+res1=bytes(L1)
+for x1 in res1:
+    print(x1)
+print()
+time.sleep(3)
+print('End of an application')
+
+
+Ex5:
+===
+import time 
+L1=[111,112,113,114,115,116,255,12]
+print('=====Before Immuutable_Oprations=====')
+res1=bytes(L1)
+print(res1)
+print()
+print(*res1)
+print()
+print("=====After Immutable_Operations====")
+res1[0]=11 
+res1[1]=12 
+res1[2]=13 
+print(res1)
+print()
+print(*res1)
+print()
+time.sleep(3)
+print('End of an application')
+
+
+OUTPUT:
+=====
+
+C:\Users\Admin\Desktop>Python test1.py
+=====Before Immuutable_Oprations=====
+b'opqrst\xff\x0c'
+
+111 112 113 114 115 116 255 12
+
+=====After Immutable_Operations====
+Traceback (most recent call last):
+  File "test1.py", line 10, in <module>
+    res1[0]=11
+TypeError: 'bytes' object does not support item assignment
+
+C:\Users\Admin\Desktop>
+
+
+bytearray data type:
+=============
+It is exactly same as bytes data type.Where bytes data type is immutable object and 
+bytearray is a mutable object.
+
+
+Ex1:
+==
+import time 
+L1=[111,112,113,114,115,116,2550,12]
+res1=bytearray(L1)
+print(res1)
+print()
+print(type(res1))
+print()
+time.sleep(3)
+print('End of an application')
+
+
+OUTPUT:
+=====
+C:\Users\Admin\Desktop>Python test1.py
+Traceback (most recent call last):
+  File "test1.py", line 3, in <module>
+    res1=bytearray(L1)
+ValueError: byte must be in range(0, 256)
+
+C:\Users\Admin\Desktop>
+
+
+Ex2:
+===
+import time 
+L1=[111,112,113,114,115,116,255,12]
+res1=bytearray(L1)
+print(res1)
+print()
+print(type(res1))
+print()
+time.sleep(3)
+print('End of an application')
+
+
+Ex3:
+==
+import time 
+L1=[111,112,113,114,115,116,255,12]
+res1=bytearray(L1)
+print(res1)
+print()
+print(*res1)
+print()
+print(type(res1))
+print()
+time.sleep(3)
+print('End of an application')
+
+
+Ex4:
+===
+import time 
+L1=[111,112,113,114,115,116,255,12]
+res1=bytearray(L1)
+for x1 in res1:
+    print(x1)
+print()
+time.sleep(3)
+print('End of an application')
+
+
+Ex5:
+===
+import time 
+L1=[111,112,113,114,115,116,255,12]
+print('====Before_Mutable_Operations=====')
+res1=bytearray(L1)
+print()
+print(res1)
+print()
+print(*res1)
+print()
+print('======After_Mutable_Operations=====')
+res1[0]=1 
+res1[1]=2 
+res1[2]=3
+res1[3]=4 
+res1[4]=5 
+print(res1)
+print()
+print(*res1)
+print()
+time.sleep(2)
+print('End of an application')
+
+
+->Frozenset data type:
+===============
+Python supports Frozenset data type.It is exactly same as Set data type.
+
+Set data type is a mutable objecy
+Frozenset data type is immutable object.
+
+
+Ex1:
+===
+import time 
+S1={111,112,113,114,115,116,117,118,119}
+S2=frozenset(S1)
+print(S2)
+print()
+print(type(S2))
+print()
+for x1 in S2:
+    print(x1)
+print()
+time.sleep(2)
+print('End of an application')
+
+
+Interview_Question:
+=============
+What is common difference between Tuple data type and FrozenSet data type.Develop a meaningfull
+use case.
+
+Ex1:
+==
+import time 
+T1=(101,102,103,104,105,106,107,108,109,110,101,102,103,104)
+print(T1)
+print()
+print(type(T1))
+print()
+S1={101,102,103,104,105,106,107,108,109,110,101,102,103,104}
+S2=frozenset(S1)
+print(S2)
+print()
+print(type(S2))
+print()
+time.sleep(3)
+print('End of an application')
+
+
+OUTPUT:
+======
+
+C:\Users\Admin\Desktop>Python test1.py
+(101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 101, 102, 103, 104)
+
+<class 'tuple'>
+
+frozenset({101, 102, 103, 104, 105, 106, 107, 108, 109, 110})
+
+<class 'frozenset'>
+
+End of an application
+
+C:\Users\Admin\Desktop>
+
+
+->Range data type:
+=============
+Python supports Range data type.The main objective of range data is to produce sequennce of 
+integer values.Range data type is assocaited with for loop.
+
+
+for x1 in range(begin,end(end-1),step):
+               -----
+
+form_1:
+=====
+for x1 in range(end(end-1):
+        ----
+
+Ex1:
+===
+import time 
+for x1 in range(7):
+    print(x1)
+print()
+time.sleep(2)
+print('End of an application')
+
+
+
+Ex2:
+===
+import time 
+for x1 in range(7):
+    print("Hello Guys")
+print()
+time.sleep(2)
+print('End of an application')
+
+
+Ex3:
+===
+import time 
+for x1 in range(7):
+    print("x1")
+print()
+time.sleep(2)
+print('End of an application')
+
+
+Ex4:
+===
+import time 
+for x1 in range(7):
+    print(x1,"--","x1")
+print()
+time.sleep(2)
+print('End of an application')
+
+form_2:
+======
+for y1 in range(begin,end(end-1)):
+              -----
+
+
+Ex1:
+==
+import time 
+for y1 in range(5,16):
+    print(y1)
+print()
+time.sleep(3)
+print('End of an application')
+
+
+Ex2:
+===
+import time 
+for y1 in range(5,16):
+    print("Application Developer")
+print()
+time.sleep(3)
+print('End of an application')
+
+
+form_3:
+=====
+for z1 in range(begin,end(end-1),step):
+                 ----
+
+
+Ex1:
+==
+import time 
+for x1 in range(0,10,2):
+    print('Even_Numbers are:',x1)
+print()
+for y1 in range(1,10,2):
+    print('Odd_Numbers are:',y1)
+print()
+time.sleep(3)
+print('End of an application')
+
+
+Ex2:
+===
+import time 
+for x1 in range(True):
+    print(x1)
+print()
+time.sleep(3)
+print('End of an application')
+
+
+Ex3:
+===
+import time 
+for x1 in range(False):
+    print(x1)
+print()
+time.sleep(3)
+print('End of an application')
+
+
+Ex4:
+===
+import time 
+for x1 in range(-5):
+    print(x1)
+print()
+time.sleep(3)
+print('End of an application')
+
+
+Ex5:
+===
+import time 
+for x1 in range(123.45):
+    print(x1)
+print()
+time.sleep(3)
+print('End of an application')
+
+
+Ex6:
+===
+import time 
+for x1 in range("Developer"):
+    print(x1)
+print()
+time.sleep(3)
+print('End of an application')
+
+
+Ex7:
+===
+import time 
+X1=chr(65)
+X2=chr(66)
+X3=chr(67)
+Y1=chr(97)
+Y2=chr(98)
+Y3=chr(99)
+print(X1,X2,X3)
+print()
+print(Y1,Y2,Y3)
+print()
+time.sleep(3)
+print('End of an application')
+
+
+Ex8:
+===
+import time 
+X1=ord('A')
+X2=ord('B')
+X3=ord('C')
+Y1=ord('a')
+Y2=ord('b')
+Y3=ord('c')
+print()
+print(X1,X2,X3)
+print()
+print(Y1,Y2,Y3)
+print()
+time.sleep(3)
+print('End of an application')
+
+
+Ex9:
+===
+import time 
+for x1 in range(chr(65)):
+    print(x1)
+print()
+time.sleep(2)
+print('End of an application')
+
+
+Ex10:
+===
+import time 
+for x1 in range(ord('A')):
+    print(x1)
+print()
+time.sleep(2)
+print('End of an application')
+
+
+Ex11:
+===
+import time 
+for x1 in range(1,7,-1):
+    print(x1)
+print()
+time.sleep(3)
+print('End of an application')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
